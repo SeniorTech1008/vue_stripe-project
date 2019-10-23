@@ -1,0 +1,480 @@
+<!Doctype html>
+<html lang="en">
+    <head>
+        <title>Wanderift | Booking is even easier on the go</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta name="description" content="">
+        <link rel="icon" href="images/favicon.png">
+        <!--bootStrap-->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css" />
+        <link rel="stylesheet" href="css/bs4-utilities.min.css"> <!--remove "css/bs4-utilities.min.css" if using bootstrap4 in future-->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/jBox.all.css">
+        <link rel="stylesheet" href="css/media.css" />
+        <link rel="stylesheet" href="css/main.css" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/style-2.css" />
+        <style>
+
+        a.btn-logout {
+        border-radius: 5px;
+        width: 140px;
+        text-align: center;
+        padding: 10px 20px !important;
+        }
+        div#myNavbar ul.navbar-right li:last-child {
+        margin-top: 4px;
+        }
+        .btn-referral{
+        background:#00B5FF;
+        color: #fff;
+        }
+        .btn-referral:hover{
+        color: #fff;
+        }
+        .btn-referral:focus{
+        color: #fff;
+        }
+        .float-right{
+        float: right !important;
+        }
+        .float-left{
+        float:left !important;
+        }
+        .float-right, .float-left::after{
+        clear: both;
+        }
+        .border-0{
+        border:none;
+        }
+        .close.float-left{
+        opacity: 1;
+        }
+        .close.float-left span{
+        font-size: .7em;
+        }
+        @media (max-width:768px) {
+        .navbar-header .icon-bar {
+        background-color: #00b5ff !important;
+        }
+        }
+        .welcome-wande {
+        background-image: url("../images/header.jpg");
+        background-repeat: no-repeat;
+        background-position: bottom;
+        background-size: 100%;
+        padding: 10px 15px 15px 15px;
+        border: 1px solid #e0e1e5;
+        border-radius: 3px;
+        }
+        </style>
+    </head>
+    <body class="body_index ">
+        <main id="app">
+            <header class="new-index new-index-customize" style="padding-bottom:0px;" >
+                <nav class="navbar navbar-default new-index " style="padding-top: 8px;height: 95px;margin-bottom: 0px;padding-bottom: 0px;">
+                <div class="container">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <!-- <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"> -->
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="index.html">
+                            <img src="images/Wanderift_Logo_2.png" style="width: 180px;">
+                        </a>
+
+                        <div class="mobile-sign-in">
+                            <ul v-if="greeting!= null">
+                                <li><a href="account.html">Account</a></li>
+                                <li><a href="account.html" class="btn btn-primary nav-sub"><b> {{tokens.available | tokens}}
+                                </b></a>
+                                </li>
+                            </ul>
+                            <ul v-else>
+                                <li><a class="login-Modal" href="" role="button" data-toggle="modal" data-target="#login-Modal">Sign In</a></li>
+                                <li><a href="" role="button" data-toggle="modal" data-target="#subscribe-Modal" class="subscribe-Modal">Sign Up</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="navbar" id="bs-example-navbar-collapse-1">
+                            <ul v-if="greeting!= null" class="nav navbar-nav navbar-right flex-row align-items-center">
+                                <li><a href="#" role="button" data-target="">{{ greeting }}</a></li>
+                                <li><a href="account.html">Account</a></li>
+
+                                <li>
+                                     <a href="account.html" role="button"  class="btn subscribe-Modal p-0"><span class="d-inline-block nav-sub">{{tokens.available | tokens}}</span></a>
+                                </li>
+                            </ul>
+                            <ul v-else class="nav navbar-nav navbar-right flex-row align-items-center">
+                                <li><a href="corporate-subscription.html">Corporate Subscription</a></li>
+                                <li><a href="how-it-works.html">How it Works</a></li>
+                                <li><a class="login-Modal" href="" role="button" data-toggle="modal" data-target="#login-Modal">Sign In</a></li>
+                                <li><a href="" role="button" data-toggle="modal" data-target="#subscribe-Modal" class="btn subscribe-Modal p-0"><span class="d-inline-block nav-sub">Sign Up</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+
+                    <!-- /.navbar-collapse -->
+                </div>
+                <!-- /.container-fluid -->
+            </nav>
+
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="row mt30" style="margin-top:75px; margin-bottom:75px;">
+            <div class="col-sm-2 col-md-2"></div>
+            <div class="col-sm-12 col-md-4 mt30 p-4">
+                <h2 style="font-size: 45px; padding-top: 20px;font-weight: bold; width:420px;">Booking is even easier on the go!</h2>
+                <p class="mt30" style="font-size:14px; line-height: 30px;">
+                    Take the Wanderift booking experince on the go with our easy to use iOS App.
+                    Booking has never been easier. Enter your phone number below and we'll text you a link to the Wanderift App
+                </p>
+                <div class="form-group d-flex mt30">
+                    <label style="padding-bottom:10px;"></label>
+                    <input class="form-control sharp w-75" type="tel" placeholder="Enter Phone Number">
+                    <button class="btn btn-1 ml-4">send</button>
+                </div>
+                <a href="https://apps.apple.com/us/app/wanderift-subscribe-to-fly/id1437310260">
+                <img src="images/apple_store_btn.png" style="padding-top: 20px; width:100px;" alt="apple store"></a>
+            </div>
+            <div class="col-sm-12 col-md-6 mt30 p-4 d-flex justify-content-center">
+                <div class="col-sm-12 col-md-8 mt-4 pt-4 text-center">
+                <img src="images/mobile.png" alt="Mobile thumbnail" class="img-responsive w-75" style="height:500px;"></a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ========================= footer ======================== -->
+<div class="footer-new ">
+    <div class="container ">
+        <div class="footer-top " style="margin-left: 160px;margin-right: 160px;padding-top: 50px; ">
+            <div class="row footer-top-row ">
+                <div class="col-md-3 ">
+                    <div class="footer-menu ">
+                        <h4 style="padding-bottom: 10px; color: #F7F9FF; ">Contact</h4>
+                        <a href="how-it-works.html" style="font-size: 14px; color: #F7F9FF; ">Help / FAQ</a>
+                        <a href="media.html " style="font-size: 14px; color: #F7F9FF; ">Press</a>
+                        <a href="# " style="font-size: 14px; color: #F7F9FF; ">Partners</a>
+                    </div>
+                </div>
+                <div class="col-md-3 ">
+                    <div class="footer-menu ">
+                        <h4 style="padding-bottom: 10px; color: #F7F9FF; ">Company</h4>
+                        <a href="about-us.html " style="font-size: 14px; color: #F7F9FF; ">About</a>
+                        <a href="mobile_app.html " style="font-size: 14px; color: #F7F9FF; ">Mobile</a>
+                        <a href="how-it-works.html" style="font-size: 14px; color: #F7F9FF; ">How it works</a>
+                    </div>
+                </div>
+                <div class="col-md-3 ">
+                    <div class="footer-menu ">
+                        <h4 style="padding-bottom: 10px; color: #F7F9FF; ">More</h4>
+                        <a href="https://skyscroller.com/" style="font-size: 14px; color: #F7F9FF; ">Skyscroller</a>
+                        <a href="ads.html" style="font-size: 14px; color: #F7F9FF; ">Advertising</a>
+                        <a href="airline_fees.html" style="font-size: 14px; color: #F7F9FF; ">Airline Fees</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom " style="height: 250px; ">
+            <div class="footer-bottom-titles ">
+                <a href="images/Wanderift_Privacy_Policy.pdf" class="title-link " style="font-size: 14px; color: #F7F9FF; ">Privacy Policy</a>
+                <a href="images/Wanderift_terms_of_Use.pdf" class="title-link " style="font-size: 14px; color: #F7F9FF; ">Terms & Conditions </a>
+                <a href="#" class="title-link " style="font-size: 14px; color: #F7F9FF; ">Wanderift LLC</a>
+            </div>
+            <div class="footer-bottom-description " style="font-size:14px; padding-top:10px; padding-bottom:5px; color: #F7F9FF; ">Save time and money when booking with Wanderift. Always pay the same price for your flight when booking with tokens.
+            </div>
+            <div class="footer-bottom-social-links ">
+                <a href="https://www.instagram.com/wanderift/" class="ig-link "><img src="asset/instagram.png " alt=" " style="width:30px; height:30px; "></a>
+                <a href="https://twitter.com/wanderift" class="twit-link "><img src="asset/twit.png " alt=" " style="width:30px; height:30px; "></a>
+                <a href="https://www.facebook.com/Wanderift/" class="face-link "><img src="asset/face.png " alt=" " style="width:30px; height:30px; "></a>
+            </div>
+        </div>
+        <div class="text-center">
+            <a href="# " class="ig-link "><img src="images/Wanderift_Logo_2.png " alt=" " style="width:140px; padding-bottom: 40px; "></a>
+        </div>
+    </div>
+</div>
+</main>
+<!-- modals -->
+<!-- signIn modal -->
+<div
+class="modal fade"
+id="login-Modal"
+tabindex="-1"
+role="dialog"
+aria-labelledby="loginModalLabel"
+aria-hidden="true">
+<!-- <div class="modal-backdrop" style="display: none"></div> -->
+<div class="modal-dialog" role="document">
+    <div class="modal-content">
+        <div class="modal-header border-0">
+            <a  class="close m-0 bg-transparent float-left" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">close</span>
+            </a>
+        </div>
+        <div class="modal-body text-center">
+            <div class="login-head">
+                <h3 class="mt-0">Sign In</h3>
+                <p class="m-0">Looking to book your next gateway?</p>
+                <p >Sign in and start saving!</p>
+            </div>
+            <div class="login-body w-75 m-auto">
+                <form>
+                    <div class="form-group">
+                        <input type="email" class="form-control sharp text-center" placeholder="Email" id="email_field" required/>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control sharp text-center" id="password_field" placeholder="Password" required/>
+                    </div>
+                    <div class="form-group">
+                        <a id="forgot-password" href="#">Forgot Password?</a>
+                    </div>
+                    <div class="form-group">
+                        <a class="btn btn-primary btn-login" onclick="login()">Sign In</a>
+                    </div>
+                    <div class="form-group">
+                        <p>By selecting "Sign in" you agree to Wanderift <a href="#" >Term of Use and Service</a></p>
+                        <p>Click <a href="#" >HERE</a> to sign in to Corporate Subscription</p>
+                    </div>
+                    <!-- <div class="form-group">
+                        <a href="#" id="started">Don't have an account? Get Started</a>
+                    </div> -->
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<!-- signUp modal -->
+<div
+class="modal fade"
+id="subscribe-Modal"
+tabindex="-1"
+role="dialog"
+aria-labelledby="subscribeModalLabel"
+aria-hidden="true">
+<!-- <div class="modal-backdrop" style="display: none"></div> -->
+<div class="modal-dialog" role="document">
+    <div class="modal-content">
+        <div class="modal-header border-0">
+            <a  class="close m-0 bg-transparent float-left" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">close</span>
+            </a>
+        </div>
+        <div class="modal-body text-center">
+            <div class="login-head">
+                <h3 class="mt-0">Sign Up</h3>
+                <p class="m-0">Enter a few detais below and get started for free</p>
+            </div>
+            <div class="login-body w-75 m-auto">
+                <form>
+                    <div>
+                        <div class="form-group">
+                            <input type="email" class="form-control sharp text-center" placeholder="Email" id="email" required/>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control sharp text-center" id="password" placeholder="Password" required/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <a class="btn btn-primary btn-login" id="submitBtn" onclick="signup()">Sign Up</a>
+                            </div>
+                            <div class="form-group">
+                                <p>By selecting "Sign Up" you agree to Wanderift <a href="#" >Term of Use and Service</a></p>
+                                <p>Looking to save on business travel tickets click <a href="#" >HERE</a> for Corporation Subscription</p>
+                            </div>
+                            <!-- <div class="form-group">
+                                <a href="#" id="login">Already have an account? Sign In</a>
+                            </div> -->
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</body>
+<script src="https://www.gstatic.com/firebasejs/5.7.2/firebase-app.js "></script>
+<script src="https://www.gstatic.com/firebasejs/5.7.2/firebase-auth.js "></script>
+<script src="https://www.gstatic.com/firebasejs/5.7.2/firebase-database.js "></script>
+<script src="https://www.gstatic.com/firebasejs/5.7.2/firebase-firestore.js "></script>
+<script src="js/firebase-config.js "></script>
+<script src="js/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js "></script>
+<script src="https://cdn.jsdelivr.net/npm/vue "></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue-filter/0.2.5/vue-filter.min.js"></script>
+<script src="js/vuejs/flight.result.js "></script>
+<script src="v2/moment.js "></script>
+<script src="js/Login.js "></script>
+<script src="js/Signup.js "></script>
+<script type="text/javascript " src="js/flights-slick.min.js "></script>
+<script src="js/bootstrap.min.js "></script>
+<script src="js/plugin.js "></script>
+<script src="js/plugin-2.js "></script>
+<script src="js/jquery.nice-select.js "></script>
+<script src="js/datedropper.pro.min.js "></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.9/js/intlTelInput.js "></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.9/js/intlTelInput.min.js "></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.9/js/utils.js "></script>
+<script type="text/javascript">
+$(document).ready(function() {
+$('#image-loader').hide();
+$("#searchFlight_w").click(function() {
+$('.flight-display').css("display", "none");
+$('#image-loader').show();
+$('html,body').animate({
+// scrollTop: 500
+}, 'slow');
+return false;
+$('.flight-display').css("display", "block");
+scrollTop: 500
+});
+});
+$(document).ready(function() {
+var show_btn = $('#started');
+//  var show_btn=$('.show-modal');
+//$("#testmodal").modal('show');
+show_btn.click(function() {
+$("#login-Modal").modal('hide');
+$("#subscribe-Modal").modal('show');
+});
+});
+$(document).ready(function() {
+var show_btn = $('#login');
+//  var show_btn=$('.show-modal');
+//$("#testmodal").modal('show');
+show_btn.click(function() {
+$("#subscribe-Modal").modal('hide');
+$("#login-Modal").modal('show');
+});
+});
+$("#open-popup").click(function() {
+$("body").addClass('modal-open');
+$("body").css('padding-right', '17px');
+$('#subscribe-Modal').show();
+$('#subscribe-Modal').addClass('in');
+$('.modal-backdrop').show();
+$('.modal-backdrop').addClass('in');
+});
+$("#login-Modal-btn").click(function() {
+$("body").addClass('modal-open');
+$("body").css('padding-right', '17px');
+$('#subscribe-Modal').hide();
+$('#subscribe-Modal').remove('in');
+$('#login-Modal').show();
+$('#login-Modal').addClass('in');
+$('.modal-backdrop').show();
+$('.modal-backdrop').addClass('in');
+});
+$(".modal-backdrop").click(function() {
+$("body").removeClass('modal-open');
+$("body").css('padding-right', '0px');
+// $('#subscribe-Modal').hide();
+$('#subscribe-Modal').removeClass('in');
+$('.modal-backdrop').hide();
+$('.modal-backdrop').removeClass('in');
+// $('#login-Modal').hide();
+$('#login-Modal').removeClass('in');
+$('#login-Modal').css('top', '-10000px');
+$('#subscribe-Modal').css('top', '-10000px');
+});
+$(document).ready(function() {
+setTimeout(function() {
+$('html, body').animate({
+scrollTop: $(".body-page").offset().top - 70
+},
+'slow');
+}, 1000);
+});
+$('a.login-Modal').on('click', function(e) {
+e.preventDefault()
+$("body").addClass('modal-open');
+$('#login-Modal').css('top', '0px');
+$('#login-Modal').addClass('in');
+$('#login-Modal .modal-backdrop').show();
+$('#login-Modal .modal-backdrop').addClass('in');
+$($('.mobile-sign-in ul li')[1]).remove();
+$($('.mobile-sign-in ul li')[0]).text('Back');
+$($('.mobile-sign-in ul li')[0]).css({
+'border': 'none',
+'width': '100%'
+});
+setTimeout(function(){
+$($('.mobile-sign-in ul')[0]).on('click', function(e){
+e.preventDefault();
+location.reload()
+});
+}, 300);
+$('html').css('overflow-y', 'hidden');
+$('.body_index #login-Modal').show();
+})
+$('a.subscribe-Modal').on('click', function(e) {
+e.preventDefault()
+$("body").addClass('modal-open');
+$('#subscribe-Modal').css('top', '0px');
+$('#subscribe-Modal').addClass('in');
+$('#subscribe-Modal .modal-backdrop').show();
+$('#subscribe-Modal .modal-backdrop').addClass('in');
+$($('.mobile-sign-in ul li')[1]).remove();
+$($('.mobile-sign-in ul li')[0]).text('Back');
+$($('.mobile-sign-in ul li')[0]).css({
+'border': 'none',
+'width': '100%'
+});
+setTimeout(function(){
+$($('.mobile-sign-in ul')[0]).on('click', function(e){
+e.preventDefault();
+location.reload()
+});
+}, 300);
+$('html').css('overflow-y', 'hidden');
+$('.body_index #subscribe-Modal').show();
+});
+$('#slider-one').carousel()
+$('#slider-two').carousel()
+if($(window).outerWidth() < 500){
+if(localStorage.getItem('wanderlift') == null) {
+localStorage.setItem('wanderlift', 'false');
+}
+if(localStorage.getItem('wanderlift') == 'true') {
+localStorage.setItem('wanderlift', 'false')
+$('.body_index .footer-new, .body_index .body-page').css('display', 'block');
+$('header.new-index, .welcome-wande').css('display', 'none');
+} else if(localStorage.getItem('wanderlift') == 'false'){
+$('.body_index .before-load.bg-change, .body_index .footer-new, .body_index .body-page, .welcome-wande').css('display', 'none');
+$('header.new-index').css('display', 'block');
+}
+$('.btn-search').on('click', function() {
+localStorage.setItem('wanderlift', 'true')
+});
+$('.flight-box-back').on('click', function() {
+localStorage.setItem('wanderlift', 'false');
+location.reload();
+})
+}
+$('.btn--signup').on('click', function(e) {
+e.preventDefault();
+$("#flightSearchModal").modal('hide');
+$('.subscribe-Modal').click();
+})
+$('.modal-backdrop').on('click', function() {
+setTimeout(function(){
+$('html').css('overflow', 'visible')
+}, 200)
+})
+</script>
+</html>

@@ -1,0 +1,1344 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+        content="Wanderift is airline travel as a subscription, subscribers pay a low monthly fee and receive a certain amount of flights. Subscribe today and start saving on your travel!" />
+    <title>Corprate Subscriptions</title>
+    <link rel="icon" href="images/favicon.png">
+    <!--normalaize-->
+    <link rel="icon" href="images/favicon.png">
+    <!--bootStrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/bs4-utilities.min.css"> <!--remove "css/bs4-utilities.min.css" if using bootstrap4 in future-->
+    <!--my Style-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.9/css/intlTelInput.css" rel="stylesheet"
+        media="screen">
+    <!--google font-->
+    <link href="https://fonts.googleapis.com/css?family=Karla:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style-2.css" />
+    <link rel="stylesheet" href="css/media.css" />
+
+
+    <!--font awsome-->
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<style type="text/css">
+    @import url('https://fonts.googleapis.com/css?family=Josefin+Sans:100,300,400,600,700');
+    @import url('https://fonts.googleapis.com/css?family=Indie+Flower');
+    /* to bee put in a separated css file */
+    body {
+        background-color: #f7f9fe;
+    }
+
+    header {
+        /*height: 80vh;*/
+        background: #141f3f !important;
+    }
+
+    /*@media all and (max-width: 860px) {
+        header {
+            background-size: 40% !important;
+        }
+    }*/
+
+    /*@media all and (max-width: 460px) {
+        header {
+            background: #141f3f !important;
+        }
+    }*/
+
+    .subscription_top h2 {
+        margin-top: 0px;
+        width: 100%;
+        text-align: center !important;
+        line-height: 1.5em;
+        font-size: 3.5em !important;
+        color: #fff;
+        margin-bottom: 150px;
+    }
+    .subscription_top{
+        background: #141f3f;
+        padding-top: 10px;
+    }
+    .subscription_top .container{
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    .subscription_top img{
+        max-width: 300px;
+        margin-left: 50px;
+    }
+
+    @media all and (max-width: 980px) {
+        .subscription_top h2 {
+            font-size: 2.5em !important;
+        }
+        .subscription_top img{
+            width: 30%;
+            margin-left: 0px;
+        }
+    }
+    @media all and (min-width:980px) and (max-height: 690px) {
+        header h2 {
+            font-size: 3em !important;
+        }
+    }
+     @media all and (max-width: 767px){
+        .subscription_top img{
+            display: none;
+        }
+        .subscription_top h2{
+            margin-top: 0;
+            margin-bottom: 40px;
+            padding-top: 20px;
+        }
+        .subscription_top {
+            margin-top: -21px;
+        }
+     }
+    @media all and (max-height: 570px) {
+        header {
+            background: #141f3f !important;
+        }
+    }
+    @media all and (min-width:501px) and (max-width: 767px) {
+        header .content {
+            margin-top: -18%;
+        }
+    }
+    @media all and (min-width: 361px) and (max-width:575px) {
+        header .content {
+            margin-left: 4%;
+        }
+    }
+    @media all and (max-width: 360px) {
+        .subscription_top h2{
+            font-size: 2.2em !important;
+            width: 90%;
+        }
+    }
+    /*header nav,
+        header .content {
+            transform: scaleX(0.9)
+        }
+
+        */
+    section {
+        padding: 4em 0 !important;
+    }
+
+    h3 {
+        text-align: center;
+        color: #141f3f;
+        font-weight: bold;
+        font-size: 2.5em;
+        text-transform: capitalize;
+        margin-bottom: 1em;
+    }
+
+    h5 {
+        color: #141f3f;
+        font-weight: bold;
+        font-size: 1.2em;
+    }
+
+    .info {
+        text-align: center;
+    }
+
+    .section-paragraph {
+        font-size: 1.2em;
+        width: 60%;
+        margin: 0 auto 2em auto;
+        color: #343f5d;
+        text-align: center;
+        font-size: 1.3em;
+    }
+
+
+    .tab {
+        border-radius: 5px;
+        width: 100%;
+        max-width: 650px;
+        margin: 0 auto;
+        height: 78px;
+        padding-top: 28px;
+        padding-bottom: 14px;
+        border: 1px solid #eee;
+        -webkit-box-shadow: -1px 2px 5px #b6b7bb !important;
+        -moz-box-shadow: -1px 2px 5px #b6b7bb !important;
+        box-shadow: -1px 2px 5px #b6b7bb !important;
+        margin-top: 20px;
+        cursor: pointer;
+        background-image: url('images/down-arrow.png');
+        background-repeat: no-repeat;
+        background-size: 20px auto;
+        background-position: right 20px top 29px;
+        background-color: white;
+        color: #141f3f;
+    }
+
+    .tab.active {
+        background-image: url('up-arrow.png');
+    }
+
+    .tab p,
+    .contents p {
+        margin-left: 70px;
+        margin-right: 40px;
+    }
+
+    .tab .title,
+    .contents .title {
+        font-weight: bold;
+        position: relative;
+        width: 80%;
+    }
+
+    .contents .title {
+        font-weight: bold;
+        position: relative;
+        width: 100%;
+    }
+
+    .tab .arrow {
+        height: 20px;
+        float: right;
+        margin-top: 15px;
+        margin-right: 20px;
+    }
+
+    .contents {
+        border-radius: 5px;
+        overflow: hidden;
+        border: 1px solid #eee;
+        -webkit-box-shadow: 3px 3px 3px 1px rgba(0, 0, 0, 0.45);
+        -moz-box-shadow: 3px 3px 3px 1px rgba(0, 0, 0, 0.45);
+        box-shadow: 3px 3px 3px 1px rgba(0, 0, 0, 0.45);
+        margin-top: 20px;
+        background-color: white;
+        display: none;
+        padding-top: 20px;
+        padding-bottom: 30px;
+        max-width: 650px;
+        margin: 0 auto;
+        text-align: left;
+    }
+
+    .title .icon {
+        height: 30px;
+        position: absolute;
+        left: -45px;
+        margin-top: -5.5px;
+    }
+
+    .contents .text {
+        line-height: 25px;
+        font-size: 12px;
+    }
+
+    .contents .center {
+        width: 60%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .contents .center p {
+        margin-left: 0;
+        text-align: left;
+        margin-right: 0;
+    }
+
+    .contents .center .description {
+        font-size: 13px;
+        line-height: 25px;
+    }
+
+    .contents .center div {
+        margin-top: 20px;
+    }
+
+    .contents .center .label {
+        color: #333;
+        font-size: 13px;
+        margin-bottom: 10px;
+    }
+
+    .contents .center input,
+    select {
+        width: 100%;
+        border: 1px inset #ddd;
+        border-radius: 3px;
+        height: 30px;
+        padding-left: 10px;
+    }
+
+    .contents .center a,
+    button {
+        display: inline-block;
+        margin-top: 20px;
+        background: #48adff;
+        background-image: -webkit-linear-gradient(top, #48adff, #48adff);
+        background-image: -moz-linear-gradient(top, #48adff, #48adff);
+        background-image: -ms-linear-gradient(top, #48adff, #48adff);
+        background-image: -o-linear-gradient(top, #48adff, #48adff);
+        background-image: linear-gradient(to bottom, #48adff, #48adff);
+        -webkit-border-radius: 5;
+        -moz-border-radius: 5;
+        border-radius: 5px;
+        font-family: Arial;
+        color: #ffffff;
+        font-size: 14px;
+        padding: 10px 40px 10px 40px;
+        text-decoration: none;
+        -moz-box-shadow: inset 0px 1px 0px 0px #dcecfb;
+        -webkit-box-shadow: inset 0px 1px 0px 0px #dcecfb;
+        box-shadow: inset 0px 1px 0px 0px #dcecfb;
+    }
+
+    .contents .center a:hover {
+        background: #3cb0fd;
+        background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+        background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+        background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+        background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+        background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+        text-decoration: none;
+    }
+
+    small {
+        color: #131e41;
+        font-weight: bold;
+        font-size: 1.2em;
+        margin-top: 30px;
+        display: block;
+    }
+
+    .slider-container {
+        background-color: #fff;
+        border: 2px solid #d5d6da;
+        box-shadow: -1px 2px 5px #b6b7bb;
+    }
+
+    .slider-div {
+        border-right: 2px solid #d5d6da;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .slider-wrap {
+        width: 80%;
+        margin-left: 20px;
+        overflow: hidden;
+    }
+
+    .slider {
+        -webkit-appearance: none;
+        width: 100%;
+        height: 35px;
+        background: #d3d3d3;
+        outline: none;
+        opacity: 0.7;
+        -webkit-transition: .2s;
+        transition: opacity .2s;
+        border-radius: 5px;
+        overflow: hidden;
+    }
+
+    input[type="range"] {
+        margin: auto;
+        -webkit-appearance: none;
+        position: relative;
+        cursor: pointer;
+        outline: none;
+    }
+
+
+    ::-webkit-slider-runnable-track {
+        background: #ddd;
+    }
+
+    ::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        width: 20px;
+        height: 40px;
+        background: #141f3f;
+        box-shadow: -100vw 0 0 100vw #00b7ff;
+    }
+
+    ::-moz-range-track {
+        height: 40px;
+        background: #ddd;
+    }
+
+    ::-moz-range-thumb {
+        background: #fff;
+        height: 40px;
+        width: 20px;
+        border: 3px solid #999;
+        border-radius: 0 !important;
+        box-shadow: -100vw 0 0 100vw #00b7ff;
+        box-sizing: border-box;
+    }
+
+    ::-ms-fill-lower {
+        background: #00b7ff;
+    }
+
+    ::-ms-thumb {
+        background: #fff;
+        border: 2px solid #999;
+        height: 40px;
+        width: 20px;
+        box-sizing: border-box;
+    }
+
+    ::-ms-ticks-after {
+        display: none;
+    }
+
+    ::-ms-ticks-before {
+        display: none;
+    }
+
+    ::-ms-track {
+        background: #ddd;
+        color: transparent;
+        height: 40px;
+        border: none;
+    }
+
+    ::-ms-tooltip {
+        display: none;
+    }
+
+    .slider-div h4 {
+        color: #001756;
+        font-weight: 700;
+        padding: 20px
+    }
+
+    .tockens-count-slider {
+        width: 70%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .total-tockens {
+        text-align: center;
+        justify-content: center;
+        padding: 15px;
+    }
+
+    .number {
+        font-size: 4.5em !important;
+        color: #001756;
+        font-weight: bold;
+    }
+
+    .payment-infos {
+        width: 100%;
+        margin: 2em auto;
+        display: flex;
+        flex-wrap: wrap;
+        background-color: #fff;
+        justify-content: space-between;
+        border: 2px solid #d5d6da;
+        box-shadow: -1px 2px 5px #b6b7bb;
+    }
+
+    .payment-inf {
+        display: flex;
+        flex: 1;
+        text-align: center;
+        align-items: center;
+        padding: 2em;
+        width: auto;
+        font-size: 1.2em;
+        justify-content: space-around;
+    }
+
+    .border-r {
+        border-right: 2px solid #d5d6da;
+    }
+
+    .payment-inf .number {
+        font-size: 2.5em !important;
+    }
+
+    .cta-box {
+        width: 55%;
+        margin: 0 auto;
+        padding: 2em;
+        background-color: #fff;
+        box-shadow: 0 1px 2px #b6b7bb;
+    }
+
+    .input-box,
+    .btn-submit {
+        margin: 40px auto;
+        max-width: 450px;
+        border: 1px solid #b6b7bb;
+        box-shadow: 0 1px 2px #b6b7bb;
+        display: flex;
+        align-items: center;
+        height: 70px;
+        position: relative;
+    }
+
+    .input-box .icon {
+        margin: 15px;
+        width: 10%;
+    }
+
+    .btn-submit {
+        width: 100%;
+        max-width: 450px;
+        height: 70px;
+        display: flex;
+        justify-content: center;
+        font-size: 1.2em;
+        background-color: #00b7ff;
+        border: none;
+        font-weight: bold;
+    }
+
+    .input-wrap {
+        height: 100%;
+        overflow: hidden;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .input-box input[type="text"] {
+        border: none !important;
+        height: 100%;
+        font-size: 1.6em;
+        outline: none;
+        background-color: transparent;
+        width: 100%
+    }
+
+    .input-box input::placeholder {
+        text-align: center;
+        color: #1d2849;
+        font-weight: bold;
+        font-size: 1.2em !important;
+    }
+
+    .input-box input::-webkit-input-placeholder {
+        text-align: center;
+        color: #1d2849;
+        font-weight: bold;
+        font-size: 16px !important;
+
+    }
+    .input-box input::-moz-input-placeholder {
+        text-align: center;
+        color: #1d2849;
+        font-weight: bold;
+        font-size: 22px !important;
+    }
+    .input-box input::-ms-input-placeholder {
+        text-align: center;
+        color: #1d2849;
+        font-weight: bold;
+        font-size: 22px !important;
+    }
+
+    .placeholder-fix:focus::-webkit-input-placeholder {
+        color: transparent;
+    }
+
+    .placeholder-fix:focus::-moz-placeholder {
+        color: transparent;
+    }
+
+    .placeholder-fix:-moz-placeholder {
+        color: transparent;
+    }
+
+    .input-box .icon {
+        padding: 5px;
+    }
+
+    @media all and (max-width: 600px) {
+        .border-r {
+            border: none;
+        }
+
+        .section-paragraph {
+            width: 80%;
+        }
+    }
+    #subscribe-Modal .modal-dialog {
+        z-index: 9999;
+    }
+
+    div#login-Modal .modal-dialog {
+        z-index: 99999;
+    }
+    /* test start *
+    /*test end */
+</style>
+
+<body class="body_index">
+    <main id="app">
+        <header class="new-index new-index-customize header-img">
+            <nav class="navbar navbar-default new-index " style="padding-top: 14px;">
+                <div class="container">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <!-- <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"> -->
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="index.html">
+                            <img src="images/Wanderift_Logo_2.png" style="width: 180px;">
+                        </a>
+
+                        <div class="mobile-sign-in">
+                            <ul v-if="greeting!= null">
+                                <li><a href="account.html">Account</a></li>
+                                <li><a href="account.html" class="btn btn-primary nav-sub"><b>
+                                            {{tokens.available | tokens}}
+                                        </b></a>
+                                </li>
+                            </ul>
+                            <ul v-else>
+                                <li><a class="login-Modal" href="" role="button" data-toggle="modal" data-target="#login-Modal">Sign In</a></li>
+                                <li><a href="" role="button" data-toggle="modal" data-target="#subscribe-Modal"
+                                        class="subscribe-Modal">Sign Up</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="navbar" id="bs-example-navbar-collapse-1">
+                            <ul v-if="greeting!= null" class="nav navbar-nav navbar-right"
+                                style="display: inline-block">
+                                <li><a href="#" role="button" data-target="">{{ greeting }}</a></li>
+                                <li><a href="account.html">Account</a></li>
+                                <li><a href="account.html" class="btn btn-primary nav-sub"><b>
+                                            {{tokens.available | tokens}}
+                                        </b></a>
+                                </li>
+                            </ul>
+                            <ul v-else class="nav navbar-nav navbar-right" style="display: inline-block">
+                                <li><a href="corporate-subscription.html">Corporate Subscription</a></li>
+                                <li><a href="how-it-works.html">How it Works</a></li>
+                                <li><a class="login-Modal" href="" role="button" data-toggle="modal" data-target="#login-Modal">Sign In</a></li>
+                                <li><a href="" role="button" data-toggle="modal" data-target="#subscribe-Modal"
+                                        class="nav-sub subscribe-Modal">Sign Up</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+
+                    <!-- /.navbar-collapse -->
+                </div>
+                <!-- /.container-fluid -->
+            </nav>
+        </header>
+
+
+        <!--Code start here-->
+        <div class="subscription_top">
+            <div class="content" style="height:120px;">
+                <div class="container">
+                        <h2 style="font-family: karla; font-weight: bold;">Corporate Subscription Plan</h2>
+                </div>
+            </div>
+        </div>
+        <section class="info">
+            <div class="container">
+                <h3 style="padding-top:20px; margin-bottom:15px;">Corporate Travel Done Right</h3>
+                <p class="section-paragraph" style="width:550px; line-height:1.8; padding-bottom: 30px; padding-top:10px;">
+                    Your employees travel for work, and those costs keep getting higher and higher.  You will save your company thousands each year when booking through Wanderift!
+                </p>
+
+                <div class="tab">
+                    <p class="title" style="font-size:22px;">
+                        <img src="images/getting-started.png" class="icon" alt="icon" /> Getting Started
+                    </p>
+                </div>
+
+                <div class="contents" style="padding-bottom: 50px; margin-top: 20px;">
+                    <p class="title" style="font-size: 18px;">
+                        <img src="images/getting-started.png" class="icon" alt="icon" /> Getting Started with Wanderift
+                    </p>
+                    <p class="text" style="padding-bottom:10px; font-size: 16px; font-weight: 400;">
+                        We have made it very easy to get started.  All you have to do is enter your companies name, an email address, and a password.  Once you do all of that, just enter your traveler information and purchase your tokens.  The final step is adding your employees to the account.
+                    </p>
+                    <p class="title" style="padding-top:20px; font-size: 18px;">
+                        <img src="images/rollover_one.png" class="icon" alt="icon" /> Do Your Tokens Expire?
+                    </p>
+                    <p class="text" style="padding-bottom:10px; font-size: 16px; font-weight: 400;">
+                        Tokens through Wanderift Corporate never expire.  These tokens can be used by any of the employees you have added.
+                    </p>
+                    <p class="title" style="padding-top:20px; font-size: 18px;">
+                        <img src="images/adding-employees.png" class="icon" alt="icon" /> Adding Employees
+                    </p>
+                    <p class="text" style="padding-bottom:10px; font-size: 16px; font-weight: 400;">
+                        You can add as many employees to your company account as you please.  All you have to do is enter your employees email address, and they will receive an email invite to create their account.  The next step is to have your employees create their free Wanderift account, and they will be all set to start booking!
+                    </p>
+                </div>
+
+                <div class="tab">
+                    <p class="title" style="font-size:22px;">
+                        <img src="images/tokens_ticket.png" class="icon" alt="icon" /> Tokens
+                    </p>
+                </div>
+
+                <div class="contents" style="padding-bottom: 50px; margin-top: 20px;">
+                    <p class="title" style="font-size: 18px;">
+                        <img src="images/tokens_ticket.png" class="icon" alt="icon" /> What are tokens?
+                    </p>
+                    <p class="text" style="padding-bottom:10px; font-size: 16px; font-weight: 400;">
+                        One token equals a one-way flight.
+                    </p>
+                    <p class="title" style="padding-top:20px; font-size: 18px;">
+                        <img src="images/rollover_one.png" class="icon" alt="icon" /> What Happens to My Unused Tokens?
+                    </p>
+                    <p class="text" style="padding-bottom:10px; font-size: 16px; font-weight: 400;">
+                        With a Wanderift Corporate plan, your tokens never expire.  You will not have to worry about any unused tokens!
+                    </p>
+                    <p class="title" style="padding-top:20px; font-size: 18px;">
+                        <img src="images/tokens_ticket.png" class="icon" alt="icon" /> Can I share or send my tokens
+                    </p>
+                    <p class="text" style="padding-bottom:10px; font-size: 16px; font-weight: 400;">
+                        Yes, tokens can be shared or sent, you just need to have the traveler your sneding the tokens to
+                        create there free Wanderift account
+                    </p>
+                </div>
+
+
+                <div class="tab">
+                    <p class="title" style="font-size:22px;">
+                        <img src="images/calendar.png" class="icon" alt="icon" /> Booking Window
+                    </p>
+                </div>
+
+                <div class="contents" style="padding-bottom: 50px; margin-top: 20px;">
+                    <p class="title" style="font-size: 18px;">
+                        <img src="test/images/skyscroller_package.png" class="icon" alt="icon" /> What Is Our Booking Window?
+                    </p>
+                    <p class="text" style="padding-bottom:10px; font-size: 16px; font-weight: 400;">
+                        You can book your next big company trip as early as one day in advance!  That way if any last-minute meetings come up, you can be sure to fly out next day!
+                    </p>
+                </div>
+
+                <div class="tab">
+                    <p class="title" style="font-size:22px;">
+                        <img src="images/payments.png" class="icon" alt="icon" /> Payments
+                    </p>
+                </div>
+
+                <div class="contents" style="padding-bottom: 50px; margin-top: 20px;">
+                    <p class="title" style="font-size: 18px;">
+                        <img src="images/how-do-payments-work.png" class="icon" alt="icon" /> How Do Payments Work?
+                    </p>
+                    <p class="text" style="padding-bottom:10px; font-size: 16px; font-weight: 400;">
+                        We make paying for your companies tokens very easy!  All you have to do is enter your credit card information into our secure online form.  We utilize a service that has a very strong security on all of your important personal information.
+                    </p>
+                    <p class="title" style="font-size: 18px;">
+                        <img src="images/tokens_ticket.png" class="icon" alt="icon" /> Receiving Tokens
+                    </p>
+                    <p class="text" style="padding-bottom:10px; font-size: 16px; font-weight: 400;">
+                        There will be a temporary hold on your tokens until your ACH Payment has been processed.
+                    </p>
+                    <p class="title" style="padding-top:20px; font-size: 18px;">
+                        <img src="images/rollover_one.png" class="icon" alt="icon" /> Tokens Are All Gone…Now What?
+                    </p>
+                    <p class="text" style="padding-bottom:10px; font-size: 16px; font-weight: 400;">
+                        Once your tokens are all used up, you can add more.  To make things easy, we can auto renew your tokens for you.  That eliminates any chance of you missing your next big meeting!
+                    </p>
+                    <p class="title" style="padding-top:20px; font-size: 18px;">
+                        <img src="images/only-pay-for-what-you-need.png" class="icon" alt="icon" /> Only Pay for What You Need
+                    </p>
+                    <p class="text" style="padding-bottom:10px; font-size: 16px; font-weight: 400;">
+                        Use the slider below to choose how many tokens you will need for your company.  Just a friendly reminder that these tokens will never expire!
+                    </p>
+                </div>
+
+
+            </div>
+            <small style="font-size:14px;font-weight:400;">Click each box for more information</small>
+
+        </section>
+
+        <section class="payment">
+            <div class="container">
+                <h3 style="margin-bottom:15px;">Only Pay For What You Need</h3>
+                <p class="section-paragraph" style="width:500px; line-height:1.8">
+                  Use the slider to choose how many tokens you will need for your companies travel.  Keep in mind that these tokens never expire!
+                </p>
+
+                <div class="slider-container" style="height:150px;">
+                    <div class="row">
+                        <div class="col-md-8 col-sm-12 slider-div" style="height:150px;">
+                            <h4 class="slider-title">Choose Your Tokens</h4>
+                            <div class="slider-wrap">
+                                <div class="range-slider">
+                                    <input class="range-slider__range" type="range" value="50" min="10" max="100"
+                                        step="1" id="tockenSlider">
+                                </div>
+                            </div>
+                            <div class="tockens-count-slider">
+
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-12 total-tockens">
+                            <h5>Total Tokens</h5>
+                            <p class="number" id="tockens">50</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="payment-infos">
+                    <div class="payment-inf border-r" style="color: #001756; font-weight:bold;">
+                        Total Price <div class="number" id="totalPrice">$2736</div>
+                    </div>
+                    <div class="payment-inf border-r" style="color: #001756; font-weight:bold;">
+                        Cost Per Token <div class="number" id="perTocken"></div>
+                    </div>
+                    <div class="payment-inf" style="color: #001756; font-weight:bold;">
+                        Total Travel Savings <div id="totalSaving" class="number">$3300</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta">
+            <h3 style="margin-bottom:15px;">Ready To Start Saving?</h3>
+            <p class="section-paragraph" style="width:500px; line-height:1.8">
+                Enter some details below and you will be on your way to saving on your companies travel!
+            </p>
+            <div class="cta-box">
+                <form >
+
+
+                    <div class="input-box">
+                        <div id="icon1" class="icon">
+                            <img src="images/company.png" alt="ticket" width="35px">
+                        </div>
+                        <div class="input-wrap">
+                            <input id="input1" type="text" placeholder="Company" class="placeholder-fix">
+                        </div>
+
+                    </div>
+                    <div class="input-box">
+                        <div id="icon2" class="icon">
+                            <img src="images/email.png" alt="ticket" width="35px">
+                        </div>
+                        <div class="input-wrap">
+                        <input id="input2" type="text" placeholder="Email Address" class="placeholder-fix" >
+                        </div>
+                    </div>
+                    <div class="input-box">
+                        <div id="icon3" class="icon">
+                            <img src="images/password.png" alt="ticket" width="35px">
+                        </div>
+                        <div class="input-wrap">
+                        <input id="input3" type="text" placeholder="Password" class="placeholder-fix">
+                    </div>
+                    </div>
+                    <!-- <a href="account-corporate-subscription.html"> -->
+                        <button class="btn-submit" id="btn-submit" onclick="getStarted()">Get Started</button>    
+                    <!-- </a> -->
+                    
+                </form>
+            </div>
+            </div>
+        </section>
+        <div class="footer-new ">
+            <div class="container ">
+                <div class="footer-top " style="margin-left: 160px;margin-right: 160px;padding-top: 50px; ">
+                    <div class="row footer-top-row ">
+                        <div class="col-md-3 ">
+                            <div class="footer-menu">
+                                <h4 style="padding-bottom: 10px; color: #F7F9FF; ">Contact</h4>
+                                <a href="how-it-works.html" style="font-size: 14px; color: #F7F9FF; ">Help / FAQ</a>
+                                <a href="media.html " style="font-size: 14px; color: #F7F9FF; ">Press</a>
+                                <a href="# " style="font-size: 14px; color: #F7F9FF; ">Partners</a>
+                            </div>
+                        </div>
+                        <div class="col-md-3 ">
+                            <div class="footer-menu ">
+                                <h4 style="padding-bottom: 10px; color: #F7F9FF; ">Company</h4>
+                                <a href="about-us.html " style="font-size: 14px; color: #F7F9FF; ">About</a>
+                                <a href="media.html " style="font-size: 14px; color: #F7F9FF; ">Mobile</a>
+                                <a href="how-it-works.html" style="font-size: 14px; color: #F7F9FF; ">How it Works</a>
+                            </div>
+                        </div>
+                        <div class="col-md-3 ">
+                            <div class="footer-menu ">
+                                <h4 style="padding-bottom: 10px; color: #F7F9FF; ">More</h4>
+                                <a href="https://skyscroller.com/"
+                                    style="font-size: 14px; color: #F7F9FF; ">Skyscroller</a>
+                                <a href="ads.html" style="font-size: 14px; color: #F7F9FF; ">Advertising</a>
+                                <a href="# " style="font-size: 14px; color: #F7F9FF; ">Airline Fees</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom " style="height: 250px; ">
+                    <div class="footer-bottom-titles ">
+                        <a href="images/Wanderift_Privacy_Policy.pdf" class="title-link "
+                            style="font-size: 14px; color: #F7F9FF; ">Privacy Policy</a>
+                        <a href="images/Wanderift_terms_of_Use.pdf" class="title-link "
+                            style="font-size: 14px; color: #F7F9FF; ">Terms & Conditions </a>
+                        <a href="#" class="title-link " style="font-size: 14px; color: #F7F9FF; ">Wanderift LLC</a>
+                    </div>
+
+                    <div class="footer-bottom-description "
+                        style="font-size:14px; padding-top:10px; padding-bottom:5px; color: #F7F9FF; ">Save time and money when booking through Wanderift.  You will always pay the same price for your flight when booking with tokens.
+
+                    </div>
+
+                    <div class="footer-bottom-social-links ">
+                        <a href="https://www.instagram.com/wanderift/" class="ig-link "><img src="asset/instagram.png "
+                                alt=" " style="width:30px; height:30px; "></a>
+                        <a href="https://twitter.com/wanderift" class="twit-link "><img src="asset/twit.png " alt=" "
+                                style="width:30px; height:30px; "></a>
+                        <a href="https://www.facebook.com/Wanderift/" class="face-link "><img src="asset/face.png "
+                                alt=" " style="width:30px; height:30px; "></a>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <a href="# " class="ig-link "><img src="images/Wanderift_Logo_2.png " alt=" "
+                            style="width:140px; padding-bottom: 40px; "></a>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- MODALS -->
+        <!-- ========================Flight Search Dialog======================== -->
+        <!-- Modal -->
+        <div class="modal fade" id="flightSearchModal" tabindex="-1" role="dialog" aria-labelledby="flightSearchModal"
+            aria-hidden="true" style="margin-top: 200px!important;">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content welcome-wande" style="text-align: center">
+
+                    <div class="modal-body">
+                        <h3
+                            style="font-size: 20px;font-weight: bold; color: #141F3F; opacity: 50%; margin-top: 10px; line-height:1.5; margin-bottom:5px; margin-left:0px;">
+                            Oops, you need tokens to book this flight</h3>
+                        <p
+                            style="font-size: 16px;font-weight: bold; color: rgba(20, 31, 63, 0.877); opacity: 50%; margin-top: 15px; margin-bottom: 15px; line-height:1.5;">
+                            Select your Wanderift subscription to receive your tokens and start saving on your flights
+                            today
+                        </p>
+                        <button href="index.html" type="button" class="btn btn-primary"
+                            style="background-color:#00B5FF; border-color:#00B5FF;">Get Started
+                        </button>
+                        <h3
+                            style="font-size: 12px;font-weight: bold; color: #141F3F; opacity: 50%; margin-top: 15px; line-height:1.5; margin-left:0px;">
+                            Already have an account?<a class="login-Modal" role="button" data-toggle="modal"
+                                data-target="">
+                                Sign In</a></h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ========================Flight Search Dialog======================== -->
+    </main>
+<!-- modals -->
+
+        <!-- signIn modal -->
+        <div
+            class="modal fade"
+            id="login-Modal"
+            tabindex="-1"
+            role="dialog"
+            aria-labelledby="loginModalLabel"
+            aria-hidden="true">
+            <!-- <div class="modal-backdrop" style="display: none"></div> -->
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                        <div class="modal-header border-0">
+                                <a  class="close m-0 bg-transparent float-left" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">close</span>
+                                </a>
+                        </div>
+                    <div class="modal-body text-center">
+                        <div class="login-head">
+                            <h3 class="mt-0">Sign In</h3>
+                            <p class="m-0">Looking to book your next gateway?</p>
+                            <p >Sign in and start saving!</p>
+                        </div>
+                        <div class="login-body w-75 m-auto">
+                            <form>
+                              <div class="form-group">
+                                  <input type="text" class="form-control sharp text-center" placeholder="Company" id="company_field" required/>
+                              </div>
+                                <div class="form-group">
+                                    <input type="email" class="form-control sharp text-center" placeholder="Email" id="email_field" required/>
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" class="form-control sharp text-center" id="password_field" placeholder="Password" required/>
+                                </div>
+                                <div class="form-group">
+                                    <a id="forgot-password" href="#">Forgot Password?</a>
+                                </div>
+                                <div class="form-group">
+                                    <a class="btn btn-primary btn-login" onclick="login()">Sign In</a>
+                                </div>
+                                <div class="form-group">
+                                    <p>By selecting "Sign in" you agree to Wanderift <a href="#" >Term of Use and Service</a></p>
+                                    <p>Click <a href="#" >HERE</a> to sign in to Corporate Subscription</p>
+                                </div>
+                                <!-- <div class="form-group">
+                                    <a href="#" id="started">Don't have an account? Get Started</a>
+                                </div> -->
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- signUp modal -->
+        <div
+            class="modal fade"
+            id="subscribe-Modal"
+            tabindex="-1"
+            role="dialog"
+            aria-labelledby="subscribeModalLabel"
+            aria-hidden="true">
+            <!-- <div class="modal-backdrop" style="display: none"></div> -->
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                        <div class="modal-header border-0">
+                                <a  class="close m-0 bg-transparent float-left" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">close</span>
+                                </a>
+                        </div>
+                    <div class="modal-body text-center">
+                        <div class="login-head">
+                            <h3 class="mt-0">Sign Up</h3>
+                            <p class="m-0">Enter a few detais below and get started for free</p>
+                        </div>
+                        <div class="login-body w-75 m-auto">
+                            <form>
+                                <div>
+                                  <div class="form-group">
+                                      <input type="text" class="form-control sharp text-center" placeholder="Company" id="company" required/>
+                                  </div>
+                                    <div class="form-group">
+                                        <input type="email" class="form-control sharp text-center" placeholder="Email" id="email" required/>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" class="form-control sharp text-center" id="password" placeholder="Password" required/>
+                                    </div>
+                                </div>
+
+
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <a class="btn btn-primary btn-login" id="submitBtn" onclick="signup()">Sign Up</a>
+                                        </div>
+                                        <div class="form-group">
+                                            <p>By selecting "Sign Up" you agree to Wanderift <a href="#" >Term of Use and Service</a></p>
+                                            <p>Looking to save on business travel tickets click <a href="#" >HERE</a> for Corporation Subscription</p>
+
+                                        </div>
+                                        <!-- <div class="form-group">
+                                            <a href="#" id="login">Already have an account? Sign In</a>
+                                        </div> -->
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+
+<script src="https://www.gstatic.com/firebasejs/5.7.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.7.2/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.7.2/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.7.2/firebase-firestore.js"></script>
+<script src="js/firebase-config.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script src="js/vuejs/how-it-works.js"></script>
+<script src="js/jquery-3.1.0.min.js"></script>
+<script src="v2/moment.js"></script>
+<script src="js/Signupforsubscription.js"></script>
+<script src="js/Loginforsubscription.js"></script>
+<script src="js/flights-slick.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/plugin.js"></script>
+<script src="js/plugin-2.js"></script>
+<script src="js/jquery.nice-select.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.9/js/intlTelInput.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.9/js/intlTelInput.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.9/js/utils.js"></script>
+
+<!--Slider and inputs-->
+<script>
+    (function () {
+        let slider = document.getElementById("tockenSlider");
+        let tockens = document.getElementById("tockens");
+        let totalPrice = document.getElementById("totalPrice");
+        let costpertockenDOM = document.getElementById("perTocken");
+        let totalSavingDOM = document.getElementById("totalSaving");
+        let costPerTocken = 117;
+        const fixedPrice = 180;
+        const StartingTockens = slider.value;
+        let totalSavingPerTocken = fixedPrice - costPerTocken;
+
+        totalSavingDOM.innerHTML = "$" + totalSavingPerTocken * StartingTockens;
+        costpertockenDOM.innerHTML = '$' + costPerTocken;
+        slider.oninput = function () {
+            if (this.value >= 50) {
+                costPerTocken = 117;
+                costpertockenDOM.innerHTML = '$' + costPerTocken;
+                totalSavingPerTocken = fixedPrice - costPerTocken;
+            }
+            else if (this.value >= 25){
+                costPerTocken = 121;
+                costpertockenDOM.innerHTML = '$' + costPerTocken;
+                totalSavingPerTocken = fixedPrice - costPerTocken;
+            }
+            else {
+                costPerTocken = 123;
+                costpertockenDOM.innerHTML = '$' + costPerTocken;
+                totalSavingPerTocken = fixedPrice - costPerTocken;
+            }
+            tockens.innerHTML = this.value;
+            totalPrice.innerHTML = '$' + this.value * costPerTocken;
+            totalSavingDOM.innerHTML = "$" + totalSavingPerTocken * this.value;
+        }
+        for (let i = 1; i <= 3; i++) {
+            document.getElementById("input" + i).addEventListener("focus", function() {
+                document.getElementById("icon" + i).style.display = "none";
+            });
+            document.getElementById("input" + i).addEventListener("focusout", function() {
+                if(document.getElementById("input" + i).value == "") {
+                    document.getElementById("icon" + i).style.display = "block";
+                }
+
+            })
+        }
+    })();
+</script>
+
+<!--Expanding boxes-->
+<script>
+    var telInput = $("#phone"),
+        errorMsg = $("#error-msg"),
+        validMsg = $("#valid-msg");
+
+    // initialise plugin
+    telInput.intlTelInput({
+
+        allowExtensions: true,
+        formatOnDisplay: true,
+        autoFormat: true,
+        autoHideDialCode: true,
+        autoPlaceholder: true,
+        defaultCountry: "auto",
+        ipinfoToken: "yolo",
+
+        nationalMode: false,
+        numberType: "MOBILE",
+        //onlyCountries: ['us', 'gb', 'ch', 'ca', 'do'],
+        preferredCountries: ['sa', 'ae', 'qa', 'om', 'bh', 'kw', 'ma'],
+        preventInvalidNumbers: true,
+        separateDialCode: true,
+        initialCountry: "auto",
+        geoIpLookup: function (callback) {
+            $.get("http://ipinfo.io", function () {}, "jsonp").always(function (resp) {
+                var countryCode = (resp && resp.country) ? resp.country : "";
+                callback(countryCode);
+            });
+        },
+        utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.9/js/utils.js"
+    });
+
+    var reset = function () {
+        telInput.removeClass("error");
+        errorMsg.addClass("hide");
+        validMsg.addClass("hide");
+    };
+
+    // on blur: validate
+    telInput.blur(function () {
+        reset();
+        if ($.trim(telInput.val())) {
+            if (telInput.intlTelInput("isValidNumber")) {
+                validMsg.removeClass("hide");
+            } else {
+                telInput.addClass("error");
+                errorMsg.removeClass("hide");
+            }
+        }
+    });
+
+    // on keyup / change flag: reset
+    telInput.on("keyup change", reset);
+
+    jQuery(function ($) {
+        $(".tab").click(function () {
+            var id = $(this).index(".tab");
+
+            $(this).toggleClass("active");
+            $(".contents").eq(id).slideToggle('slow');
+        });
+    });
+</script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#image-loader').hide();
+        $("#searchFlight_w").click(function() {
+            $('.flight-display').css("display", "none");
+            $('#image-loader').show();
+            $('html,body').animate({
+                // scrollTop: 500
+            }, 'slow');
+            return false;
+            $('.flight-display').css("display", "block");
+            scrollTop: 500
+        });
+    });
+
+    $("#open-popup").click(function() {
+        $("body").addClass('modal-open');
+        $("body").css('padding-right', '17px');
+        $('#subscribe-Modal').show();
+        $('#subscribe-Modal').addClass('in');
+        $('.modal-backdrop').show();
+        $('.modal-backdrop').addClass('in');
+
+    });
+    
+    $("#login-Modal-btn").click(function() {
+        $("body").addClass('modal-open');
+        $("body").css('padding-right', '17px');
+        $('#subscribe-Modal').hide();
+        $('#subscribe-Modal').remove('in');
+        $('#login-Modal').show();
+        $('#login-Modal').addClass('in');
+        $('.modal-backdrop').show();
+        $('.modal-backdrop').addClass('in');
+
+    });
+    $(".modal-backdrop").click(function() {
+        $("body").removeClass('modal-open');
+        $("body").css('padding-right', '0px');
+        // $('#subscribe-Modal').hide();
+        $('#subscribe-Modal').removeClass('in');
+        $('.modal-backdrop').hide();
+        $('.modal-backdrop').removeClass('in');
+        // $('#login-Modal').hide();
+        $('#login-Modal').removeClass('in');
+        $('#login-Modal').css('top', '-10000px');
+        $('#subscribe-Modal').css('top', '-10000px');
+    });
+
+
+    $(document).ready(function() {
+        setTimeout(function() {
+            $('html, body').animate({
+                    scrollTop: $(".body-page").offset().top - 70
+                },
+                'slow');
+        }, 1000);
+    });
+
+    $("#btn-submit").click(function() {
+        console.log("I am here");
+        window.location = "account-corporate-subscription.html"
+
+    });
+
+    $('a.login-Modal').on('click', function(e) {
+        e.preventDefault()
+        $("body").addClass('modal-open');
+        $('#login-Modal').css('top', '0px');
+        $('#login-Modal').addClass('in');
+        $('#login-Modal .modal-backdrop').show();
+        $('#login-Modal .modal-backdrop').addClass('in');
+        $($('.mobile-sign-in ul li')[1]).remove();
+        $($('.mobile-sign-in ul li')[0]).text('Back');
+        $($('.mobile-sign-in ul li')[0]).css({
+            'border': 'none',
+            'width': '100%'
+        });
+        setTimeout(function(){
+            $($('.mobile-sign-in ul')[0]).on('click', function(e){
+                e.preventDefault();
+                location.reload()
+            });
+        }, 300);
+        $('html').css('overflow-y', 'hidden');
+        $('.body_index #login-Modal').show();
+    })
+    $('a.subscribe-Modal').on('click', function(e) {
+        e.preventDefault()
+        $("body").addClass('modal-open');
+        $('#subscribe-Modal').css('top', '0px');
+        $('#subscribe-Modal').addClass('in');
+        $('#subscribe-Modal .modal-backdrop').show();
+        $('#subscribe-Modal .modal-backdrop').addClass('in');
+        $($('.mobile-sign-in ul li')[1]).remove();
+        $($('.mobile-sign-in ul li')[0]).text('Back');
+        $($('.mobile-sign-in ul li')[0]).css({
+            'border': 'none',
+            'width': '100%'
+        });
+        setTimeout(function(){
+            $($('.mobile-sign-in ul')[0]).on('click', function(e){
+                e.preventDefault();
+                location.reload()
+            });
+        }, 300);
+        $('html').css('overflow-y', 'hidden');
+        $('.body_index #subscribe-Modal').show();
+    });
+
+
+    $('#slider-one').carousel()
+    $('#slider-two').carousel()
+
+    if($(window).outerWidth() < 500){
+        if(localStorage.getItem('wanderlift') == 'true'){
+            localStorage.setItem('wanderlift', 'false')
+            $('.body_index .footer-new, .body_index .body-page').css('display', 'block');
+            $('header.new-index, .welcome-wande').css('display', 'none');
+        } else if(localStorage.getItem('wanderlift') == 'false'){
+            $('.body_index .before-load.bg-change, .body_index .footer-new, .body_index .body-page, .welcome-wande').css('display', 'none');
+            $('header.new-index').css('display', 'block');
+        }
+
+        $('.btn-search').on('click', function(){
+            localStorage.setItem('wanderlift', 'true')
+        });
+
+        $('.flight-box-back').on('click', function(){
+            localStorage.setItem('wanderlift', 'false');
+            location.reload();
+        })
+    }
+
+</script>
+
+</html>

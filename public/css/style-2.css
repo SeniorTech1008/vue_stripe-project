@@ -1,0 +1,5128 @@
+@font-face {
+    font-family: 'Karla';
+    src: url('../css/fonts/karla/karla-Regular.ttf');
+}
+
+.new-index.subs .offer {
+    transition: all .5s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -ms-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+}
+
+.card {
+    background-color: #F7F9FE;
+}
+
+.navbar-header {
+    width: 100%;
+}
+
+nav.new-index {
+    background-color: transparent;
+    border: none;
+}
+
+nav.new-index .navbar-right {
+    margin: 5px 0;
+}
+
+nav.new-index a {
+    font-size: 18px !important;
+    color: #fff !important;
+    padding: 10px 20px;
+    letter-spacing: 0 !important;
+    margin: 5px;
+}
+
+nav.new-index a::after {
+    background-color: #00B5FF;
+    bottom: -11px;
+}
+
+nav a.navbar-brand::after {
+    display: none;
+}
+
+nav.new-index .nav-sub {
+    background-color: #00B5FF;
+    border-radius: 5px;
+    text-align: center;
+    width: 140px;
+    padding: 10px 20px;
+}
+
+
+/*nav.new-index.scroll-bottom {
+  background-color: #FFF;
+  border-bottom: 1px solid #e7e7e7; }
+  nav.new-index.scroll-bottom a {
+    font-size: 13px !important;
+    color: #000 !important;
+    font-weight: bold;
+    padding: 10px 20px;
+    letter-spacing: 0 !important;
+    margin: 5px; }
+    nav.new-index.scroll-bottom a:hover {
+      color: #00B5FF !important; }
+  nav.new-index.scroll-bottom .nav-sub {
+    background-color: #00B5FF;
+    border-radius: 5px;
+    color: #FFF !important; }
+    nav.new-index.scroll-bottom .nav-sub:hover {
+      color: #000 !important; }*/
+
+header.new-index {
+    background-color: #141F3F;
+    background-size: cover;
+    position: relative;
+}
+
+header.new-index-customize2 {
+    background-image: url("../images/seattle_trending.png");
+    background-size: cover;
+    background-position: center;
+}
+
+header.new-index-hotel {
+    /*background-image: url("../images/beach-chairs.jpg");*/
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/Background_Hotel.png);
+    background-size: cover;
+    background-position: center;
+}
+
+header.new-index .fillter {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+}
+
+header.new-index .box {
+    color: #FFF;
+    position: relative;
+}
+
+header.new-index .box h1 {
+    font-size: calc(100% + 6vw);
+    font-weight: bold;
+}
+
+header.new-index .box h2 {
+    font-size: calc(100% + 2.5vw);
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+header.new-index .box p {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+header.new-index .form-container {
+    background-color: #FFF;
+    margin-top: 30px;
+    color: #777;
+    border-radius: 5px;
+    padding: 10px 20px;
+    padding-bottom: 0px;
+}
+
+header.new-index .form-container p {
+    height: 25px;
+}
+
+header.new-index .form-container button {
+    color: #FFF;
+    background-color: #00B5FF;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 16px;
+    height: 60px;
+}
+
+header.new-index .form-container button:hover {
+    background-color: #009bdb;
+}
+
+header.new-index .form-container select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+}
+
+header.new-index .form-container input {
+    border: none;
+    box-shadow: none;
+    color: #aaa;
+    font-size: 16px;
+}
+
+header.new-index .form-container input::placeholder {
+    font-size: 20px;
+    color: #aaa;
+}
+
+header.new-index .form-container .basic {
+    font-weight: bold;
+    padding: 0;
+    font-size: 20px;
+    color: #aaa;
+    width: 100%;
+    border: none;
+    box-shadow: none;
+}
+
+header.new-index .form-container .basic:focus {
+    box-shadow: none;
+}
+
+header.new-index .border-right {
+    position: relative;
+}
+
+header.new-index .border-right::after {
+    position: absolute;
+    content: "";
+    top: 10px;
+    bottom: 0px;
+    right: 0;
+    width: 1px;
+    background-color: #dedede;
+}
+
+.featured-on .small-img {
+    margin-top: 20px !important;
+}
+
+.new-index.featured-on {
+    padding: 30px 0;
+}
+
+.desktop-screen.row {
+    display: flex
+}
+
+@media only screen and (max-width: 768px) {
+    .new-index.featured-on.mobile-screen,
+    .new-index.destinations-new-index.mobile-screen,
+    .new-index.spiceup {
+        display: none;
+    }
+    div#pricing h3.text-center {
+        font-size: 30px !important;
+        padding-top: 20px
+    }
+    .new-index.trinding-trips {
+        padding-bottom: 0px;
+    }
+    .offset-1.col-10.tripSelectors.rounded-top {
+        padding-top: 15px;
+    }
+    div#bs-example-navbar-collapse-1 {
+        width: 110%;
+    }
+    .desktop-screen.row {
+        display: none;
+    }
+}
+
+.new-index.destinations-new-index h3 {
+    padding: 40px 0;
+    padding-top: 0;
+    color: #000;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.new-index.destinations-new-index div {
+    padding: 0;
+}
+
+.new-index.destinations-new-index .row {
+    margin: 0;
+}
+
+.new-index.destinations-new-index .img-container {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    transition: all .5s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -ms-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+}
+
+.new-index.destinations-new-index .big-img {
+    height: 500px;
+}
+
+.new-index.destinations-new-index .big-img .town-name h3 {
+    margin-top: 180px;
+}
+
+.new-index.destinations-new-index .small-img {
+    height: 243px;
+}
+
+.new-index.destinations-new-index .small-img .town-name h3 {
+    margin-top: 69px;
+}
+
+.new-index.destinations-new-index .zoom-in {
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+    margin: 7px;
+}
+
+.new-index.destinations-new-index .zoom-in:hover .img-container {
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -o-transform: scale(1.2);
+}
+
+.new-index.destinations-new-index .zoom-in .town-name {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.27);
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: #FFF;
+    font-weight: bold;
+    text-transform: none;
+}
+
+.new-index.destinations-new-index .zoom-in .town-name h3 {
+    color: #FFF;
+    margin-bottom: 10px;
+    padding: 0;
+}
+
+.new-index.destinations-new-index .zoom-in .town-name p {
+    font-size: 22px;
+}
+
+.new-index.trinding-trips {
+    padding-bottom: 50px;
+    color: #000;
+}
+
+.new-index.trinding-trips h3 {
+    /*    padding: 40px 0;*/
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.new-index.trinding-trips a {
+    color: #000;
+    text-decoration: none;
+}
+
+.new-index.trinding-trips a p {
+    margin: 0;
+    margin-top: 10px;
+    padding-left: 10px;
+    font-size: 26px;
+    font-weight: 800;
+}
+
+.new-index.trinding-trips a .description {
+    margin-top: 15px;
+    padding-left: 10px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.new-index.trinding-trips a .airline {
+    font-size: 18px;
+}
+
+.new-index.trinding-trips a .views {
+    font-size: 14px;
+    color: #ABAEBC;
+    margin-top: 15px;
+}
+
+.new-index.trinding-trips .small-img {
+    height: 250px;
+}
+
+.new-index.trinding-trips .img-container {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /*    margin: 5px 10px 15px 10px;*/
+    border-radius: 0px;
+}
+
+.new-index.trinding {
+    padding-bottom: 50px;
+    color: #000;
+}
+
+.new-index.trinding h3 {
+    padding: 40px 0;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.new-index.trinding a {
+    color: #000;
+    text-decoration: none;
+}
+
+.new-index.trinding a p {
+    margin: 0;
+    font-weight: bold;
+    padding-left: 8px;
+}
+
+.new-index.trinding .small-img {
+    height: 250px;
+}
+
+.new-index.trinding .img-container {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 5px 5px 15px 5px;
+    border-radius: 5px;
+}
+
+.overlay {
+    position: absolute;
+    height: 250px;
+    background: rgba(0, 0, 0, 0.3);
+    color: #fff;
+    font-weight: bold;
+    margin-top: -250px;
+    width: 92%;
+    /*      margin-left: 10px;*/
+    padding-top: 160px;
+    padding-left: 10px;
+}
+
+.overlay h3,
+.overlay h5 {
+    margin-top: 0px;
+}
+
+.trinding-trips .btn-deals {
+    position: absolute;
+    width: 35%;
+    /* float: right; */
+    margin-left: 54%;
+    margin-top: -11%;
+    padding: 10px !important;
+}
+
+.new-index.why-wanderift {
+    background-image: linear-gradient(#F8FBFC, #EFF7F8);
+    background-image: -webkit-linear-gradient(#F8FBFC, #EFF7F8);
+    background-image: -moz-linear-gradient(#F8FBFC, #EFF7F8);
+    background-image: -ms-linear-gradient(#F8FBFC, #EFF7F8);
+    background-image: -o-linear-gradient(#F8FBFC, #EFF7F8);
+    padding-top: 50px;
+}
+
+.new-index.why-wanderift h3 {
+    color: #000;
+    margin: 0;
+    padding-bottom: 40px;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.new-index.why-wanderift img {
+    margin: auto;
+}
+
+.new-index.why-wanderift p {
+    color: #444;
+    margin: 0;
+}
+
+.new-index.why-wanderift p.title {
+    font-size: 18px;
+    margin: 20px 0 10px 0;
+    font-weight: bold;
+    color: #000;
+}
+
+.new-index.why-wanderift .box {
+    margin-bottom: 50px;
+    padding: 0 10px;
+}
+
+.new-index.subs {
+    padding: 40px 0;
+}
+
+.new-index.subs .title {
+    font-weight: bold;
+    text-align: center;
+    color: #666;
+    max-width: 700px;
+    margin: auto;
+    font-size: 18px;
+}
+
+.new-index.subs h3 {
+    padding: 40px 0;
+    padding-bottom: 20px;
+    color: #666;
+    font-weight: bold;
+    font-size: calc(100% + 4vw);
+}
+
+.new-index.subs h4 {
+    padding-bottom: 40px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #000;
+}
+
+.new-index.subs .offer.float-right {
+    float: right;
+    border-left: 2px solid #e3e3e3;
+}
+
+.new-index.subs .offer.float-left {
+    float: left;
+    border-right: 2px solid #e3e3e3;
+}
+
+.new-index.subs .offer {
+    background-color: #fff;
+    margin: 30px 0;
+    padding: 30px;
+}
+
+.new-index.subs .offer:hover {
+    box-shadow: 0px 25px 55px #adadad;
+    border-radius: 20px;
+    border: 0px solid #e3e3e3;
+}
+
+.new-index.subs .offer img {
+    margin: auto;
+}
+
+.new-index.subs .offer h3 {
+    padding: 0;
+    color: #000;
+    font-size: 35px;
+}
+
+.new-index.subs .offer h4 {
+    font-size: 35px;
+    color: #666;
+}
+
+.new-index.subs .offer p {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.new-index.subs .offer a {
+    display: block;
+    margin: 40px auto;
+    background-color: #00B5FF;
+    color: #FFF;
+    padding: 15px;
+    text-align: center;
+    max-width: 200px;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+.new-index.subs .offer a:hover {
+    background-color: #009bdb;
+}
+
+.new-index.subs .default-hover {
+    box-shadow: 0px 25px 55px #adadad;
+    border-radius: 20px;
+    border: 0px solid #e3e3e3;
+}
+
+.new-index.get-started {
+    background-image: url("../images/get-started-cover.jpg");
+    background-size: cover;
+    padding: 50px 0;
+}
+
+.new-index.get-started h3 {
+    text-align: center;
+    font-size: 25px;
+    letter-spacing: 0;
+    color: #000;
+    margin-bottom: 20px;
+}
+
+.new-index.get-started .form-container {
+    max-width: 700px;
+    padding: 30px 50px;
+    margin: auto;
+    border-radius: 5px;
+    background-color: #FFF;
+}
+
+.new-index.get-started .form-container select {
+    font-weight: bold;
+    color: #000;
+}
+
+.new-index.get-started .form-container button {
+    color: #FFF;
+    background-color: #00B5FF;
+    width: 250px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    display: block;
+    margin: 30px auto;
+    letter-spacing: 3px;
+}
+
+.new-index.get-started .form-container button:hover {
+    background-color: #009bdb;
+}
+
+.signup .row {
+    margin: 0;
+}
+
+.signup .fly-smarter {
+    background-image: url(../images/Sign_Up.jpeg);
+    background-size: 100%;
+    height: 100px;
+    position: relative;
+    height: auto;
+}
+
+.signup .fly-smarter .filter {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.35);
+}
+
+.signup .fly-smarter .box {
+    color: #FFF;
+    max-width: 500px;
+    padding-left: 100px;
+}
+
+.signup .fly-smarter .box h2 {
+    font-weight: bold;
+}
+
+.signup .fly-smarter .box p {
+    line-height: 2;
+    margin-bottom: 30px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.signup .fly-smarter .box a {
+    color: #FFF;
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #000;
+    border-radius: 5px;
+    padding-top: 12px;
+}
+
+.signup .fly-smarter .box a:hover {
+    color: #aaa;
+}
+
+.signup .fly-smarter .box a i {
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+.signup .sign-up-section {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.signup .sign-up-section .form-container {
+    position: relative;
+}
+
+.signup .sign-up-section h2 {
+    color: #00B5FF;
+    font-weight: bold;
+    padding: 0 15px;
+    font-size: 36px;
+}
+
+.signup .sign-up-section p {
+    padding: 0 15px;
+    color: #444;
+}
+
+.signup .sign-up-section a {
+    color: #00B5FF;
+}
+
+.signup .sign-up-section label {
+    color: #ABAEBC;
+}
+
+.signup .sign-up-section input,
+.signup .sign-up-section select {
+    background-color: #EFEFF4;
+    border: none;
+    outline: none;
+    background-image: none;
+    margin-bottom: 5px;
+}
+
+.signup .sign-up-section select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+}
+
+.signup .sign-up-section .my-checkbox label {
+    padding: 10px;
+    position: relative;
+    top: -45px;
+    margin-left: 20px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.signup .sign-up-section button {
+    color: #FFF;
+    background-color: #00B5FF;
+    height: 50px;
+    font-weight: bold;
+    position: relative;
+    top: -10px;
+}
+
+.signup .sign-up-section button:hover {
+    background-color: #009bdb;
+}
+
+.signin .sign-up-section {
+    padding-top: 40px;
+}
+
+.signin p {
+    font-weight: bold;
+    margin: 30px auto;
+}
+
+.signin .fly-smarter {
+    background-image: url(../images/Sign_In.jpeg);
+}
+
+.signin button {
+    margin-top: 30px;
+}
+
+.signin #forgot-password {
+    display: block;
+    margin: 20px auto;
+}
+
+.new-index.have-qustion {
+    background-image: url("../images/get-started-cover.jpg");
+    background-size: cover;
+    margin-bottom: 0;
+}
+
+.new-index.have-qustion h3 {
+    margin: 0;
+    padding: 0;
+}
+
+.new-index.have-qustion .box {
+    background-color: #FFF;
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 50px;
+}
+
+.new-index.have-qustion .box input {
+    border: none;
+    box-shadow: none;
+    text-align: left;
+}
+
+.new-index.have-qustion .box input::placeholder {
+    text-align: left;
+}
+
+.new-index.have-qustion .box .my-row {
+    border: 2px solid #CCC;
+    margin: 0;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.new-index.have-qustion .box .my-row button {
+    width: 100px;
+    background-color: #00B5FF;
+}
+
+.new-index.have-qustion .box .my-row button:hover {
+    background-color: #009bdb;
+}
+
+.new-index.have-qustion p {
+    letter-spacing: 0;
+}
+
+.new-index.sub-page-footer li a {
+    letter-spacing: 0;
+}
+
+.sitemap {
+    border-top: 1px solid #ccc;
+    border-bottom: 2px solid #ccc;
+    background-color: #F8F9FB;
+    font-size: 12px;
+    box-shadow: 0 5px 10px #CCC;
+    margin-bottom: 6px;
+}
+
+.sitemap p {
+    margin: 0;
+    font-weight: bold;
+    padding: 20px 0;
+}
+
+
+/*# sourceMappingURL=style-2.css.map */
+
+.offer h3 {
+    padding: 0;
+    color: #000;
+    font-size: 30px !important;
+}
+
+.offer-price {
+    font-size: 28px !important;
+    color: #000 !important;
+    padding-bottom: 15px !important;
+}
+
+.offer-price span {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.offer .clear {
+    height: 2px;
+    background: #ccc;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.offer a {
+    margin: 0 !important;
+    max-width: 100% !important;
+}
+
+.new-index.subs .offer1 h4 {
+    font-size: 35px;
+    color: #666;
+}
+
+.new-index.subs .offer1 p {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.new-index.subs .offer1 a {
+    display: block;
+    margin-bottom: 15px;
+    background-color: #00B5FF;
+    color: #FFF;
+    padding: 8px;
+    text-align: center;
+    /*    max-width: 200px;*/
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 14px;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.new-index.subs .offer1 a:hover {
+    background-color: #009bdb;
+}
+
+.offer1 {
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 455px;
+}
+
+.offer1 h3 {
+    padding: 0;
+    color: #000 !important;
+    font-size: 20px !important;
+}
+
+.offer1 h3 {
+    padding: 25px 0 !important;
+    padding-bottom: 0px !important;
+}
+
+.offer1 .offer-price {
+    font-size: 18px !important;
+    color: #000 !important;
+    padding-bottom: 10px !important;
+}
+
+.offer1 h2 {
+    color: #000;
+}
+
+.freq-questions h5 {
+    font-size: 24px;
+    color: #000;
+    margin-bottom: 20px;
+    font-weight: 700;
+    margin-top: 20px;
+}
+
+.freq-questions p {
+    font-size: 20px;
+    color: #000;
+    margin-bottom: 20px;
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+.offer-price {
+    font-size: 28px !important;
+    color: #000 !important;
+    padding-bottom: 15px !important;
+}
+
+.offer-price span {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.offer1 .clear {
+    height: 2px;
+    background: #ccc;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.shadow1 {
+    box-shadow: 0 4px 6px 2px rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
+    padding-bottom: 20px;
+}
+
+.shadow2 {
+    box-shadow: 0 4px 6px 2px rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
+    padding-bottom: 20px;
+}
+
+.shadow1:hover {
+    transform: scale(1.04);
+    -webkit-transform: scale(1.04);
+    -ms-transform: scale(1.04);
+    -moz-transform: scale(1.04);
+    -o-transform: scale(1.04);
+    transition: all .5s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -ms-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+}
+
+.tisti-slider .shadow1 {
+    margin-bottom: 30px;
+}
+
+.tisti-slider .shadow2 {
+    margin-bottom: 30px;
+}
+
+.spicelist li {
+    padding-left: 48px;
+    font-size: 16px;
+    line-height: 30px;
+    font-weight: 600;
+    position: relative;
+    margin-bottom: 10px;
+    padding-right: 100px;
+}
+
+.footer {
+    background: #222229;
+    padding-top: 50px;
+}
+
+.footer .footer-menu {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.footer .footer-menu a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin: 15px;
+}
+
+.footer .store {
+    text-align: right;
+}
+
+.footer .store img {
+    width: 100px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+}
+
+.footer p {
+    color: #666;
+    font-weight: 600;
+}
+
+.footer .footer-menu-bottom {
+    text-align: right;
+}
+
+.footer .footer-menu-bottom a {
+    color: #666;
+    text-decoration: none;
+    font-weight: 600;
+    margin: 15px;
+}
+
+.tisti .box {
+    box-shadow: 0 4px 6px 2px rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
+}
+
+#login-Modal .modal-dialog, #login-Error-Modal .modal-dialog {
+    margin-top: 10%;
+    width: 420px;
+}
+
+#login-Error-Modal .modal-dialog {
+    margin-top: 2%;
+}
+
+#login-Modal .modal-content .login-head h3 {
+    font-size: 30px;
+    font-weight: 700;
+    color: #141F3F;
+}
+
+#login-Modal .modal-content .login-head p {
+    font-weight: 800;
+    color: #141F3F;
+}
+
+#login-Modal .modal-content .login-body {
+    padding-top: 20px;
+}
+
+#login-Modal .modal-content .login-body form .form-group {
+    margin-top: 10px;
+}
+
+#login-Modal .modal-content .login-body form input {
+    border: 2px solid #d8d8d8;
+    font-weight: 600;
+    height: 40px;
+}
+
+#login-Modal .modal-content .login-body form a {
+    font-weight: 600;
+    text-decoration: none;
+}
+
+#login-Modal .modal-content .login-body form .btn-login, #login-Error-Modal .modal-content .login-body .btn-login {
+    color: #FFF;
+    background-color: #00B5FF;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 16px;
+    /*    height: 60px;*/
+}
+
+#forgot-Password-Modal .modal-dialog {
+    margin-top: 10%;
+    width: 420px;
+}
+
+#forgot-Password-Modal .modal-content .login-head h3 {
+    font-size: 30px;
+    font-weight: 700;
+    color: #141F3F;
+}
+
+#forgot-Password-Modal .modal-content .login-head p {
+    font-weight: 800;
+    color: #141F3F;
+}
+
+#forgot-Password-Modal .modal-content .login-body {
+    padding-top: 20px;
+}
+
+#forgot-Password-Modal .modal-content .login-body form .form-group {
+    margin-top: 10px;
+}
+
+#forgot-Password-Modal .modal-content .login-body form input {
+    border: 2px solid #d8d8d8;
+    font-weight: 600;
+    height: 40px;
+}
+
+#forgot-Password-Modal .modal-content .login-body form a {
+    font-weight: 600;
+    text-decoration: none;
+}
+
+#forgot-Password-Modal .modal-content .login-body form .btn-login {
+    color: #FFF;
+    background-color: #00B5FF;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 16px;
+    /*    height: 60px;*/
+}
+
+#signup-Modal .modal-dialog {
+    margin-top: 6%;
+    width: 420px;
+}
+
+#signup-Modal .modal-content .login-head {
+    border-bottom: 4px solid #d8d8d8;
+}
+
+#signup-Modal .modal-content .login-head h3 {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+#signup-Modal .modal-content .login-head p {
+    font-weight: 800;
+}
+
+#signup-Modal .modal-content .login-body {
+    padding-top: 20px;
+}
+
+#signup-Modal .modal-content .login-body form .form-group {
+    margin-top: 10px;
+}
+
+#signup-Modal .modal-content .login-body form input {
+    border: 2px solid #d8d8d8;
+    font-weight: 600;
+    height: 40px;
+}
+
+#signup-Modal .modal-content .login-body form input:focus {
+    border-bottom: 3px solid #00B5FF;
+}
+
+#signup-Modal .modal-content .login-body form a {
+    font-weight: 600;
+    text-decoration: none;
+}
+
+#signup-Modal .modal-content .login-body form .btn-login {
+    color: #FFF;
+    background-color: #00B5FF;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 16px;
+    /*    height: 60px;*/
+}
+
+#subscribe-Modal .modal-dialog {
+    margin-top: 10%;
+    width: 420px;
+}
+
+#subscribe-Modal .modal-content .login-head h3 {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+#subscribe-Modal .modal-content .login-head p {
+    font-weight: 800;
+}
+
+#subscribe-Modal .modal-content .login-body {
+    padding-top: 20px;
+}
+
+#subscribe-Modal .modal-content .login-body form input {
+    border: 2px solid #d8d8d8;
+    font-weight: 600;
+    height: 40px;
+}
+
+#subscribe-Modal .modal-content .login-body form .form-group {
+    margin-top: 10px;
+}
+
+#subscribe-Modal .modal-content .login-body form input:focus {
+    border-bottom: 3px solid #00B5FF;
+}
+
+#subscribe-Modal .modal-content .login-body form a {
+    font-weight: 600;
+    text-decoration: none;
+}
+
+#subscribe-Modal .modal-content .login-body form .btn-login {
+    color: #FFF;
+    background-color: #00B5FF;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 16px;
+    /*    height: 60px;*/
+}
+
+.spiceup .mock-up img {
+    width: 118%;
+    margin-top: 12%;
+}
+
+.desktop-screen {
+    display: block;
+}
+
+.mobile-screen {
+    display: none;
+}
+
+.banner_text1 {
+    /*    font-size: 80px !important;*/
+    padding-top: 40px;
+}
+
+.banner_text2 {
+    font-size: 28px !important;
+}
+
+.mobile {
+    display: none;
+}
+
+nav.new-index2 {
+    background-image: url("../images/background.png");
+    background-size: cover;
+    /*background-position: 10px , 20px;*/
+    border: none;
+    padding-top: 5px;
+    padding-bottom: 65px;
+}
+
+nav.new-index2 .navbar-right {
+    margin: 5px 0;
+}
+
+nav.new-index2 a {
+    font-size: 16px !important;
+    color: #fff !important;
+    font-weight: bold;
+    padding: 10px 20px;
+    letter-spacing: 0 !important;
+    margin: 5px;
+}
+
+nav.new-index2 a::after {
+    background-color: #00B5FF;
+    bottom: -11px;
+}
+
+nav.new-index2 a.navbar-brand::after {
+    display: none;
+}
+
+nav.new-index2 .nav-sub {
+    background-color: #00B5FF;
+    border-radius: 5px;
+    color: #fff !important;
+    width: 140px;
+    text-align: center;
+}
+
+.search-results .heading {
+    font-weight: bold;
+    font-size: 32px;
+}
+
+.trip {
+    padding-bottom: 20px;
+    border-bottom: 3px solid #9f9f9f;
+}
+
+.trip h4 {
+    font-weight: bold;
+}
+
+.trip h4 span {
+    margin-left: 30px;
+    font-weight: normal;
+    color: #9f9f9f;
+}
+
+.trip form input {
+    border: 2px solid #d8d8d8;
+    font-weight: 700;
+    height: 50px;
+    font-size: 20px;
+    border-radius: 2px;
+    color: #000;
+}
+
+.trip .btn-search {
+    color: #FFF;
+    background-color: #00B5FF;
+    width: 70px;
+    padding: 10px;
+    text-align: center;
+    border: none;
+    border-radius: 2px;
+    font-weight: normal;
+    font-size: 20px;
+    float: right;
+}
+
+.token-dtails {
+    box-shadow: 0 4px 6px 2px rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.token-dtails img {
+    width: 60%;
+    margin-top: 0px;
+}
+
+.token-dtails p {
+    padding-top: 12px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.token-dtails .btn-subscribe {
+    color: #FFF;
+    background-color: #00B5FF;
+    padding: 10px;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 45px;
+}
+
+.today {
+    margin-top: 40px;
+}
+
+.today img {
+    width: 100%;
+}
+
+.result .small-img {
+    height: 250px;
+}
+
+.result .img-container {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 250px;
+}
+
+.result .description p {
+    font-size: 14px;
+}
+
+.result .description {
+    padding-right: 5%;
+    padding-left: 5%;
+}
+
+.result .btn-subscribe {
+    color: #FFF;
+    background-color: #00B5FF;
+    padding: 10px;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 10px;
+    width: 100%;
+    /*margin-right: 10%;*/
+}
+
+.header1 {
+    min-height: 200px !important;
+}
+
+.header1 .content h2 {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    color: #fff;
+    text-align: center;
+    font-weight: 800;
+    font-size: 50px;
+}
+
+.media-details {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.sub-media {
+    box-shadow: 0 4px 6px 2px rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 5px;
+    margin-top: 50px;
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    height: 200px;
+}
+
+.sub-media img {
+    width: 50%;
+    height: 40px;
+}
+
+.sub-media p {
+    margin-top: 30px;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.inquiries {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+    font-weight: 800;
+}
+
+.work-details {
+    padding-bottom: 50px;
+}
+
+.work-details .container {
+    width: 100%;
+    margin-right: 0px;
+    margin-left: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.work-details .row {
+    margin-right: 0px;
+    margin-left: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.work-details .col-md-6 {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.work-details img {
+    width: 100%;
+    height: 100%;
+}
+
+.work-details .description {
+    padding-top: 50px;
+    font-size: 16px;
+    font-weight: 600;
+    padding-left: 8%;
+    padding-right: 8%;
+}
+
+.work-details .description h2 {
+    font-size: 28px;
+    font-weight: 900;
+}
+
+.work-details .btn-account {
+    color: #FFF;
+    background-color: #00B5FF;
+    padding: 10px;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 16px;
+    margin-top: 10px;
+    width: 150px;
+    /*margin-right: 10%;*/
+}
+
+.work-questions {
+    padding-top: 30px;
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.work-questions .btn-faq {
+    color: #FFF;
+    background-color: #00B5FF;
+    padding: 10px;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 16px;
+    margin-top: 10px;
+    width: 150px;
+    cursor: pointer;
+    /*margin-right: 10%;*/
+}
+
+.work-questions .btn-faq:hover {
+    cursor: pointer;
+}
+
+.story {
+    box-shadow: 0 4px 6px 2px rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
+    margin-top: 40px;
+    text-align: center;
+    padding-left: 8%;
+    padding-right: 8%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.story h2 {
+    font-size: 30px;
+    font-weight: 900;
+}
+
+.story p {
+    margin-top: 30px;
+    font-size: 16px;
+    line-height: 30px;
+    text-align: justify;
+    font-weight: 500;
+}
+
+.team {
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.sub-team {
+    box-shadow: 0 4px 6px 2px rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
+    margin-top: 40px;
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    height: 100%;
+}
+
+.sub-team h2 {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 900;
+}
+
+.team-member {
+    margin-top: 40px;
+}
+
+.sub-team img {
+    width: 100%;
+}
+
+.sub-team .description {
+    padding-right: 40px;
+}
+
+.sub-team .description .member-name {
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.sub-team .description p {
+    margin-top: 15px;
+}
+
+.sub-testimonials {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    padding-right: 5%;
+}
+
+.sub-testimonials .head {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.sub-testimonials .location {
+    font-size: 16px;
+    color: #666;
+}
+
+.sub-testimonials .description {
+    font-size: 16px;
+    margin-top: 20px;
+    font-weight: 700;
+}
+
+.wandering {
+    background-image: url("../images/background.png");
+    background-size: cover;
+    position: relative;
+}
+
+.wandering .description {
+    color: #fff;
+    padding-top: 20px;
+    padding-bottom: 60px;
+    padding-right: 5%;
+}
+
+.wandering .description p {
+    font-size: 20px;
+}
+
+.wander-btn {
+    padding-top: 70px;
+    padding-bottom: 60px;
+}
+
+.wander-btn a {
+    margin: 20px;
+}
+
+.wander-btn .btn-start {
+    color: #FFF;
+    background-color: #00B5FF;
+    padding: 10px;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 16px;
+    margin-top: 10px;
+    width: 150px;
+    cursor: pointer;
+    width: 200px;
+}
+
+.wander-btn .btn-flight {
+    color: #FFF;
+    background-color: transparent;
+    border: 1px solid #fff;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 16px;
+    margin-top: 10px;
+    width: 150px;
+    cursor: pointer;
+    width: 200px;
+}
+
+.schedule {
+    box-shadow: 0 4px 6px 2px rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 8px;
+}
+
+.schedule .head {
+    /*    display: -webkit-inline-box;*/
+}
+
+.schedule h3 {
+    font-weight: 700;
+    font-size: 22px;
+}
+
+.btn-check {
+    box-shadow: 0 4px 6px 2px rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
+    background: #00B5FF;
+    color: #fff;
+    padding-left: 30px;
+    font-size: 16px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 50%;
+    font-weight: bold;
+    /*    float: right;*/
+    /*margin-top: -42px;*/
+}
+
+.schedule img {
+    width: 100%;
+}
+
+.schedule h4 {
+    font-weight: 900;
+    font-size: 16px;
+}
+
+.schedule h6 {
+    text-align: center;
+    color: #ccc;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.schedule p {
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: 900;
+    color: #000;
+}
+
+.subscription {
+    /*    margin-top: 30px;*/
+    box-shadow: 0 4px 6px 2px rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    border-radius: 5px;
+}
+
+.subscription h3 {
+    font-weight: 700;
+    font-size: 22px;
+}
+
+.tokens {
+    box-shadow: 0 4px 6px 2px rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 15px;
+    padding-bottom: 40px;
+    border-radius: 5px;
+}
+
+.tokens h3 {
+    font-weight: 700;
+    font-size: 22px;
+}
+
+.tokens p {
+    font-weight: 700;
+}
+
+.tokens .btn-deals {
+    color: #FFF;
+    background-color: #00B5FF;
+    width: 50%;
+    padding: 8px;
+}
+
+.add-ones {
+    margin-top: 30px;
+    box-shadow: 0 4px 6px 2px rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 15px;
+    padding-bottom: 70px;
+    border-radius: 5px;
+}
+
+.add-ones h3 {
+    font-weight: 700;
+    font-size: 22px;
+}
+
+.add-ones .sub-addons {
+    margin-top: 15px;
+    box-shadow: 0 4px 6px 2px rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-radius: 5px;
+}
+
+.add-ones .sub-addons .btn-deals {
+    width: 100%;
+    padding: 6px;
+    margin-top: 17%;
+}
+
+.add-ones h4 {
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.supports {
+    margin-top: 30px;
+    box-shadow: 0 4px 6px 2px rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 15px;
+    padding-bottom: 40px;
+    border-radius: 5px;
+}
+
+.supports h3 {
+    font-weight: 700;
+    font-size: 22px;
+    padding-bottom: 20px;
+}
+
+.supports p {
+    font-weight: 700;
+}
+
+.profile {
+    box-shadow: 0 4px 6px 2px rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 60px;
+    padding-bottom: 30px;
+    border-radius: 5px;
+}
+
+.profile .head {
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.profile .head h3 {
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.profile .head h2 {
+    font-size: 32px;
+    font-weight: 800;
+}
+
+.profile p {
+    font-weight: 700;
+}
+
+.profile a {
+    color: #000;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.profile .sub-body a {
+    color: #999;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.profile .profile-body .sub-body {
+    font-weight: 700;
+    font-size: 16px;
+    border-bottom: 1px solid #cdcdcd;
+    padding-top: 15px;
+    padding-bottom: 19px;
+}
+
+.profile .profile-body .sub-body .text-left {
+    text-align: left;
+}
+
+.profile .profile-body .sub-body .text-right {
+    text-align: right;
+    float: right;
+}
+
+.profile .logout {
+    margin-top: 80px;
+}
+
+#addons-Modal .modal-dialog {
+    margin-top: 10%;
+    width: 280px;
+    margin-left: 77%;
+}
+
+#addons-Modal .modal-content .login-head {
+    border-bottom: 4px solid #d8d8d8;
+}
+
+#addons-Modal .modal-content .login-head h3 {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+#addons-Modal .modal-content .login-head p {
+    font-weight: 800;
+    font-size: 24px;
+}
+
+#addons-Modal .modal-content .login-head p span {
+    font-weight: 800;
+    font-size: 18px;
+}
+
+#addons-Modal .modal-content .login-body {
+    padding-top: 20px;
+}
+
+#addons-Modal .modal-content .login-body form .form-group {
+    margin-top: 10px;
+}
+
+#addons-Modal .modal-content .login-body form input {
+    border: 2px solid #d8d8d8;
+    font-weight: 600;
+    height: 40px;
+}
+
+#addons-Modal .modal-content .login-body form input:focus {
+    border-bottom: 3px solid #00B5FF;
+}
+
+#addons-Modal .modal-content .login-body form a {
+    color: #000;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+#addons-Modal .modal-content .login-body form .btn-login {
+    color: #FFF;
+    background-color: #00B5FF;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 16px;
+    /*    height: 60px;*/
+}
+
+#current-Modal .modal-dialog {
+    margin-top: 12%;
+    width: 480px;
+    margin-left: 27%;
+}
+
+#current-Modal .modal-content .login-head {
+    border-bottom: 4px solid #d8d8d8;
+}
+
+#current-Modal .modal-content .login-head h3 {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+#current-Modal .modal-content .login-head p {
+    font-weight: 800;
+    font-size: 24px;
+}
+
+#current-Modal .modal-content .login-head p span {
+    font-weight: 800;
+    font-size: 18px;
+}
+
+#current-Modal .modal-content .login-body {
+    padding-top: 20px;
+}
+
+#current-Modal .modal-content .login-body form .form-group {
+    margin-top: 10px;
+}
+
+#current-Modal .modal-content .login-body form input {
+    border: 2px solid #d8d8d8;
+    font-weight: 600;
+    height: 40px;
+}
+
+#current-Modal .modal-content .login-body form input:focus {
+    border-bottom: 3px solid #00B5FF;
+}
+
+#current-Modal .modal-content .login-body form a {
+    color: #000;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+#current-Modal .modal-content .login-body form .btn-login {
+    color: #FFF;
+    background-color: #00B5FF;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 16px;
+    /*    height: 60px;*/
+}
+
+#upgrade-Modal .modal-dialog {
+    margin-top: 12%;
+    width: 480px;
+    margin-left: 48%;
+}
+
+#upgrade-Modal .modal-content .login-head {
+    border-bottom: 4px solid #d8d8d8;
+}
+
+#upgrade-Modal .modal-content .login-head h3 {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+#upgrade-Modal .modal-content .login-head p {
+    font-weight: 800;
+    font-size: 24px;
+}
+
+#upgrade-Modal .modal-content .login-head p span {
+    font-weight: 800;
+    font-size: 18px;
+}
+
+#upgrade-Modal .modal-content .login-body {
+    padding-top: 20px;
+}
+
+#upgrade-Modal .modal-content .login-body form .form-group {
+    margin-top: 10px;
+}
+
+#upgrade-Modal .modal-content .login-body form input {
+    border: 2px solid #d8d8d8;
+    font-weight: 600;
+    height: 40px;
+}
+
+#upgrade-Modal .modal-content .login-body form input:focus {
+    border-bottom: 3px solid #00B5FF;
+}
+
+#upgrade-Modal .modal-content .login-body form a {
+    color: #000;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+#upgrade-Modal .modal-content .login-body form .btn-login {
+    color: #FFF;
+    background-color: #00B5FF;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 16px;
+    /*    height: 60px;*/
+}
+
+.new-index-customize {
+    min-height: 40px !important;
+}
+
+.header-customize {}
+
+.header-customize .box {
+    top: 30px !important;
+}
+
+.header-customize .box p {
+    font-size: 16px !important;
+    font-weight: bold;
+}
+
+.header-customize .box p span {
+    color: #ccc;
+    margin-left: 30px;
+}
+
+.header-customize .form-container .basic {
+    /*    font-size: 16px !important;*/
+}
+
+.header-customize .form-container input {
+    min-height: 30px !important;
+}
+
+.header-customize .nice-select:after {
+    display: none !important;
+}
+
+.new-index-customize .btn-help {
+    color: #FFF;
+    background-color: #00B5FF;
+    width: 90%;
+    float: right;
+    margin-right: -40px;
+    padding: 14px;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 131%;
+}
+
+.new-index-customize .btn-question {
+    color: #FFF;
+    background-color: #00B5FF;
+    width: 90%;
+    padding: 14px;
+    text-align: center;
+    border: none;
+    float: right;
+    margin-right: -40px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 146%;
+}
+
+.main-content {
+    padding-top: 40px;
+    /*padding-left: 50px;*/
+    padding-bottom: 50px;
+}
+
+.banner-bottom {
+    margin-top: 30px;
+    height: 180px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px 4px rgba(0, 0, 0, 0.2), 0px 6px 10px 12px rgba(0, 0, 0, 0.19);
+}
+
+.banner-bottom img {
+    width: 100%;
+    height: 180px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.banner-bottom h3 {
+    font-weight: 700;
+    font-size: 22px;
+}
+
+.btn-deals {
+    color: #FFF;
+    background-color: #00B5FF;
+    width: 50%;
+    padding: 8px;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 2%;
+}
+
+.flight-schedules {
+    margin-top: 30px;
+    box-shadow: 0px 4px 8px 4px rgba(0, 0, 0, 0.2), 0px 6px 10px 12px rgba(0, 0, 0, 0.19);
+    border-radius: 4px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 50px;
+}
+
+.flight-schedules img {
+    width: 80%;
+}
+
+.flight-schedules h4 {
+    font-weight: 900;
+    font-size: 18px;
+}
+
+.day-date {
+    text-align: right;
+}
+
+.timings {
+    margin-top: 25px;
+}
+
+.timings .line:after {
+    content: '';
+    position: absolute;
+    width: 55%;
+    margin-left: 4%;
+    background: #000;
+    height: 1px;
+    margin-top: 3%;
+}
+
+.flight-schedules h6 {
+    color: #ccc;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.btn-book {
+    color: #FFF;
+    background-color: #00B5FF;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    border: none;
+    border-radius: 3px;
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 35%;
+}
+
+.hotel-booking {
+    margin-top: 40%;
+    background: #f6fafb;
+    padding-left: 10px;
+    padding-right: 15px;
+    /*padding-bottom: 10px;*/
+    box-shadow: 0px 4px 8px 4px rgba(0, 0, 0, 0.2), 0px 6px 10px 12px rgba(0, 0, 0, 0.19);
+    margin-bottom: 50px;
+}
+
+.hotel-booking h3 {
+    font-weight: bold;
+    line-height: 40px;
+}
+
+.hotel-booking h4 {
+    font-size: 20px;
+    padding-top: 15px;
+    font-weight: 700;
+}
+
+.stops {
+    box-shadow: 0px 4px 8px 4px rgba(0, 0, 0, 0.2), 0px 6px 10px 12px rgba(0, 0, 0, 0.19);
+    padding-top: 5px;
+    padding-bottom: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.stops .head {
+    border-bottom: 3px solid #ccc;
+}
+
+.stops .head h3 {
+    font-weight: 700;
+    font-size: 22px;
+}
+
+.checkbox_1 {
+    display: table;
+    cursor: pointer;
+    padding: 0.5rem;
+    position: relative;
+    margin-top: 10px;
+}
+
+.checkbox_1>span {
+    padding: 0px 3.25rem;
+    margin-top: -29px;
+    /* position: absolute; */
+    width: 190px;
+    display: inherit;
+    color: #999;
+    font-size: 15px;
+    margin-left: 4px;
+}
+
+.checkbox_1>input {
+    width: 25px;
+    height: 25px;
+    /* remove default browser styling */
+    -webkit-appearance: none;
+    -mox-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    /* custom styling */
+    /*background-color: #f2f2f2;*/
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    outline: none;
+    transition-duration: 0.3s;
+}
+
+.checkbox_1>input:checked {
+    border: 1px solid #ccc;
+    /*background-color: #5ac5c9;*/
+}
+
+
+/* style checkmark symbol */
+
+.checkbox_1>input:checked+span::before {
+    color: #004466;
+    content: "\2713";
+    text-align: center;
+    font-size: 24px;
+    display: block;
+    position: absolute;
+    left: .95rem;
+    top: .5rem;
+}
+
+.checkbox_1>input:active {
+    border: 2px solid #5ac5c9;
+}
+
+.checkbox_1>input:focus+label::before {
+    outline: #5d9dd5 solid 1px;
+    box-shadow: 0 0px 8px #5e9ed6;
+}
+
+.top-nav {
+    color: #000;
+    font-size: 16px;
+    background: #f6f6f6;
+    margin-top: -20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.top-nav a {
+    color: #000;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.confirm-booking {
+    padding-bottom: 200px;
+}
+
+.side-label-left {
+    background-image: url("../images/weekend-getaway.jpg");
+    background-size: cover;
+    position: relative;
+    height: 100%;
+    border-radius: 10px;
+    margin-top: 30px;
+    box-shadow: 0px 4px 8px 4px rgba(0, 0, 0, 0.2), 0px 6px 10px 12px rgba(0, 0, 0, 0.19);
+    color: #fff;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+}
+
+.side-label-left h3 {
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 40px;
+}
+
+.side-label-left p {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 30px;
+}
+
+.side-label-left .btn-deals {
+    width: auto;
+}
+
+.side-label-right {
+    background-image: url("../images/Sign_Up.jpeg");
+    background-size: cover;
+    position: relative;
+    height: 100%;
+    border-radius: 10px;
+    margin-top: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    color: #fff;
+    box-shadow: 0px 4px 8px 4px rgba(0, 0, 0, 0.2), 0px 6px 10px 12px rgba(0, 0, 0, 0.19);
+}
+
+.side-label-right h3 {
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 40px;
+}
+
+.side-label-right p {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 30px;
+}
+
+.side-label-right .btn-deals {
+    width: auto;
+}
+
+.sub-booking {
+    box-shadow: 0px 4px 8px 4px rgba(0, 0, 0, 0.2), 0px 6px 10px 12px rgba(0, 0, 0, 0.19);
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+.sub-booking h5 {
+    font-weight: bold;
+}
+
+.sub-booking h3 {
+    font-weight: bold;
+    margin-top: 0px;
+}
+
+.sub-booking h3 span {
+    float: right;
+    font-size: 20px;
+}
+
+.sub-booking .head {
+    border-bottom: 3px solid #ccc;
+}
+
+.sub-booking img {
+    width: 70%;
+}
+
+.flight-title {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 25px;
+}
+
+.sub-booking .timings {
+    margin-top: 0px;
+}
+
+.sub-booking .timings h4 {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 25px;
+}
+
+.sub-booking .timings p {
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.booking-confirmation {
+    text-align: right;
+    margin-top: 20px;
+}
+
+.booking-confirmation .btn-confirmation {
+    color: #FFF;
+    background-color: #00B5FF;
+    width: auto;
+    padding: 16px;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 16px;
+    /*margin-top: 131%;*/
+}
+
+.app {
+    background: #f6f9fa;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.app .description {
+    padding-right: 10%;
+    margin-top: 15%;
+}
+
+.app .description h2 {
+    font-weight: bold;
+    font-size: 40px;
+    color: #000;
+    line-height: 50px;
+}
+
+.app .description p {
+    font-weight: bold;
+    font-size: 20px;
+    color: #000;
+    margin-top: 5%;
+    margin-bottom: 20px;
+}
+
+.app a {}
+
+l8 .app a img {
+    width: 140px;
+}
+
+.app img {
+    width: 100%;
+}
+
+nav.new-index .navbar-2 {
+    margin: 5px -50px;
+}
+
+.footer-new {
+    background: #141F3F;
+    width: 100%;
+    /*    margin-left:-20px;
+        margin-right: -20px;
+        margin-bottom: -20px;*/
+}
+
+.footer-new .footer-top {
+    padding-top: 20px;
+    padding-bottom: 30px;
+    /* border-bottom: 1px solid #ccc; */
+}
+
+.footer-new h4 {
+    font-weight: bold;
+    font-size: 22px;
+    color: #222229;
+}
+
+.footer-new .description p {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 30px;
+}
+
+.footer-new .phone-book {}
+
+.footer-new .phone-book .btn-deals {
+    position: absolute;
+    width: 70px;
+    border-radius: 0px;
+    margin-top: 0px;
+    font-weight: normal;
+    height: 40px;
+}
+
+
+/* footer-fix */
+
+.footer-new .footer-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-new .footer-menu a {
+    margin-top: 20px;
+    color: #222229;
+    font-size: 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer-bottom {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    color: #222229;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.footer-bottom-titles {
+    display: flex;
+    justify-content: space-around;
+    padding: 0 160px;
+}
+
+.footer-bottom span {
+    color: #222229;
+    font-weight: bolder;
+    font-size: 16px;
+}
+
+.footer-bottom a {
+    color: black;
+    /* margin-right: 20px; */
+    font-size: 18px;
+}
+
+.footer-bottom-titles a:hover {
+    text-decoration: none;
+}
+
+.footer-bottom-description {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 16px;
+}
+
+.footer-bottom-social-links {
+    margin: 30px 0px 50px 0px;
+    display: flex;
+    justify-content: space-around;
+    padding: 0 40%;
+}
+
+.intl-tel-input {
+    position: relative;
+    display: inline-block;
+}
+
+.intl-tel-input * {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+.intl-tel-input .hide {
+    display: none;
+}
+
+.intl-tel-input .v-hide {
+    visibility: hidden;
+}
+
+.intl-tel-input input,
+.intl-tel-input input[type=text],
+.intl-tel-input input[type=tel] {
+    position: relative;
+    z-index: 0;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    padding-right: 36px;
+    margin-right: 0;
+}
+
+.intl-tel-input .flag-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    padding: 1px;
+}
+
+.intl-tel-input .selected-flag {
+    z-index: 1;
+    position: relative;
+    width: 36px;
+    height: 100%;
+    padding: 0 0 0 8px;
+}
+
+.intl-tel-input .selected-flag .iti-flag {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.intl-tel-input .selected-flag .iti-arrow {
+    position: absolute;
+    top: 50%;
+    margin-top: -2px;
+    right: 6px;
+    width: 0;
+    height: 0;
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
+    border-top: 4px solid #555;
+}
+
+.intl-tel-input .selected-flag .iti-arrow.up {
+    border-top: none;
+    border-bottom: 4px solid #555;
+}
+
+.intl-tel-input .country-list {
+    position: absolute;
+    z-index: 2;
+    list-style: none;
+    text-align: left;
+    padding: 0;
+    margin: 0 0 0 -1px;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+    background-color: white;
+    border: 1px solid #CCC;
+    white-space: nowrap;
+    max-height: 200px;
+    overflow-y: scroll;
+}
+
+.intl-tel-input .country-list.dropup {
+    bottom: 100%;
+    margin-bottom: -1px;
+}
+
+.intl-tel-input .country-list .flag-box {
+    display: inline-block;
+    width: 20px;
+}
+
+@media (max-width: 500px) {
+    .intl-tel-input .country-list {
+        white-space: normal;
+    }
+}
+
+.intl-tel-input .country-list .divider {
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid #CCC;
+}
+
+.intl-tel-input .country-list .country {
+    padding: 5px 10px;
+}
+
+.intl-tel-input .country-list .country .dial-code {
+    color: #999;
+}
+
+.intl-tel-input .country-list .country.highlight {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.intl-tel-input .country-list .flag-box,
+.intl-tel-input .country-list .country-name,
+.intl-tel-input .country-list .dial-code {
+    vertical-align: middle;
+}
+
+.intl-tel-input .country-list .flag-box,
+.intl-tel-input .country-list .country-name {
+    margin-right: 6px;
+}
+
+.intl-tel-input.allow-dropdown input,
+.intl-tel-input.allow-dropdown input[type=text],
+.intl-tel-input.allow-dropdown input[type=tel],
+.intl-tel-input.separate-dial-code input,
+.intl-tel-input.separate-dial-code input[type=text],
+.intl-tel-input.separate-dial-code input[type=tel] {
+    padding-right: 6px;
+    padding-left: 52px;
+    margin-left: 0;
+    height: 40px;
+}
+
+.intl-tel-input.allow-dropdown .flag-container,
+.intl-tel-input.separate-dial-code .flag-container {
+    right: auto;
+    left: 0;
+}
+
+.intl-tel-input.allow-dropdown .selected-flag,
+.intl-tel-input.separate-dial-code .selected-flag {
+    width: 46px;
+}
+
+.intl-tel-input.allow-dropdown .flag-container:hover {
+    cursor: pointer;
+}
+
+.intl-tel-input.allow-dropdown .flag-container:hover .selected-flag {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.intl-tel-input.allow-dropdown input[disabled]+.flag-container:hover,
+.intl-tel-input.allow-dropdown input[readonly]+.flag-container:hover {
+    cursor: default;
+}
+
+.intl-tel-input.allow-dropdown input[disabled]+.flag-container:hover .selected-flag,
+.intl-tel-input.allow-dropdown input[readonly]+.flag-container:hover .selected-flag {
+    background-color: transparent;
+}
+
+.intl-tel-input.separate-dial-code .selected-flag {
+    background-color: rgba(0, 0, 0, 0.05);
+    display: table;
+}
+
+.intl-tel-input.separate-dial-code .selected-dial-code {
+    display: table-cell;
+    vertical-align: middle;
+    padding-left: 28px;
+}
+
+.intl-tel-input.separate-dial-code.iti-sdc-2 input,
+.intl-tel-input.separate-dial-code.iti-sdc-2 input[type=text],
+.intl-tel-input.separate-dial-code.iti-sdc-2 input[type=tel] {
+    padding-left: 66px;
+}
+
+.intl-tel-input.separate-dial-code.iti-sdc-2 .selected-flag {
+    width: 60px;
+}
+
+.intl-tel-input.separate-dial-code.allow-dropdown.iti-sdc-2 input,
+.intl-tel-input.separate-dial-code.allow-dropdown.iti-sdc-2 input[type=text],
+.intl-tel-input.separate-dial-code.allow-dropdown.iti-sdc-2 input[type=tel] {
+    padding-left: 76px;
+}
+
+.intl-tel-input.separate-dial-code.allow-dropdown.iti-sdc-2 .selected-flag {
+    width: 70px;
+}
+
+.intl-tel-input.separate-dial-code.iti-sdc-3 input,
+.intl-tel-input.separate-dial-code.iti-sdc-3 input[type=text],
+.intl-tel-input.separate-dial-code.iti-sdc-3 input[type=tel] {
+    padding-left: 74px;
+}
+
+.intl-tel-input.separate-dial-code.iti-sdc-3 .selected-flag {
+    width: 68px;
+}
+
+.intl-tel-input.separate-dial-code.allow-dropdown.iti-sdc-3 input,
+.intl-tel-input.separate-dial-code.allow-dropdown.iti-sdc-3 input[type=text],
+.intl-tel-input.separate-dial-code.allow-dropdown.iti-sdc-3 input[type=tel] {
+    padding-left: 84px;
+}
+
+.intl-tel-input.separate-dial-code.allow-dropdown.iti-sdc-3 .selected-flag {
+    width: 78px;
+}
+
+.intl-tel-input.separate-dial-code.iti-sdc-4 input,
+.intl-tel-input.separate-dial-code.iti-sdc-4 input[type=text],
+.intl-tel-input.separate-dial-code.iti-sdc-4 input[type=tel] {
+    padding-left: 82px;
+}
+
+.intl-tel-input.separate-dial-code.iti-sdc-4 .selected-flag {
+    width: 76px;
+}
+
+.intl-tel-input.separate-dial-code.allow-dropdown.iti-sdc-4 input,
+.intl-tel-input.separate-dial-code.allow-dropdown.iti-sdc-4 input[type=text],
+.intl-tel-input.separate-dial-code.allow-dropdown.iti-sdc-4 input[type=tel] {
+    padding-left: 92px;
+}
+
+.intl-tel-input.separate-dial-code.allow-dropdown.iti-sdc-4 .selected-flag {
+    width: 86px;
+}
+
+.intl-tel-input.separate-dial-code.iti-sdc-5 input,
+.intl-tel-input.separate-dial-code.iti-sdc-5 input[type=text],
+.intl-tel-input.separate-dial-code.iti-sdc-5 input[type=tel] {
+    padding-left: 90px;
+}
+
+.intl-tel-input.separate-dial-code.iti-sdc-5 .selected-flag {
+    width: 84px;
+}
+
+.intl-tel-input.separate-dial-code.allow-dropdown.iti-sdc-5 input,
+.intl-tel-input.separate-dial-code.allow-dropdown.iti-sdc-5 input[type=text],
+.intl-tel-input.separate-dial-code.allow-dropdown.iti-sdc-5 input[type=tel] {
+    padding-left: 100px;
+}
+
+.intl-tel-input.separate-dial-code.allow-dropdown.iti-sdc-5 .selected-flag {
+    width: 94px;
+}
+
+.intl-tel-input.iti-container {
+    position: absolute;
+    top: -1000px;
+    left: -1000px;
+    z-index: 1060;
+    padding: 1px;
+}
+
+.intl-tel-input.iti-container:hover {
+    cursor: pointer;
+}
+
+.iti-mobile .intl-tel-input.iti-container {
+    top: 30px;
+    bottom: 30px;
+    left: 30px;
+    right: 30px;
+    position: fixed;
+}
+
+.iti-mobile .intl-tel-input .country-list {
+    max-height: 100%;
+    width: 100%;
+}
+
+.iti-mobile .intl-tel-input .country-list .country {
+    padding: 10px 10px;
+    line-height: 1.5em;
+}
+
+.iti-flag {
+    width: 20px;
+}
+
+.iti-flag.be {
+    width: 18px;
+}
+
+.iti-flag.ch {
+    width: 15px;
+}
+
+.iti-flag.mc {
+    width: 19px;
+}
+
+.iti-flag.ne {
+    width: 18px;
+}
+
+.iti-flag.np {
+    width: 13px;
+}
+
+.iti-flag.va {
+    width: 15px;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min--moz-device-pixel-ratio: 2),
+only screen and (-o-min-device-pixel-ratio: 2 / 1),
+only screen and (min-device-pixel-ratio: 2),
+only screen and (min-resolution: 192dpi),
+only screen and (min-resolution: 2dppx) {
+    .iti-flag {
+        background-size: 5630px 15px;
+    }
+}
+
+.iti-flag.ac {
+    height: 10px;
+    background-position: 0px 0px;
+}
+
+.iti-flag.ad {
+    height: 14px;
+    background-position: -22px 0px;
+}
+
+.iti-flag.ae {
+    height: 10px;
+    background-position: -44px 0px;
+}
+
+.iti-flag.af {
+    height: 14px;
+    background-position: -66px 0px;
+}
+
+.iti-flag.ag {
+    height: 14px;
+    background-position: -88px 0px;
+}
+
+.iti-flag.ai {
+    height: 10px;
+    background-position: -110px 0px;
+}
+
+.iti-flag.al {
+    height: 15px;
+    background-position: -132px 0px;
+}
+
+.iti-flag.am {
+    height: 10px;
+    background-position: -154px 0px;
+}
+
+.iti-flag.ao {
+    height: 14px;
+    background-position: -176px 0px;
+}
+
+.iti-flag.aq {
+    height: 14px;
+    background-position: -198px 0px;
+}
+
+.iti-flag.ar {
+    height: 13px;
+    background-position: -220px 0px;
+}
+
+.iti-flag.as {
+    height: 10px;
+    background-position: -242px 0px;
+}
+
+.iti-flag.at {
+    height: 14px;
+    background-position: -264px 0px;
+}
+
+.iti-flag.au {
+    height: 10px;
+    background-position: -286px 0px;
+}
+
+.iti-flag.aw {
+    height: 14px;
+    background-position: -308px 0px;
+}
+
+.iti-flag.ax {
+    height: 13px;
+    background-position: -330px 0px;
+}
+
+.iti-flag.az {
+    height: 10px;
+    background-position: -352px 0px;
+}
+
+.iti-flag.ba {
+    height: 10px;
+    background-position: -374px 0px;
+}
+
+.iti-flag.bb {
+    height: 14px;
+    background-position: -396px 0px;
+}
+
+.iti-flag.bd {
+    height: 12px;
+    background-position: -418px 0px;
+}
+
+.iti-flag.be {
+    height: 15px;
+    background-position: -440px 0px;
+}
+
+.iti-flag.bf {
+    height: 14px;
+    background-position: -460px 0px;
+}
+
+.iti-flag.bg {
+    height: 12px;
+    background-position: -482px 0px;
+}
+
+.iti-flag.bh {
+    height: 12px;
+    background-position: -504px 0px;
+}
+
+.iti-flag.bi {
+    height: 12px;
+    background-position: -526px 0px;
+}
+
+.iti-flag.bj {
+    height: 14px;
+    background-position: -548px 0px;
+}
+
+.iti-flag.bl {
+    height: 14px;
+    background-position: -570px 0px;
+}
+
+.iti-flag.bm {
+    height: 10px;
+    background-position: -592px 0px;
+}
+
+.iti-flag.bn {
+    height: 10px;
+    background-position: -614px 0px;
+}
+
+.iti-flag.bo {
+    height: 14px;
+    background-position: -636px 0px;
+}
+
+.iti-flag.bq {
+    height: 14px;
+    background-position: -658px 0px;
+}
+
+.iti-flag.br {
+    height: 14px;
+    background-position: -680px 0px;
+}
+
+.iti-flag.bs {
+    height: 10px;
+    background-position: -702px 0px;
+}
+
+.iti-flag.bt {
+    height: 14px;
+    background-position: -724px 0px;
+}
+
+.iti-flag.bv {
+    height: 15px;
+    background-position: -746px 0px;
+}
+
+.iti-flag.bw {
+    height: 14px;
+    background-position: -768px 0px;
+}
+
+.iti-flag.by {
+    height: 10px;
+    background-position: -790px 0px;
+}
+
+.iti-flag.bz {
+    height: 14px;
+    background-position: -812px 0px;
+}
+
+.iti-flag.ca {
+    height: 10px;
+    background-position: -834px 0px;
+}
+
+.iti-flag.cc {
+    height: 10px;
+    background-position: -856px 0px;
+}
+
+.iti-flag.cd {
+    height: 15px;
+    background-position: -878px 0px;
+}
+
+.iti-flag.cf {
+    height: 14px;
+    background-position: -900px 0px;
+}
+
+.iti-flag.cg {
+    height: 14px;
+    background-position: -922px 0px;
+}
+
+.iti-flag.ch {
+    height: 15px;
+    background-position: -944px 0px;
+}
+
+.iti-flag.ci {
+    height: 14px;
+    background-position: -961px 0px;
+}
+
+.iti-flag.ck {
+    height: 10px;
+    background-position: -983px 0px;
+}
+
+.iti-flag.cl {
+    height: 14px;
+    background-position: -1005px 0px;
+}
+
+.iti-flag.cm {
+    height: 14px;
+    background-position: -1027px 0px;
+}
+
+.iti-flag.cn {
+    height: 14px;
+    background-position: -1049px 0px;
+}
+
+.iti-flag.co {
+    height: 14px;
+    background-position: -1071px 0px;
+}
+
+.iti-flag.cp {
+    height: 14px;
+    background-position: -1093px 0px;
+}
+
+.iti-flag.cr {
+    height: 12px;
+    background-position: -1115px 0px;
+}
+
+.iti-flag.cu {
+    height: 10px;
+    background-position: -1137px 0px;
+}
+
+.iti-flag.cv {
+    height: 12px;
+    background-position: -1159px 0px;
+}
+
+.iti-flag.cw {
+    height: 14px;
+    background-position: -1181px 0px;
+}
+
+.iti-flag.cx {
+    height: 10px;
+    background-position: -1203px 0px;
+}
+
+.iti-flag.cy {
+    height: 13px;
+    background-position: -1225px 0px;
+}
+
+.iti-flag.cz {
+    height: 14px;
+    background-position: -1247px 0px;
+}
+
+.iti-flag.de {
+    height: 12px;
+    background-position: -1269px 0px;
+}
+
+.iti-flag.dg {
+    height: 10px;
+    background-position: -1291px 0px;
+}
+
+.iti-flag.dj {
+    height: 14px;
+    background-position: -1313px 0px;
+}
+
+.iti-flag.dk {
+    height: 15px;
+    background-position: -1335px 0px;
+}
+
+.iti-flag.dm {
+    height: 10px;
+    background-position: -1357px 0px;
+}
+
+.iti-flag.do {
+    height: 13px;
+    background-position: -1379px 0px;
+}
+
+.iti-flag.dz {
+    height: 14px;
+    background-position: -1401px 0px;
+}
+
+.iti-flag.ea {
+    height: 14px;
+    background-position: -1423px 0px;
+}
+
+.iti-flag.ec {
+    height: 14px;
+    background-position: -1445px 0px;
+}
+
+.iti-flag.ee {
+    height: 13px;
+    background-position: -1467px 0px;
+}
+
+.iti-flag.eg {
+    height: 14px;
+    background-position: -1489px 0px;
+}
+
+.iti-flag.eh {
+    height: 10px;
+    background-position: -1511px 0px;
+}
+
+.iti-flag.er {
+    height: 10px;
+    background-position: -1533px 0px;
+}
+
+.iti-flag.es {
+    height: 14px;
+    background-position: -1555px 0px;
+}
+
+.iti-flag.et {
+    height: 10px;
+    background-position: -1577px 0px;
+}
+
+.iti-flag.eu {
+    height: 14px;
+    background-position: -1599px 0px;
+}
+
+.iti-flag.fi {
+    height: 12px;
+    background-position: -1621px 0px;
+}
+
+.iti-flag.fj {
+    height: 10px;
+    background-position: -1643px 0px;
+}
+
+.iti-flag.fk {
+    height: 10px;
+    background-position: -1665px 0px;
+}
+
+.iti-flag.fm {
+    height: 11px;
+    background-position: -1687px 0px;
+}
+
+.iti-flag.fo {
+    height: 15px;
+    background-position: -1709px 0px;
+}
+
+.iti-flag.fr {
+    height: 14px;
+    background-position: -1731px 0px;
+}
+
+.iti-flag.ga {
+    height: 15px;
+    background-position: -1753px 0px;
+}
+
+.iti-flag.gb {
+    height: 10px;
+    background-position: -1775px 0px;
+}
+
+.iti-flag.gd {
+    height: 12px;
+    background-position: -1797px 0px;
+}
+
+.iti-flag.ge {
+    height: 14px;
+    background-position: -1819px 0px;
+}
+
+.iti-flag.gf {
+    height: 14px;
+    background-position: -1841px 0px;
+}
+
+.iti-flag.gg {
+    height: 14px;
+    background-position: -1863px 0px;
+}
+
+.iti-flag.gh {
+    height: 14px;
+    background-position: -1885px 0px;
+}
+
+.iti-flag.gi {
+    height: 10px;
+    background-position: -1907px 0px;
+}
+
+.iti-flag.gl {
+    height: 14px;
+    background-position: -1929px 0px;
+}
+
+.iti-flag.gm {
+    height: 14px;
+    background-position: -1951px 0px;
+}
+
+.iti-flag.gn {
+    height: 14px;
+    background-position: -1973px 0px;
+}
+
+.iti-flag.gp {
+    height: 14px;
+    background-position: -1995px 0px;
+}
+
+.iti-flag.gq {
+    height: 14px;
+    background-position: -2017px 0px;
+}
+
+.iti-flag.gr {
+    height: 14px;
+    background-position: -2039px 0px;
+}
+
+.iti-flag.gs {
+    height: 10px;
+    background-position: -2061px 0px;
+}
+
+.iti-flag.gt {
+    height: 13px;
+    background-position: -2083px 0px;
+}
+
+.iti-flag.gu {
+    height: 11px;
+    background-position: -2105px 0px;
+}
+
+.iti-flag.gw {
+    height: 10px;
+    background-position: -2127px 0px;
+}
+
+.iti-flag.gy {
+    height: 12px;
+    background-position: -2149px 0px;
+}
+
+.iti-flag.hk {
+    height: 14px;
+    background-position: -2171px 0px;
+}
+
+.iti-flag.hm {
+    height: 10px;
+    background-position: -2193px 0px;
+}
+
+.iti-flag.hn {
+    height: 10px;
+    background-position: -2215px 0px;
+}
+
+.iti-flag.hr {
+    height: 10px;
+    background-position: -2237px 0px;
+}
+
+.iti-flag.ht {
+    height: 12px;
+    background-position: -2259px 0px;
+}
+
+.iti-flag.hu {
+    height: 10px;
+    background-position: -2281px 0px;
+}
+
+.iti-flag.ic {
+    height: 14px;
+    background-position: -2303px 0px;
+}
+
+.iti-flag.id {
+    height: 14px;
+    background-position: -2325px 0px;
+}
+
+.iti-flag.ie {
+    height: 10px;
+    background-position: -2347px 0px;
+}
+
+.iti-flag.il {
+    height: 15px;
+    background-position: -2369px 0px;
+}
+
+.iti-flag.im {
+    height: 10px;
+    background-position: -2391px 0px;
+}
+
+.iti-flag.in {
+    height: 14px;
+    background-position: -2413px 0px;
+}
+
+.iti-flag.io {
+    height: 10px;
+    background-position: -2435px 0px;
+}
+
+.iti-flag.iq {
+    height: 14px;
+    background-position: -2457px 0px;
+}
+
+.iti-flag.ir {
+    height: 12px;
+    background-position: -2479px 0px;
+}
+
+.iti-flag.is {
+    height: 15px;
+    background-position: -2501px 0px;
+}
+
+.iti-flag.it {
+    height: 14px;
+    background-position: -2523px 0px;
+}
+
+.iti-flag.je {
+    height: 12px;
+    background-position: -2545px 0px;
+}
+
+.iti-flag.jm {
+    height: 10px;
+    background-position: -2567px 0px;
+}
+
+.iti-flag.jo {
+    height: 10px;
+    background-position: -2589px 0px;
+}
+
+.iti-flag.jp {
+    height: 14px;
+    background-position: -2611px 0px;
+}
+
+.iti-flag.ke {
+    height: 14px;
+    background-position: -2633px 0px;
+}
+
+.iti-flag.kg {
+    height: 12px;
+    background-position: -2655px 0px;
+}
+
+.iti-flag.kh {
+    height: 13px;
+    background-position: -2677px 0px;
+}
+
+.iti-flag.ki {
+    height: 10px;
+    background-position: -2699px 0px;
+}
+
+.iti-flag.km {
+    height: 12px;
+    background-position: -2721px 0px;
+}
+
+.iti-flag.kn {
+    height: 14px;
+    background-position: -2743px 0px;
+}
+
+.iti-flag.kp {
+    height: 10px;
+    background-position: -2765px 0px;
+}
+
+.iti-flag.kr {
+    height: 14px;
+    background-position: -2787px 0px;
+}
+
+.iti-flag.kw {
+    height: 10px;
+    background-position: -2809px 0px;
+}
+
+.iti-flag.ky {
+    height: 10px;
+    background-position: -2831px 0px;
+}
+
+.iti-flag.kz {
+    height: 10px;
+    background-position: -2853px 0px;
+}
+
+.iti-flag.la {
+    height: 14px;
+    background-position: -2875px 0px;
+}
+
+.iti-flag.lb {
+    height: 14px;
+    background-position: -2897px 0px;
+}
+
+.iti-flag.lc {
+    height: 10px;
+    background-position: -2919px 0px;
+}
+
+.iti-flag.li {
+    height: 12px;
+    background-position: -2941px 0px;
+}
+
+.iti-flag.lk {
+    height: 10px;
+    background-position: -2963px 0px;
+}
+
+.iti-flag.lr {
+    height: 11px;
+    background-position: -2985px 0px;
+}
+
+.iti-flag.ls {
+    height: 14px;
+    background-position: -3007px 0px;
+}
+
+.iti-flag.lt {
+    height: 12px;
+    background-position: -3029px 0px;
+}
+
+.iti-flag.lu {
+    height: 12px;
+    background-position: -3051px 0px;
+}
+
+.iti-flag.lv {
+    height: 10px;
+    background-position: -3073px 0px;
+}
+
+.iti-flag.ly {
+    height: 10px;
+    background-position: -3095px 0px;
+}
+
+.iti-flag.ma {
+    height: 14px;
+    background-position: -3117px 0px;
+}
+
+.iti-flag.mc {
+    height: 15px;
+    background-position: -3139px 0px;
+}
+
+.iti-flag.md {
+    height: 10px;
+    background-position: -3160px 0px;
+}
+
+.iti-flag.me {
+    height: 10px;
+    background-position: -3182px 0px;
+}
+
+.iti-flag.mf {
+    height: 14px;
+    background-position: -3204px 0px;
+}
+
+.iti-flag.mg {
+    height: 14px;
+    background-position: -3226px 0px;
+}
+
+.iti-flag.mh {
+    height: 11px;
+    background-position: -3248px 0px;
+}
+
+.iti-flag.mk {
+    height: 10px;
+    background-position: -3270px 0px;
+}
+
+.iti-flag.ml {
+    height: 14px;
+    background-position: -3292px 0px;
+}
+
+.iti-flag.mm {
+    height: 14px;
+    background-position: -3314px 0px;
+}
+
+.iti-flag.mn {
+    height: 10px;
+    background-position: -3336px 0px;
+}
+
+.iti-flag.mo {
+    height: 14px;
+    background-position: -3358px 0px;
+}
+
+.iti-flag.mp {
+    height: 10px;
+    background-position: -3380px 0px;
+}
+
+.iti-flag.mq {
+    height: 14px;
+    background-position: -3402px 0px;
+}
+
+.iti-flag.mr {
+    height: 14px;
+    background-position: -3424px 0px;
+}
+
+.iti-flag.ms {
+    height: 10px;
+    background-position: -3446px 0px;
+}
+
+.iti-flag.mt {
+    height: 14px;
+    background-position: -3468px 0px;
+}
+
+.iti-flag.mu {
+    height: 14px;
+    background-position: -3490px 0px;
+}
+
+.iti-flag.mv {
+    height: 14px;
+    background-position: -3512px 0px;
+}
+
+.iti-flag.mw {
+    height: 14px;
+    background-position: -3534px 0px;
+}
+
+.iti-flag.mx {
+    height: 12px;
+    background-position: -3556px 0px;
+}
+
+.iti-flag.my {
+    height: 10px;
+    background-position: -3578px 0px;
+}
+
+.iti-flag.mz {
+    height: 14px;
+    background-position: -3600px 0px;
+}
+
+.iti-flag.na {
+    height: 14px;
+    background-position: -3622px 0px;
+}
+
+.iti-flag.nc {
+    height: 10px;
+    background-position: -3644px 0px;
+}
+
+.iti-flag.ne {
+    height: 15px;
+    background-position: -3666px 0px;
+}
+
+.iti-flag.nf {
+    height: 10px;
+    background-position: -3686px 0px;
+}
+
+.iti-flag.ng {
+    height: 10px;
+    background-position: -3708px 0px;
+}
+
+.iti-flag.ni {
+    height: 12px;
+    background-position: -3730px 0px;
+}
+
+.iti-flag.nl {
+    height: 14px;
+    background-position: -3752px 0px;
+}
+
+.iti-flag.no {
+    height: 15px;
+    background-position: -3774px 0px;
+}
+
+.iti-flag.np {
+    height: 15px;
+    background-position: -3796px 0px;
+}
+
+.iti-flag.nr {
+    height: 10px;
+    background-position: -3811px 0px;
+}
+
+.iti-flag.nu {
+    height: 10px;
+    background-position: -3833px 0px;
+}
+
+.iti-flag.nz {
+    height: 10px;
+    background-position: -3855px 0px;
+}
+
+.iti-flag.om {
+    height: 10px;
+    background-position: -3877px 0px;
+}
+
+.iti-flag.pa {
+    height: 14px;
+    background-position: -3899px 0px;
+}
+
+.iti-flag.pe {
+    height: 14px;
+    background-position: -3921px 0px;
+}
+
+.iti-flag.pf {
+    height: 14px;
+    background-position: -3943px 0px;
+}
+
+.iti-flag.pg {
+    height: 15px;
+    background-position: -3965px 0px;
+}
+
+.iti-flag.ph {
+    height: 10px;
+    background-position: -3987px 0px;
+}
+
+.iti-flag.pk {
+    height: 14px;
+    background-position: -4009px 0px;
+}
+
+.iti-flag.pl {
+    height: 13px;
+    background-position: -4031px 0px;
+}
+
+.iti-flag.pm {
+    height: 14px;
+    background-position: -4053px 0px;
+}
+
+.iti-flag.pn {
+    height: 10px;
+    background-position: -4075px 0px;
+}
+
+.iti-flag.pr {
+    height: 14px;
+    background-position: -4097px 0px;
+}
+
+.iti-flag.ps {
+    height: 10px;
+    background-position: -4119px 0px;
+}
+
+.iti-flag.pt {
+    height: 14px;
+    background-position: -4141px 0px;
+}
+
+.iti-flag.pw {
+    height: 13px;
+    background-position: -4163px 0px;
+}
+
+.iti-flag.py {
+    height: 11px;
+    background-position: -4185px 0px;
+}
+
+.iti-flag.qa {
+    height: 8px;
+    background-position: -4207px 0px;
+}
+
+.iti-flag.re {
+    height: 14px;
+    background-position: -4229px 0px;
+}
+
+.iti-flag.ro {
+    height: 14px;
+    background-position: -4251px 0px;
+}
+
+.iti-flag.rs {
+    height: 14px;
+    background-position: -4273px 0px;
+}
+
+.iti-flag.ru {
+    height: 14px;
+    background-position: -4295px 0px;
+}
+
+.iti-flag.rw {
+    height: 14px;
+    background-position: -4317px 0px;
+}
+
+.iti-flag.sa {
+    height: 14px;
+    background-position: -4339px 0px;
+}
+
+.iti-flag.sb {
+    height: 10px;
+    background-position: -4361px 0px;
+}
+
+.iti-flag.sc {
+    height: 10px;
+    background-position: -4383px 0px;
+}
+
+.iti-flag.sd {
+    height: 10px;
+    background-position: -4405px 0px;
+}
+
+.iti-flag.se {
+    height: 13px;
+    background-position: -4427px 0px;
+}
+
+.iti-flag.sg {
+    height: 14px;
+    background-position: -4449px 0px;
+}
+
+.iti-flag.sh {
+    height: 10px;
+    background-position: -4471px 0px;
+}
+
+.iti-flag.si {
+    height: 10px;
+    background-position: -4493px 0px;
+}
+
+.iti-flag.sj {
+    height: 15px;
+    background-position: -4515px 0px;
+}
+
+.iti-flag.sk {
+    height: 14px;
+    background-position: -4537px 0px;
+}
+
+.iti-flag.sl {
+    height: 14px;
+    background-position: -4559px 0px;
+}
+
+.iti-flag.sm {
+    height: 15px;
+    background-position: -4581px 0px;
+}
+
+.iti-flag.sn {
+    height: 14px;
+    background-position: -4603px 0px;
+}
+
+.iti-flag.so {
+    height: 14px;
+    background-position: -4625px 0px;
+}
+
+.iti-flag.sr {
+    height: 14px;
+    background-position: -4647px 0px;
+}
+
+.iti-flag.ss {
+    height: 10px;
+    background-position: -4669px 0px;
+}
+
+.iti-flag.st {
+    height: 10px;
+    background-position: -4691px 0px;
+}
+
+.iti-flag.sv {
+    height: 12px;
+    background-position: -4713px 0px;
+}
+
+.iti-flag.sx {
+    height: 14px;
+    background-position: -4735px 0px;
+}
+
+.iti-flag.sy {
+    height: 14px;
+    background-position: -4757px 0px;
+}
+
+.iti-flag.sz {
+    height: 14px;
+    background-position: -4779px 0px;
+}
+
+.iti-flag.ta {
+    height: 10px;
+    background-position: -4801px 0px;
+}
+
+.iti-flag.tc {
+    height: 10px;
+    background-position: -4823px 0px;
+}
+
+.iti-flag.td {
+    height: 14px;
+    background-position: -4845px 0px;
+}
+
+.iti-flag.tf {
+    height: 14px;
+    background-position: -4867px 0px;
+}
+
+.iti-flag.tg {
+    height: 13px;
+    background-position: -4889px 0px;
+}
+
+.iti-flag.th {
+    height: 14px;
+    background-position: -4911px 0px;
+}
+
+.iti-flag.tj {
+    height: 10px;
+    background-position: -4933px 0px;
+}
+
+.iti-flag.tk {
+    height: 10px;
+    background-position: -4955px 0px;
+}
+
+.iti-flag.tl {
+    height: 10px;
+    background-position: -4977px 0px;
+}
+
+.iti-flag.tm {
+    height: 14px;
+    background-position: -4999px 0px;
+}
+
+.iti-flag.tn {
+    height: 14px;
+    background-position: -5021px 0px;
+}
+
+.iti-flag.to {
+    height: 10px;
+    background-position: -5043px 0px;
+}
+
+.iti-flag.tr {
+    height: 14px;
+    background-position: -5065px 0px;
+}
+
+.iti-flag.tt {
+    height: 12px;
+    background-position: -5087px 0px;
+}
+
+.iti-flag.tv {
+    height: 10px;
+    background-position: -5109px 0px;
+}
+
+.iti-flag.tw {
+    height: 14px;
+    background-position: -5131px 0px;
+}
+
+.iti-flag.tz {
+    height: 14px;
+    background-position: -5153px 0px;
+}
+
+.iti-flag.ua {
+    height: 14px;
+    background-position: -5175px 0px;
+}
+
+.iti-flag.ug {
+    height: 14px;
+    background-position: -5197px 0px;
+}
+
+.iti-flag.um {
+    height: 11px;
+    background-position: -5219px 0px;
+}
+
+.iti-flag.us {
+    height: 11px;
+    background-position: -5241px 0px;
+}
+
+.iti-flag.uy {
+    height: 14px;
+    background-position: -5263px 0px;
+}
+
+.iti-flag.uz {
+    height: 10px;
+    background-position: -5285px 0px;
+}
+
+.iti-flag.va {
+    height: 15px;
+    background-position: -5307px 0px;
+}
+
+.iti-flag.vc {
+    height: 14px;
+    background-position: -5324px 0px;
+}
+
+.iti-flag.ve {
+    height: 14px;
+    background-position: -5346px 0px;
+}
+
+.iti-flag.vg {
+    height: 10px;
+    background-position: -5368px 0px;
+}
+
+.iti-flag.vi {
+    height: 14px;
+    background-position: -5390px 0px;
+}
+
+.iti-flag.vn {
+    height: 14px;
+    background-position: -5412px 0px;
+}
+
+.iti-flag.vu {
+    height: 12px;
+    background-position: -5434px 0px;
+}
+
+.iti-flag.wf {
+    height: 14px;
+    background-position: -5456px 0px;
+}
+
+.iti-flag.ws {
+    height: 10px;
+    background-position: -5478px 0px;
+}
+
+.iti-flag.xk {
+    height: 15px;
+    background-position: -5500px 0px;
+}
+
+.iti-flag.ye {
+    height: 14px;
+    background-position: -5522px 0px;
+}
+
+.iti-flag.yt {
+    height: 14px;
+    background-position: -5544px 0px;
+}
+
+.iti-flag.za {
+    height: 14px;
+    background-position: -5566px 0px;
+}
+
+.iti-flag.zm {
+    height: 14px;
+    background-position: -5588px 0px;
+}
+
+.iti-flag.zw {
+    height: 10px;
+    background-position: -5610px 0px;
+}
+
+.iti-flag {
+    width: 20px;
+    height: 15px;
+    box-shadow: 0px 0px 1px 0px #888;
+    background-image: url("https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.9/img/flags.png");
+    background-repeat: no-repeat;
+    background-color: #DBDBDB;
+    background-position: 20px 0;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min--moz-device-pixel-ratio: 2),
+only screen and (-o-min-device-pixel-ratio: 2 / 1),
+only screen and (min-device-pixel-ratio: 2),
+only screen and (min-resolution: 192dpi),
+only screen and (min-resolution: 2dppx) {
+    .iti-flag {
+        background-image: url("https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.9/img/flags@2x.png");
+    }
+}
+
+.iti-flag.np {
+    background-color: transparent;
+}
+
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+body {
+    /*margin: 20px;*/
+    font-size: 14px;
+    font-family: 'Karla', sans-serif;
+    color: #131f3f;
+}
+
+.hide {
+    display: none;
+}
+
+pre {
+    margin: 0 !important;
+    display: inline-block;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+    background: none;
+}
+
+input,
+button {
+    height: 35px;
+    margin: 0;
+    padding: 6px 12px;
+    border-radius: 2px;
+    font-family: inherit;
+    font-size: 100%;
+    color: inherit;
+}
+
+input[disabled],
+button[disabled] {
+    background-color: #eee;
+}
+
+input,
+select {
+    border: 1px solid #CCC;
+    width: 250px;
+}
+
+::-webkit-input-placeholder {
+    color: #BBB;
+}
+
+::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #BBB;
+    opacity: 1;
+}
+
+:-ms-input-placeholder {
+    color: #BBB;
+}
+
+#result {
+    margin-bottom: 100px;
+}
+
+.wander {
+    background: #f7f9fe;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    text-align: center;
+    font-weight: bolder;
+}
+
+.wander .description img {
+    width: 100px;
+    height: 100px;
+}
+
+.wander p {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.hotel-results {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.hotel-results .border-right {
+    border-right: 1px solid #ddd;
+}
+
+.sub-hotels {
+    margin-bottom: 30px;
+    box-shadow: 0px 4px 8px 4px rgba(0, 0, 0, 0.2), 0px 6px 10px 12px rgba(0, 0, 0, 0.19);
+    border-radius: 4px;
+    /*    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 10px;*/
+    margin-bottom: 50px;
+    color: #000;
+}
+
+.sub-hotels .head {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.sub-hotels .location {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.sub-hotels .feature {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.sub-hotels .room-left {
+    font-size: 16px;
+    margin-top: 10px;
+    color: #e73827;
+}
+
+.sub-hotels .review {
+    font-size: 16px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.btn-review {
+    color: #FFF;
+    background-color: #00B5FF;
+    /*    width: 100%;*/
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+    border: none;
+    border-radius: 3px;
+    margin-right: 10px;
+    /*font-weight: bold;*/
+    font-size: 16px;
+    /*margin-top: 50%;*/
+}
+
+.sub-hotels img {
+    width: 100%;
+    height: 100%;
+}
+
+.sub-hotels .off {
+    font-size: 26px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.sub-hotels .off span {
+    font-size: 14px;
+}
+
+.sub-hotels .price {
+    font-size: 26px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.sub-hotels .price span {
+    font-size: 14px;
+}
+
+.btn-select {
+    color: #FFF;
+    background-color: #00B5FF;
+    width: 90%;
+    padding: 10px;
+    /*    padding-left: 10px;
+    padding-right: 10px;*/
+    text-align: center;
+    border: none;
+    border-radius: 3px;
+    /*    margin-right: 10px;*/
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.services {
+    background: #f2f8f8;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+.services img {
+    height: 60px;
+}
+
+.services p {
+    font-size: 16px;
+    color: #000;
+    font-weight: 400;
+    margin-top: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+@media only screen and (max-width: 768px) {
+    .mac-background {
+        background-position: 113% 130px;
+    }
+    .desktop-screen {
+        display: none;
+    }
+    .mobile-screen {
+        display: block;
+    }
+    .spiceup .mock-up img {
+        display: none;
+    }
+    .banner_text1 {
+        font-size: 40px !important;
+        padding-top: 40px;
+    }
+    .banner_text2 {
+        font-size: 16px !important;
+    }
+    .sub-form {
+        padding-top: 10px;
+        background: #fff;
+        color: #000;
+        height: 120px;
+        padding-left: 10px;
+        padding-right: 10px;
+        width: 100%;
+        border-radius: 5px;
+    }
+    .sub-form p {
+        font-size: 28px !important;
+        font-weight: 900 !important;
+        margin-bottom: 5px !important
+    }
+    .sub-form-bottom {
+        margin-top: 15px;
+        padding-top: 10px;
+        background: #fff;
+        color: #000;
+        /*height: 120px;*/
+        padding-left: 10px;
+        padding-right: 10px;
+        width: 100%;
+        margin-bottom: 15px;
+        border-radius: 5px;
+        padding-bottom: 10px;
+    }
+    .sub-form-bottom p {
+        font-size: 28px !important;
+        font-weight: 900 !important;
+        margin-bottom: 5px !important
+    }
+    .sub-form .nice-select {
+        -webkit-tap-highlight-color: transparent;
+        background-color: #fff;
+        border-radius: 5px;
+        border: solid 1px #e8e8e8;
+        box-sizing: border-box;
+        clear: both;
+        cursor: pointer;
+        display: block;
+        float: left;
+        font-family: inherit;
+        font-size: 14px;
+        font-weight: bold;
+        height: 42px;
+        line-height: 40px;
+        outline: none;
+        padding-left: 18px;
+        padding-right: 30px;
+        position: relative;
+        text-align: left !important;
+        -webkit-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        white-space: nowrap;
+        width: auto;
+    }
+    .banner_form1 .btn {
+        display: block;
+        margin: 10px auto;
+        background-color: #00B5FF;
+        color: #FFF;
+        padding: 15px;
+        text-align: center;
+        width: 100%;
+        font-weight: bold;
+        text-decoration: none;
+        font-size: 18px;
+        border-radius: 5px;
+    }
+    .spicelist li {
+        padding-right: 20px;
+    }
+    .new-index.subs .offer {
+        box-shadow: 0px 5px 9px #adadad !important;
+        border-radius: 20px;
+        border: 0px solid #e3e3e3;
+    }
+    .mobile .store {
+        text-align: center;
+    }
+    .mobile p {
+        text-align: center;
+    }
+    .mobile .footer-logo {
+        text-align: center;
+    }
+    .question-box p {
+        font-size: 18px;
+    }
+    .question-button {
+        max-width: 160px !important;
+    }
+    .slick-slide {
+        /*width:320px !important;*/
+        /*margin-left: 50px;*/
+    }
+    .navbar-default .navbar-collapse,
+    .navbar-default .navbar-form {
+        background: rgba(0, 0, 0, 0.5);
+    }
+    /* .banner_form1{
+        display: none !important;
+    } */
+    .banner_form1 .basic.nice-select {
+        width: 100%;
+        padding: 0 10px;
+    }
+    .banner_form1 .nice-select .list {
+        right: 0;
+    }
+    .banner_form1 p.text-center {
+        display: none;
+    }
+    .banner_form1 .sub-form {
+        height: auto;
+        padding: 0;
+        margin: 10px 0px;
+    }
+    .banner_form1 .btn {
+        -webkit-appearance: none;
+        padding: 10px;
+        width: 100%;
+        margin-left: 15px;
+        border-radius: 3px;
+        border-color: transparent;
+    }
+    .banner_form1 .btn:active,
+    .banner_form1 .btn:hover,
+    .banner_form1 .btn:focus {
+        border-color: transparent;
+        box-shadow: none;
+        outline-color: transparent;
+    }
+    .tripSelectors {
+        background: #f6fafb;
+    }
+    .tripSelectors .form-control {
+        border: none;
+        -webkit-box-shadow: -2px 4px 16px -4px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: -2px 4px 16px -4px rgba(0, 0, 0, 0.75);
+        box-shadow: 0px 2px 7px -5px rgba(0, 0, 0, 0.75);
+        margin-bottom: 10px;
+        font-size: 0.9em;
+    }
+    .tripSelectors .basic.nice-select:after {
+        display: none;
+    }
+    .tripSelectors .sub-form-bottom {
+        background: transparent;
+        padding: 0;
+    }
+    .rounded-bottom {
+        border-bottom-left-radius: 4px;
+        border-bottom-right-radius: 4px;
+    }
+    .rounded-top {
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .navbar-default .navbar-collapse,
+    .navbar-default .navbar-form {
+        background: transparent;
+    }
+    header.new-index {
+        padding-bottom: 20px;
+    }
+    header.new-index .form-container button {
+        margin-left: -25px;
+    }
+    .mobile-screen {
+        display: none;
+    }
+    .desktop-screen {
+        display: block;
+    }
+    .spiceup .mock-up img {
+        width: 100%;
+        margin-top: 52%;
+        display: block;
+    }
+    .question-button {
+        font-size: 12px !important;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .spiceup .mock-up img {
+        width: 100%;
+        margin-top: 12%;
+        display: block;
+    }
+    .question-button {
+        font-size: 18px !important;
+    }
+}
+
+
+/*raju*/
+
+.bg-change {
+    background-color: #f7f9fe;
+}
+
+.filter-by-box {
+    margin-bottom: 20px;
+}
+
+.filter-by-box h4 {
+    font-weight: bold;
+    font-size: 22px;
+    color: #222229;
+    text-transform: capitalize;
+    margin: 0 0 10px;
+}
+
+.filter-by-box li {}
+
+.filter-by-box li a {
+    font-weight: normal;
+    font-size: 14px;
+    display: block;
+    color: #333;
+    text-transform: capitalize;
+    max-width: 190px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding: 10px 0;
+    display: block;
+    text-decoration: none;
+}
+
+.filter-by-box li a:hover {
+    color: #00B5FF;
+}
+
+.filter-by-box.filter-by-stop li img {
+    height: 17px;
+    width: 17px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.filter-by-box.filter-by-airline li img {
+    height: 25px;
+    width: 25px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.right-filter-by .filter-by-box {
+    background-color: #ffffff;
+    padding: 15px;
+    border: 1px solid #e0e1e5;
+    border-radius: 3px;
+}
+
+.right-filter-by .filter-by-box h4 {
+    font-size: 16px;
+}
+
+.right-filter-by .filter-by-box li a span {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.right-filter-by .filter-by-box li a span small {
+    display: block;
+    color: #a3a7b0;
+}
+
+.right-filter-by .filter-by-box li img {
+    height: 30px;
+    width: 30px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.welcome-wande h3 {
+    margin-top: 0;
+    font-weight: 700px;
+    color: #47a7c0;
+    margin-bottom: 15px;
+    margin-left: 30px;
+    font-size: 22px;
+}
+
+.msg-wande {
+    background-color: #ffffff;
+    padding: 15px;
+    border: 1px solid #e0e1e5;
+    border-bottom: 0;
+    display: table;
+}
+
+.msg-wande img {
+    height: 50px;
+    width: 50px;
+    display: table-cell;
+    vertical-align: middle;
+    margin-right: 20px;
+}
+
+.msg-wande p {
+    display: table-cell;
+    vertical-align: middle;
+    margin-bottom: 0;
+    text-transform: capitalize;
+}
+
+.socialwande {
+    background-color: #ffffff;
+    border: 1px solid #e0e1e5;
+    border-top-width: 1px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    padding: 15px;
+}
+
+.socialwande li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.socialwande li a {
+    text-transform: capitalize;
+    color: #222229;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.socialwande li a:hover {
+    color: #00B5FF;
+}
+
+.socialwande li a img {
+    border-radius: 5px;
+    height: 25px;
+    width: 25px;
+    margin-right: 10px;
+}
+
+.result-airlines-data {
+    background-color: #ffffff;
+    border: 1px solid #e0e1e5;
+    border-radius: 5px;
+    padding: 15px;
+    margin-top: 30px;
+}
+
+.data-flight-deign img {
+    height: 40px;
+    width: 40px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.left-data-filled {
+    width: 80%;
+    float: left;
+    padding-right: 10px;
+}
+
+.right-data-filled {
+    width: 20%;
+    float: left;
+    position: relative;
+    padding: 20px 0 10px 15px;
+    border-left: 1px solid #e0e1e5;
+}
+
+.data-flight-deign:first-child {
+    /* border-bottom: 2px solid #e0e1e5; */
+    /* padding-bottom: 20px; */
+    padding-top: 5vh;
+}
+
+.data-flight-deign {
+    padding-top: 20px;
+}
+
+.flighttime {
+    display: inline-block;
+    vertical-align: middle;
+    text-transform: capitalize;
+    font-size: 16px;
+    /* margin-right: 40px; */
+}
+
+.flighttime small {
+    display: block;
+}
+
+.bystop {
+    display: inline-block;
+    vertical-align: top;
+    padding-top: 6px;
+    text-transform: capitalize;
+    margin-right: 15px;
+}
+
+.timeduraion {
+    display: inline-block;
+    vertical-align: middle;
+    text-transform: capitalize;
+    font-size: 16px;
+}
+
+.timeduraion small {
+    display: block;
+    text-transform: uppercase;
+}
+
+.clearfix:after {
+    content: " ";
+    /* Older browser do not support empty content */
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both;
+}
+
+.tokenti {
+    font-size: 16px;
+    font-weight: bold;
+    color: #222229;
+    text-transform: capitalize;
+    display: block;
+}
+
+.tokenairlinename {
+    display: block;
+    margin-top: 5px;
+    text-transform: capitalize;
+}
+
+.bookflight-btn {
+    background-color: #00b9f0;
+    color: #ffffff!important;
+    text-transform: capitalize;
+    font-size: 14px;
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    padding: 5px 0;
+    text-decoration: none;
+    border-radius: 2px;
+}
+
+.bookflight-btn:hover {
+    background-color: #037091;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.left-filter-by {
+    background-color: #ffffff;
+    padding: 10px 15px 15px 15px;
+    border: 1px solid #e0e1e5;
+    border-radius: 3px;
+}
+
+.welcome-wande {
+    background-image: url("../images/header.jpg");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 100%;
+    padding: 10px 15px 15px 15px;
+    border: 1px solid #e0e1e5;
+    border-radius: 3px;
+}
+
+.welcome-wande h4 {
+    margin-bottom: 0px;
+}
+
+.flight-box {
+    background-color: #FFF;
+    background-size: 100%;
+    padding: 5px;
+    border: 1px solid #e0e1e5;
+    border-radius: 3px;
+    margin-top: 5px;
+}
+
+.hotel-box {
+    background-color: #FFF;
+    background-size: 100%;
+    padding: 5px;
+    border: 2px solid #e0e1e5;
+    border-radius: 3px;
+    margin-top: 5px;
+}
+
+.sticky-panel {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    align-self: flex-start;
+}
+
+.footer-top-row {
+    justify-content: space-between;
+}
+.bk-cnf-pop .modal-body {
+    padding: 15px 30px 20px;
+}
+.bk-cnf-pop .modal-body p {
+    font-size: 17px;
+    text-align: center;
+    color: #333;
+}
+.bk-cnf-pop .modal-header h4 {
+       text-align: center;
+    display: block;
+    width: 100%;
+    color: black;
+    font-weight: bold;
+}
+.bk-cnf-pop .modal-header {
+        border-bottom: 0px;
+        text-align: center;
+        padding-top:40px;
+}
+.bk-cnf-pop .modal-footer {
+    border-top: 0px;
+    text-align: center;
+        justify-content: center;
+        padding-top:0;
+        padding-bottom: 40px;
+}
+.modal-header .close { display: none; }
+.modal-footer .btn-primary {
+background: rgb(0, 181, 255); margin-top: 20px; border-color: rgb(0, 181, 255);
+padding: 10px 40px;
+}
+
+.mobile-banner {
+    display: none;
+}
+
+@media (max-width: 500px) {
+    .mobile-banner {
+        display: block;
+        font-size: 28px;
+        padding-bottom: 30px;
+    }
+
+    nav.new-index {
+        border-bottom: solid 3px #fff;
+    }
+}
+
+.trending-flights {
+    font-size: 34px;
+    font-weight: bold;
+    color: #141F3F;
+    margin-top: 60px;
+    line-height: 1.5;
+}
+
+.trending-flights-text {
+    font-size: 18px;
+    margin-right: 30px;
+}
+
+.pr-0 {
+    padding-right: 0 !important;
+}
+
+.tokens-trip {
+    padding-top: 70px !important;
+    padding-bottom: 70px !important;
+}
+
+@media (min-width: 768px) {
+    .tokens-trip {
+        padding-top: 30px !important;
+        padding-bottom: 30px !important;
+    }
+}
+
+.modal-backdrop.fade.show {
+    /*display: none !important;*/
+    opacity: 0.5;
+}
+
+@media (max-width: 500px) {
+    header .box > div {
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+}

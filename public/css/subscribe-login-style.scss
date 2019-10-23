@@ -1,0 +1,239 @@
+$mainColorA: #1d222e;
+$mainColorB: #2f7d95;
+$mainColorC: #13171f;
+$mainPadding: 30px 0px;
+/*global*/
+.none {
+    display: none;   
+}
+body {
+    font-family: 'Open Sans', sans-serif;   
+}
+.bold {
+    font-weight: bold;
+}
+img {
+    position: relative;
+}
+section {
+    overflow: hidden;
+}
+h2 {
+    font-size:42px;   
+}
+%transition {
+    transition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+}
+* {
+font-family: 'Karla', sans-serif;}
+.navbar-default .navbar-nav>li>a {
+    font-size: 18px;
+    color: #1d222e;
+    letter-spacing:2px;
+}
+.navbar-default .navbar-brand {
+    color: #1d222e;
+    letter-spacing:2px;
+}
+nav a {
+    position: relative;
+    &:after {
+        content:"";
+        height: 3px;
+        background-color: $mainColorA;
+        position: absolute;
+        bottom: 5px;
+        width: 80%;
+        left: 10%;
+        display: none;
+    }
+    &:hover {
+        &:after {
+            display: block;
+            background-color: #CCC;
+        }
+    }
+}
+nav a.active {
+    &:after {
+        display: block!important;
+    }
+}
+
+
+.login, .subscribe {
+    background-image: linear-gradient(#1d222e, #2f7d95);
+    background-image: -webkit-linear-gradient(#1d222e, #2f7d95);
+    background-image:    -moz-linear-gradient(#1d222e, #2f7d95);
+    background-image:     -ms-linear-gradient(#1d222e, #2f7d95);
+    background-image:      -o-linear-gradient(#1d222e, #2f7d95);
+    position: relative;
+
+    .box {
+        position: relative;
+    }
+    .form-container {
+        background-color: #FFF;
+        padding: 30px 60px;
+        max-width: 450px;
+        margin: auto;
+        border-radius: 5px;
+        h3 {
+            color: $mainColorA;
+            letter-spacing: 3px;
+            margin-bottom: 30px;
+            font-weight: bold;
+        }
+        label {
+            color: $mainColorA;
+            letter-spacing: 3px;
+            margin: 0;
+            font-size: 12px;
+        }
+        input {
+            box-sizing: border-box;
+            width: 100%;
+            border: 2px solid #979797;
+            margin: 15px auto;
+            padding: 10px;
+            border-radius: 5px;
+            min-height: 40px;
+            &:first-of-type {
+                margin-bottom: 50px;
+            }
+            
+        }
+        a {
+            display: block;
+            text-align: center;
+            font-size: 10px;
+            letter-spacing: 3px;
+            color: #979797;
+        }
+        button {
+            display: block;
+            width: 200px;
+            letter-spacing: 3px;
+            color: #FFF;
+            margin: 40px auto;
+            background-color: $mainColorA;
+            padding: 10px;
+            border-radius: 25px;
+            border: none;
+            font-weight: bold;
+            &:hover {
+                background-color: $mainColorC;
+            }
+            
+        }
+    }
+}
+.subscribe {
+    .form-container {
+        padding: 30px 60px;
+        max-width: 850px;
+        span {
+            color: $mainColorA;
+            display: block;
+            text-align: center;
+            font-size: 10px;
+            letter-spacing: 3px;
+            font-weight: bold;
+        }
+        button { 
+            margin: 20px auto;
+        }
+        input {
+            min-height: 46px;
+            &:first-of-type {margin: 0;}
+        }
+        .input-container input {
+            margin: 10px auto 25px auto;
+        }
+        select {
+            margin: 10px auto 25px auto;
+            min-height: 46px;
+            border: 2px solid #979797;
+        }
+    }
+}
+
+[type="date"] {
+  background:#fff url(../images/calendar_2.png)  97% 50% no-repeat ;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -e-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -moz-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -ms-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    
+    width: 100%;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;  
+}
+[type="date"]::-webkit-inner-spin-button {
+  display: none;
+}
+[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+}
+    .date {
+        text-align: left;
+        label {
+            letter-spacing: 2px;
+            margin:30px auto 10px;
+        }
+    }
+    .city {
+        font-weight: bold;
+        letter-spacing: 2px;
+        text-align: left;
+        label {
+            letter-spacing: 2px;
+            margin: 30px auto 10px;
+            display: inline-block;
+        }
+        input {
+            width: 100%;
+        }
+    }
+
+/*footer*/
+.sub-page-footer {
+    padding: 50px 10px;
+    p.h4 {
+        font-weight: bold;
+        color: $mainColorA;
+        letter-spacing: 4px;
+    }
+    li {
+        margin: 20px auto;
+        font-size: 12px;
+        &:last-child{
+            margin-bottom: 0;
+        }
+        a {
+            color: $mainColorA;
+            font-weight: bold;
+            letter-spacing: 3px;
+        }
+    }
+}
+.brand-footer {
+    background-color: $mainColorA;
+    color: #FFF;
+    padding: 10px;
+    font-size: 12px;
+    a {
+        color: #FFF;
+        padding-top: 10px;
+        display: inline-block;
+    }
+}

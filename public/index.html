@@ -1,0 +1,1536 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-118970281-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'UA-118970281-1');
+    </script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Wanderift is airline travel as a subscription, subscribers pay a low monthly fee and receive a certain amount of flights. Subscribe today and start saving on your travel!" />
+    <title>Wanderift | Airline Travel as a Subscription</title>
+    <!--normalaize-->
+    <link rel="icon" href="images/favicon.png">
+    <!--bootStrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bs4-utilities.min.css">
+    <!--remove "css/bs4-utilities.min.css" if using bootstrap4 in future-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/jBox.all.css">
+    <link rel="stylesheet" href="css/media.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <!--my Style-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.9/css/intlTelInput.css" media="screen">
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style-2.css" />
+    <link rel="stylesheet" href="css/media.css" />
+
+    <!--google font-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karla">
+    <!--font awsome-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style type="text/css">
+    @import url('https://fonts.googleapis.com/css?family=Josefin+Sans:100,300,400,600,700');
+    @import url('https://fonts.googleapis.com/css?family=Indie+Flower');
+    .svg-calLoader {
+        width: 230px;
+        height: 230px;
+        animation: 1.4s linear infinite loader-spin;
+    }
+    
+    .cal-loader__plane {
+        fill: $ c-hilight;
+    }
+    
+    .cal-loader__path {
+        stroke: $ c-front;
+        animation: 1.4s ease-in-out infinite loader-path;
+    }
+    
+    @keyframes loader-spin {
+        to {
+            transform: rotate(360deg);
+        }
+    }
+    
+    @keyframes loader-path {
+        0% {
+            stroke-dasharray: 0, 580, 0, 0, 0, 0, 0, 0, 0;
+        }
+        50% {
+            stroke-dasharray: 0, 450, 10, 30, 10, 30, 10, 30, 10;
+        }
+        100% {
+            stroke-dasharray: 0, 580, 0, 0, 0, 0, 0, 0, 0;
+        }
+    }
+    
+    #overlay {
+        position: fixed;
+        /* Sit on top of the page content */
+        display: block;
+        /* Hidden by default */
+        width: 100%;
+        /* Full width (cover the whole page) */
+        height: 100%;
+        /* Full height (cover the whole page) */
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(20, 31, 63, 0.9);
+        /* Black background with opacity */
+        z-index: 2;
+        /* Specify a stack order in case you're using a different order for other elements */
+        cursor: pointer;
+        /* Add a pointer on hover */
+    }
+    
+    .align-middle {
+        position: absolute;
+        margin: auto;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 500px;
+        height: 250px;
+        background-color: #fff;
+        border-radius: 3px;
+        padding-left: 10px;
+        padding-right: 10px;
+        max-width: 100%;
+    }
+    
+    #subscribe-Modal .modal-dialog {
+        z-index: 9999;
+    }
+    
+    div#login-Modal .modal-dialog {
+        z-index: 99999;
+    }
+    
+    @media (max-width: 360px) {
+        .align-middle {
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+    }
+</style>
+
+<body class="body_index">
+    <main id="app">
+        <template>
+            <div class="top_stripe" v-if="loggedin !== 'true'">
+                <div class="container">
+                    <p>
+                        Saving on travel with Wanderift is easy! Create your free account today
+                    </p>
+                    <a href="" class="button btn--signup">Get Started</a>
+                </div>
+            </div>
+        </template>
+        <header class="new-index new-index-customize header-img">
+            <nav class="navbar navbar-default new-index " style="padding-top: 14px;">
+                <div class="container">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <!-- <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"> -->
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="index.html">
+                            <img src="images/Wanderift_Logo_2.png" style="width: 180px;">
+                        </a>
+
+                        <div class="mobile-sign-in">
+                            <ul v-if="greeting!= null">
+                                <li><a href="account.html">Account</a></li>
+                                <li><a href="account.html" class="btn btn-primary nav-sub"><b> {{tokens.available | tokens}}
+                                </b></a>
+                                </li>
+                            </ul>
+                            <ul v-else>
+                                <li><a class="login-Modal" href="" role="button" data-toggle="modal" data-target="#login-Modal">Sign In</a></li>
+                                <li><a href="" role="button" data-toggle="modal" data-target="#subscribe-Modal" class="subscribe-Modal">Sign Up</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="navbar" id="bs-example-navbar-collapse-1">
+                            <ul v-if="greeting!= null" class="nav navbar-nav navbar-right flex-row align-items-center">
+                                <li><a href="#" role="button" data-target="">{{ greeting }}</a></li>
+                                <li><a href="account.html">Account</a></li>
+
+                                <li>
+                                    <a href="account.html" role="button" class="btn subscribe-Modal p-0"><span class="d-inline-block nav-sub">{{tokens.available | tokens}}</span></a>
+                                </li>
+                            </ul>
+                            <ul v-else class="nav navbar-nav navbar-right flex-row align-items-center">
+                                <li><a href="corporate-subscription.html" style="font-weight: bold;">Corporate Subscriptions</a></li>
+                                <li><a href="how-it-works.html" style="font-weight: bold;">How it Works</a></li>
+                                <li><a class="login-Modal" href="" role="button" data-toggle="modal" data-target="#login-Modal" style="font-weight: bold;">Sign In</a></li>
+                                <li><a href="" role="button" data-toggle="modal" data-target="#subscribe-Modal" class="btn subscribe-Modal p-0"><span class="d-inline-block nav-sub" style="font-weight: bold;">Sign Up</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+
+                    <!-- /.navbar-collapse -->
+                </div>
+                <!-- /.container-fluid -->
+            </nav>
+            <!-- <div class="fillter" style="background:#141F3F;"></div> -->
+            <div class="container">
+                <div class="box" style="padding-bottom:30px; margin-top:10px;">
+                    <h1 class="banner_text1" style="text-align: left;padding-top:10px;font-size:47px; font-weight: 600; margin-top:0px;">Subscribe to Fly and Start Saving</h1>
+                    <h3 class="mobile-banner text-left pl-4 pr-4 m-0">Search and Save on <br> Flights with Wanderlift</h3>
+                    <div>
+                        <span class="btn" id="roundtrip" style="font-size: 16px; text-align: left; color: #00b5ff" value="roundtrip" v-model="flight_type">Round Trip</span>
+                        <span class="btn" id="oneway" style="font-size: 16px; text-align: left;" value="oneway" v-model="flight_type">One Way</span>
+                    </div>
+
+
+                    <div class="form-container">
+                        <div id="round-trip-form">
+                            <div class="row">
+                                <div class="col-sm-3 border-right">
+                                    <p>Select Departure City</p>
+                                    <select id="departure" data-required="true" class="form-control basic" name="departure" required v-model="search.fly_from">
+                                    <option value="" selected="selected">Departure City</option>
+                                    <option slide-rel="atlanta" value="ATL">Atlanta - ATL</option>
+                                    <option slide-rel="austin" value="AUS">Austin - AUS</option>
+                                    <option slide-rel="boston" value="BOS">Boston - BOS</option>
+                                    <option slide-rel="chicago" value="ORD">Chicago - ORD</option>
+                                    <option slide-rel="chicago" value="ORD">Chicago - MDW</option>
+                                    <option slide-rel="dallas" value="DFW">Dallas - DFW</option>
+                                    <option slide-rel="denver" value="DEN">Denver - DEN</option>
+                                    <option slide-rel="detroit" value="DTW">Detroit - DTW</option>
+                                    <option slide-rel="houston" value="IAH">Houston - IAH</option>
+                                    <option slide-rel="houston" value="HOU">Houston - HOU</option>
+                                    <option slide-rel="huntsville" value="HSV">Huntsville - HSV</option>
+                                    <option slide-rel="miami" value="MIA">Miami - MIA</option>
+                                    <option slide-rel="new_orleans" value="MSY">New Orleans - MSY</option>
+                                    <option slide-rel="new_york" value="LGA">New York - LGA</option>
+                                    <option slide-rel="new_york" value="JFK">New York - JFK</option>
+                                    <option slide-rel="new_york" value="EWR">New York - EWR</option>
+                                    <option slide-rel="las_vegas" value="LAS">Las Vegas - LAS</option>
+                                    <option slide-rel="little_rock" value="LIT">Little Rock - LIT</option>
+                                    <option slide-rel="los_angeles" value="LAX">Los Angeles - LAX</option>
+                                    <option slide-rel="phoenix" value="PHX">Phoenix - PHX</option>
+                                    <option slide-rel="san_fransisco" value="SFO">San Francisco - SFO</option>
+                                    <option slide-rel="seattle" value="SEA">Seattle - SEA</option>
+                                    <option slide-rel="washington_dc" value="IAD">Washington DC - IAD</option>
+                                    <option slide-rel="washington_dc" value="DCA">Washington DC - DCA</option>
+                                </select>
+                                </div>
+                                <div class="clearfix visible-xs"></div>
+                                <div class="col-sm-3 border-right">
+                                    <p>Select Arrival City</p>
+                                    <select id="arrival" data-required="true" name="arrival" v-model="search.fly_to" class="form-control basic" required>
+                                    <option value="" selected="selected">Arrival City</option>
+                                    <option slide-rel="albuquerque" value="ABQ">Albuquerque - ABQ</option>
+                                    <option slide-rel="atlanta" value="ATL">Atlanta - ATL</option>
+                                    <option slide-rel="austin" value="AUS">Austin - AUS</option>
+                                    <option slide-rel="boston" value="BOS">Boston - BOS</option>
+                                    <option slide-rel="chicago" value="ORD">Chicago - ORD</option>
+                                    <option slide-rel="chicago" value="ORD">Chicago - MDW</option>
+                                    <option slide-rel="dallas" value="DFW">Dallas - DFW</option>
+                                    <option slide-rel="denver" value="DEN">Denver - DEN</option>
+                                    <option slide-rel="detroit" value="DTW">Detroit - DTW</option>
+                                    <option slide-rel="houston" value="IAH">Houston - IAH</option>
+                                    <option slide-rel="houston" value="HOU">Houston - HOU</option>
+                                    <option slide-rel="huntsville" value="HSV">Huntsville - HSV</option>
+                                    <option slide-rel="miami" value="MIA">Miami - MIA</option>
+                                    <option slide-rel="new_orleans" value="MSY">New Orleans - MSY</option>
+                                    <option slide-rel="new_york" value="LGA">New York - LGA</option>
+                                    <option slide-rel="new_york" value="JFK">New York - JFK</option>
+                                    <option slide-rel="new_york" value="EWR">New York - EWR</option>
+                                    <option slide-rel="orlando" value="ORD">Orlando - ORD</option>
+                                    <option slide-rel="las_vegas" value="LAS">Las Vegas - LAS</option>
+                                    <option slide-rel="little_rock" value="LIT">Little Rock - LIT</option>
+                                    <option slide-rel="los_angeles" value="LAX">Los Angeles - LAX</option>
+                                    <option slide-rel="phoenix" value="PHX">Phoenix - PHX</option>
+                                    <option slide-rel="san_fransisco" value="SFO">San Francisco - SFO</option>
+                                    <option slide-rel="seattle" value="SEA">Seattle - SEA</option>
+                                    <option slide-rel="washington_dc" value="IAD">Washington DC - IAD</option>
+                                    <option slide-rel="washington_dc" value="DCA">Washington DC - DCA</option>
+                                </select>
+                                </div>
+                                <div class="clearfix visible-xs"></div>
+                                <div class="col-sm-2 border-right">
+                                    <p>Departure Date</p>
+                                    <input data-datedropper data-dd-roundtrip="my-trip" data-dd-theme="wanderift" type="text" class="form-control" name="datefilterstart" id="bookingdate" placeholder="Dep Date" required v-model="search.dateFrom" />
+                                </div>
+                                <div class="col-sm-2">
+                                    <p>Return Date</p>
+                                    <input data-datedropper data-dd-roundtrip="my-trip" data-dd-theme="wanderift" required type="text" name="datefilterend" id="returndate" placeholder="Ret Date" class="form-control" v-model="search.dateTo" />
+                                </div>
+                                <div class="col-sm-2" style="margin-top:18px;">
+                                    <button class="btn btn-primary btn-search" id="searchFlight_w" style="width:140px; height: 50px; margin-left:0px;" @click="searchFlight()">
+                                    Search
+                                </button>
+                                </div>
+                                <div class="col-sm-12">
+                                    <button class="btn btn-primary btn--link" onclick="location.href='https://www.wanderift.com/how-it-works.html'">
+                                    How it Works
+                                </button>
+                                </div>
+                                <div class="col-sm-12">
+                                    <button class="btn btn-primary btn--link" onclick="location.href='https://www.wanderift.com/about-us.html'">
+                                    About Us
+                                </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div id="overlay">
+            <div class="align-middle" style="text-align: center;">
+                <div style="padding-left:50px; padding-right:50px">
+                    <img style="width: 20%; margin-top: 30px" src="https://www.growingagreenerworld.com/wp-content/uploads/2015/03/loading.gif">
+                    <h3 style="font-size: 16px;font-weight: bold; color: #141F3F; opacity: 50%;width:450px; margin-top: 22px; line-height:1.5; margin-top:10px;">
+                        Loading top results for your search</h3>
+                    <p style="font-size: 16px;font-weight: bold; color: rgba(20, 31, 63, 0.877); opacity: 50%; margin-top: 20px; line-height:1.5;">
+                        Wanderift Fast Fact: <span v-if="fast_facts" id="fast_facts" style="display: none">{{fast_facts}}</span><span v-else> Wanderift travellers save thousands a year on flights </span>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="new-index featured-on desktop-screen" style="background-color: #fff; padding-top:0px; padding-bottom:0px;">
+            <div>
+                <!--
+                        <h3 class="text-center" style="font-size: 35px; padding-top: 40px; padding-bottom: 40px;">Featured on
+                        </h3>
+        -->
+                <div class="row">
+                    <div class="col-sm-2" style="margin-top:-10px;padding-bottom:10px;">
+                        <a href="https://simpleflying.com/airline-subscription-model/" target="_blank">
+                            <div class="img-container">
+
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-sm-2">
+                        <a href="https://simpleflying.com/airline-subscription-model/" target="_blank">
+                            <div class="img-container">
+                                <img alt="img" src="images/simple.png" class="img-responsive small-img" />
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-sm-2">
+                        <a href="https://www.smartertravel.com/members-only-air-service-cheaper-us-flights/" target="_blank">
+                            <div class="img-container">
+                                <img alt="img" src="images/Smarter_Travel_Logo.png" class="img-responsive small-img" />
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-sm-2" style="padding-top:10px;">
+                        <a href="https://www.forbes.com/sites/juliewalmsley/2019/04/30/remember-rollover-minutes-this-subscription-service-lets-you-roll-over-flights-or-give-them-away/#614450f53c2e" target="_blank">
+                            <div class="img-container">
+                                <img alt="img" src="images/Forbes_Logo.png" class="img-responsive" />
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-sm-2" style="padding-top:20px;">
+                        <a href="https://medium.com/globalluxsoft/the-future-of-travel-industry-trends-and-predictions-part-2-6909a358cc44" target="_blank">
+                            <div class="img-container">
+                                <img alt="img" src="images/trip_advisor_logo.png" class="img-responsive" />
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-sm-2" style="padding-top:10px;">
+                        <a href="https://medium.com/globalluxsoft/the-future-of-travel-industry-trends-and-predictions-part-2-6909a358cc44" target="_blank">
+                            <div class="img-container">
+
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="before-load bg-change">
+            <div class="main-content container" style="padding-bottom: 160px;">
+                <h3 style="font-size: 34px; font-weight: bold; color: #141F3F; opacity: 50%;width:450px; margin-top: 40px; line-height:1.5;">Top Destinations of 2019</h3>
+                <p style="font-size: 18px; margin-right: 30px;">We've taken all our flight searches to suggest to you where our subscribers are wandering</p>
+
+                <div class="slider">
+                    <div id="slider-one" class="carousel slide" data-ride="carousel">
+                        <!-- <ol class="carousel-indicators">
+                        <li data-target="#slider-one" data-slide-to="0" class="active"></li>
+                        <li data-target="#slider-one" data-slide-to="1"></li>
+                        <li data-target="#slider-one" data-slide-to="2"></li>
+                    </ol> -->
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="card-group">
+                                    <div class="card" style="margin: 10px; border: 0px!important;">
+                                        <img src="images/New_York.png" class="card-img-top" alt="..." style="border-radius: 6px;">
+                                        <div class="card-body" style="padding: 0 0 2px 8px">
+                                            <h3 style="font-weight: bold; font-size:24px; color: #141F3F; opacity: 50%;width:450px; margin-top: 10px; margin-bottom: 5px; line-height:1.5;">
+                                                New York - LGA</h3>
+                                            <p class="card-text" style="font-size: 16px; margin-right: 30px;">Typical Carriers, American, Delta</p>
+                                        </div>
+                                    </div>
+                                    <div class="card" style="margin: 10px; border: 0px!important;">
+                                        <img src="images/Miami.png" class="card-img-top" alt="..." style="border-radius: 6px;">
+                                        <div class="card-body" style="padding: 0 0 2px 8px">
+                                            <h3 style="font-weight: bold; color: #141F3F; font-size:24px; opacity: 50%;width:450px; margin-top: 10px; margin-bottom: 5px; line-height:1.5;">
+                                                Miami - MIA</h3>
+                                            <p class="card-text" style="font-size: 16px; margin-right: 30px;">Typical Carriers, Alaska, American, Delta</p>
+                                        </div>
+                                    </div>
+                                    <div class="card" style="margin: 10px; border: 0px!important;">
+                                        <img src="images/Los_Angeles.png" class="card-img-top" alt="..." style="border-radius: 6px;">
+                                        <div class="card-body" style="padding: 0 0 2px 8px">
+                                            <h3 style="font-weight: bold; color: #141F3F; font-size:24px; opacity: 50%;width:450px; margin-top: 10px; margin-bottom: 5px; line-height:1.5;">
+                                                Los Angeles - LAX</h3>
+                                            <p class="card-text" style="font-size: 16px; margin-right: 30px;">Typical Carriers, Alaska, American, United</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="card-group">
+                                    <div class="card" style="margin: 10px; border: 0px!important;">
+                                        <img src="https://media.istockphoto.com/photos/sunrise-cityscape-austin-texas-at-golden-hour-above-tranquil-lady-picture-id819459266?k=6&m=819459266&s=612x612&w=0&h=8DTHmoNXTDbjsxxJS-W1VLTlEGqtu-2_XQ1PcO8bZxQ=" class="card-img-top" alt="..." style="border-radius: 6px;">
+                                        <div class="card-body" style="padding: 0 0 2px 8px">
+                                            <h3 style="font-weight: bold; color: #141F3F; font-size:24px; opacity: 50%;width:450px; margin-top: 10px; margin-bottom: 5px; line-height:1.5;">
+                                                Dallas Texas - DFW</h3>
+                                            <p class="card-text" style="font-size: 16px; margin-right: 30px;">Typical Carriers, American, Delta</p>
+                                        </div>
+                                    </div>
+                                    <div class="card" style="margin: 10px; border: 0px!important;">
+                                        <img src="https://media.istockphoto.com/photos/sunrise-cityscape-austin-texas-at-golden-hour-above-tranquil-lady-picture-id819459266?k=6&m=819459266&s=612x612&w=0&h=8DTHmoNXTDbjsxxJS-W1VLTlEGqtu-2_XQ1PcO8bZxQ=" class="card-img-top" alt="..." style="border-radius: 6px;">
+                                        <div class="card-body" style="padding: 0 0 2px 8px">
+                                            <h3 style="font-weight: bold; color: #141F3F; font-size:24px; opacity: 50%;width:450px; margin-top: 10px; margin-bottom: 5px; line-height:1.5;">
+                                                San Francisco - SFO</h3>
+                                            <p class="card-text" style="font-size: 16px; margin-right: 30px;">Typical Carriers, American, Delta</p>
+                                        </div>
+                                    </div>
+                                    <div class="card" style="margin: 10px; border: 0px!important;">
+                                        <img src="https://media.istockphoto.com/photos/sunrise-cityscape-austin-texas-at-golden-hour-above-tranquil-lady-picture-id819459266?k=6&m=819459266&s=612x612&w=0&h=8DTHmoNXTDbjsxxJS-W1VLTlEGqtu-2_XQ1PcO8bZxQ=" class="card-img-top" alt="..." style="border-radius: 6px;">
+                                        <div class="card-body" style="padding: 0 0 2px 8px">
+                                            <h3 style="font-weight: bold; color: #141F3F; font-size:24px; opacity: 50%;width:450px; margin-top: 10px; margin-bottom: 5px; line-height:1.5;">
+                                                Dallas Texas - DFW</h3>
+                                            <p class="card-text" style="font-size: 16px; margin-right: 30px;">Typical carriers, American, Delta</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="card-group">
+                                    <div class="card" style="margin: 10px; border: 0px!important;">
+                                        <img src="https://media.istockphoto.com/photos/sunrise-cityscape-austin-texas-at-golden-hour-above-tranquil-lady-picture-id819459266?k=6&m=819459266&s=612x612&w=0&h=8DTHmoNXTDbjsxxJS-W1VLTlEGqtu-2_XQ1PcO8bZxQ=" class="card-img-top" alt="..." style="border-radius: 6px;">
+                                        <div class="card-body" style="padding: 0 0 2px 8px">
+                                            <h3 style="font-weight: bold; color: #141F3F; font-size:24px; opacity: 50%;width:450px; margin-top: 10px; margin-bottom: 5px; line-height:1.5;">
+                                                Dallas Texas - DFW</h3>
+                                            <p class="card-text" style="font-size: 16px; margin-right: 30px;">Typical carriers, American, Delta</p>
+                                        </div>
+                                    </div>
+                                    <div class="card" style="margin: 10px; border: 0px!important;">
+                                        <img src="https://media.istockphoto.com/photos/sunrise-cityscape-austin-texas-at-golden-hour-above-tranquil-lady-picture-id819459266?k=6&m=819459266&s=612x612&w=0&h=8DTHmoNXTDbjsxxJS-W1VLTlEGqtu-2_XQ1PcO8bZxQ=" class="card-img-top" alt="..." style="border-radius: 6px;">
+                                        <div class="card-body" style="padding: 0 0 2px 8px">
+                                            <h3 style="font-weight: bold; color: #141F3F; font-size:24px; opacity: 50%;width:450px; margin-top: 10px; margin-bottom: 5px; line-height:1.5;">
+                                                Dallas Texas - DFW</h3>
+                                            <p class="card-text" style="font-size: 16px; margin-right: 30px;">Typical carriers, American, Delta</p>
+                                        </div>
+                                    </div>
+                                    <div class="card" style="margin: 10px; border: 0px!important;">
+                                        <img src="https://media.istockphoto.com/photos/sunrise-cityscape-austin-texas-at-golden-hour-above-tranquil-lady-picture-id819459266?k=6&m=819459266&s=612x612&w=0&h=8DTHmoNXTDbjsxxJS-W1VLTlEGqtu-2_XQ1PcO8bZxQ=" class="card-img-top" alt="..." style="border-radius: 6px;">
+                                        <div class="card-body" style="padding: 0 0 2px 8px">
+                                            <h3 style="font-weight: bold; color: #141F3F; font-size:24px; opacity: 50%;width:450px; margin-top: 10px; margin-bottom: 5px; line-height:1.5;">
+                                                Dallas Texas - DFW</h3>
+                                            <p class="card-text" style="font-size: 16px; margin-right: 30px;">Typical carriers, American, Delta</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#slider-one" role="button" data-slide="prev">
+                            <!-- <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span> -->
+                        </a>
+                        <a class="carousel-control-next" href="#slider-one" role="button" data-slide="next">
+                            <!-- <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span> -->
+                        </a>
+                    </div>
+                </div>
+
+                <h3 style="font-size: 34px;font-weight: bold; color: #141F3F; opacity: 50%;width:450px; margin-top: 60px; line-height:1.5;">
+                    Popular Flights in August</h3>
+                <p style="font-size: 18px; margin-right: 30px;">Having trouble finding a destination? Take a look at our Popular flights to help you find a getaway today</p>
+
+                <div class="slider">
+                    <div id="slider-two" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="card-group">
+                                    <div class="card" style="margin: 10px; border: 0px!important;">
+                                        <img src="images/Los_Angeles.png" class="card-img-top" alt="...">
+                                        <div class="card-body" style="padding: 0 0 2px 8px">
+                                            <h3 style="font-size: 24px;font-weight: bold; color: #141F3F; opacity: 50%;width:450px; margin-top: 10px; line-height:1.5; margin-bottom:5px;">
+                                                SFO - LAX, Round Trip</h3>
+                                            <p class="card-text" style="font-size: 14px; margin-right: 30px; margin-top:5px;">American Airlines - 2 Token Trip</p>
+                                        </div>
+                                    </div>
+                                    <div class="card" style="margin: 10px; border: 0px!important;">
+                                        <img src="images/Las_Vegas.png" class="card-img-top" alt="...">
+                                        <div class="card-body" style="padding: 0 0 2px 8px">
+                                            <h3 style="font-size: 24px;font-weight: bold; color: #141F3F; opacity: 50%;width:450px; margin-top: 10px; line-height:1.5; margin-bottom:5px;">
+                                                DFW - LAS, Round Trip</h3>
+                                            <p class="card-text" style="font-size: 14px; margin-right: 30px;">United Airlines - 2 Token Trip</p>
+                                        </div>
+                                    </div>
+                                    <div class="card" style="margin: 10px; border: 0px!important;">
+                                        <img src="images/Boston.png" class="card-img-top" alt="...">
+                                        <div class="card-body" style="padding: 0 0 2px 8px">
+                                            <h3 style="font-size: 24px;font-weight: bold; color: #141F3F; opacity: 50%;width:450px; margin-top: 10px; line-height:1.5; margin-bottom:5px;">
+                                                LGA - BOS, Round Trip</h3>
+                                            <p class="card-text" style="font-size: 14px; margin-right: 30px;">jetBlue - 2 Token Trip</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="card-group">
+                                    <div class="card" style="margin: 10px; border: 0px!important;">
+                                        <img src="https://media.istockphoto.com/photos/sunrise-cityscape-austin-texas-at-golden-hour-above-tranquil-lady-picture-id819459266?k=6&m=819459266&s=612x612&w=0&h=8DTHmoNXTDbjsxxJS-W1VLTlEGqtu-2_XQ1PcO8bZxQ=" class="card-img-top" alt="...">
+                                        <div class="card-body" style="padding: 0 0 2px 8px">
+                                            <h3 style="font-weight: bold; color: #141F3F; opacity: 50%;width:450px; margin-top: 10px; line-height:1.5; margin-bottom:5px;">
+                                                Dallas Texas - DFW</h3>
+                                            <p class="card-text" style="font-size: 14px; margin-right: 30px;">Typical carriers, American, Delta</p>
+                                        </div>
+                                    </div>
+                                    <div class="card" style="margin: 10px; border: 0px!important;">
+                                        <img src="https://media.istockphoto.com/photos/sunrise-cityscape-austin-texas-at-golden-hour-above-tranquil-lady-picture-id819459266?k=6&m=819459266&s=612x612&w=0&h=8DTHmoNXTDbjsxxJS-W1VLTlEGqtu-2_XQ1PcO8bZxQ=" class="card-img-top" alt="...">
+                                        <div class="card-body" style="padding: 0 0 2px 8px">
+                                            <h3 style="font-weight: bold; color: #141F3F; opacity: 50%;width:450px; margin-top: 10px; line-height:1.5;">
+                                                Dallas Texas - DFW</h3>
+                                            <p class="card-text" style="font-size: 16px; margin-right: 30px;">Typical carriers, American, Delta</p>
+                                        </div>
+                                    </div>
+                                    <div class="card" style="margin: 10px; border: 0px!important;">
+                                        <img src="https://media.istockphoto.com/photos/sunrise-cityscape-austin-texas-at-golden-hour-above-tranquil-lady-picture-id819459266?k=6&m=819459266&s=612x612&w=0&h=8DTHmoNXTDbjsxxJS-W1VLTlEGqtu-2_XQ1PcO8bZxQ=" class="card-img-top" alt="...">
+                                        <div class="card-body" style="padding: 0 0 2px 8px">
+                                            <h3 style="font-weight: bold; color: #141F3F; opacity: 50%;width:450px; margin-top: 10px; line-height:1.5;">
+                                                Dallas Texas - DFW</h3>
+                                            <p class="card-text" style="font-size: 16px; margin-right: 30px;">Typical carriers, American, Delta</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="card-group">
+                                    <div class="card" style="margin: 10px; border: 0px!important;">
+                                        <img src="https://media.istockphoto.com/photos/sunrise-cityscape-austin-texas-at-golden-hour-above-tranquil-lady-picture-id819459266?k=6&m=819459266&s=612x612&w=0&h=8DTHmoNXTDbjsxxJS-W1VLTlEGqtu-2_XQ1PcO8bZxQ=" class="card-img-top" alt="...">
+                                        <div class="card-body" style="padding: 0 0 2px 8px">
+                                            <h3 style="font-weight: bold; color: #141F3F; opacity: 50%;width:450px; margin-top: 20px; line-height:1.5;">
+                                                Dallas Texas - DFW</h3>
+                                            <p class="card-text" style="font-size: 16px; margin-right: 30px;">Typical carriers, American, Delta</p>
+                                        </div>
+                                    </div>
+                                    <div class="card" style="margin: 10px; border: 0px!important;">
+                                        <img src="https://media.istockphoto.com/photos/sunrise-cityscape-austin-texas-at-golden-hour-above-tranquil-lady-picture-id819459266?k=6&m=819459266&s=612x612&w=0&h=8DTHmoNXTDbjsxxJS-W1VLTlEGqtu-2_XQ1PcO8bZxQ=" class="card-img-top" alt="...">
+                                        <div class="card-body" style="padding: 0 0 2px 8px">
+                                            <h3 style="font-weight: bold; color: #141F3F; opacity: 50%;width:450px; margin-top: 20px; line-height:1.5;">
+                                                Dallas Texas - DFW</h3>
+                                            <p class="card-text" style="font-size: 16px; margin-right: 30px;">Typical carriers, American, Delta</p>
+                                        </div>
+                                    </div>
+                                    <div class="card" style="margin: 10px; border: 0px!important;">
+                                        <img src="https://media.istockphoto.com/photos/sunrise-cityscape-austin-texas-at-golden-hour-above-tranquil-lady-picture-id819459266?k=6&m=819459266&s=612x612&w=0&h=8DTHmoNXTDbjsxxJS-W1VLTlEGqtu-2_XQ1PcO8bZxQ=" class="card-img-top" alt="...">
+                                        <div class="card-body" style="padding: 0 0 2px 8px">
+                                            <h3 style="font-weight: bold; color: #141F3F; opacity: 50%;width:450px; margin-top: 20px; line-height:1.5;">
+                                                Dallas Texas - DFW</h3>
+                                            <p class="card-text" style="font-size: 16px; margin-right: 30px;">
+                                                carriers, American, Delta</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#slider-two" role="button" data-slide="prev">
+                            <!-- <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span> -->
+                        </a>
+                        <a class="carousel-control-next" href="#slider-two" role="button" data-slide="next">
+                            <!-- <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span> -->
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hotel-box row" style="margin-top: 100px;height: 222px;padding-top: 20px;padding-bottom: 20px;">
+                    <div class="col-md-4" style="padding-left:40px;">
+                        <img src="images/hotel.png" alt="hotel" style="width:180px;">
+                    </div>
+                    <div class="col-md-4" style="right: 100px;">
+                        <h3 style="font-weight: bold; color: #141F3F; opacity: 50%;width:350px; margin-top: 20px; line-height:1.5;">
+                            Travelers account saves up to 60% off hotels</h3>
+                        <p>Enter your email and password and create your free Wanderift traveler account
+                        </p>
+                    </div>
+                    <div class="col-md-4 pt-4" style="text-align: center; right: 80px; margin-top:20px;">
+                        <form>
+                            <div class="form-group">
+                                <input type="email" placeholder="Email" required/>
+                            </div>
+                            <div class="form-group">
+                                <input type="password" placeholder="Password" required/>
+                            </div>
+                            <button style="width: 75%; background: #00B5FF; border-color: #00B5FF;" class="btn btn-primary">
+                            Start Saving
+                        </button>
+                        </form>
+                    </div>
+                </div>
+
+                <h3 class="trending-flights">Trending Now</h3>
+                <p class="trending-flights-text">Take a look at the current flights Wanderift travelers are searching and booking</p>
+
+                <div class="result-airlines-data row">
+                    <div class="col-sm-10">
+                        <div class="row pt-4 pb-4">
+                            <div class="col-sm-2 text-center">
+                                <img src="images/american_airlines_logo.png" alt="AA" style="width: 45px;">
+                            </div>
+                            <div class="col-sm-4">
+                                <span class="font-weight-bold" style="font-size: 20px; color: #151F3F;">
+                                    2:46 PM - 4:31 AM
+                                    <br><small style="color:#555; font-size:14px;">American Airlines | 9/6</small>
+                                </span>
+                            </div>
+                            <div class="col-sm-4">
+                                <span class="font-weight-bold" style="font-size: 20px; color: #151F3F">
+                                    3h 40m
+                                    <br><small style="color:#555; font-size:14px;">Dallas (DFW) - San Francisco (SFO)</small>
+                                </span>
+                            </div>
+                            <div class="col-sm-2 text-center">
+                                <span class="font-weight-bold" style="font-size: 20px; color: #151F3F;">
+                                    Not Stop
+                                </span>
+                            </div>
+                        </div>
+                        <div class="row pt-4 pb-4">
+                            <div class="col-sm-2 text-center">
+                                <img src="images/american_airlines_logo.png" alt="AA" style="width: 45px;">
+                            </div>
+                            <div class="col-sm-4">
+                                <span class="font-weight-bold" style="font-size: 20px; color: #151F3F;">
+                                    3:08 PM - 8:35 PM
+                                    <br><small style="color:#555; font-size:14px;">American Airlines | 9/13</small>
+                                </span>
+                            </div>
+                            <div class="col-sm-4">
+                                <span class="font-weight-bold" style="font-size: 20px; color: #151F3F;">
+                                    3h 40m
+                                    <br><small style="color:#555; font-size:14px;">San Francisco (SFO) - Dallas (DFW)</small>
+                                </span>
+                            </div>
+                            <div class="col-sm-2 text-center">
+                                <span class="font-weight-bold" style="font-size: 20px; color: #151F3F;">
+                                    Not Stop
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right-data-filled col-sm-2 text-center p-4 pr-0 tokens-trip">
+                        <span class="tokenti " style="font-size:18px; padding-bottom: 5px;">2 Token Trip</span>
+                        <small style="font-size: 14px; padding-bottom:5px;">Round Trip</small>
+                        <a class="bookflight-btn d-inline-block w-100" style="width: 85px; color: rgb(255, 255, 255); font-size: 16px;">View Flight</a>
+                    </div>
+                </div>
+
+                <div class="result-airlines-data row">
+                    <div class="col-sm-10">
+                        <div class="row pt-4 pb-4">
+                            <div class="col-sm-2 text-center">
+                                <img src="images/delta_airlines.png" alt="AA" style="width: 45px;">
+                            </div>
+                            <div class="col-sm-4">
+                                <span class="font-weight-bold" style="font-size: 20px; color: #151F3F;">
+                                    12:45 PM - 2:16 AM
+                                    <br><small style="color:#555; font-size:14px;">Delta Airlines | 8/20</small>
+                                </span>
+                            </div>
+                            <div class="col-sm-4">
+                                <span class="font-weight-bold" style="font-size: 20px; color: #151F3F;">
+                                    3h 40m
+                                    <br><small style="color:#555; font-size:14px;">Dallas (DFW) - San Francisco (SFO)</small>
+                                </span>
+                            </div>
+                            <div class="col-sm-2 text-center">
+                                <span class="font-weight-bold" style="font-size: 20px; color: #151F3F;">
+                                    Not Stop
+                                </span>
+                            </div>
+                        </div>
+                        <div class="row pt-4 pb-4">
+                            <div class="col-sm-2 text-center">
+                                <img src="images/delta_airlines.png" alt="AA" style="width: 45px;">
+                            </div>
+                            <div class="col-sm-4">
+                                <span class="font-weight-bold" style="font-size: 20px; color: #151F3F;">
+                                    7:00 PM - 8:25 PM
+                                    <br><small style="color:#555; font-size:14px;">Delta Airlines | 8/23</small>
+                                </span>
+                            </div>
+                            <div class="col-sm-4">
+                                <span class="font-weight-bold" style="font-size: 20px; color: #151F3F;">
+                                    3h 40m
+                                    <br><small style="color:#555; font-size:14px;">San Francisco (SFO) - Dallas (DFW)</small>
+                                </span>
+                            </div>
+                            <div class="col-sm-2 text-center">
+                                <span class="font-weight-bold" style="font-size: 20px; color: #151F3F;">
+                                    Not Stop
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right-data-filled col-sm-2 text-center p-4 pr-0 tokens-trip">
+                        <span class="tokenti " style="font-size:18px; padding-bottom: 5px;">2 Token Trip</span>
+                        <small style="font-size: 14px; padding-bottom:5px;">Round Trip</small>
+                        <a class="bookflight-btn d-inline-block w-100" style="width: 85px; color: rgb(255, 255, 255); font-size: 16px;">View Flight</a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 text-right">
+                        <a href="#"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="body-page">
+            <div class="main-content bg-change" style="padding-bottom: 160px;">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3 sticky-panel filter-panel">
+                            <div class="left-filter-by">
+                                <div class="filter-by-box filter-by-airline" style="padding-top: 10px;">
+                                    <h4 style="color: #141F3F; font-size:22px; padding-bottom: 5px;">Filter by Airline
+                                    </h4>
+                                    <ul v-for="airline in airlines">
+                                        <li>
+                                            <a @click="filterByAirline(decodeFlight(airline))"><img :src="getFlightImage(airline)" />{{decodeFlight(airline)}} airlines
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 flight-display" v-if="two_way=='true'">
+                            <div class="result-data">
+                                <template>
+                                <div class="welcome-wande" style="text-align: center; height:157px;"
+                                     v-if="loggedin !== 'true'">
+
+                                    <p>
+                                    <h4 style="margin-top:0px;font-size: 22px; font-weight: bold; color: #141F3F;"
+                                        v-if="dataSource[0]">Welcome To Wanderift</h4>
+                                    </p>
+                                    <p class="bold"
+                                       style="width:420px; margin-top: 20px;margin-left: 50px; line-height:1.5; color: #141F3F;">
+                                        Wanderift is airline travel as a subscription. With Wanderift always pay the
+                                        same price for your flight no matter the distance or destination.
+                                    </p>
+
+                                </div>
+                                </template>
+                                <div class="flight-box" v-if="dataSource.length != 0">
+                                    <img src="images/rightarrow_iphone.png" alt="" class="flight-box-back">
+                                    <!-- <template v-if="dataSource[0]"> -->
+                                    <h3 style="font-size: 18px; font-weight: bold; color: #141F3F;">
+                                        <span class="show-mobile"> {{dataSource[0].flyFrom}} - {{dataSource[0].flyTo}} </span> | {{dataSource[0].local_departure | date('%a %e %b, %Y')}}
+                                        <template v-if="dataSource[0].route[1]"><span v-if="two_way == 'true'">-
+                                                    {{dataSource[0].route[1].local_departure | date('%a %e %b, %Y')}}</span>
+                                        </template>
+                                    </h3>
+                                    <!-- </template> -->
+                                    <!-- <template> -->
+                                    <h3 v-if="airlineFilter == 'false'" style="font-size: 14px; font-weight: bold; color: #141F3F;">Unfortunately we don't have flights for those specific airline. Please consider choosing a different airline on the filter section</h3>
+                                    <!-- </template> -->
+
+                                    <template v-if="dateFilter == 'false' && airlineFilter == 'true'">
+                                        <h3 style="font-size: 14px; font-weight: bold; color: #141F3F; opacity: 50%;width:450px; margin-top: 20px;margin-left: 50px; line-height:1.5;">
+                                        Unfortunately we don't have flights for those specific dates.Here are some
+                                        flights on alternate days that may work for you</h3>
+                                    </template>
+                                </div>
+                                <div class="flight-box" style="text-align: center;" v-if="dataSource.length == 0">
+                                    <h3 style="font-size: 14px; font-weight: bold; color: #141F3F; opacity: 50%;width:450px; margin-top: 20px;margin-left: 50px; line-height:1.5;">
+                                        Oops! Please search for flights to see something here.</h3>
+
+                                </div>
+
+                                <div class="result-airlines-data clearfix row " v-for="flight in dataSource " style="padding-right:25px; margin-top:20px; padding-top: 0px; ">
+                                    <template v-if="checkIndex(flight)">
+                                    <div class="left-data-filled col-md-2">
+                                        <div style="width: 8px" v-for="route in flight.route">
+                                            <img :src="getFlightImage(route.airline) " :alt="route.airline "
+                                                 style="width: 45px; margin-top:25px; ">
+                                        </div>
+                                    </div>
+                                    <div class="left-data-filled col-md-8 " style="padding-left: 10px;">
+                                        <!-- ==================Departure Flight============================ -->
+                                        <div class="upper data-flight-deign row" v-for="route in flight.route"
+                                             style="padding-top:24px; padding-bottom:5px;">
+
+                                            <span class="flighttime " style="font-weight: bold; font-size: 16px; padding-right: 30px;">
+                                                {{route.local_departure | date('%I:%M %p')}} -
+                                                {{route.local_arrival | date('%I:%M %p')}}
+                                                <small >{{route.airline | airlines}}
+                                                    airlines</small>
+                                            </span>
+
+                                            <span class="bystop ">
+                                                {{ flight.routes | length}} Stop<br>
+                                                <!-- <span>{{flight.routes | stops}} </span> -->
+                                            </span>
+                                            <span class="timeduraion">
+                                                <span style="font-weight: bold; ">{{route | datediff }}</span>
+                                                <small>{{route.flyFrom}} - {{route.flyTo}}</small>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="right-data-filled col-md-2 col-lg-2 col-sm-2"
+                                         style="padding-top: 40px;">
+                                        <div class="token-tickts ">
+                                            <span class="tokenti ">
+                                                2 Tokens
+                                            </span>
+
+                                            <a @click="confirmBooking(flight) " class="bookflight-btn "
+                                               style="width: 85px; color: #fff;">Book Flight</a>
+                                        </div>
+                                    </div>
+
+                                </template>
+
+                                    <template v-else v-html="displayAdvert()">
+
+                                        <div class="left-data-filled col-md-2" style="padding-left: 5px;">
+
+                                            <div>
+                                                <img :src="advert[advert_no].image_src"
+                                                     :alt="advert[advert_no].name"
+                                                     style="width: 100%; margin-top:40px; width: 110px; ">
+                                            </div>
+                                        </div>
+                                        <div class="left-data-filled col-md-7 " style="padding-right: 15px; padding-left: 50px;">
+                                            <div class="" style="text-align: center">
+                                                <h3 style="text-align: left; font-size: 18px;font-weight: bold; color: #141F3F; opacity: 50%; line-height:1.5;">
+                                                    {{advert[advert_no].title}}</h3>
+                                                <p style="text-align: left; font-size: 14px;font-weight: 400; color: rgba(20, 31, 63, 1); line-height:1.5;letter-spacing: 0px; width:280px;">
+                                                    {{advert[advert_no].body}}
+                                                </p>
+                                                <p style="text-align: left; font-size: 14px;font-weight: bold; color: rgba(20, 31, 63, 1); line-height:1.5;letter-spacing: 0px; margin-top: 24px;">
+                                                    {{advert[advert_no].website}} | Sponsored
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <div class="right-data-filled col-md-3" style="padding-left: 30px; border-left-width: 0px; padding-top:40px;">
+                                            <div class="token-tickts" style="margin-top:30px; ">
+                                                <a class="bookflight-btn" :href="advert[advert_no].url" style="width: 85px; ">View Deal</a>
+                                            </div>
+                                        </div>
+                                </template>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 flight-display" v-if="two_way =='false'">
+                            <div class="result-data">
+                                <div class="welcome-wande" style="text-align: center" v-if="loggedin !== 'true'">
+
+                                    <p>
+                                        <h4 style="margin-top:0px;font-size: 22px; font-weight: bold; color: #141F3F;" v-if="dataSource[0]">Welcome To Wanderift</h4>
+                                    </p>
+                                    <p class="bold" style="width:420px; margin-top: 20px;margin-left: 50px; line-height:1.5; color: #141F3F;">
+                                        Wanderift is airline travel as a subscription. With Wanderift always pay the same price for your flight no matter the distance or destination.
+                                    </p>
+                                </div>
+                                <div class="flight-box" style="text-align: center" v-if="dataSource !=0">
+                                    <h3 style="font-size: 18px; font-weight: bold; color: #141F3F;">Select Flight | {{dataSource[0].flyFrom}} - {{dataSource[0].flyTo}} | {{dataSource[0].local_departure | date('%a %e %b, %Y')}} </h3>
+                                </div>
+                                <div class="flight-box" style="text-align: center;" v-if="dataSource ==0">
+                                    <h3 style="font-size: 14px; font-weight: bold; color: #141F3F; opacity: 50%;width:450px; margin-top: 20px;margin-left: 50px; line-height:1.5;">
+                                        Ooops! Please search for flights to see something here.</h3>
+                                </div>
+
+                                <div class="result-airlines-data clearfix row " v-for="flight in dataSource " style="padding-right:25px; margin-top:20px; ">
+                                    <template v-if="checkIndex(flight)">
+                                    <div class="left-data-filled col-md-2">
+                                        <div style="width: 8px">
+                                            <img :src="getFlightImage(flight.airlines[0]) " :alt="flight.airlines[0]"
+                                                 style="width: 45px; margin-top:40px; ">
+                                        </div>
+                                    </div>
+                                    <div class="left-data-filled col-md-8 " style="padding-left: 10px;">
+                                        <!-- ==================Departure Flight============================ -->
+                                        <div class="row upper data-flight-deign " style="padding-top: 40px;">
+
+                                            <span class="flighttime " style="font-weight: bold; font-size: 16px; padding-right: 30px;">
+                                                {{flight.local_departure | date('%I:%M %p')}} -
+                                                {{flight.local_arrival | date('%I:%M %p')}}
+                                                <small>{{flight.route[0].airline | airlines}}
+                                                    airlines</small>
+                                            </span>
+
+                                            <span class="bystop">
+                                                {{ flight.routes | length}} Stop<br>
+                                                <!-- {{ flight.fare.adults}} -->
+                                                <!-- <span>{{flight.routes | stops}} </span> -->
+                                            </span>
+                                            <span class="timeduraion">
+                                                <span
+                                                        style="font-size: 16px; font-weight: bold; ">{{flight | datediff }}</span>
+                                            <small>{{flight.flyFrom}} - {{flight.flyTo}}</small>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="right-data-filled col-md-2 ">
+                                        <div class="token-tickts ">
+                                            <span class="tokenti ">
+                                                1 Token
+                                            </span>
+                                            <span class="tokenairlinename " style="width: 120px; "
+                                                  v-for="airline in flight.airlines">
+                                                <small>{{airline | airlines}} airlines</small>
+                                            </span>
+                                            <a @click="confirmBooking(flight) " class="bookflight-btn "
+                                               style="width: 85px; ">Book Flight</a>
+                                        </div>
+                                    </div>
+                                </template>
+
+                                    <template v-else>
+                                    <div >
+                                        <div class="left-data-filled col-md-2" style="padding-left: 5px;">
+
+                                            <div>
+                                                <img :src="advert[0].image_src"
+                                                     :alt="advert[0].name"
+                                                     style="width: 100%; margin-top:40px; width: 110px; ">
+                                            </div>
+                                        </div>
+                                        <div class="left-data-filled col-md-7 " style="padding-right: 15px; margin-right: 26px; padding-left: 50px;">
+                                            <div class="" style="text-align: center">
+                                                <h3 style="text-align: left; font-size: 18px;font-weight: bold; color: #141F3F; opacity: 50%; line-height:1.5;">
+                                                    {{advert[0].title}}</h3>
+                                                <p style="text-align: left; font-size: 14px;font-weight: 400; color: rgba(20, 31, 63, 1); line-height:1.5;letter-spacing: 0px; width:280px; margin-top: 10px;">
+                                                    {{advert[0].body}}
+                                                </p>
+                                                <p style="text-align: left; font-size: 14px;font-weight: bold; color: rgba(20, 31, 63, 1); line-height:1.5;letter-spacing: 0px; margin-top: 14px;">
+                                                    {{advert[0].website}} | Sponsored
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <div class="right-data-filled col-md-3 " style="padding-left: 30px; border-left-width: 0px; padding-top:40px;">
+                                            <div class="token-tickts" style="margin-top:30px; ">
+                                                <a class="bookflight-btn " style="width: 85px; ">View Deal</a>
+                                                <p style="text-align: center; font-size: 12px;font-weight: bold; color: rgba(20, 31, 63, 1); margin-top: 10px;">
+                                                    </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div v-else>
+                                        <div class="left-data-filled col-md-2" style="padding-left: 5px;">
+
+                                            <div>
+                                                <img :src="advert[1].image_src"
+                                                     :alt="advert[1].name"
+                                                     style="width: 100%; margin-top:40px; width: 110px; ">
+                                            </div>
+                                        </div>
+                                        <div class="left-data-filled col-md-7 " style="padding-right: 15px; margin-right: 26px; padding-left: 50px;">
+                                            <div class="" style="text-align: center">
+                                                <h3 style="text-align: left; font-size: 18px;font-weight: bold; color: #141F3F; opacity: 50%; line-height:1.5;">
+                                                    {{advert[1].title}}</h3>
+                                                <p style="text-align: left; font-size: 14px;font-weight: 400; color: rgba(20, 31, 63, 1); line-height:1.5;letter-spacing: 0px; width:280px; margin-top: 10px;">
+                                                    {{advert[1].body}}
+                                                </p>
+                                                <p style="text-align: left; font-size: 14px;font-weight: bold; color: rgba(20, 31, 63, 1); line-height:1.5;letter-spacing: 0px; margin-top: 14px;">
+                                                    {{advert[1].website}} | Sponsored
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <div class="right-data-filled col-md-3 " style="padding-left: 30px; border-left-width: 0px; padding-top:40px;">
+                                            <div class="token-tickts" style="margin-top:30px; ">
+                                                <a class="bookflight-btn " style="width: 85px; ">View Deal</a>
+                                                <p style="text-align: center; font-size: 12px;font-weight: bold; color: rgba(20, 31, 63, 1); margin-top: 10px;">
+                                                    </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </template>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3 sticky-panel ">
+                            <div class="right-filter-by ">
+                                <div class="filter-by-box filter-by-stop ">
+                                    <h4 style="font-size:22px; color: #141F3F; ">Trending flights</h4>
+                                    <ul>
+                                        <li>
+                                            <a><img src="images/alaska.jpg " /><span>dallas -
+                                                    seattle<small>9/15/19 -
+                                                        9/24/2019</small></span></a>
+                                        </li>
+                                        <li>
+                                            <a><img src="images/spirit.jpg " /><span>detroit -
+                                                    tampa<small>9/24/19 -
+                                                        10/23/2019</small></span></a>
+                                        </li>
+                                        <li>
+                                            <a><img src="images/united_airlines.png " /><span>chicago -
+                                                    denver<small>10/12/19 -
+                                                        10/16/2019</small></span></a>
+                                        </li>
+                                        <li>
+                                            <a><img src="images/sun_country.png " /><span>minneapolis -
+                                                    dallas<small>7/23/19 - 7/28/2019</small></span></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="filter-by-box filter-by-airline ">
+                                    <h4 style="font-size:22px; color: #141F3F; ">Carrier rankings</h4>
+                                    <ul>
+                                        <li>
+                                            <a href="https://www.delta.com"><img src="images/delta_airlines.png " /><span>Delta
+                                                    airlines<small>1,043 flights
+                                                        on wanderift</small></span></a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.alaskaair.com"><img src="images/alaska.jpg " /><span>alaska
+                                                    airlines<small>1,022
+                                                        flights on wanderift</small></span></a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.aa.com/homePage.do"><img src="images/american_airlines_logo.png " /><span>american
+                                                    airlines<small>923
+                                                        flights on wanderift</small></span></a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.united.com/en/us/"><img src="images/united_airlines.png " /><span>united
+                                                    airlines<small>873 flights
+                                                        on wanderift</small></span></a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.jetblue.com"><img src="images/jet_Blue.jpg " /><span>jetblue
+                                                    airlines<small>643
+                                                        flights on wanderift</small></span></a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.spirit.com"><img src="images/spirit.jpg " /><span>spirit
+                                                    airlines<small>542 flights
+                                                        on wanderift</small></span></a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.suncountry.com"><img src="images/sun_country.png " /><span>sun country
+                                                    airlines<small>343 flights on wanderift</small></span></a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.allegiantair.com"><img src="images/allegiant_air.png " /><span>allegiant
+                                                    airlines<small>232 flights on wanderift</small></span></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-new ">
+            <div class="container ">
+                <div class="footer-top " style="margin-left: 160px;margin-right: 160px;padding-top: 50px; ">
+                    <div class="row footer-top-row ">
+                        <div class="col-md-3 ">
+                            <!-- <div class="description ">
+                            <h4 style="padding-bottom: 10px; ">Booking on the go?</h4>
+                            <p style="padding-bottom: 20px; ">Booking has never been easier when using the wanderift
+                                mobile app. Subscribers can book flights in under twenty Seconds</p>
+                            <div class="phone-book " style="padding-bottom:20px; ">
+                                <input id="phone " type="tel " placeholder="Enter Mobile No. ">
+                                <span id="valid-msg " class="hide ">Valid</span>
+                                <span id="error-msg " class="hide ">Invalid number</span>
+                                <input type="submit " value="Send " class="btn btn-deals ">
+                            </div>
+                        </div> -->
+                            <div class="footer-menu ">
+                                <h4 style="padding-bottom: 10px; color: #F7F9FF; ">Contact</h4>
+                                <a href="how-it-works.html" style="font-size: 14px; color: #F7F9FF; ">Help / FAQ</a>
+                                <a href="media.html " style="font-size: 14px; color: #F7F9FF; ">Press</a>
+                                <a href="# " style="font-size: 14px; color: #F7F9FF; ">Partners</a>
+                            </div>
+                        </div>
+                        <div class="col-md-3 ">
+                            <div class="footer-menu ">
+                                <h4 style="padding-bottom: 10px; color: #F7F9FF; ">Company</h4>
+                                <a href="about-us.html " style="font-size: 14px; color: #F7F9FF; ">About</a>
+                                <a href="mobile_app.html " style="font-size: 14px; color: #F7F9FF; ">Mobile</a>
+                                <a href="how-it-works.html" style="font-size: 14px; color: #F7F9FF; ">How it works</a>
+                            </div>
+                        </div>
+                        <div class="col-md-3 ">
+                            <div class="footer-menu ">
+                                <h4 style="padding-bottom: 10px; color: #F7F9FF;">More</h4>
+                                <a href="https://skyscroller.com/" style="font-size: 14px; color: #F7F9FF;">Skyscroller</a>
+                                <a href="ads.html" style="font-size: 14px; color: #F7F9FF;">Advertising</a>
+                                <a href="airline_fees.html" style="font-size: 14px; color: #F7F9FF;">Airline Fees</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom " style="height: 250px; ">
+                    <div class="footer-bottom-titles ">
+                        <a href="images/Wanderift_Privacy_Policy.pdf" class="title-link " style="font-size: 14px; color: #F7F9FF;">Privacy Policy</a>
+                        <a href="images/Wanderift_terms_of_Use.pdf" class="title-link " style="font-size: 14px; color: #F7F9FF;">Terms & Conditions </a>
+                        <a href="#" class="title-link " style="font-size: 14px; color: #F7F9FF; ">Wanderift LLC</a>
+                    </div>
+
+                    <div class="footer-bottom-description " style="font-size:14px; padding-top:10px; padding-bottom:5px; color: #F7F9FF;">Save time and money when booking with Wanderift. Always pay the same price for your flight when booking with tokens.
+                    </div>
+
+                    <div class="footer-bottom-social-links ">
+                        <a href="https://www.instagram.com/wanderift/" class="ig-link "><img src="asset/instagram.png " alt=" " style="width:30px; height:30px;"></a>
+                        <a href="https://twitter.com/wanderift" class="twit-link "><img src="asset/twit.png " alt=" " style="width:30px; height:30px;"></a>
+                        <a href="https://www.facebook.com/Wanderift/" class="face-link "><img src="asset/face.png " alt=" " style="width:30px; height:30px;"></a>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <a href="# " class="ig-link "><img src="images/Wanderift_Logo_2.png " alt=" " style="width:140px; padding-bottom: 40px; "></a>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- MODALS -->
+        <!-- ========================Flight Search Dialog======================== -->
+        <!-- Modal -->
+        <div class="modal fade" id="flightSearchModal" tabindex="-1" role="dialog" aria-labelledby="flightSearchModal" aria-hidden="true" style="margin-top: 200px!important;">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content welcome-wande" style="text-align: center">
+
+                    <div class="modal-body">
+                        <h3 style="font-size: 20px;font-weight: bold; color: #141F3F; opacity: 50%; margin-top: 10px; line-height:1.5; margin-bottom:5px; margin-left:0px;">
+                            Oops, you need tokens to book this flight</h3>
+                        <p style="font-size: 16px;font-weight: bold; color: rgba(20, 31, 63, 0.877); opacity: 50%; margin-top: 15px; margin-bottom: 15px; line-height:1.5;">
+                            Select your Wanderift subscription to receive your tokens and start saving on your flights today
+                        </p>
+                        <button href="index.html" type="button" class="btn btn-primary btn--signup" style="background-color:#00B5FF; border-color:#00B5FF;">Get Started
+                    </button>
+                        <h3 style="font-size: 12px;font-weight: bold; color: #141F3F; opacity: 50%; margin-top: 15px; line-height:1.5; margin-left:0px;">
+                            Already have an account?<a class="login-Modal" role="button" data-toggle="modal" data-target="#login-Modal">
+                        Sign In</a></h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ========================Flight Search Dialog======================== -->
+
+        <!-- ========================No token Dialog======================== -->
+        <!-- Modal -->
+        <div id="noTokenModal" tabindex="-1" role="dialog" aria-labelledby="referFriendLabel" aria-hidden="true" class="modal fade" style="top: 20%;">
+            <div role="document" class="modal-dialog">
+                <div class="modal-content" style="padding: 0 1rem;">
+                    <div class="modal-header border-0">
+                        <button type="button" data-dismiss="modal" aria-label="Close" class="close float-left m-0 d-block p-0" style="opacity: 0.7;">
+                            <span aria-hidden="true" style="font-size: 0.7em; color: #000; text-shadow: 0 1px 0 #fff;">close</span>
+                        </button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <h4 class="h4 font-weight-bold">Oops, you don't have any tokens</h4>
+                        <p style="line-height: 2; padding: 0px 5rem;">You'll need to upgrade your account to Wanderift Lite(3 tokens). or Wanderift Pro(4 tokens) to book this flight</p>
+                    </div>
+                    <div class="modal-footer text-center border-0 d-block mb-4">
+                        <button href="account.html" type="button" class="btn btn-primary m-0 p-0 upgrade-subscription" style="width: 50%;">Upgrade Subscription</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ========================No token Dialog======================== -->
+
+        <!-- modals -->
+
+        <!-- signIn modal -->
+        <div class="modal fade" id="login-Modal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+            <!--<div class="modal-backdrop in" style="display: none"></div>-->
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header border-0 p-1 ">
+                        <button type="button" class="close m-0 bg-transparent" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true" style="font-size:14px;">close</span>
+                                </button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <div class="login-head">
+                            <h3 class="mt-0" style="padding-bottom: 5px;">Sign In</h3>
+                            <p class="m-0">Looking to book your next gateway?</p>
+                            <p>Sign in and start saving!</p>
+                        </div>
+                        <div class="login-body w-75 m-auto">
+                            <form>
+                                <div class="form-group">
+                                    <input type="email" class="form-control sharp text-center" placeholder="Email" id="email_field" required/>
+                                </div>
+                                <div class="form-group" style="padding-bottom: 5px;">
+                                    <input type="password" class="form-control sharp text-center" id="password_field" placeholder="Password" required/>
+                                </div>
+                                <div class="form-group">
+                                    <a id="forgot-password" data-dismiss="modal" aria-label="Close" data-toggle="modal" data-target="#forgot-Password-Modal" href="#" style="font-size:12px; color:#151F3F;">Forgot Password?</a>
+                                </div>
+                                <div class="form-group">
+                                    <a class="btn btn-primary btn-login" onclick="login()">Sign In</a>
+                                </div>
+                                <div class="form-group">
+                                    <p style="font-size:12px; padding-top:5px;">By selecting "Sign in" you agree to Wanderift <a href="images/Wanderift_Terms_of_Use.pdf" style="color:#151F3F;">Term of Use and Service</a></p>
+                                    <p style="font-size:12px; padding-top:20px;">Click <a href="corporate-subscription.html" style="color:#151F3F;">HERE</a> to sign in to Corporate Subscription</p>
+                                </div>
+                                <!-- <div class="form-group">
+                                    <a href="#" id="started">Don't have an account? Get Started</a>
+                                </div> -->
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- signIn error modal -->
+        <div class="modal fade" id="login-Error-Modal" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-backdrop in" style="display: none"></div>
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-body text-center">
+                        <div class="login-head">
+                            <p id="error_message" class="m-0 mb-2"></p>
+                        </div>
+                        <div class="login-body w-75 m-auto">
+                            <a class="btn btn-primary btn-login" data-dismiss="modal" aria-label="Close" style="width: auto; padding: 5px 26px;">Close</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Forgot Password modal -->
+        <div class="modal fade in" id="forgot-Password-Modal" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-backdrop in" style="display: none"></div>
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header border-0">
+                        <button type="button" data-dismiss="modal" aria-label="Close" class="close float-left m-0 d-block p-0" style="opacity: 0.7;">
+                            <span aria-hidden="true" style="font-size: 0.7em; color: #000; text-shadow: 0 1px 0 #fff;">close</span>
+                        </button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <div class="login-head w-75 m-auto">
+                            <h3 class="mt-0" style="padding-bottom: 5px;">Forgot Password?</h3>
+                            <p class="m-0">Forgot your password? No worries</p>
+                            <p class="m-0 mb-3">enter your email below and we'll send you instructions to reset it</p>
+                        </div>
+                        <div class="login-body w-75 m-auto">
+                            <form>
+                                <div class="form-group">
+                                    <input type="email" class="form-control sharp text-center" placeholder="Email" id="forgot-email-field" required/>
+                                </div>
+                                <div class="form-group">
+                                    <a class="btn btn-primary btn-login">Reset Password</a>
+                                </div>
+                                <div class="form-group">
+                                    <p style="font-size:12px; padding-top:5px;">Don't have an account?
+                                        <a href="" role="button" data-dismiss="modal" aria-label="Close" data-toggle="modal" data-target="#subscribe-Modal" style="color:#151F3F;">Sign Up</a>
+                                    </p>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- signUp modal -->
+        <div class="modal fade in" id="subscribe-Modal" tabindex="-1" role="dialog" aria-labelledby="subscribeModalLabel" aria-hidden="true" style="top: 0px; padding-left: 7px;">
+            <!--<div class="modal-backdrop in" style="display: none"></div>-->
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header border-0 p-1">
+                        <button type="button" class="close m-0 bg-transparent" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true" style="font-size:14px;">close</span>
+                                </button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <div class="login-head">
+                            <h3 class="mt-0" style="font-size:30px; font-weight:700px; color: #141F3F; padding-bottom: 5px;">Sign Up</h3>
+                            <p class="m-0" style="font-weight:800; font-weight:14px; color: #141F3F; width: 300px;margin-left: 30px;margin-right: 30px;padding-left: 80px;">Enter a few detais below and get started for free</p>
+                        </div>
+                        <div class="login-body w-75 m-auto">
+                            <form>
+                                <div>
+                                    <div class="form-group">
+                                        <input type="email" class="form-control sharp text-center" placeholder="Email" id="email" required/>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" class="form-control sharp text-center" id="password" placeholder="Password" required/>
+                                    </div>
+                                </div>
+
+
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <a class="btn btn-primary btn-login" id="submitBtn" onclick="signup()">Sign Up</a>
+                                        </div>
+                                        <div class="form-group">
+                                            <p style="font-size:12px; padding-top:5px;">By selecting "Sign Up" you agree to Wanderift <a href="images/Wanderift_Terms_of_Use.pdf" style="color:#151F3F;">Term of Use and Service</a></p>
+                                            <p style="font-size:12px; padding-top:5px;">Looking to save on business travel tickets click <a href="corporate-subscription.html" style="color:#151F3F;">HERE</a> for Corporation Subscription</p>
+
+                                        </div>
+                                        <!-- <div class="form-group">
+                                            <a href="#" id="login">Already have an account? Sign In</a>
+                                        </div> -->
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+</body>
+<script src="https://www.gstatic.com/firebasejs/5.7.2/firebase-app.js "></script>
+<script src="https://www.gstatic.com/firebasejs/5.7.2/firebase-auth.js "></script>
+<script src="https://www.gstatic.com/firebasejs/5.7.2/firebase-database.js "></script>
+<script src="https://www.gstatic.com/firebasejs/5.7.2/firebase-firestore.js "></script>
+<script src="js/firebase-config.js "></script>
+<script src="js/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js "></script>
+<script src="https://cdn.jsdelivr.net/npm/vue "></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue-filter/0.2.5/vue-filter.min.js"></script>
+<script src="js/vuejs/flight.result.js "></script>
+<script src="v2/moment.js "></script>
+<script src="js/Login.js "></script>
+<script src="js/Signup.js "></script>
+<script type="text/javascript " src="js/flights-slick.min.js "></script>
+<script src="js/bootstrap.min.js "></script>
+<script src="js/plugin.js "></script>
+<script src="js/plugin-2.js "></script>
+<script src="js/jquery.nice-select.js "></script>
+<script src="js/datedropper.pro.min.js "></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.9/js/intlTelInput.js "></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.9/js/intlTelInput.min.js "></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.9/js/utils.js "></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#image-loader').hide();
+        $("#searchFlight_w").click(function() {
+            $('.flight-display').css("display", "none");
+            $('#image-loader').show();
+            $('html,body').animate({
+                // scrollTop: 500
+            }, 'slow');
+            return false;
+            $('.flight-display').css("display", "block");
+            scrollTop: 500
+        });
+    });
+
+    $(document).ready(function() {
+        var show_btn = $('#started');
+        //  var show_btn=$('.show-modal');
+        //$("#testmodal").modal('show');
+
+        show_btn.click(function() {
+            $("#login-Modal").modal('hide');
+            $("#subscribe-Modal").modal('show');
+        });
+    });
+
+    $(document).ready(function() {
+        var show_btn = $('#login');
+        //  var show_btn=$('.show-modal');
+        //$("#testmodal").modal('show');
+
+        show_btn.click(function() {
+            $("#subscribe-Modal").modal('hide');
+            $("#login-Modal").modal('show');
+        });
+    });
+
+    $("#open-popup").click(function() {
+        $("body").addClass('modal-open');
+        $("body").css({
+            'padding-right': '17px',
+            'overflow': 'scroll'
+        });
+        $('#subscribe-Modal').show();
+        $('#subscribe-Modal').addClass('in');
+        $('.modal-backdrop').show();
+        $('.modal-backdrop').addClass('in');
+
+    });
+
+    $("#login-Modal-btn").click(function() {
+        $("body").addClass('modal-open');
+        $("body").css({
+            'padding-right': '17px',
+            'overflow': 'scroll'
+        });
+        $('#subscribe-Modal').hide();
+        $('#subscribe-Modal').remove('in');
+        $('#login-Modal').show();
+        $('#login-Modal').addClass('in');
+        $('.modal-backdrop').show();
+        $('.modal-backdrop').addClass('in');
+
+    });
+
+    $(".modal-backdrop").click(function() {
+        $("body").removeClass('modal-open');
+        $("body").css({
+            'padding-right': '0px',
+            'overflow': 'scroll'
+        });
+        // $('#subscribe-Modal').hide();
+        $('#subscribe-Modal').removeClass('in');
+        $('.modal-backdrop').hide();
+        $('.modal-backdrop').removeClass('in');
+        // $('#login-Modal').hide();
+        $('#login-Modal').removeClass('in');
+        $('#login-Modal').css('top', '-10000px');
+        $('#subscribe-Modal').css('top', '-10000px');
+    });
+
+
+    $(document).ready(function() {
+        setTimeout(function() {
+            $('html, body').animate({
+                    scrollTop: $(".body-page").offset().top - 70
+                },
+                'slow');
+        }, 1000);
+    });
+
+
+    $('a.login-Modal').on('click', function(e) {
+        e.preventDefault()
+        $("body").addClass('modal-open');
+        $('#login-Modal').css('top', '0px');
+        $('#login-Modal').addClass('in');
+        $('#login-Modal .modal-backdrop').show();
+        $('#login-Modal .modal-backdrop').addClass('in');
+        $($('.mobile-sign-in ul li')[1]).remove();
+        $($('.mobile-sign-in ul li')[0]).text('Back');
+        $($('.mobile-sign-in ul li')[0]).css({
+            'border': 'none',
+            'width': '100%'
+        });
+        setTimeout(function() {
+            $($('.mobile-sign-in ul')[0]).on('click', function(e) {
+                e.preventDefault();
+                location.reload()
+            });
+        }, 300);
+        //$('html').css('overflow-y', 'hidden');
+        $('.body_index #login-Modal').show();
+    })
+    $('a.subscribe-Modal').on('click', function(e) {
+        e.preventDefault()
+        $("body").addClass('modal-open');
+        $('#subscribe-Modal').css('top', '0px');
+        $('#subscribe-Modal').addClass('in');
+        $('#subscribe-Modal .modal-backdrop').show();
+        $('#subscribe-Modal .modal-backdrop').addClass('in');
+        $($('.mobile-sign-in ul li')[1]).remove();
+        $($('.mobile-sign-in ul li')[0]).text('Back');
+        $($('.mobile-sign-in ul li')[0]).css({
+            'border': 'none',
+            'width': '100%'
+        });
+        setTimeout(function() {
+            $($('.mobile-sign-in ul')[0]).on('click', function(e) {
+                e.preventDefault();
+                location.reload()
+            });
+        }, 300);
+        $('html').css('overflow-y', 'hidden');
+        $('.body_index #subscribe-Modal').show();
+    });
+
+
+    $('#slider-one').carousel()
+    $('#slider-two').carousel()
+
+    if ($(window).outerWidth() < 500) {
+        if (localStorage.getItem('wanderlift') == null) {
+            localStorage.setItem('wanderlift', 'false');
+        }
+        if (localStorage.getItem('wanderlift') == 'true') {
+            localStorage.setItem('wanderlift', 'false')
+            $('.body_index .footer-new, .body_index .body-page').css('display', 'block');
+            $('header.new-index, .welcome-wande').css('display', 'none');
+        } else if (localStorage.getItem('wanderlift') == 'false') {
+            $('.body_index .before-load.bg-change, .body_index .footer-new, .body_index .body-page, .welcome-wande').css('display', 'none');
+            $('header.new-index').css('display', 'block');
+        }
+
+        $('.btn-search').on('click', function() {
+            localStorage.setItem('wanderlift', 'true')
+        });
+
+        $('.flight-box-back').on('click', function() {
+            localStorage.setItem('wanderlift', 'false');
+            location.reload();
+        })
+    }
+    $('.btn--signup').on('click', function(e) {
+        e.preventDefault();
+        $("#flightSearchModal").modal('hide');
+        $('.subscribe-Modal').click();
+    })
+
+    $('.modal-backdrop').on('click', function() {
+        setTimeout(function() {
+            $('html').css('overflow', 'visible')
+        }, 200)
+    })
+
+    $('.upgrade-subscription').on('click', function() {
+        window.location.href = "account.html";
+    })
+</script>
+
+
+</html>

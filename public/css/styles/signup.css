@@ -1,0 +1,87 @@
+html, body {
+    padding: 0;
+    margin: 0;
+}
+#signup-page * {
+    font-family: 'Karla', sans-serif;
+    font-weight: 400;
+}
+#signup-page .left {
+    background:  url("../../images/misc/airport.png") no-repeat center, linear-gradient(to bottom, #1E222D, #197A93);
+    height: 100vh;
+}
+#signup-page .right {
+    height: 100vh;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+@media screen and (max-width: 768px) {
+    #signup-page .left {
+        height: 340px;
+        background-position: center 90%;
+        -webkit-background-size: 300px;
+        background-size: 300px;
+    }
+    #signup-page .right {
+        height: auto;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+#signup-page input, #sub-market {
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    height: 45px;
+    line-height: 45px;
+}
+#sub-market {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding-top: 0;
+
+    background-position: 95% 50%;
+    background-repeat:no-repeat;
+    -webkit-background-size: 20px;
+    background-size: 20px;
+    background-image: url("../../images/misc/np_arrow_52950_000000.svg");
+}
+#signup-page label {
+    font-weight: 700;
+    color: #202D38;
+}
+#signup-page .form-group {
+    margin-bottom: 26px;
+}
+@media screen and (max-width: 768px) {
+    #signup-page .form-group {
+        margin-bottom: 18px;
+    }
+}
+#signup-page .terms-of-service {
+    margin: 20px 0;
+}
+#signup-page .terms-of-service,
+#signup-page .log-in {
+    color: lightgray;
+}
+#signup-page .terms-of-service a,
+#signup-page .log-in a{
+    color: gray;
+}
+#signup-page button {
+    background-color: #1F222C;
+    color: #ffffff;
+    width: 100%;
+    max-width: 420px;
+    height: 52px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    font-size: 22px;
+}
+#signup-page .heading {
+    font-weight: 700;
+    font-size: 24px;
+}

@@ -1,0 +1,2327 @@
+
+
+
+.trip-search {
+    padding: 3%;
+    background-image: url("../../images/landing/splashimage.png");
+    background-position: center;
+    background-size: 100%;
+}
+
+.header-text {
+    color: #ffffff;
+}
+
+.navbar {
+    background: rgb(30, 34, 45);
+    background: linear-gradient(174deg, rgba(30, 34, 45, 1) 0%, rgba(28, 74, 92, 1) 55%, rgba(25, 122, 147, 1) 100%);
+    box-shadow: 0 0 8px 0px rgba(88, 88, 88, 0.19);
+    -webkit-animation: slideInDown 1s both;
+    animation: slideInDown 1s both;
+}
+
+html {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+body {
+    font-family: 'Karla', sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+    font-size: 18px;
+    overflow-x: hidden;
+}
+
+p {
+    font-weight: 400;
+    color: #898d98;
+    font-size: 9px;
+    line-height: 1.7;
+}
+
+p:last-child {
+    margin-bottom: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+
+a {
+    color: #1E222D;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+
+a:hover,
+a:focus {
+    color: #4533eb;
+    text-decoration: none;
+}
+
+a:focus {
+    outline: none;
+}
+
+img {
+    color: #4533eb;
+    max-width: 100%;
+    height: auto;
+}
+
+ul,
+li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+b,
+strong {
+    font-weight: 700;
+}
+
+/* ==========================================================================
+   2.Hero section
+   ========================================================================== */
+
+.navbar-collapse {
+    text-align: center;
+}
+
+.ml-auto {
+    padding: 1.5rem 0;
+}
+
+.navbar-light .navbar-toggler {
+    color: #3b28ea;
+    border-color: transparent;
+    background: transparent;
+}
+
+.hero-section .navbar .nav-link {
+    font-weight: 700;
+    padding: 10px 20px;
+}
+
+.navbar-light .navbar-nav .nav-link,
+.navbar.affix .btn-nav {
+    display: inline-block;
+}
+
+.navbar-light .navbar-nav .nav-link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #fff;
+    transition: width .3s;
+}
+
+.navbar-light .navbar-nav .nav-link:hover::after {
+    width: 100%;
+}
+
+.navbar-toggler {
+    cursor: pointer;
+}
+
+.navbar button {
+    outline: none;
+}
+
+.btn-nav,
+.navbar.affix .btn-modal {
+    display: none;
+}
+
+.navbar {
+    background-color: transparent;
+    width: 100%;
+    padding: 1rem;
+}
+
+@-webkit-keyframes slideInDown {
+    from {
+        -webkit-transform: translate3d(0, -100%, 0);
+        transform: translate3d(0, -100%, 0);
+        visibility: visible;
+    }
+    to {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes slideInDown {
+    from {
+        -webkit-transform: translate3d(0, -100%, 0);
+        transform: translate3d(0, -100%, 0);
+        visibility: visible;
+    }
+    to {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.navbar-nav {
+    width: 100%;
+}
+
+.navbar-light .navbar-nav .nav-link,
+.hero-section .navbar.affix .nav-link,
+.navbar-light.affix .navbar-nav .nav-link:focus,
+.navbar-light.affix .navbar-nav .show > .nav-link {
+    color: #fff;
+}
+
+.navbar-light .navbar-nav .nav-link:focus,
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light.affix .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .show > .nav-link {
+    color: #197A93;
+}
+
+.navbar-toggler .icon-bar {
+    display: block;
+    width: 23px;
+    height: 2px;
+    border-radius: 1px;
+    background-color: #16c2e7;
+    position: relative;
+    transition: all 500ms ease-in-out;
+}
+
+
+.navbar-toggler .icon-bar:not(:last-child) {
+    margin-bottom: 5px;
+}
+
+.navbar-toggler .icon-bar:nth-of-type(2) {
+    top: 1px;
+}
+
+.navbar-toggler .icon-bar:nth-of-type(3) {
+    top: 2px;
+}
+
+.navbar-toggler.hamburger-active .icon-bar:nth-of-type(1) {
+    top: 7px;
+    transform: rotate(45deg);
+}
+
+.navbar-toggler.hamburger-active .icon-bar:nth-of-type(2) {
+    background-color: transparent;
+}
+
+.navbar-toggler.hamburger-active .icon-bar:nth-of-type(3) {
+    top: -6.7px;
+    transform: rotate(-45deg);
+}
+
+.hero-welcome-message {
+    padding: 6.75rem 0 0;
+}
+
+.hero-welcome-message h1,
+.hero-welcome-message h2 {
+    color: #fff;
+}
+
+.hero-welcome-message h1 {
+    font-weight: 700;
+    font-size: 3rem;
+}
+
+.hero-welcome-message h5 {
+    font-weight: 700;
+    font-size: 2.0rem;
+}
+
+.hero-welcome-message h2 {
+    margin: 1rem 0 3rem;
+    font-weight: 600;
+
+    font-size: 1.40rem;
+}
+
+.signup-form {
+    margin-bottom: 3rem;
+}
+
+
+::-webkit-input-placeholder {
+    color: #16c2e7 !important;
+    font-size: 18px;
+}
+
+::-moz-placeholder {
+    color: #898d98 !important;
+    font-size: 18px;
+}
+
+:-ms-input-placeholder {
+    color: #898d98 !important;
+    font-size: 18px;
+}
+
+:-moz-placeholder {
+    color: #898d98 !important;
+    font-size: 18px;
+}
+
+
+.btn {
+    padding: .75rem 1.5rem;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 2rem;
+}
+
+.btn-primary,
+.btn:focus,
+.btn-primary:disabled,
+.navbar.affix .nav-item .btn-primary {
+    color: #1B3554;
+    background-color: #fff;
+    border-color: #fff;
+}
+
+.btn-primary:hover,
+.navbar.affix .nav-item .btn-primary:hover,
+.btn-primary:not([disabled]):not(.disabled):active {
+    color: #000;
+    background-color: #fff;
+    border-color: #fff;
+}
+
+.btn-primary:not([disabled]):not(.disabled):active,
+.btn-primary:not(:disabled):not(.disabled):active:focus,
+.btn:focus {
+    box-shadow: none;
+}
+
+.navbar .nav-item .btn {
+    padding: .5rem 2rem;
+    margin: 10px 0;
+    background-color: #fff;
+    border-color: #fff;
+    color: #1B3554;
+}
+
+.navbar .nav-item .btn:hover {
+    background-color: #fff;
+    border-color: #fff;
+    color: #1E222D;
+}
+
+.hero-welcome-message .btn {
+    width: 100%;
+    margin-top: .75rem;
+}
+
+#mc-error .fa-exclamation-triangle,
+#mc-success .fa-envelope {
+    margin-right: .5rem;
+}
+
+#mc-error,
+#mc-success {
+    padding: .5rem 0;
+    color: #fff;
+    display: none;
+    margin-top: 1rem;
+    text-align: center;
+    border-radius: 2rem;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+#mc-error {
+    background: #f44336;
+}
+
+#mc-success {
+    background: #28a745;
+}
+
+@keyframes float {
+    0% {
+        transform: translate(0, 0px);
+    }
+    50% {
+        transform: translate(0, -10px);
+    }
+    100% {
+        transform: translate(0, 0px);
+    }
+}
+
+/*-------------------------------------------------------------------------------------
+    section heading
+---------------------------------------------------------------------------------------*/
+
+.section-heading h6 {
+    font-weight: 600;
+    color: #0985f9;
+    margin: 0 0 5px
+}
+
+.section-heading h2 {
+    font-weight: 700;
+}
+
+.section-heading {
+    margin-bottom: 60px;
+}
+
+
+/* ==========================================================================
+   3.Features Area
+   ========================================================================== */
+
+#feature-area {
+    padding: 65px 0 90px;
+    /*background-image: url(../images/shape-4.png);*/
+    background-repeat: no-repeat;
+    background-position: left top
+}
+
+.feature-single {
+
+
+    border-radius: 10px;
+    padding: 22px 20px 10px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    background: rgb(30, 34, 45);
+    background: linear-gradient(174deg, rgba(30, 34, 45, 1) 16%, rgba(28, 74, 92, 1) 79%, rgba(25, 122, 147, 1) 100%);
+}
+
+.feature-single2 {
+
+
+    border-radius: 10px;
+    padding: 10px 0px 10px;
+    overflow: hidden;
+    margin-bottom: 30px;
+
+}
+
+.feature-single .icon {
+    width: 20%;
+    float: left;
+    margin: 10px 0 0
+}
+
+.feature-single .icon i {
+    font-size: 24px;
+    color: #fff;
+    display: inline-block;
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.feature-single .content {
+    float: none;
+    width: 100%;
+    padding-left: 0px
+}
+
+.feature-single h5 {
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+
+/* ==========================================================================
+   3.Contact form modal
+   ========================================================================== */
+
+
+.modal-header {
+    border-bottom: none;
+    position: relative;
+    padding: 1rem;
+}
+
+.modal-header .close {
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    right: 1.3rem;
+    transition: all 0.2s linear;
+    z-index: 1;
+    text-shadow: none;
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: #898d98;
+    opacity: 1;
+    cursor: pointer;
+}
+
+.close:not(:disabled):not(.disabled):focus,
+.close:not(:disabled):not(.disabled):hover {
+    opacity: 1;
+    color: #3b28ea;
+}
+
+.modal-header button:focus,
+.modal-header button span:focus {
+    outline: none;
+}
+
+.contact-modal header {
+    margin-bottom: 2.25rem;
+}
+
+.contact-modal header h2 {
+    font-size: 1.75rem;
+}
+
+.contact-modal header h3 {
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.modal-body {
+    padding: 0 1.5rem 2.25rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.contact-form .form-control.input-error {
+    border-color: #f44336;
+}
+
+.contact-form-success {
+    color: #fff;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    display: none;
+    background: #28a745;
+    padding: .5rem 1rem;
+    border-radius: 2rem;
+}
+
+.contact-form-success .fa-envelope-open {
+    margin-right: .5rem;
+}
+
+.modal {
+    padding: 0 !important;
+}
+
+.btn:disabled {
+    opacity: 1;
+    cursor: not-allowed;
+}
+
+/* ==========================================================================
+   4.Features
+   ========================================================================== */
+
+.features {
+    background: rgb(25, 122, 147);
+    background: linear-gradient(174deg, rgba(25, 122, 147, 1) 0%, rgba(28, 74, 92, 1) 55%, rgba(30, 34, 45, 1) 100%);
+    box-shadow: 0 -10px 0 10px #1E222D;
+}
+
+.features.section-spacing {
+    padding: 3rem 0 4.5rem;
+}
+
+.section-spacing {
+    padding: 4.5rem 0;
+}
+
+.features .section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.features .section-header h2,
+.features .section-header h3 {
+    color: #fff;
+}
+
+.features .section-header h2 {
+    font-size: 2.51rem;
+    text-transform: none;
+    font-weight: 600;
+}
+
+.features .section-header h3 {
+    font-size: 2.5rem;
+    margin-bottom: 2.25rem;
+}
+
+.features .section-header p {
+    font-weight: 600;
+    font-size: 18px;
+    color: #959AA8;
+}
+
+.features h4 {
+    font-size: 1.5rem;
+    color: #16c2e7;
+    margin: 1.5rem 0 0;
+    font-weight: 400;
+}
+
+.features-list img {
+    width: 155px;
+    height: 155px;
+}
+
+.features-list [class^=col]:not(:nth-last-child(-n+1)) {
+    margin-bottom: 3rem;
+}
+
+/* ==========================================================================
+   5.Features 1
+   ========================================================================== */
+
+.features1 {
+    background: rgb(25, 122, 147);
+    background: linear-gradient(174deg, rgba(30, 34, 45, 1) 10%, rgba(28, 74, 92, 1) 55%, rgba(25, 122, 147, 1) 100%);
+}
+
+.features1.section-spacing {
+    padding: 3rem 0 4.5rem;
+}
+
+.section-spacing {
+    padding: 4.5rem 0;
+}
+
+.features1 .section-header {
+    text-align: left;
+    margin-bottom: 3rem;
+}
+
+.features1 .section-header h2,
+.features1 .section-header h3 {
+    color: #fff;
+}
+
+.features1 .section-header h2 {
+    font-size: 2.51rem;
+    text-transform: none;
+    font-weight: 200;
+}
+
+.features1 .section-header h3 {
+    font-size: 2.5rem;
+    margin-bottom: 2.25rem;
+}
+
+.features1 .section-header p {
+    font-weight: 500;
+    font-size: 18px;
+    color: #959AA8;
+}
+
+.features1 h4 {
+    font-size: 1.5rem;
+    color: #16c2e7;
+    margin: 1.5rem 0 0;
+    font-weight: 400;
+}
+
+.features1-list img {
+    width: 155px;
+    height: 155px;
+}
+
+.feature1s-list [class^=col]:not(:nth-last-child(-n+1)) {
+    margin-bottom: 3rem;
+}
+
+/* ==========================================================================
+   6.Features 2
+   ========================================================================== */
+
+.features2 {
+    background: rgb(30, 34, 45);
+    background: linear-gradient(174deg, rgba(30, 34, 45, 1) 16%, rgba(28, 74, 92, 1) 79%, rgba(25, 122, 147, 1) 100%);
+}
+
+.features2.section-spacing {
+    padding: 3rem 0 4.5rem;
+}
+
+.section-spacing {
+    padding: 4.5rem 0;
+}
+
+.features2 .section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.features2 .section-header h2,
+.features2 .section-header h3 {
+    color: #fff;
+}
+
+.features2 .section-header h2 {
+    font-size: 2.51rem;
+    text-transform: none;
+    font-weight: 600;
+}
+
+.features2 .section-header h3 {
+    font-size: 2.5rem;
+    margin-bottom: 2.25rem;
+}
+
+.features2 .section-header p {
+    font-weight: 600;
+    font-size: 18px;
+    color: #959AA8;
+}
+
+.features2 h4 {
+    font-size: 1.5rem;
+    color: #16c2e7;
+    margin: 1.5rem 0 0;
+    font-weight: 400;
+}
+
+.features2-list img {
+    width: 155px;
+    height: 155px;
+}
+
+.features2-list [class^=col]:not(:nth-last-child(-n+1)) {
+    margin-bottom: 3rem;
+}
+
+/* ==========================================================================
+   7.Features 3
+   ========================================================================== */
+
+.features {
+    background: rgb(25, 122, 147);
+    background: linear-gradient(174deg, rgba(25, 122, 147, 1) 0%, rgba(28, 74, 92, 1) 55%, rgba(30, 34, 45, 1) 100%);
+    box-shadow: 0 -10px 0 10px #1E222D;
+}
+
+.features.section-spacing {
+    padding: 3rem 0 4.5rem;
+}
+
+.section-spacing {
+    padding: 4.5rem 0;
+}
+
+.features .section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.features .section-header h2,
+.features .section-header h3 {
+    color: #fff;
+}
+
+.features .section-header h2 {
+    font-size: 2.51rem;
+    text-transform: none;
+    font-weight: 600;
+}
+
+.features .section-header h3 {
+    font-size: 2.5rem;
+    margin-bottom: 2.25rem;
+}
+
+.features .section-header p {
+    font-weight: 600;
+    font-size: 18px;
+    color: #959AA8;
+}
+
+.features h4 {
+    font-size: 1.5rem;
+    color: #16c2e7;
+    margin: 1.5rem 0 0;
+    font-weight: 400;
+}
+
+.features-list img {
+    width: 155px;
+    height: 155px;
+}
+
+.features-list [class^=col]:not(:nth-last-child(-n+1)) {
+    margin-bottom: 3rem;
+}
+
+/* ==========================================================================
+   8.Carriers
+   ========================================================================== */
+
+.carriers h1 {
+    color: #fff;
+    font-size: 2.86rem;
+    text-align: center;
+    width: 100%;
+    padding-bottom: 40px;
+
+}
+
+.carries {
+    background-color: #fff;
+}
+
+.carriers h2 {
+    color: #fff;
+    font-size: 1.875rem;
+}
+
+.carriers img {
+    width: 0px;
+    height: 0px;
+    margin-top: 1.5rem;
+}
+
+.carriers-wrapper {
+    background-color: #fff;
+    border: 1px solid #212529;
+    border-radius: 6px;
+    padding: 2.25rem 1rem;
+    transition: all 0.3s ease-in-out;
+    height: 100%;
+}
+
+.carriers-wrapper:hover {
+    border: 1px solid #fff;
+}
+
+.carriers .container > .row > [class^=col]:not(:last-child) {
+    margin-bottom: 3rem;
+}
+
+
+/* ==========================================================================
+   9.Features more
+   ========================================================================== */
+
+.features-more h1 {
+    color: #1B3554;
+    font-size: 2.86rem;
+    text-align: center;
+    width: 100%;
+    padding-bottom: 20px;
+
+}
+
+.features-more h2 {
+    color: #959AA8;
+    font-size: 1.35rem;
+    text-align: center;
+    width: 100%;
+    padding-bottom: 100px;
+}
+
+.features-more {
+    background-color: #fff;
+}
+
+
+.features-more img {
+    width: 130px;
+    height: 130px;
+    margin-top: 1.5rem;
+}
+
+.features-more-wrapper {
+    background-color: #fff;
+    border: 1px solid #fff;
+    border-radius: 6px;
+    padding: 2.25rem 1rem;
+    transition: all 0.3s ease-in-out;
+    height: 100%;
+}
+
+.features-more-wrapper:hover {
+    border: 1px solid #fff;
+}
+
+.features-more .container > .row > [class^=col]:not(:last-child) {
+    margin-bottom: 3rem;
+}
+
+
+/* ==========================================================================
+   10.Pricing
+   ========================================================================== */
+
+.pricing {
+    background: rgb(30, 34, 45);
+    background: linear-gradient(174deg, rgba(30, 34, 45, 1) 0%, rgba(28, 74, 92, 1) 55%, rgba(25, 122, 147, 1) 100%);
+
+}
+
+
+.pricing h1 {
+    color: #fff;
+    font-size: 2.86rem;
+    text-align: center;
+    width: 100%;
+    padding-bottom: 40px;
+
+}
+
+.pricing h2 {
+    color: #1B3554;
+    font-size: 1.875rem;
+    line-height: 34px;
+    padding-top: 10px
+
+}
+
+.pricing .features .section-header h3 {
+    font-size: 2.5rem;
+    margin-bottom: 2.25rem;
+}
+
+.pricing h4 {
+    color: #fff;
+    font-size: 2.0rem;
+    text-align: center;
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 40px;
+
+}
+
+
+.pricing li {
+    text-align: left;
+    font-weight: 600;
+    padding-top: 9px;
+    color: #959AA8
+}
+
+.pricing p {
+    text-align: left;
+    font-size: 12px;
+    padding-top: 5px;
+}
+
+.pricing-wrapper {
+    background-color: #fff;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    padding: 4rem 2rem;
+    transition: all 0.3s ease-in-out;
+    height: 100%;
+}
+
+.pricing-wrapper:hover {
+    border: 1px solid #fff;
+}
+
+.pricing .container > .row > [class^=col]:not(:last-child) {
+    margin-bottom: 3rem;
+}
+
+
+.pricing-footer {
+    text-align: center;
+}
+
+.pricing-footer.section-spacing {
+    padding: 3.75rem 0;
+}
+
+
+.pricing-footer .container > .row:not(:last-child) {
+    margin-bottom: 1.5rem;
+}
+
+.pricing-footer .container > .row > [class^=col]:not(:last-child) {
+    margin-bottom: 1.5rem;
+}
+
+.social {
+    margin-top: .5rem;
+}
+
+.social li,
+.terms-privacy li {
+    display: inline-block;
+}
+
+.social li:not(:nth-last-child(1) ), .terms-privacy li:not(:nth-last-child(1) ) {
+    margin-right: 1rem;
+}
+
+.social li {
+    text-align: center;
+}
+
+.social li a {
+    display: block;
+    width: 42px;
+    height: 42px;
+    line-height: 45px;
+    color: #fff;
+    border-radius: 50%;
+    position: relative;
+    transition: all .8s ease;
+    font-size: .9rem;
+    background: #16c2e7;
+}
+
+.social li a:hover {
+    background: #212529;
+}
+
+.terms-privacy a {
+    color: #fff;
+}
+
+.terms-privacy a:hover,
+.terms-privacy a:focus {
+    color: #16c2e7;
+}
+
+
+/* ==========================================================================
+   11.CTA
+   ========================================================================== */
+
+
+.cta {
+    background: #fff;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta h2,
+.cta h3 {
+    color: #16c2e7;
+}
+
+.cta h2 {
+    font-size: 3rem;
+}
+
+.cta h3 {
+    font-size: 1.875rem;
+    font-weight: 400;
+}
+
+.cta-button {
+    margin-top: 2.25rem;
+}
+
+.cta-button .btn,
+.cta-button .btn:focus {
+    color: #1B3554;
+    background-color: #fff;
+    border-color: #fff;
+}
+
+.cta-buttonsignup {
+    margin-top: 2.25rem;
+}
+
+.cta-buttonsignup .btn,
+.cta-buttonsignup .btn:focus {
+    color: #fff;
+    background-color: #1E222D;
+    border-color: #1E222D;
+}
+
+
+.cta-button .btn:hover {
+[ disabled ]
+}
+
+.cta-button .btn-primary:not([disabled]):not(.disabled):active {
+    background-color: #fff;
+    color: #fff;
+    box-shadow: none;
+    border-color: rgb(25, 122, 147);
+    background: linear-gradient(174deg, rgba(25, 122, 147, 1) 0%, rgba(28, 74, 92, 1) 55%, rgba(30, 34, 45, 1) 100%);;
+}
+
+.cta svg {
+    display: block;
+    margin: 0 auto;
+    position: absolute;
+    top: 29%;
+}
+
+.curve {
+    stroke-width: 1px;
+    stroke-opacity: 0;
+}
+
+.curve path {
+    transform-origin: center 60px;
+}
+
+.curve path:nth-child(1) {
+    animation: curve 6s linear 1.2s infinite;
+}
+
+.curve path:nth-child(2) {
+    animation: curve 6s linear 2.4s infinite;
+}
+
+.curve path:nth-child(3) {
+    animation: curve 6s linear 3.6s infinite;
+}
+
+@keyframes curve {
+    0% {
+        transform: none;
+        stroke-opacity: 0;
+    }
+    50% {
+        transform: rotateX(360deg) scaleY(0.8);
+        stroke-opacity: .3;
+    }
+    100% {
+        transform: none;
+        stroke-opacity: 0;
+    }
+}
+
+
+/* ==========================================================================
+   11a . Destinations Slider
+   ========================================================================== */
+
+.pww-slider-init .pww-slider-item img {
+    height: auto;
+    width: 100%;
+}
+
+
+/* Reset Select */
+div.select select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    outline: 0;
+    box-shadow: none;
+    border: 0 !important;
+    background: #2c3e50;
+    background-image: none;
+}
+
+/* Custom Select */
+.select {
+    position: relative;
+    display: block;
+    width: 250px;
+    height: 50px;
+    line-height: 3;
+    background: transparent;
+    overflow: hidden;
+    border-radius: .25em;
+    margin: 20px auto 20px;
+}
+
+select {
+    width: 100%;
+    height: 100%;
+    padding: 0 0 0 .5em !important;
+    color: #222222 !important;
+    cursor: pointer;
+    font-size: 23px;
+    margin: 0px !important;
+    font-weight: bold;
+    background-color: transparent !important;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+/* Arrow */
+/* .select::after {
+  content: '\25BC';
+  position: absolute;
+  top: 12px;
+  right: 0;
+  bottom: 0;
+  padding: 0 1em;
+  background: transparent;
+  pointer-events: none;
+} */
+
+.select::after {
+    content: "\f107";
+    position: absolute;
+    top: -6px;
+    right: 0;
+    bottom: 0;
+    padding: 0 1em;
+    background: transparent;
+    pointer-events: none;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 26px;
+}
+
+/* .select:after {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+  content: "\f167";
+} */
+
+
+/* Transition */
+.select:hover::after {
+    color: #1C4F62;
+}
+
+.select::after {
+    -webkit-transition: .25s all ease;
+    -o-transition: .25s all ease;
+    transition: .25s all ease;
+}
+
+.slider-loading {
+    position: absolute;
+    top: 0;
+    left: 50%;
+}
+
+.pww-slider-init {
+    opacity: 0;
+}
+
+button.arrow {
+    background: transparent;
+    border: none;
+    font-size: 60px;
+    position: absolute;
+    top: 40%;
+}
+
+button.arrow.arrow-prev {
+    left: 0px;
+}
+
+button.arrow.arrow-next {
+    right: 0px;
+}
+
+.row.pww-slider {
+    position: relative;
+}
+
+h3.dest-tagline {
+    text-align: center;
+    width: 100%;
+    font-size: 18px;
+    margin: 30px auto 0px;
+    padding: 0px 15px;
+}
+
+
+@media (max-width: 576px) {
+    button.arrow {
+        display: none;
+    }
+}
+
+/* ==========================================================================
+   12.Footer
+   ========================================================================== */
+
+
+/* Custom Changes by Umair */
+
+section.hero-welcome-message h2.sub-main-heading {
+    font-size: 1.40rem;
+    margin-bottom: 0;
+    color: #898d98;
+}
+
+#features1 {
+    padding: 100px 0px;
+}
+
+.commit-section {
+    padding-bottom: 400px;
+}
+
+.booking-header h3 {
+    padding-top: 150px;
+}
+
+section footer p.footer-para {
+    padding: 40px 15px 0px;
+    text-align: left;
+}
+
+.commit-wrap {
+    padding: 200px 15px 0px;
+}
+
+.features-list li .phone_img {
+    width: 530px;
+    height: 700px;
+}
+
+
+@media (min-width: 768px) {
+    .top-main-heading {
+        padding-top: 125px;
+        width: 700px;
+        text-align: left;
+    }
+
+    .sub-main-heading {
+
+        text-align: left;
+    }
+}
+
+@media (max-width: 768px) {
+    .top-main-heading {
+        padding-top: 80px;
+    }
+
+    #features1 {
+        padding: 100px 0px;
+    }
+
+    .commit-section {
+        padding-bottom: 50px;
+    }
+
+    .booking-header h3 {
+        padding-top: 50px;
+    }
+
+    section footer p.footer-para {
+        text-align: center;
+    }
+
+
+    .commit-wrap {
+        padding: 80px 15px 0px;
+    }
+
+    .features-list li .phone_img {
+        width: 100%;
+        height: auto;
+        max-width: 530px;
+    }
+
+}
+
+/* ==========================================================================
+   13.Small devices (landscape phones, 576px and up)
+   ========================================================================== */
+
+@media (min-width: 576px) {
+
+    .mr-sm-2 {
+        margin-right: 1rem !important;
+    }
+
+    .hero-welcome-message {
+        padding: 9rem 0 0;
+    }
+
+    .hero-welcome-message h1 {
+        font-size: 3.75rem;
+    }
+
+    .hero-welcome-message h2 {
+        margin: 1rem 0 3.75rem;
+    }
+
+    .signup-form {
+        margin-bottom: 3.75rem;
+    }
+
+    .input-wrapper {
+        position: relative;
+    }
+
+    .signup-form .btn {
+        position: absolute;
+        top: 7px;
+        right: 7px;
+    }
+
+    .signup-form .form-control {
+        padding: 2rem 15.4rem 2rem 1.5rem;
+    }
+
+    .hero-welcome-message .btn {
+        width: auto;
+        margin-top: 0;
+    }
+
+    .modal-body {
+        padding: 0 2rem 2.25rem;
+    }
+
+    .features .section-header h3 {
+        font-size: 3rem;
+    }
+
+    .features-more-wrapper {
+        padding: 3rem 1.5rem;
+    }
+
+    .cta h2 {
+        font-size: 3.75rem;
+    }
+}
+
+
+/* ==========================================================================
+   14.Destinations
+   ========================================================================== */
+
+
+.destinations h1 {
+    color: #fff;
+    font-size: 2.86rem;
+    text-align: center;
+    width: 100%;
+    padding-bottom: 40px;
+
+}
+
+
+.destinations {
+    border-color: rgb(25, 122, 147);
+    background: linear-gradient(174deg, rgba(25, 122, 147, 1) 0%, rgba(28, 74, 92, 1) 55%, rgba(30, 34, 45, 1) 100%);;
+}
+
+.destinations h2 {
+    color: #fff;
+    font-size: 1.875rem;
+}
+
+.destinations img {
+    width: 130px;
+    height: 130px;
+    margin-top: 1.5rem;
+}
+
+.destinations-wrapper {
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    padding: 2.25rem 1rem;
+    transition: all 0.3s ease-in-out;
+    height: 100%;
+}
+
+.features-more-wrapper:hover {
+    border: 1px solid #fff;
+}
+
+.features-more .container > .row > [class^=col]:not(:last-child) {
+    margin-bottom: 3rem;
+}
+
+
+/* Popular Trips By UMAIR*/
+
+.trip-slider-holder .slider-item img {
+    max-width: 375px;
+}
+
+
+.how-to-wander .heading h2 {
+    color: #FFFf;
+    font-size: 2.86rem;
+}
+
+.row.cards-row {
+    margin: 30px 0px;
+}
+
+.icon-card {
+    background: #FFF;
+    border-radius: 10px;
+    padding: 30px 20px;
+    box-shadow: 0px 3px 6px 0px #000;
+    position: relative;
+}
+
+.row.cards-row .col-lg-6 {
+    padding: 5px 20px;
+}
+
+img.card-icon {
+    position: absolute;
+    max-width: 60px;
+    top: 17px;
+    left: 10px;
+}
+
+.card-heading, .card-content {
+    padding-left: 60px;
+}
+
+.card-content p {
+    color: #1B3554;
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 5px;
+}
+
+.card-heading h3 {
+    line-height: 35px;
+    font-size: 24px;
+}
+
+.pricing-wrapper h2 {
+    font-size: 28px;
+}
+
+.pricing-wrapper li {
+    color: #000 !important;
+}
+
+.footer-top {
+    padding: 70px 0px 0px;
+}
+
+.download-btns .dl-btn img {
+    max-width: 185px;
+    float: left;
+}
+
+.download-btns .dl-btn {
+    float: left;
+}
+
+.anroid-btn.dl-btn {
+    margin-left: 35px;
+}
+
+.download-btns {
+    float: left;
+    margin: 30px 0px;
+}
+
+.col-lg-7.pref-text {
+    padding-top: 60px;
+}
+
+.phonemockup {
+    position: relative;
+    bottom: -6px;
+}
+
+.col-lg-7.pref-text h2 {
+    font-size: 38px;
+}
+
+.pref-text span {
+    font-size: 20px;
+    display: block;
+    margin: 20px 0px 10px;
+}
+
+footer.site-footer {
+    padding: 50px 0px 20px;
+}
+
+.col-sm-12.logo-holder {
+    margin: 0px 0px 15px !important;
+}
+
+span.footer-credit {
+    color: #FFF;
+    font-weight: bold;
+    font-size: 15px;
+    margin: 20px 0px;
+}
+
+ul.footer-links li a {
+    color: #FFF;
+    margin: 10px 0px;
+    float: left;
+    width: 100%;
+}
+
+.no-gutters {
+    padding: 0px !important;
+}
+
+.footer-info li {
+    font-size: 15px;
+    color: #FFF;
+}
+
+.footer-info .fheading {
+    font-size: 20px;
+    font-weight: bold;
+    color: #FFF;
+}
+
+.footer-wrap {
+    background: rgb(30, 34, 45);
+    background: linear-gradient(155deg, rgba(30, 34, 45, 1) 0%, rgba(28, 74, 92, 1) 55%, rgba(25, 122, 147, 1) 100%);
+
+}
+
+
+.next-arrow.ts-arrow {
+    right: -60px;
+}
+
+.ts-arrow {
+    font-size: 50px;
+    position: absolute;
+    top: 45px;
+    cursor: pointer;
+}
+
+.prev-arrow.ts-arrow {
+    left: -60px;
+}
+
+.how-to-wander .heading > h2 {
+    padding-left: 40px;
+    margin-bottom: 15px;
+}
+
+ul.social-media-icons li {
+    float: left;
+    margin: 0px 12px 0px 0px;
+}
+
+ul.social-media-icons li img {
+    max-width: 36px;
+}
+
+/* ===============================
+ New User home Code by Umair
+=================================== */
+
+.top-welcome-msg h1, .book-flight-wrap .main-heading {
+    font-size: 28px;
+    padding: 0px 0px 10px;
+    text-align: center;
+}
+
+.top-welcome-msg.col-sm-12 {
+    border-bottom: 1px solid #6f6f6f;
+    margin: 20px 0px 0px;
+}
+
+.top-welcome-msg h4 {
+    font-size: 20px;
+    padding: 15px 0px 0px;
+    text-align: center;
+}
+
+
+.booking-form {
+    margin: 0px auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.flight-booking-form {
+    margin: 0px 0px 20px;
+}
+
+.ua-form label {
+    text-align: left !important;
+    width: 100%;
+    margin: 10px 0px;
+    color: #000;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+h3.sub-heading.alternate-date-mesg {
+    font-weight: 400;
+    margin: 10px 0px 25px;
+    color: #c7c7c7;
+    font-size: 19px;
+    display: none;
+}
+
+i.fa.fa-close.close-results {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 39px;
+    color: #FFF;
+}
+
+.f-time {
+    padding: 0px 10px;
+}
+
+.booking-form select.dep-city, .booking-form select.arr-city {
+    border-radius: 6px;
+    border: 2px solid #5c5b5b;
+
+}
+
+.trip_dates input {
+    width: 100%;
+    border-radius: 6px;
+    border: 2px solid #222222;
+}
+
+
+.trip_time select {
+    border-radius: 5px;
+    border: 2px solid #222222;
+    font-size: 15px;
+    font-weight: normal;
+    height: auto;
+    width: 100%;
+    padding: 8px 5px !important;
+}
+
+.ua-form .submit-btn input {
+    background: #000;
+    border: 0px;
+    border-radius: 25px;
+    color: #FFF;
+    margin: 26px 0px 0px;
+    padding: 8px 40px;
+}
+
+.trips_wrap h2 {
+    color: #222222;
+    text-align: left;
+}
+
+.trips_wrap {
+    margin: 20px 0px 20px;
+}
+
+
+.col-sm-6.popular_flights {
+    padding: 0px 0px 0px 80px;
+    background: #FFF; /* Old browsers */
+
+}
+
+.book_flight {
+    padding: 130px 0px 0px 80px;
+}
+
+.popular_flights .logo-cont {
+    text-align: left;
+    padding: 30px 15px 0px;
+}
+
+span.add-token {
+    padding: 6px 11px;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.trips_wrap {
+    margin: 60px 0px 20px;
+    float: left;
+    width: 100%;
+    padding: 0px 25px;
+}
+
+.wish-list-wrap h2.main-heading {
+    color: #fff;
+    float: left;
+    width: 100%;
+    text-align: center;
+}
+
+.top-welcome-msg {
+    padding: 60px 20px;
+}
+
+.status_heading {
+    color: #FFF !important;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.row.wish-list-wrap {
+    margin: 0px 0px 0px;
+    background: #1E2935;
+    text-align: center;
+    padding: 20px 0px;
+}
+
+.pricing.userhomepage {
+    padding-bottom: 0px !important;
+}
+
+.wish-list-wrap span {
+    color: #fff;
+    float: left;
+    width: 100%;
+    margin: 25px 0px 10px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.wish-list-form {
+    margin: 0px auto;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.wish-list-form .form-group {
+    margin-bottom: 15px;
+}
+
+.wish-list-form .submit-btn input {
+    margin-top: 10px;
+    background: #FFF;
+    color: #222;
+}
+
+.wish-list-form .form-group input[name="wish-city"] {
+    width: 100%;
+    background: #222222;
+    border: 2px solid #FFF;
+    border-radius: 5px;
+    padding: 5px 0px;
+    max-width: 400px;
+}
+
+.popular-trips-container .ptrip-slider-holder {
+    margin: 30px 0px;
+}
+
+.popular-trips-container .next-arrow.ts-arrow {
+    right: -5px;
+    font-size: 38px;
+    top: 55px;
+}
+
+.popular-trips-container .prev-arrow.ts-arrow {
+    left: -5px;
+    font-size: 38px;
+    top: 55px;
+}
+
+.flights_data .head {
+    width: 100%;
+    display: block;
+    font-weight: bold;
+    color: #222222;
+    font-size: 14px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #eeeded;
+}
+
+.flights_data .flight {
+    background: #FFF;
+    border-radius: 10px;
+    padding: 20px;
+    color: #222222;
+    font-size: 13px;
+    font-weight: bold;
+    margin: 20px 0px;
+}
+
+
+.flights_data .f-time {
+    width: 100%;
+    display: block;
+}
+
+
+#twowayform {
+    display: none;
+}
+
+.bookingoverlay .flight.row {
+    background: #FFF;
+    max-width: 700px;
+    border-radius: 11px;
+    padding: 10px 20px;
+    margin: 20px auto;
+}
+
+.bookingoverlay .flight.row span {
+    color: #222;
+}
+
+
+#trip_selector li {
+    float: left;
+    width: auto;
+    margin: 0px 5px;
+    background: #FFF;
+    border-radius: 6px 8px 0px 0px;
+    color: #222222;
+    padding: 5px 11px 15px;
+    cursor: pointer;
+}
+
+#trip_selector li.active {
+    background: #000;
+    color: #fff;
+}
+
+
+.dateselector {
+    width: 100%;
+    border: 2px solid #222222;
+    padding: 5px 5px;
+    border-radius: 5px;
+}
+
+.booking-form input[type="text"] {
+    background: #FFF;
+    border: 2px solid #222222;
+}
+
+#trip_selector {
+    margin: 60px 0px 0px 15.33%;
+    top: 8px;
+    left: 0px;
+}
+
+.flights-data span, .f_times span {
+    width: 100%;
+    display: block;
+}
+
+span.form-error {
+    color: red;
+    float: left;
+    width: 100%;
+    /* padding: 10px; */
+    display: block;
+    text-align: left;
+}
+
+.twoway_trips .flight.row {
+    margin: 5px 0px;
+}
+
+.twoway_trips {
+    margin: 0px 0px 15px;
+}
+
+.flights_data .flight {
+    margin: 0px 0px 50px;
+}
+
+.booking-btn button {
+    background: #000;
+    color: #FFF;
+    border: 0px;
+    padding: 5px 15px;
+    border-radius: 22px;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+}
+
+.booking-btn button:hover {
+    background: #f5f5f5;
+    color: #000;
+}
+
+.booking-btn {
+    width: 100%;
+    text-align: right;
+    margin: 0px 0px 0px;
+}
+
+.twoway_trips .flight.row {
+    width: 100%;
+    /* display: block; */
+    max-width: 100%;
+}
+
+.twoway_trips {
+    max-width: 750px;
+    margin: 30px auto;
+}
+
+.success-msg {
+    color: #42626f;
+    font-size: 17px;
+    /* border: 2px solid #1C404F; */
+    width: 100%;
+    margin: 10px 0px 0px;
+    background: #FFF;
+}
+
+.bookingoverlay.booking-results {
+    position: absolute;
+    top: 0px;
+    bottom: -1100px;
+    left: 0px;
+    right: 0px;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 99999;
+    display: none;
+    padding-top: 80px;
+    text-align: center;
+}
+
+.bookingoverlay.booking-results h2 {
+    color: #FFF;
+}
+
+.trip_selector {
+    text-align: left;
+    padding: 0px 15px 0px 0px;
+}
+
+.trip_selector span.trip_select {
+    background: #222222;
+    color: #ffffff;
+    padding: 5px 10px;
+    border-radius: 10px 10px 0px 0px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.trip_selector span.trip_select.is_active {
+    background: #ffffff;
+    color: #222222;
+
+}
+
+/*zs changing starts here
+*/
+.homepricing .trip_selector {
+    margin-bottom: 20px;
+}
+
+.homepricing .trip_selector span.trip_select {
+    background-color: #fff;
+    color: #222222;
+    font-size: 13px;
+    position: relative;
+    padding-left: 25px;
+    font-weight: bold;
+    line-height: 5px;
+}
+
+.homepricing .trip_selector span.trip_select:before {
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #999;
+    border-radius: 50%;
+    display: block;
+}
+
+.homepricing .trip_selector span.trip_select:after {
+    content: "";
+    position: absolute;
+    left: 3px;
+    top: 3px;
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    display: block;
+    background-color: #fff;
+}
+
+.homepricing .trip_selector span.trip_select.is_active:after {
+    background-color: #15C2E7;
+
+}
+
+.homepricing input {
+    margin: 0 !important;
+    background-color: transparent !important;
+}
+
+.homepricing label {
+    font-size: 13px;
+    color: #222222;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.homepricing .form-group {
+    text-align: left;
+}
+
+.homepricing .col-md-12 {
+    text-align: left;
+}
+
+.homepricing button[type="submit"] {
+    color: #fff;
+    padding: 8px 50px;
+
+}
+
+/* ==========================================================================
+   15.Medium devices (tablets, 768px and up)
+   ========================================================================== */
+
+@media (min-width: 768px) {
+
+    .hero-welcome-message h2 {
+        margin: 1rem 0 4.5rem;
+    }
+
+    .section-spacing {
+        padding: 5.25rem 0;
+    }
+
+    .features.section-spacing {
+        padding: 3rem 0 5.25rem;
+    }
+
+    .features-list [class^=col]:nth-last-child(-n+2) {
+        margin-bottom: 0;
+    }
+}
+
+/* ==========================================================================
+   12.Large devices (desktops, 992px and up)
+   ========================================================================== */
+
+@media (min-width: 992px) {
+
+    .hero-section {
+        /* background: url(../img/hero-bg.svg) center 101% no-repeat; */
+        background-size: 104%;
+    }
+
+    .navbar:not(.affix) {
+        background-color: transparent;
+    }
+
+    .navbar .nav-item .btn {
+        margin: 0 0 0 20px;
+    }
+
+    .navbar-collapse {
+        background-color: transparent;
+        padding: 0;
+    }
+
+    .ml-auto {
+        padding: 0;
+    }
+
+    .hero-welcome-message {
+        padding: 11.25rem 0 0;
+    }
+
+    .section-spacing {
+        padding: 9rem 0;
+    }
+
+    .features.section-spacing {
+        padding: 3.75rem 0 9rem;
+    }
+
+    .features .section-header {
+        text-align: left;
+        margin: 1.5rem 0 0;
+    }
+
+    .features-more .container > .row > [class^=col]:not(:last-child) {
+        margin-bottom: 0;
+    }
+
+    .cta {
+        text-align: left;
+    }
+
+    .cta.section-spacing {
+        padding: 6rem 0;
+    }
+
+    .cta svg {
+        top: 1%;
+    }
+
+    .site-footer {
+        text-align: left;
+    }
+
+    .site-footer .container > .row > [class^=col]:not(:last-child) {
+        margin-bottom: 0;
+    }
+
+    .social {
+        text-align: right;
+        position: relative;
+        bottom: 10px;
+        margin-top: 0;
+    }
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+
+    .contact-form .form-control:not(.contact-message) {
+        padding: 0 1.5rem;
+        height: 3.1rem;
+    }
+
+    .signup-form .form-control {
+        padding: 0 15.4rem 0 1.5rem;
+        height: 4.1rem;
+    }
+
+    ::-ms-clear {
+        display: none;
+    }
+}
+
+
+@media only screen and (max-width: 777px) {
+    .trip-slider-holder .slider-item img {
+        margin: 0px auto;
+    }
+
+
+    .next-arrow.ts-arrow {
+        right: 0px;
+    }
+
+    .prev-arrow.ts-arrow {
+        left: 0px;
+    }
+
+
+}
+
+.header-text {
+    padding-left: 20%;
+    font-size: 50px;
+    padding-top: 10%;
+    font-weight: 600;
+}
+
+section{
+    margin-bottom: 20px;
+}
+
+.booking-text{
+    margin-top: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    text-space: 2px;
+}
+.title{
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 70px;
+}
+
+.sub-title{
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.wide-btn{
+    background-color: #1E222D!important;
+    color: #fff;
+    margin: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.white-btn{
+    background-color: #FFFFFF!important;
+    color: #1E222D;
+    margin: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.booking-window{
+    background-image: url("../../images/landing/booking_window_sanfran.png");
+    background-size: cover;
+    background-position: center;
+    color: #FFFFFF;
+    padding: 8%;
+}
+
+.custom-text{
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;
+    color: #FFFFFF !important;
+}
+.simple-booking{
+    padding: 70px;
+}
+
+.send-btn{
+    background-color: #1E222D!important;
+    color: #fff;
+    position: relative;
+    top: 0px;
+    left: -40px;
+    padding-right: 50px;
+    padding-left: 50px;
+}
+.send-input{
+    border-radius: 30px;
+    height: 50px;
+    width: 70%;
+    color: #1E222D !important;
+}
+::placeholder{
+    color: #1E222D;
+}
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    #1E222D;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:    #1E222D;
+    opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:    #1E222D;
+    opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color:    #1E222D;
+}
+::-ms-input-placeholder { /* Microsoft Edge */
+    color:    #1E222D;
+}

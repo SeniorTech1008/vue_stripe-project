@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Wanderift | How it Works</title>
+    <link rel="icon" href="images/favicon.png">
+    <!--bootStrap-->
+    <link rel="stylesheet" href="css/bs4-utilities.min.css"> <!--remove "css/bs4-utilities.min.css" if using bootstrap4 in future-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!--my Style-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.9/css/intlTelInput.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" href="css/nice-select.css">
+    <link rel="stylesheet" href="css/flights.css">
+    <link rel="stylesheet" href="datedropper.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style-2.css" />
+    <link rel="stylesheet" href="css/media.css" />
+    <link rel="stylesheet" href="css/extra.css" />
+    <link rel="stylesheet" href="css/wanderift.css" />
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!--google font-->
+    <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
+
+    <style>
+        * {
+            font-family: 'Karla', sans-serif;
+            box-sizing: border-box;
+            font-weight: bold;
+            color: #596172;
+        }
+
+        body {
+            background: #F7F9FE;
+        }
+
+        .container-s {
+            width: 500px;
+            margin: 50px auto 0;
+        }
+
+        .header h2 {
+            text-align: center;
+        }
+
+        .header .title {
+            text-align: center;
+            width: 70%;
+            line-height: 25px;
+            margin: 0 auto;
+            padding-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .tab {
+            border-radius: 5px;
+            width: 100%;
+            height: 78px;
+            padding-top: 28px;
+            padding-bottom: 14px;
+            border: 1px solid #eee;
+            -webkit-box-shadow: 3px 3px 3px 1px rgba(0, 0, 0, 0.45);
+            -moz-box-shadow: 3px 3px 3px 1px rgba(0, 0, 0, 0.45);
+            box-shadow: 3px 3px 3px 1px rgba(0, 0, 0, 0.45);
+            margin-top: 20px;
+            cursor: pointer;
+            background-image: url('images/down-arrow.png');
+            background-repeat: no-repeat;
+            background-size: 20px auto;
+            background-position: right 20px top 29px;
+            background-color: white;
+        }
+
+        .tab.active {
+            background-image: url('up-arrow.png');
+        }
+
+        .tab p,
+        .contents p {
+            margin-left: 70px;
+            margin-right: 40px;
+        }
+
+        .tab .title,
+        .contents .title {
+            font-weight: bold;
+            position: relative;
+            width: 100%;
+        }
+
+        .contents .title {
+            font-weight: bold;
+            position: relative;
+            width: 100%;
+        }
+
+        .tab .arrow {
+            height: 20px;
+            float: right;
+            margin-top: 15px;
+            margin-right: 20px;
+        }
+
+        .contents {
+            border-radius: 5px;
+            overflow: hidden;
+            border: 1px solid #eee;
+            -webkit-box-shadow: 3px 3px 3px 1px rgba(0, 0, 0, 0.45);
+            -moz-box-shadow: 3px 3px 3px 1px rgba(0, 0, 0, 0.45);
+            box-shadow: 3px 3px 3px 1px rgba(0, 0, 0, 0.45);
+            margin-top: 20px;
+            background-color: white;
+            display: none;
+            padding-top: 20px;
+            padding-bottom: 30px;
+        }
+
+        .title .icon {
+            height: 30px;
+            position: absolute;
+            left: -45px;
+            margin-top: -5.5px;
+        }
+
+        .contents .text {
+            line-height: 25px;
+            font-size: 12px;
+        }
+
+        .contents .center {
+            width: 60%;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .contents .center p {
+            margin-left: 0;
+            text-align: left;
+            margin-right: 0;
+        }
+
+        .contents .center .description {
+            font-size: 13px;
+            line-height: 25px;
+        }
+
+        .contents .center div {
+            margin-top: 20px;
+        }
+
+        .contents .center .label {
+            color: #333;
+            font-size: 13px;
+            margin-bottom: 10px;
+        }
+
+        .contents .center input,
+        select {
+            width: 100%;
+            border: 1px inset #ddd;
+            border-radius: 3px;
+            height: 30px;
+            padding-left: 10px;
+        }
+
+        .contents .center a,
+        button {
+            display: inline-block;
+            margin-top: 20px;
+            background: #48adff;
+            background-image: -webkit-linear-gradient(top, #48adff, #48adff);
+            background-image: -moz-linear-gradient(top, #48adff, #48adff);
+            background-image: -ms-linear-gradient(top, #48adff, #48adff);
+            background-image: -o-linear-gradient(top, #48adff, #48adff);
+            background-image: linear-gradient(to bottom, #48adff, #48adff);
+            -webkit-border-radius: 5;
+            -moz-border-radius: 5;
+            border-radius: 5px;
+            font-family: inherit;
+            color: #ffffff;
+            font-size: 14px;
+            padding: 10px 40px 10px 40px;
+            text-decoration: none;
+            -moz-box-shadow: inset 0px 1px 0px 0px #dcecfb;
+            -webkit-box-shadow: inset 0px 1px 0px 0px #dcecfb;
+            box-shadow: inset 0px 1px 0px 0px #dcecfb;
+        }
+
+        .contents .center a:hover {
+            background: #3cb0fd;
+            background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+            background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+            background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+            background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+            background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+            text-decoration: none;
+        }
+
+        p.footer {
+            text-align: center;
+            margin-top: 80px;
+            font-size: 14px;
+        }
+        main#app .container .navbar-header {
+    display: inline-block;
+    width: auto;
+}
+@media (max-width:767px){
+    main#app .container .navbar-header{
+        width: 100%;
+        display: unset;
+    }
+    main#app .container .navbar-header button{
+        box-shadow: none;
+    }
+}
+    </style>
+
+
+</head>
+
+<body>
+    <main id="app">
+        <header class="new-index header1" style="padding-bottom: 0px; background: transparent;">
+            <nav class="navbar navbar-default new-index" style="background: #141F3F;padding-top: 14px; height: 90px;">
+                <div class="container">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="index.html">
+                            <img src="images/Wanderift_Logo_2.png" style="width: 180px;">
+                        </a>
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other contents for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul v-if="greeting!= null" class="nav navbar-nav navbar-right">
+                            <li><a href="#" role="button" data-target="">{{ greeting }}</a></li>
+                            <li><a href="how-it-works.html">How it Works</a></li>
+                            <li><a href="account.html" class="btn btn-primary nav-sub"><b style="color: #fff;">Account</b>
+                                        <!-- <button class="btn btn-primary" style="margin-left: 59px;width: 150px;height: 48px;background: #00B5FF"><b>Account</b>
+                                        </button> -->
+                                    </a></li>
+                        </ul>
+                        <ul v-else class="nav navbar-nav navbar-right">
+                            <li><a href="corporate-subscription.html">Corporate Subscription</a></li>
+                            <li><a href="how-it-works.html">How it Works</a></li>
+                            <li><a href="#login-Modal" role="button" data-toggle="modal" data-target="#login-Modal">Sign In</a></li>
+                            <li><a href="#subscribe-Modal" role="button" data-toggle="modal" data-target="#subscribe-Modal" class="nav-sub">Sign Up</a></li>
+                        </ul>
+                    </div>
+                    <!-- /.navbar-collapse -->
+                </div>
+                <!-- /.container-fluid -->
+            </nav>
+            <div class="content">
+                <h2 style="padding-bottom: 0px;padding-top: 30px;margin-bottom: 0px;margin-top: 40px; font-size:50px; color: #141F3F;">How You'll Wander</h2>
+                <h3 style="text-align:center;font-weight: bold;text-align: center;color: #666;margin-top: 20px; font-size: 18px;"> Change up your travel plans and start saving on flights today! </h3>
+            </div>
+        </header>
+
+        <!-- The Code starts here -->
+
+        <div class="container-s">
+
+            <div class="tab">
+                <p class="title" style="font-size:18px;">
+                    <img src="images/tokens_ticket.png" class="icon" alt="icon" /> Tokens
+                </p>
+            </div>
+
+            <div class="contents" style="padding-bottom: 50px;">
+                <p class="title" style="font-size: 18px;">
+                    <img src="images/tokens_ticket.png" class="icon" alt="icon" /> What are tokens?
+                </p>
+                <p class="text" style="padding-bottom:10px; font-size: 16px; font-weight: 400;">
+                    Book your flights using tokens.  One token equals a one-way flight.
+                </p>
+                <p class="title" style="padding-top:20px; font-size: 16px;">
+                    <img src="images/rollover_one.png" class="icon" alt="icon" /> What happens to my unused tokens?
+                </p>
+                <p class="text" style="padding-bottom:10px; font-size: 16px; font-weight: 400;">
+                  Depending on your subscription plan, you will get up to one or two tokens that will rollover onto the next month.
+                </p>
+                <p class="title" style="padding-top:20px; font-size: 16px;">
+                    <img src="images/tokens_ticket.png" class="icon" alt="icon" /> Can I share or send my tokens
+                </p>
+                <p class="text" style="padding-bottom:10px; font-size: 16px; font-weight: 400;">
+                  Yes, tokens can be shared or sent.  All that has to happen is the traveler you want to send or share tokens with has to have a free Wanderift account!
+                </p>
+            </div>
+
+            <div class="tab">
+                <p class="title" style="font-size:18px;">
+                    <img src="images/airplane_one.png" class="icon" alt="icon" /> Airlines
+                </p>
+            </div>
+
+            <div class="contents">
+                <p class="title" style="font-size: 18px; padding-bottom: 14px;">
+                    <img src="images/airplane_one.png" class="icon" alt="icon" /> Fly who you want...When you want
+                </p>
+                <p class="text" style="padding-bottom:5px; font-size: 14px;">Alaska Airlines</p>
+                <p class="text" style="padding-bottom:5px; font-size: 14px;">Allegiant</p>
+                <p class="text" style="padding-bottom:5px; font-size: 14px;">American Airlines</p>
+                <p class="text" style="padding-bottom:5px; font-size: 14px;">Delta</p>
+                <p class="text" style="padding-bottom:5px; font-size: 14px;">Frontier</p>
+                <p class="text" style="padding-bottom:5px; font-size: 14px;">jetBlue</p>
+                <p class="text" style="padding-bottom:5px; font-size: 14px;">Southwest</p>
+                <p class="text" style="padding-bottom:5px; font-size: 14px;">Spirit</p>
+                <p class="text" style="padding-bottom:5px; font-size: 14px;">Sun Country Airlines</p>
+                <p class="text" style="padding-bottom:5px; font-size: 14px;">United</p>
+
+            </div>
+
+            <div class="tab">
+                <p class="title" style="font-size:18px;">
+                    <img src="images/calendar.png" class="icon" alt="icon" /> Booking Window
+                </p>
+            </div>
+
+            <div class="contents">
+                <p class="title" style="font-size: 18px;">
+                    <img src="test/images/skyscroller_package.png" class="icon" alt="icon" /> Book when you want
+                </p>
+                <p class="text" style="padding-bottom:10px; font-size: 16px; font-weight: 400;">
+                  Book When You Want - Have a flight two days to two months from now?  Not a problem with Wanderift!  When using Wanderift, you can book your flight when you want.
+                </p>
+            </div>
+
+            <div class="tab">
+                <p class="title" style="font-size:18px;">
+                    <img src="images/pin.png" class="icon" alt="icon" /> Destinations
+                </p>
+            </div>
+            <div id="contact">
+                <div class="contents">
+                    <p class="title" style="font-size: 18px; padding-bottom: 14px;">
+                        <img src="images/pin.png" class="icon" alt="icon" /> 22 Amazing Destinations and Counting!
+                    </p>
+                    <p class="text" style="padding-bottom:5px; font-size: 14px;">Atlanta</p>
+                    <p class="text" style="padding-bottom:5px; font-size: 14px;">Austin</p>
+                    <p class="text" style="padding-bottom:5px; font-size: 14px;">Chicago</p>
+                    <p class="text" style="padding-bottom:5px; font-size: 14px;">Dallas</p>
+                    <p class="text" style="padding-bottom:5px; font-size: 14px;">Denver</p>
+                    <p class="text" style="padding-bottom:5px; font-size: 14px;">Detroit</p>
+                    <p class="text" style="padding-bottom:5px; font-size: 14px;">Houston</p>
+                    <p class="text" style="padding-bottom:5px; font-size: 14px;">Miami</p>
+                    <p class="text" style="padding-bottom:5px; font-size: 14px;">New York</p>
+                    <p class="text" style="padding-bottom:5px; font-size: 14px;">Orlando</p>
+                    <p class="text" style="padding-bottom:5px; font-size: 14px;">Las Vegas</p>
+                    <p class="text" style="padding-bottom:5px; font-size: 14px;">Los Angeles</p>
+                    <p class="text" style="padding-bottom:5px; font-size: 14px;">Salt Lake City</p>
+                    <p class="text" style="padding-bottom:5px; font-size: 14px;">San Francisco</p>
+                    <p class="text" style="padding-bottom:5px; font-size: 14px;">Seattle</p>
+
+                </div>
+                <h3 style="text-align:center;font-weight: bold;text-align: center;color: #666;margin-top: 40px; font-size: 14px;"> Click on each box to learn more </h3>
+            </div>
+
+            <p></p>
+        </div>
+        <!-- The Code Ends here. What a headache -->
+
+        <div class="new-index subs" style="padding-bottom: 60px; background: #F7F9FE;" id="pricing">
+            <div class="container">
+                <h3 class="text-center desktop-screen" style="font-size:50px; color: #141F3F;; padding-bottom: 20px;">
+                    Choose Your Ideal Subscription</h3>
+                <h3 class="text-center mobile-screen" style="font-size:30px; color: #141F3F;; padding-bottom: 20px;">
+                    Subscriptions</h3>
+                <p class="title" style="padding-bottom: 40px;line-height: 30px;">Choose between Lite and Pro.  If your travel plans change throughout your subscription, feel free to pause and reactivate your account!</p>
+                <div class="row">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-4">
+                        <div class="offer default-hover shadow">
+                            <h3 class="h2">Wanderift Lite</h3>
+                            <h4 class="offer-price" style="color: #141F3F;">$369 <span>/ per month</span></h4>
+                            <div class="clear"></div>
+                            <p style="font-size:16px;"><img src="images/tokens_ticket.png" alt="tokens_ticket" style="width:20px; height:20px;" /> 3 Tokens (3 one-way flights)</p>
+                            <p style="font-size:16px;"><img src="images/rollover_one.png" alt="rollover_one" style="width:20px; height:20px;" /> 1 Token Rollover</p>
+                            <p style="font-size:16px;"><img src="images/airplane_one.png" alt="airplane_one" style="width:20px; height:20px;" /> Fly All Major Airlines</p>
+                            <p style="font-size:16px;"><img src="images/index_hotel.png" alt="hotel" style="width:20px; height:20px;" /> Exclusive Deals on Hotels</p>
+                            <p style="font-size:16px; padding-bottom: 20px;"><img src="images/no_long_term_commitment.png" alt="no_long_term_commitment" style="width:20px; height:20px;" /> No Long Term Commitment</p>
+                            <div class="clear"></div>
+                            <a href="#subscribe-Modal" role="button" data-toggle="modal" data-target="#subscribe-Modal">
+                           Get Started
+                       </a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="offer  shadow">
+                            <h3 class="h2">Wanderift Pro</h3>
+
+                            <h4 class="offer-price" style="color: #141F3F;">$459 <span>/ per month </span></h4>
+                            <div class="clear"></div>
+                            <p style="font-size:16px;"><img src="images/tokens_ticket.png" alt="tokens_ticket" style="width:20px; height:20px;" /> 4 Tokens (4 one-way flights)</p>
+                            <p style="font-size:16px;"><img src="images/rollover_two.png" alt="rollover_two" style="width:20px; height:20px;" /> 2 Token Rollover</p>
+                            <p style="font-size:16px;"><img src="images/airplane_two.png" alt="airplane_two" style="width:20px; height:20px;" /> Fly All Major Airlines</p>
+                            <p style="font-size:16px;"><img src="images/index_hotel.png" alt="hotel" style="width:20px; height:20px;" /> Exclusive Deals on Hotels</p>
+                            <p style="font-size:16px; padding-bottom: 20px;"><img src="images/no_long_term_commitment.png" alt="no_long_term_commitment" style="width:20px; height:20px;" /> No Long Term Commitment</p>
+                            <div class="clear"></div>
+                            <a href="#subscribe-Modal" role="button" data-toggle="modal" data-target="#subscribe-Modal">
+                           Get Started
+                       </a>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        <div class="new-index testimonials desktop-screen" style="padding-bottom: 100px; background: #f7f9fe; ">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3 class="h2" style="color: #141F3F;;font-size: 50px; padding-top: 20px;  padding-bottom: 10px; margin-top: 60px; text-align: center; font-weight:bold">
+                            What Our Subscribers Say</h3>
+                        <p class="title" style="font-weight: bold;text-align: center;color: #666;max-width: 700px;margin: auto;font-size: 18px; padding-bottom: 40px;">
+                            Here are a few words about airline travel as a subscription.</p>
+                    </div>
+                </div>
+                <div class="testimonials-details">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="box sub-testimonials shadow" style="box-shadow: 0px 25px 55px #adadad; padding:20px; border-radius: 5px; background: #fff;text-align: center;">
+                                <p class="letter" style="padding: 20px 10px 5px; font-size: 16px; font-weight: 600;">"Airline travel is finally predictable with Wanderift"</p>
+                                <p class="client-name" style="padding-bottom: 20px; font-size: 14px; font-weight: 400;">Aaron M. San Francisco
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="box sub-testimonials shadow" style="box-shadow: 0px 25px 55px #adadad; padding:20px; border-radius: 5px; background: #fff;text-align: center;">
+                                <p class="letter" style="padding: 20px 10px 5px; font-size: 16px; font-weight: 600;">“Wanderift makes frequent travel stress free”</p>
+                                <p class="client-name" style="padding-bottom: 20px; font-size: 14px; font-weight: 400;">Michael B. Los Angeles
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="box sub-testimonials shadow" style="box-shadow: 0px 25px 55px #adadad; padding:20px; border-radius: 5px; background: #fff;text-align: center;">
+                                <p class="letter" style="padding: 20px 10px 5px; font-size: 16px; font-weight: 600;">“With Wanderift I don’t worry about expensive last minute flights”</p>
+                                <p class="client-name" style="padding-bottom: 20px; font-size: 14px; font-weight: 400;">David L. San Francisco
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="box sub-testimonials shadow" style="box-shadow: 0px 25px 55px #adadad; padding:20px; border-radius: 5px; background: #fff;text-align: center;">
+                                <p class="letter" style="padding: 20px 10px 5px; font-size: 16px; font-weight: 600;">“Booking a flight has never been easier”</p>
+                                <p class="client-name" style="padding-bottom: 20px; font-size: 14px; font-weight: 400;">Alexander R. San Francisco</p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="box sub-testimonials shadow" style="box-shadow: 0px 25px 55px #adadad; padding:20px; border-radius: 5px; background: #fff;text-align: center; height: 147px;">
+                                <p class="letter" style="padding: 20px 10px 5px; font-size: 16px; font-weight: 600;">"Finally a better solution to frequent travel"</p>
+                                <p class="client-name" style="padding-bottom: 20px; font-size: 14px; font-weight: 400;">Dan W. New York
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="box sub-testimonials shadow" style=" box-shadow: 0px 25px 55px #adadad;padding:20px; border-radius: 5px; background: #fff;text-align: center;">
+                                <p class="letter" style="padding: 20px 10px 5px; font-size: 16px; font-weight: 600;">"Awesome customer service"</p>
+                                <p class="client-name" style="padding-bottom: 20px; font-size: 14px; font-weight: 400;">Igore R. Los Angeles
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="footer-new">
+            <div class="container">
+                <div class="footer-top" style="margin-left: 160px;margin-right: 160px;padding-top: 50px;">
+                    <div class="row footer-top-row">
+                        <div class="col-md-3">
+                            <!-- <div class="description">
+                                    <h4 style="padding-bottom: 10px;">Booking on the go?</h4>
+                                    <p style="padding-bottom: 20px;">Booking has never been easier when using the wanderift
+                                        mobile app. Subscribers can book flights in under twenty Seconds</p>
+                                    <div class="phone-book" style="padding-bottom:20px;">
+                                        <input id="phone" type="tel" placeholder="Enter Mobile No.">
+                                        <span id="valid-msg" class="hide">Valid</span>
+                                        <span id="error-msg" class="hide">Invalid number</span>
+                                        <input type="submit" value="Send" class="btn btn-deals">
+                                    </div>
+                                </div> -->
+                            <div class="footer-menu">
+                                <h4 style="padding-bottom: 10px; color: #F7F9FF;">Contact</h4>
+                                <a href="about-us.html" style="font-size: 14px; color: #F7F9FF;">Help / FAQ</a>
+                                <a href="media.html" style="font-size: 14px; color: #F7F9FF;">Press</a>
+                                <a href="#" style="font-size: 14px; color: #F7F9FF;">Partners</a>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="footer-menu">
+                                <h4 style="padding-bottom: 10px; color: #F7F9FF;">Company</h4>
+                                <a href="about-us.html" style="font-size: 14px; color: #F7F9FF;">About</a>
+                                <a href="mobile_app.html" style="font-size: 14px; color: #F7F9FF;">Mobile</a>
+                                <a href="#" style="font-size: 14px; color: #F7F9FF;">How it Works</a>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="footer-menu">
+                                <h4 style="padding-bottom: 10px; color: #F7F9FF;">More</h4>
+                                <a href="https://skyscroller.com/" style="font-size: 14px; color: #F7F9FF;">Skyscroller</a>
+                                <a href="#" style="font-size: 14px; color: #F7F9FF;">Hotels</a>
+                                <a href="airline_fees.html" style="font-size: 14px; color: #F7F9FF;">Airline Fees</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom" style="height: 250px;">
+                    <div class="footer-bottom-titles">
+                        <a href="images/Wanderift_Privacy_Policy.pdf" class="title-link" style="font-size: 14px; color: #F7F9FF;">Privacy Policy</a>
+                        <a href="images/Wanderift_terms_of_Use.pdf" class="title-link" style="font-size: 14px; color: #F7F9FF;">Terms & Conditions </a>
+                        <a href="#" class="title-link" style="font-size: 14px; color: #F7F9FF;">Wanderift LLC</a>
+                    </div>
+
+                    <div class="footer-bottom-description" style="font-size:14px;  padding-top:10px; padding-bottom:5px; color: #F7F9FF;">Save time and money when booking through Wanderift.  You will always pay the same price for your flight when booking with tokens.
+
+
+                    </div>
+
+                    <div class="footer-bottom-social-links">
+                        <a href="https://www.instagram.com/wanderift/" class="ig-link"><img src="asset/instagram.png" alt="" style="width:30px; height:30px;"></a>
+                        <a href="https://twitter.com/wanderift" class="twit-link"><img src="asset/twit.png" alt="" style="width:30px; height:30px;"></a>
+                        <a href="https://www.facebook.com/Wanderift/" class="face-link"><img src="asset/face.png" alt="" style="width:30px; height:30px;"></a>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <a href="#" class="ig-link"><img src="images/Wanderift_Logo_2.png" alt="" style="width:140px; padding-bottom: 40px;"></a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- modals -->
+
+        <!-- signIn modal -->
+        <div
+            class="modal fade"
+            id="login-Modal"
+            tabindex="-1"
+            role="dialog"
+            aria-labelledby="loginModalLabel"
+            aria-hidden="true">
+            <!-- <div class="modal-backdrop" style="display: none"></div> -->
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                        <div class="modal-header border-0">
+                                <a type="button" class="close m-0 bg-transparent float-left" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">close</span>
+                                </a>
+                        </div>
+                    <div class="modal-body text-center">
+                        <div class="login-head">
+                            <h3 class="mt-0">Sign In</h3>
+                            <p class="m-0">Looking to book your next gateway?</p>
+                            <p >Sign in and start saving!</p>
+                        </div>
+                        <div class="login-body w-75 m-auto">
+                            <form>
+                                <div class="form-group">
+                                    <input type="email" class="form-control sharp text-center" placeholder="Email" id="email_field" required/>
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" class="form-control sharp text-center" id="password_field" placeholder="Password" required/>
+                                </div>
+                                <div class="form-group">
+                                    <a id="forgot-password" href="#">Forgot Password?</a>
+                                </div>
+                                <div class="form-group">
+                                    <a class="btn btn-primary btn-login" onclick="login()">Sign In</a>
+                                </div>
+                                <div class="form-group">
+                                    <p>By selecting "Sign in" you agree to Wanderift <a href="#" >Term of Use and Service</a></p>
+                                    <p>Click <a href="#" >HERE</a> to sign in to Corporate Subscription</p>
+                                </div>
+                                <!-- <div class="form-group">
+                                    <a href="#" id="started">Don't have an account? Get Started</a>
+                                </div> -->
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- signUp modal -->
+        <div
+            class="modal fade"
+            id="subscribe-Modal"
+            tabindex="-1"
+            role="dialog"
+            aria-labelledby="subscribeModalLabel"
+            aria-hidden="true">
+            <!-- <div class="modal-backdrop" style="display: none"></div> -->
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                        <div class="modal-header border-0">
+                                <a type="button" class="close m-0 bg-transparent float-left" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">close</span>
+                                </a>
+                        </div>
+                    <div class="modal-body text-center">
+                        <div class="login-head">
+                            <h3 class="mt-0">Sign Up</h3>
+                            <p class="m-0">Enter a few detais below and get started for free</p>
+                        </div>
+                        <div class="login-body w-75 m-auto">
+                            <form>
+                                <div>
+                                    <div class="form-group">
+                                        <input type="email" class="form-control sharp text-center" placeholder="Email" id="email" required/>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" class="form-control sharp text-center" id="password" placeholder="Password" required/>
+                                    </div>
+                                </div>
+
+
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <a class="btn btn-primary btn-login" id="submitBtn" onclick="signup()">Sign Up</a>
+                                        </div>
+                                        <div class="form-group">
+                                            <p>By selecting "Sign Up" you agree to Wanderift <a href="#" >Term of Use and Service</a></p>
+                                            <p>Looking to save on business travel tickets click <a href="#" >HERE</a> for Corporation Subscription</p>
+
+                                        </div>
+                                        <!-- <div class="form-group">
+                                            <a href="#" id="login">Already have an account? Sign In</a>
+                                        </div> -->
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+
+<script src="https://www.gstatic.com/firebasejs/5.7.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.7.2/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.7.2/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.7.2/firebase-firestore.js"></script>
+<script src="js/firebase-config.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script src="js/vuejs/how-it-works.js"></script>
+<script src="js/jquery-3.1.0.min.js"></script>
+<script src="v2/moment.js"></script>
+<script src="js/Signup.js"></script>
+<script src="js/Login.js"></script>
+<script src="js/flights-slick.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/plugin.js"></script>
+<script src="js/plugin-2.js"></script>
+<script src="js/jquery.nice-select.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.9/js/intlTelInput.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.9/js/intlTelInput.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.9/js/utils.js"></script>
+
+<script>
+    $(document).ready(function() {
+        var show_btn = $('#started');
+        //  var show_btn=$('.show-modal');
+        //$("#testmodal").modal('show');
+
+        show_btn.click(function() {
+            $("#login-Modal").modal('hide');
+            $("#subscribe-Modal").modal('show');
+        });
+    });
+
+    $(document).ready(function() {
+        var show_btn = $('#login');
+        //  var show_btn=$('.show-modal');
+        //$("#testmodal").modal('show');
+
+        show_btn.click(function() {
+            $("#subscribe-Modal").modal('hide');
+            $("#login-Modal").modal('show');
+        });
+    });
+
+    var telInput = $("#phone"),
+        errorMsg = $("#error-msg"),
+        validMsg = $("#valid-msg");
+
+    // initialise plugin
+    telInput.intlTelInput({
+
+        allowExtensions: true,
+        formatOnDisplay: true,
+        autoFormat: true,
+        autoHideDialCode: true,
+        autoPlaceholder: true,
+        defaultCountry: "auto",
+        ipinfoToken: "yolo",
+
+        nationalMode: false,
+        numberType: "MOBILE",
+        //onlyCountries: ['us', 'gb', 'ch', 'ca', 'do'],
+        preferredCountries: ['sa', 'ae', 'qa', 'om', 'bh', 'kw', 'ma'],
+        preventInvalidNumbers: true,
+        separateDialCode: true,
+        initialCountry: "auto",
+        geoIpLookup: function(callback) {
+            $.get("http://ipinfo.io", function() {}, "jsonp").always(function(resp) {
+                var countryCode = (resp && resp.country) ? resp.country : "";
+                callback(countryCode);
+            });
+        },
+        utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.9/js/utils.js"
+    });
+
+    var reset = function() {
+        telInput.removeClass("error");
+        errorMsg.addClass("hide");
+        validMsg.addClass("hide");
+    };
+
+    // on blur: validate
+    telInput.blur(function() {
+        reset();
+        if ($.trim(telInput.val())) {
+            if (telInput.intlTelInput("isValidNumber")) {
+                validMsg.removeClass("hide");
+            } else {
+                telInput.addClass("error");
+                errorMsg.removeClass("hide");
+            }
+        }
+    });
+
+    // on keyup / change flag: reset
+    telInput.on("keyup change", reset);
+
+    jQuery(function($) {
+        $(".tab").click(function() {
+            var id = $(this).index(".tab");
+
+            $(this).toggleClass("active");
+            $(".contents").eq(id).slideToggle('slow');
+        });
+    });
+</script>
+
+</html>

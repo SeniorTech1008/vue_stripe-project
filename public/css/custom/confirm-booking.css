@@ -1,0 +1,178 @@
+
+        body {
+            background: #F7F9FE;
+        }
+
+        .container-s {
+            width: 500px;
+            margin: 50px auto 0;
+        }
+
+        .header h2 {
+            text-align: center;
+        }
+
+        .header .title {
+            text-align: center;
+            width: 70%;
+            line-height: 25px;
+            margin: 0 auto;
+            padding-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .tab {
+            border-radius: 5px;
+            width: 100%;
+            height: 78px;
+            padding-top: 28px;
+            padding-bottom: 14px;
+            border: 1px solid #eee;
+            -webkit-box-shadow: 3px 3px 3px 1px rgba(0, 0, 0, 0.45);
+            -moz-box-shadow: 3px 3px 3px 1px rgba(0, 0, 0, 0.45);
+            box-shadow: 3px 3px 3px 1px rgba(0, 0, 0, 0.45);
+            margin-top: 20px;
+            cursor: pointer;
+            background-image: url('images/down-arrow.png');
+            background-repeat: no-repeat;
+            background-size: 20px auto;
+            background-position: right 20px top 29px;
+            background-color: white;
+        }
+
+        .tab.active {
+            background-image: url('up-arrow.png');
+        }
+
+        .tab p,
+        .contents p {
+            margin-left: 70px;
+            margin-right: 40px;
+        }
+
+        .tab .title,
+        .contents .title {
+            font-weight: bold;
+            position: relative;
+            width: 100%;
+        }
+
+        .contents .title {
+            font-weight: bold;
+            position: relative;
+            width: 100%;
+        }
+
+        .tab .arrow {
+            height: 20px;
+            float: right;
+            margin-top: 15px;
+            margin-right: 20px;
+        }
+
+        .contents {
+            border-radius: 5px;
+            overflow: hidden;
+            border: 1px solid #eee;
+            -webkit-box-shadow: 3px 3px 3px 1px rgba(0, 0, 0, 0.45);
+            -moz-box-shadow: 3px 3px 3px 1px rgba(0, 0, 0, 0.45);
+            box-shadow: 3px 3px 3px 1px rgba(0, 0, 0, 0.45);
+            margin-top: 20px;
+            background-color: white;
+            display: none;
+            padding-top: 20px;
+            padding-bottom: 30px;
+        }
+
+        .title .icon {
+            height: 30px;
+            position: absolute;
+            left: -45px;
+            margin-top: -5.5px;
+        }
+
+        .contents .text {
+            line-height: 25px;
+            font-size: 12px;
+        }
+
+        .contents .center {
+            width: 60%;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .contents .center p {
+            margin-left: 0;
+            text-align: left;
+            margin-right: 0;
+        }
+
+        .contents .center .description {
+            font-size: 13px;
+            line-height: 25px;
+        }
+
+        .contents .center div {
+            margin-top: 20px;
+        }
+
+        .contents .center .label {
+            color: #333;
+            font-size: 13px;
+            margin-bottom: 10px;
+        }
+
+        .contents .center input,
+        select {
+            width: 100%;
+            border: 1px inset #ddd;
+            border-radius: 3px;
+            height: 30px;
+            padding-left: 10px;
+        }
+
+        .contents .center a,
+        button {
+            display: inline-block;
+            margin-top: 20px;
+            background: #48adff;
+            background-image: -webkit-linear-gradient(top, #48adff, #48adff);
+            background-image: -moz-linear-gradient(top, #48adff, #48adff);
+            background-image: -ms-linear-gradient(top, #48adff, #48adff);
+            background-image: -o-linear-gradient(top, #48adff, #48adff);
+            background-image: linear-gradient(to bottom, #48adff, #48adff);
+            -webkit-border-radius: 5;
+            -moz-border-radius: 5;
+            border-radius: 5px;
+            font-family: inherit;
+            color: #ffffff;
+            font-size: 14px;
+            padding: 10px 40px 10px 40px;
+            text-decoration: none;
+            -moz-box-shadow: inset 0px 1px 0px 0px #dcecfb;
+            -webkit-box-shadow: inset 0px 1px 0px 0px #dcecfb;
+            box-shadow: inset 0px 1px 0px 0px #dcecfb;
+        }
+
+        .contents .center a:hover {
+            background: #3cb0fd;
+            background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+            background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+            background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+            background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+            background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+            text-decoration: none;
+        }
+
+        p.footer {
+            text-align: center;
+            margin-top: 80px;
+            font-size: 14px;
+        }
+
+        .booking-menu button.btn.btn-primary {
+            margin-top: 0;
+            box-shadow: none;
+        }
+    

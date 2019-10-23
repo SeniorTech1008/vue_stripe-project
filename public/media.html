@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description"
+              content="Wanderift is airline travel as a subscription, subscribers pay a low monthly fee and receive a certain amount of flights. Subscribe today and start saving on your travel!" />
+        <title>Wanderift | News</title>
+        <link rel="icon" href="images/favicon.png">
+        <!--normalaize-->
+        <link rel="stylesheet" href="css/normalaize.css" />
+        <!--bootStrap-->
+        <!--bootStrap-->
+        <link rel="stylesheet" href="css/bs4-utilities.min.css">     <!--remove "css/bs4-utilities.min.css" if using bootstrap4 in future-->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <!--slider-->
+        <link rel="stylesheet" type="text/css" href="css/flights-slick.css" />
+        <link rel="stylesheet" type="text/css" href="css/flights-slick-theme.css" />
+        <!--my Style-->
+        <link rel="stylesheet" href="css/nice-select.css">
+        <link rel="stylesheet" href="css/flights.css">
+        <link rel="stylesheet" href="datedropper.min.css" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/style-2.css" />
+        <link rel="stylesheet" href="css/media.css" />
+        <link rel="stylesheet" href="css/extra.css" />
+        <link rel="stylesheet" href="css/wanderift.css" />
+
+        <!--google font-->
+        <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
+
+        <!--font awsome-->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    </head>
+    <body>
+        <header class="new-index header1">
+          <nav class="navbar navbar-default new-index" style="padding-top: 14px;">
+              <div class="container">
+                  <!-- Brand and toggle get grouped for better mobile display -->
+                  <div class="navbar-header" style="width: auto">
+                      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                          <span class="sr-only">Toggle navigation</span>
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                      </button>
+                      <a class="navbar-brand" href="index.html">
+                          <img src="images/Wanderift_Logo_2.png" style="width: 180px;">
+                      </a>
+                  </div>
+
+                  <!-- Collect the nav links, forms, and other content for toggling -->
+                  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                      <ul class="nav navbar-nav navbar-right">
+                          <li><a href="how-it-works.html">How it Works</a></li>
+                          <li><a href="#login-Modal" role="button" data-toggle="modal" data-target="#login-Modal">Sign In</a></li>
+                          <li><a href="#subscribe-Modal" role="button" data-toggle="modal" data-target="#subscribe-Modal" class="nav-sub">Subscribe</a></li>
+                      </ul>
+                  </div><!-- /.navbar-collapse -->
+              </div><!-- /.container-fluid -->
+          </nav>
+            <div class="content">
+                <h2>Media</h2>
+            </div>
+        </header>
+
+
+        <div class="modal fade" id="subscribe-Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="login-head">
+                            <h3>Get Started with Wanderift!</h3>
+                            <p>Enter a few details below and get started for free</p>
+                        </div>
+                        <div class="login-body">
+                                <form>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" id="first-name" placeholder="First Name"
+                                                        required/>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" id="last-name" placeholder="Last Nmae"
+                                                        required/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <input data-datedropper data-dd-roundtrip="my-trip" data-dd-theme="wanderift"
+                                                        type="text" class="form-control" name="datefilterstart" id="dob"
+                                                        placeholder="Date of Birth" required/>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" placeholder="Gender" id="gender"
+                                                        required/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" placeholder="Subscriber Market"
+                                                        id="sub-market" required/>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" id="reference"
+                                                        placeholder="How'd You Hear About Us(Optional)">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" placeholder="Email" id="email"
+                                                        required/>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <input type="password" class="form-control" placeholder="Password" id="password"
+                                                        required/>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <a class="btn btn-primary btn-login" id="submitBtn" onclick="signup()">Create
+                                                    Account</a>
+                                            </div>
+                                            <div class="form-group">
+                                                <a href="#" id="login">Already have an account? Sign In</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="media-details">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="sub-media shadow1">
+                            <img alt="img" src="images/Forbes_Logo.png" />
+                            <p>Remember Rollover Minutes? This Subscription services Lets You ROll Over Flights(Or Give Them Away)</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="sub-media shadow1">
+                            <img alt="img" src="images/simple.png" style="width:200px;" />
+                            <p>Would A Subscription Airline Modal Work?</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="sub-media shadow1">
+                            <img alt="img" src="images/Smarter_Travel_Logo.png" style="width:180px;height: 30px;"/>
+                            <p style="margin-top:40px;">Could This New Members-Only Air Service MEan Cheaper U.S Flights</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="sub-media shadow1">
+                            <img alt="img" src="images/phocuswirelogo-tagline-RGB.png" style="height: 50px;" />
+                            <p>Wanderift brings a subscription model to air travel</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="sub-media shadow1">
+                            <img alt="img" src="images/pymnts-logo.png" style="height: 50px;" />
+                            <p>Can Air Travel Ticketing Subscriptions Take Off??</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="sub-media shadow1">
+                            <img alt="img" src="images/trip_advisor_logo.png" style="height: 40px; width: 180px;" />
+                            <p style="padding-top:10px;">Wanderift, Airline Travel Subscription</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="sub-media shadow1" style="padding-top:15px;">
+                            <img alt="img" src="images/the_money_cloud_logo.png" style="height:120px;"/>
+                            <p style="margin-top:0px;">When Flyers Become Dynamic Travel Subscribers</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="sub-media shadow1" style="padding-top: 20px;">
+                            <img alt="img" src="images/ph-logo-1.png" style="height: 90px;" />
+                            <p style="margin-top:0px;">Wanderift | Product Hunt</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="sub-media shadow1">
+                            <img alt="img" src="images/betapage.png" style="height:60px; padding-bottom:10px;"/>
+                            <p style="margin-top:10px;">Wanderift | BetaPage</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="sub-media shadow1">
+                            <img alt="img" src="images/Medium_logo.png" style="height:50px;" />
+                            <p>The future of travel industry: trends and predictions.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="sub-media shadow1">
+                            <img alt="img" src="images/iheartmedia_logo.png" style="width:190px; height:40px;" />
+                            <p>Tricks of the trade to get the best deal on airfares</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="sub-media shadow1">
+                            <img alt="img" src="images/iheartmedia_logo.png" style="width:190px; height:40px;" />
+                            <p>The current Pilot shortage is gonna cost Travelers</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="inquiries">
+                            <h2>Media Inquiries</h2>
+                            <p>For all media inquiries, send an email to info@wanderift.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-new">
+            <div class="container">
+                <div class="footer-top" style="margin-left: 160px;margin-right: 160px;padding-top: 50px; ">
+                    <div class="row footer-top-row">
+                        <div class="col-md-3">
+                            <div class="footer-menu">
+                                <h4 style="padding-bottom: 10px; color: #F7F9FF;">Contact</h4>
+                                <a href="how-it-works.html" style="font-size: 14px; color: #F7F9FF;">Help / FAQ</a>
+                                <a href="media.html" style="font-size: 14px; color: #F7F9FF;">Press</a>
+                                <a href="about-us.html" style="font-size: 14px; color: #F7F9FF;">Partners</a>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="footer-menu">
+                                <h4 style="padding-bottom: 10px; color: #F7F9FF;">Company</h4>
+                                <a href="about-us.html" style="font-size: 14px; color: #F7F9FF;">About</a>
+                                <a href="mobile_app.html" style="font-size: 14px; color: #F7F9FF;">Mobile</a>
+                                <a href="how-it-works.html" style="font-size: 14px; color: #F7F9FF;">How it works</a>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="footer-menu">
+                                <h4 style="padding-bottom: 10px; color: #F7F9FF;">More</h4>
+                                <a href="https://skyscroller.com/" style="font-size: 14px; color: #F7F9FF;">Skyscroller</a>
+                                <a href="ads.html" style="font-size: 14px; color: #F7F9FF;">Advertising</a>
+                                <a href="airline_fees.html" style="font-size: 14px; color: #F7F9FF;">Airline Fee's</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <div class="footer-bottom-titles">
+                        <a href="images/Wanderift_Privacy_Policy.pdf" class="title-link" style="font-size: 14px; color: #F7F9FF;">Privacy Policy</a>
+                        <a href="images/Wanderift_Terms_of_Use.pdf" class="title-link" style="font-size: 14px; color: #F7F9FF;">Terms & Conditions </a>
+                        <a href="about-us.html" class="title-link" style="font-size: 14px; color: #F7F9FF;">Wanderift LLC</a>
+                    </div>
+
+                    <div class="footer-bottom-description" style="font-size:14px; padding-top:10px; padding-bottom:5px; color: #F7F9FF;">Save time and money when booking through Wanderift.  You will always pay the same price for your flight when booking with tokens.
+
+                    </div>
+
+                    <div class="footer-bottom-social-links">
+                        <a href="https://www.instagram.com/wanderift/" class="ig-link"><img src="../public/asset/instagram.png" alt="" style="width:30px; height:30px;"></a>
+                        <a href="https://twitter.com/wanderift" class="twit-link"><img src="../public/asset/twit.png" alt="" style="width:30px; height:30px;"></a>
+                        <a href="https://www.facebook.com/Wanderift/" class="face-link"><img src="../public/asset/face.png" alt="" style="width:30px; height:30px;"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+         <!-- modals -->
+
+        <!-- signIn modal -->
+        <div
+            class="modal fade"
+            id="login-Modal"
+            tabindex="-1"
+            role="dialog"
+            aria-labelledby="loginModalLabel"
+            aria-hidden="true">
+            <!-- <div class="modal-backdrop" style="display: none"></div> -->
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                        <div class="modal-header border-0">
+                                <a type="button" class="close m-0 bg-transparent float-left" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">close</span>
+                                </a>
+                        </div>
+                    <div class="modal-body text-center">
+                        <div class="login-head">
+                            <h3 class="mt-0">Sign In</h3>
+                            <p class="m-0">Looking to book your next gateway?</p>
+                            <p >Sign in and start saving!</p>
+                        </div>
+                        <div class="login-body w-75 m-auto">
+                            <form>
+                                <div class="form-group">
+                                    <input type="email" class="form-control sharp text-center" placeholder="Email" id="email_field" required/>
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" class="form-control sharp text-center" id="password_field" placeholder="Password" required/>
+                                </div>
+                                <div class="form-group">
+                                    <a id="forgot-password" href="#">Forgot Password?</a>
+                                </div>
+                                <div class="form-group">
+                                    <a class="btn btn-primary btn-login" onclick="login()">Sign In</a>
+                                </div>
+                                <div class="form-group">
+                                    <p>By selecting "Sign in" you agree to Wanderift <a href="#" >Term of Use and Service</a></p>
+                                    <p>Click <a href="#" >HERE</a> to sign in to Corporate Subscription</p>
+                                </div>
+                                <!-- <div class="form-group">
+                                    <a href="#" id="started">Don't have an account? Get Started</a>
+                                </div> -->
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+</body>
+
+        <script src="https://www.gstatic.com/firebasejs/5.7.2/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.7.2/firebase-database.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.7.2/firebase-firestore.js"></script>
+        <script src="js/firebase-config.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+        <script src="js/jquery-3.1.0.min.js"></script>
+        <script src="v2/moment.js"></script>
+
+        <script src="js/Signup.js"></script>
+        <script src="js/Login.js"></script>
+
+        <script type="text/javascript" src="js/flights-slick.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/fancySelect.js"></script>
+        <script src="js/datedropper.min.js"></script>
+        <script src="js/plugin.js"></script>
+        <script src="js/plugin-2.js"></script>
+        <script src="js/jquery.nice-select.js"></script>
+        <script src="js/index_v2.js"></script>
+        <script src="js/datedropper.pro.min.js"></script>
+
+        <script>
+            $(document).ready(function () {
+                var show_btn = $('#started');
+//  var show_btn=$('.show-modal');
+                //$("#testmodal").modal('show');
+
+                show_btn.click(function () {
+                    $("#login-Modal").modal('hide');
+                    $("#subscribe-Modal").modal('show');
+                });
+            });
+
+            $(document).ready(function () {
+                var show_btn = $('#login');
+//  var show_btn=$('.show-modal');
+                //$("#testmodal").modal('show');
+
+                show_btn.click(function () {
+                    $("#subscribe-Modal").modal('hide');
+                    $("#login-Modal").modal('show');
+                });
+            });
+        </script>
+</html>

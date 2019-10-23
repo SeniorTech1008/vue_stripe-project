@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Trip Summary </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/media.css">
+    <link rel="icon" href="images/favicon.png">
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/style-2.css" />
+    <style>
+        body {
+            background: #F7F9FE;
+        }
+
+        .container-s {
+            width: 500px;
+            margin: 50px auto 0;
+        }
+
+        .header h2 {
+            text-align: center;
+        }
+
+        .header .title {
+            text-align: center;
+            width: 70%;
+            line-height: 25px;
+            margin: 0 auto;
+            padding-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .tab {
+            border-radius: 5px;
+            width: 100%;
+            height: 78px;
+            padding-top: 28px;
+            padding-bottom: 14px;
+            border: 1px solid #eee;
+            -webkit-box-shadow: 3px 3px 3px 1px rgba(0, 0, 0, 0.45);
+            -moz-box-shadow: 3px 3px 3px 1px rgba(0, 0, 0, 0.45);
+            box-shadow: 3px 3px 3px 1px rgba(0, 0, 0, 0.45);
+            margin-top: 20px;
+            cursor: pointer;
+            background-image: url('images/down-arrow.png');
+            background-repeat: no-repeat;
+            background-size: 20px auto;
+            background-position: right 20px top 29px;
+            background-color: white;
+        }
+
+        .tab.active {
+            background-image: url('up-arrow.png');
+        }
+
+        .tab p,
+        .contents p {
+            margin-left: 70px;
+            margin-right: 40px;
+        }
+
+        .tab .title,
+        .contents .title {
+            font-weight: bold;
+            position: relative;
+            width: 100%;
+        }
+
+        .contents .title {
+            font-weight: bold;
+            position: relative;
+            width: 100%;
+        }
+
+        .tab .arrow {
+            height: 20px;
+            float: right;
+            margin-top: 15px;
+            margin-right: 20px;
+        }
+
+        .contents {
+            border-radius: 5px;
+            overflow: hidden;
+            border: 1px solid #eee;
+            -webkit-box-shadow: 3px 3px 3px 1px rgba(0, 0, 0, 0.45);
+            -moz-box-shadow: 3px 3px 3px 1px rgba(0, 0, 0, 0.45);
+            box-shadow: 3px 3px 3px 1px rgba(0, 0, 0, 0.45);
+            margin-top: 20px;
+            background-color: white;
+            display: none;
+            padding-top: 20px;
+            padding-bottom: 30px;
+        }
+
+        .title .icon {
+            height: 30px;
+            position: absolute;
+            left: -45px;
+            margin-top: -5.5px;
+        }
+
+        .contents .text {
+            line-height: 25px;
+            font-size: 12px;
+        }
+
+        .contents .center {
+            width: 60%;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .contents .center p {
+            margin-left: 0;
+            text-align: left;
+            margin-right: 0;
+        }
+
+        .contents .center .description {
+            font-size: 13px;
+            line-height: 25px;
+        }
+
+        .contents .center div {
+            margin-top: 20px;
+        }
+
+        .contents .center .label {
+            color: #333;
+            font-size: 13px;
+            margin-bottom: 10px;
+        }
+
+        .contents .center input,
+        select {
+            width: 100%;
+            border: 1px inset #ddd;
+            border-radius: 3px;
+            height: 30px;
+            padding-left: 10px;
+        }
+
+        .contents .center a,
+        button {
+            display: inline-block;
+            margin-top: 20px;
+            background: #48adff;
+            background-image: -webkit-linear-gradient(top, #48adff, #48adff);
+            background-image: -moz-linear-gradient(top, #48adff, #48adff);
+            background-image: -ms-linear-gradient(top, #48adff, #48adff);
+            background-image: -o-linear-gradient(top, #48adff, #48adff);
+            background-image: linear-gradient(to bottom, #48adff, #48adff);
+            -webkit-border-radius: 5;
+            -moz-border-radius: 5;
+            border-radius: 5px;
+            font-family: inherit;
+            color: #ffffff;
+            font-size: 14px;
+            padding: 10px 40px 10px 40px;
+            text-decoration: none;
+            -moz-box-shadow: inset 0px 1px 0px 0px #dcecfb;
+            -webkit-box-shadow: inset 0px 1px 0px 0px #dcecfb;
+            box-shadow: inset 0px 1px 0px 0px #dcecfb;
+        }
+
+        .contents .center a:hover {
+            background: #3cb0fd;
+            background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+            background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+            background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+            background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+            background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+            text-decoration: none;
+        }
+
+        p.footer {
+            text-align: center;
+            margin-top: 80px;
+            font-size: 14px;
+        }
+
+        .booking-menu button.btn.btn-primary {
+            margin-top: 0;
+            box-shadow: none;
+        }
+    </style>
+</head>
+
+<body>
+    <main id="app">
+        <div class="row booking-header-row" style="background: #141F3F; height: 90px;">
+            <div class="container booking-header">
+                <div class="row" style="padding-top: 25px;padding-bottom: 7px;">
+                    <div class="col-md-6 col-sm-12">
+                        <img src="images/Wanderift_Logo_2.png" class="img img-fluid" id="logo" style="width:180px;">
+                    </div>
+                    <div class="col-md-6 col-sm-12 booking-menu">
+                        <p><a href="index.html"><b style="color:#fff; font-size:18px;">Home</b></a><a href="account.html"><button
+									class="btn btn-primary" style="margin-left: 59px;width: 140px;height: 42px;background: #00B5FF"><b>Account</b></button></a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="container">
+                <div class="col-md-12" style="padding-top: 15px;padding-bottom: 15px;">
+                    <a href="index.html"><img src="asset/left_arrow.png"></a>
+                    <span style="margin-left: 10px; font-weight: bold;"><b>Back to Flight Results</b></span>
+                </div>
+            </div>
+        </div>
+        <div class="row" style="background: #F7F9FE">
+            <div class="container">
+                <div class="col-md-10" style="margin:0 auto;">
+
+                    <h1 style="padding-top: 30px; padding-bottom:20px; font-size:35px; color: #131f3f; font-weight: bold;">Confirm your booking</h1>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12" style="background: #F7F9FE">
+                <div class="container" style="margin-bottom:20px;" v-for="flight in dataSource.flights" v-if="two_way==='false'">
+                    <div class="col-md-10" style="margin:0 auto;min-height: 140px;background: #fff;border:1px solid #E6E7E9;border-radius: 10px;">
+                        <div class="row">
+                            <div class="col-md-11" style="margin:0 auto;border-bottom: 2px solid #DDDDDD;padding-top: 10px;">
+                                <div class="row">
+
+
+                                    <div class="col-md-3" style="padding-left: 0;">
+                                        <p><b>{{ flight.local_departure | date('%A, %-d %B %Y ') }}</b></p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <p style="width:250px;"><span><b>{{ flight.cityFrom}}</b></span><span style="margin-left: 10px;"><img
+                                                    src="images/right-arrow-confirm.png" style="width:20px;"></span><span style="margin-left: 10px;"><b>{{ flight.dst}}</b></span>
+                                        </p>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p>
+                                            <b style="padding-left: 40;">{{flight | datediff}}</b>
+                                            <span style="float: right;"><b>Depart</b></span>
+                                        </p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-11" style="margin:0 auto;padding-top: 19px;  padding-bottom: 13px;">
+                                <div class="row">
+
+
+                                    <div class="col-md-3" style="padding-left: 0;">
+                                        <div class="row">
+                                            <div class="col-md-3">
+                                                <img :src="getFlightImage(flight.operating_airline.iata) " :alt="flight.operating_airline.name" style="width: 45px; ">
+                                            </div>
+                                            <div class="col-md-9">
+                                                <b>{{ flight.operating_airline.name }}</b><br>
+                                                <b>Flight
+                                                    {{ flight.flight_no}}</b>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-md-5">
+                                        <div class="row">
+                                            <div class="col-md-5">
+                                                <b style="font-size: 25px;">{{flight.local_departure | date('%I:%M %p')}}</b>
+                                                <p style="font-size: 12px;"><b>{{flight.src}}
+                                                        ({{flight.dst}})</b></p>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <img src="asset/right_arrow.png" style="width: 29px;    margin-top: 10px;">
+                                            </div>
+                                            <div class="col-md-5">
+                                                <b style="font-size: 25px;">{{flight.local_arrival | date('%I:%M %p')}}</b>
+                                                <p style="font-size: 12px;"><b>{{flight.dst}}
+                                                        ({{flight.dst}})</b></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4" style="padding-right: 0;">
+                                        <div style="float: right;">
+                                            <b style="font-size: 30px;">1 Token</b>
+                                            <p style="font-size: 12px;"><b>Basic Economy</b></p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!--second v-if="two_way == 'true'"--->
+                <div class="row" style="background: #F7F9FE">
+                    <div class="container" style="margin-bottom:20px;" v-for="flight in dataSource.flights" v-if="two_way==='true'">
+                        <div class="col-md-10" style="margin:0 auto;min-height: 140px;background: #fff;border:1px solid #E6E7E9;border-radius: 10px;">
+                            <div class="row">
+                                <div class="col-md-11" style="margin:0 auto;border-bottom: 2px solid #DDDDDD;padding-top: 10px;">
+                                    <div class="row">
+
+
+                                        <div class="col-md-3" style="padding-left: 0;">
+                                            <p><b>{{ flight.local_departure | date('%A, %-d %B %Y ') }}</b></p>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <p style="width:250px;"><span><b>{{ flight.src}}</b></span><span style="margin-left: 10px;"><img
+														src="asset/right_arrow.png"></span><span style="margin-left: 10px;"><b>{{ flight.dst}}</b></span>
+                                            </p>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <p>
+                                                <b style="padding-left: 40;">{{flight | datediff}}</b>
+                                                <span style="float: right;" v-if="dataSource.flights[1].dst == flight.src"><b>Depart</b></span>
+                                                <span style="float: right;" v-if="dataSource.flights[1].src == flight.src"><b>Return</b></span>
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-11" style="margin:0 auto;padding-top: 19px;  padding-bottom: 13px;">
+                                    <div class="row">
+
+
+                                        <div class="col-md-3" style="padding-left: 0;">
+                                            <div class="row">
+                                                <div class="col-md-3">
+                                                    <img :src="getFlightImage(flight.operating_airline.iata) " :alt="flight.operating_airline.name" style="width: 45px; ">
+                                                </div>
+                                                <div class="col-md-9">
+                                                    <b>{{ flight.operating_airline.name }}</b><br>
+                                                    <b>Flight
+														{{ flight.flight_no}}</b>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="col-md-5">
+                                            <div class="row">
+                                                <div class="col-md-5">
+                                                    <b style="font-size: 25px;">{{flight.local_departure | date('%I:%M %p')}}</b>
+                                                    <p style="font-size: 12px;"><b>{{flight.src}}
+															({{flight.dst}})</b></p>
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <img src="asset/right_arrow.png" style="width: 29px;    margin-top: 10px;">
+                                                </div>
+                                                <div class="col-md-5">
+                                                    <b style="font-size: 25px;">{{flight.local_arrival | date('%I:%M %p')}}</b>
+                                                    <p style="font-size: 12px;"><b>{{flight.dst}}
+															({{flight.dst}})</b></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4" style="padding-right: 0;">
+                                            <div style="float: right;">
+                                                <b style="font-size: 30px;">1 Token</b>
+                                                <p style="font-size: 12px;"><b>Basic Economy</b></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="container">
+                        <div class="row container">
+                            <div class="col-md-10" style="margin:0 auto">
+                                <button class="btn btn-primary" style="background: #00B5FF;margin-top: 20px; border-color: #00B5FF;" @click="confirmBooking(dataSource)">Confirm Flight</button>
+                                <!-- data-toggle="modal" data-target="#myModal" -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="container">
+                        <div class="col-md-10" style="margin:0 auto">
+                            <h3 style="margin-top: 50px; color: #131f3f;">Frequently asked questions</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container-s confirm-tabs" style="padding-bottom: 30px;">
+
+            <div class="tab">
+                <p class="title" style="font-size:18px; font-weight: 600;">
+                    <img src="images/flight_confirmation.png" class="icon" alt="icon" /> When Will I Recieve My Flight Confirmation
+                </p>
+            </div>
+
+            <div class="contents" style="padding-bottom: 50px;">
+                <p class="text" style="padding-top: 20px; padding-bottom:5px; font-size: 18px; font-weight: 500;">
+                    Shortly after confirming your booking, you will receive an email from Wanderift with your confirmation number and flight details.
+                </p>
+            </div>
+
+            <div class="tab">
+                <p class="title" style="font-size:18px;">
+                    <img src="images/rollover.png" class="icon" alt="icon" /> What happens to my unused tokens?
+                </p>
+            </div>
+
+            <div class="contents">
+                <p class="text" style="padding-top: 20px; padding-bottom:5px; font-size: 18px; font-weight: 500;">Depending on your subscription plan, you will be able to rollover a certain number of tokens. With Lite, you can rollover up to ONE unused token. With Pro, you can roll over up toTWO unused tokens.</p>
+            </div>
+
+            <div class="tab">
+                <p class="title" style="font-size:18px;">
+                    <img src="images/share.png" class="icon" alt="icon" /> Can I share or send my tokens
+                </p>
+            </div>
+
+            <div class="contents">
+                <p class="text" style="padding-top: 20px; padding-bottom:5px; font-size: 18px; font-weight: 500;">
+                    Yes, your tokens can be shared or sent. All that has to happen is the traveler who you want to share or send your tokens has to create a free Wanderift account.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="footer-new">
+            <div class="container">
+                <div class="footer-top" style="margin-left: 160px;margin-right: 160px;padding-top: 50px;">
+                    <div class="row footer-top-row">
+                        <div class="col-md-3">
+                            <div class="footer-menu">
+                                <h4 style="padding-bottom: 10px; color: #F7F9FF; font-weight: 500;">Contact</h4>
+                                <a href="about-us.html" style="font-size: 14px; color: #F7F9FF; font-weight: 500;">Help / FAQ</a>
+                                <a href="media.html" style="font-size: 14px; color: #F7F9FF; font-weight: 500;">Press</a>
+                                <a href="#" style="font-size: 14px; color: #F7F9FF; font-weight: 500px;">Partners</a>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="footer-menu">
+                                <h4 style="padding-bottom: 10px; color: #F7F9FF; font-weight: 500;">Company</h4>
+                                <a href="about-us.html" style="font-size: 14px; color: #F7F9FF; font-weight: 500;">About</a>
+                                <a href="mobile_app.html" style="font-size: 14px; color: #F7F9FF; font-weight: 500;">Mobile</a>
+                                <a href="how-it-works.html" style="font-size: 14px; color: #F7F9FF; font-weight: 500;">How it Works</a>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="footer-menu">
+                                <h4 style="padding-bottom: 10px; color: #F7F9FF; font-weight: 500">More</h4>
+                                <a href="how-it-works.html" style="font-size: 14px; color: #F7F9FF; font-weight: 500">Skyscroller</a>
+                                <a href="#" style="font-size: 14px; color: #F7F9FF; font-weight: 500">Hotels</a>
+                                <a href="airline_fees.html" style="font-size: 14px; color: #F7F9FF; font-weight: 500">Airline Fees</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom" style="height: 250px;">
+                    <div class="footer-bottom-titles">
+                        <a href="images/Wanderift_Privacy_Policy.pdf" class="title-link" style="font-size: 14px; color: #F7F9FF; font-weight: 500">Privacy Policy</a>
+                        <a href="images/Wanderift_Terms_of_Use.pdf" class="title-link" style="font-size: 14px; color: #F7F9FF; font-weight: 500">Terms & Conditions </a>
+                        <a href="#" class="title-link" style="font-size: 14px; color: #F7F9FF; font-weight: 500">Wanderift LLC</a>
+                    </div>
+
+                    <div class="footer-bottom-description" style="font-size:14px;  padding-top:10px; padding-bottom:5px; color: #F7F9FF; font-weight: 500">Save time and money when booking through Wanderift.  You will always pay the same price for your flight when booking with tokens.
+
+                    </div>
+
+                    <div class="footer-bottom-social-links">
+                        <a href="https://www.instagram.com/wanderift/" class="ig-link"><img src="asset/instagram.png" alt="" style="width:30px; height:30px;"></a>
+                        <a href="https://twitter.com/wanderift" class="twit-link"><img src="asset/twit.png" alt="" style="width:30px; height:30px;"></a>
+                        <a href="https://www.facebook.com/Wanderift/" class="face-link"><img src="asset/face.png" alt="" style="width:30px; height:30px;"></a>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <a href="#" class="ig-link"><img src="images/Wanderift_Logo_2.png" alt="" style="width:140px; padding-bottom: 40px;"></a>
+                </div>
+            </div>
+        </div>
+
+        <div id="myModal" class="modal fade" role="dialog">
+            <div class="modal-dialog modal-dialog-centered">
+
+                <!-- Modal content-->
+                <div class="modal-content bk-cnf-pop">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">{{booked.title}}</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p> {{ booked.message }}</p>
+                    </div>
+                    <div class="modal-footer" v-if="booked.status">
+                        <a v-if="booked.status" href="index.html" class="btn btn-primary">Home</a>
+                    </div>
+                    <div class="modal-footer" v-else>
+                        <img src="images/loader.gif" alt="Loader" style="width: 10%">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+</body>
+<script src="https://www.gstatic.com/firebasejs/5.7.2/firebase-app.js "></script>
+<script src="https://www.gstatic.com/firebasejs/5.7.2/firebase-auth.js "></script>
+<script src="https://www.gstatic.com/firebasejs/5.7.2/firebase-database.js "></script>
+<script src="https://www.gstatic.com/firebasejs/5.7.2/firebase-firestore.js "></script>
+<script src="js/firebase-config.js "></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue-filter/0.2.5/vue-filter.js"></script>
+<script src="js/vuejs/confirm-booking.js"></script>
+<script>
+    jQuery(function($) {
+        $(".tab").click(function() {
+            var id = $(this).index(".tab");
+
+            $(this).toggleClass("active");
+            $(".contents").eq(id).slideToggle('slow');
+        });
+    });
+</script>
+
+</html>

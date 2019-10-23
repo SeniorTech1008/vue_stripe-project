@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<meta name="description" content="Start working with Wanderift and increase your brands visibility" />
+	<title>Wanderift Ad Packages</title>
+	<link rel="icon" href="test/images/Ads_Icon.png" />
+	<link rel="stylesheet" href="css/media.css" />
+	<link href='https://fonts.googleapis.com/css?family=Karla' rel='stylesheet'>
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<style>
+		* {
+			font-family: 'Karla', sans-serif;
+			box-sizing: border-box;
+			font-weight: bold;
+			color: #596172;
+		}
+
+		body {
+			background: #F7F9FE;
+		}
+
+		.container {
+			width: 500px;
+			margin: 50px auto 0;
+		}
+
+		.header h2 {
+			text-align: center;
+		}
+
+		.header .title {
+			text-align: center;
+			width: 70%;
+			line-height: 25px;
+			margin: 0 auto;
+			padding-bottom: 20px;
+			font-weight: bold;
+		}
+
+		.tab {
+			border-radius: 5px;
+			width: 100%;
+			height: 78px;
+			padding-top: 14px;
+			padding-bottom: 14px;
+			border: 1px solid #eee;
+			-webkit-box-shadow: 3px 3px 3px 1px rgba(0, 0, 0, 0.45);
+			-moz-box-shadow: 3px 3px 3px 1px rgba(0, 0, 0, 0.45);
+			box-shadow: 3px 3px 3px 1px rgba(0, 0, 0, 0.45);
+			margin-top: 20px;
+			cursor: pointer;
+			background-image: url('down-arrow.png');
+			background-repeat: no-repeat;
+			background-size: 20px auto;
+			background-position: right 20px top 29px;
+			background-color: white;
+		}
+
+		.tab.active {
+			background-image: url('up-arrow.png');
+		}
+
+		.tab p,
+		.content p {
+			margin-left: 70px;
+			margin-right: 40px;
+		}
+
+		.tab .title,
+		.content .title {
+			font-weight: bold;
+			position: relative;
+			width: 100%;
+		}
+
+		.content .title {
+			font-weight: bold;
+			position: relative;
+			width: 100%;
+		}
+
+		.tab .arrow {
+			height: 20px;
+			float: right;
+			margin-top: 15px;
+			margin-right: 20px;
+		}
+
+		.content {
+			border-radius: 5px;
+			overflow: hidden;
+			border: 1px solid #eee;
+			-webkit-box-shadow: 3px 3px 3px 1px rgba(0, 0, 0, 0.45);
+			-moz-box-shadow: 3px 3px 3px 1px rgba(0, 0, 0, 0.45);
+			box-shadow: 3px 3px 3px 1px rgba(0, 0, 0, 0.45);
+			margin-top: 20px;
+			background-color: white;
+			display: none;
+			padding-top: 20px;
+			padding-bottom: 30px;
+		}
+
+		.title .icon {
+			height: 30px;
+			position: absolute;
+			left: -45px;
+			margin-top: -5.5px;
+		}
+
+		.content .text {
+			line-height: 25px;
+			font-size: 12px;
+		}
+
+		.content .center {
+			width: 60%;
+			margin: 0 auto;
+			text-align: center;
+		}
+
+		.content .center p {
+			margin-left: 0;
+			text-align: left;
+			margin-right: 0;
+		}
+
+		.content .center .description {
+			font-size: 13px;
+			line-height: 25px;
+		}
+
+		.content .center div {
+			margin-top: 20px;
+		}
+
+		.content .center .label {
+			font-size: 13px;
+			margin-bottom: 10px;
+		}
+
+		.content .center input,
+		select {
+			width: 100%;
+			border: 1px inset #ddd;
+			border-radius: 3px;
+			height: 30px;
+			padding-left: 10px;
+		}
+
+		.content .center a,
+		button {
+			display: inline-block;
+			margin-top: 20px;
+			background: #48adff;
+			background-image: -webkit-linear-gradient(top, #48adff, #48adff);
+			background-image: -moz-linear-gradient(top, #48adff, #48adff);
+			background-image: -ms-linear-gradient(top, #48adff, #48adff);
+			background-image: -o-linear-gradient(top, #48adff, #48adff);
+			background-image: linear-gradient(to bottom, #48adff, #48adff);
+			-webkit-border-radius: 5;
+			-moz-border-radius: 5;
+			border-radius: 5px;
+			font-family: inherit;
+			color: #ffffff;
+			font-size: 14px;
+			padding: 10px 40px 10px 40px;
+			text-decoration: none;
+			-moz-box-shadow: inset 0px 1px 0px 0px #dcecfb;
+			-webkit-box-shadow: inset 0px 1px 0px 0px #dcecfb;
+			box-shadow: inset 0px 1px 0px 0px #dcecfb;
+		}
+
+		.content .center a:hover {
+			background: #3cb0fd;
+			background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+			background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+			background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+			background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+			background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+			text-decoration: none;
+		}
+
+		p.footer {
+			text-align: center;
+			margin-top: 80px;
+			font-size: 14px;
+		}
+	</style>
+</head>
+
+<body>
+	<main id="app">
+		<div class="container">
+			<div class="header">
+				<h2 style="padding-top: 60px; font-size: 35px; padding-bottom: 1px;">Advertise with Us!</h3>
+					<p class="title" style="font-size:15px;">
+						Let us help you reach targeted users, increase conversions, and grow your brand!
+					</p>
+			</div>
+
+			<div class="tab">
+				<p class="title">
+					<img src="test/images/baggage-claim.png" class="icon" alt="icon" />
+					Travel Oriented
+				</p>
+			</div>
+			<div class="content" style="padding-bottom: 50px;">
+				<p class="title" style="padding-top:20px;">
+					<img src="test/images/travel_oriented_two.png" class="icon" alt="icon" />
+					Wanderift
+				</p>
+				<p class="text" style="padding-bottom:20px;">
+					Wanderift is airline travel as a subscription.  Wanderift users prepay for their flights, and because of this, Wanderift users are more active than typical travelers.  This proposes a very unique opportunity to target a specific group of users that could result in a higher conversion for your brand!
+				</p>
+				<a href="https://wanderift.com" role="button"
+					style="background-color:#00B5FF;color:#fff;text-decoration:none;width: 40px;height: 40px;padding-top: 10px;padding-bottom: 10px;padding-left: 10px;padding-right: 10px;margin-left: 190px;margin-top: 0px;border-radius:4px; font-size: 14px;">
+					View Wanderift
+				</a>
+				<p class="title" style="padding-top:40px;">
+					<img src="test/images/newsletter.png" class="icon" alt="icon" />
+					Weekly Wander Newsletter
+				</p>
+				<p class="text" style="padding-bottom:20px;">
+					With over 10,000 weekly subscribers, the Weekly Wander is a great place to display the exciting things your brand/product has to offer!
+				</p>
+				<a href="images/Weekly_Wander.png" role="button"
+					style="background-color:#00B5FF;color:#fff;text-decoration:none;width: 40px;height: 40px;padding-top: 10px;padding-bottom: 10px;padding-left: 10px;padding-right: 10px;margin-left: 170px;margin-top: 0px;border-radius:4px; font-size: 14px;">
+					View Weekly Wanderer
+				</a>
+			</div>
+
+			<div class="tab">
+				<p class="title">
+					<img src="test/images/active_auidence.png" class="icon" alt="icon" />
+					The Audience
+				</p>
+			</div>
+
+			<div class="content">
+				<p class="title">
+					<img src="test/images/impression.png" class="icon" alt="icon" />
+					Impressions
+				</p>
+				<p class="text" style="padding-bottom:20px;">
+					With thousands of daily users scrolling through the awesome deals on Skyscroller, hundreds of daily flight searches on Wanderift, and over 10,000 Weekly Wanderer readers, you are guaranteed to get the impressions you need to maximize your conversion.
+				</p>
+				<p class="title">
+					<img src="test/images/demographics.png" class="icon" alt="icon" />
+					Demographics
+				</p>
+				<p class="text" style="padding-bottom:20px;">
+					Our demographics are very travel oriented, which means our subscribers and potential subscribers are from all over the country.  Let us use our demographics to your advantage to get your ad in front of as many people as possible!
+				</p>
+			</div>
+
+			<div class="tab">
+				<p class="title">
+					<img src="test/images/pricing_plans.png" class="icon" alt="icon" />
+					Ad Pricing
+				</p>
+			</div>
+
+			<div class="content">
+				<p class="title">
+					<img src="test/images/skyscroller_package.png" class="icon" alt="icon" />
+					$30 per month | No Long Term Commitment
+				</p>
+				<p class="text" style="padding-bottom:20px;">
+					If you’re looking for the best way to increase conversion and grow your brand, the Skyscroller Package is for you!  Your custom ad will have the opportunity to be displayed on the Skyscroller feed every 4 flight deals.  As users scroll through the feed, they will be exposed to your brand.
+				</p>
+			</div>
+
+			<div class="tab">
+				<p class="title">
+					<img src="test/images/get_started.png" class="icon" alt="icon" />
+					Get Started
+				</p>
+			</div>
+			<div id="contact">
+				<div class="content">
+					<div class="center">
+						<p style="font-size:14px; padding-bottom: 10px;" class="description">
+							Fill out the information below, and a Wanderift team member will reach out to you shortly!
+						</p>
+
+						<div>
+							<p class="label">First Name</p>
+							<input type="text" name="name" v-model="name" />
+						</div>
+
+						<div>
+							<p class="label">Email</p>
+							<input type="text" name="email" v-model="email" />
+						</div>
+
+						<div>
+							<p class="label">Company</p>
+							<input type="text" name="company" v-model="company" />
+						</div>
+
+						<button style="background-color:#00B5FF;" @click="submit()"> Send</button>
+					</div>
+				</div>
+			</div>
+			<p class="footer" style="padding-top:10px; margin-top: 40px;">Powered by Wanderift</p>
+		</div>
+	</main>
+	<script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
+	<script src="js/firebase-config.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+	<script src="js/vuejs/ads.js"></script>
+	<script>
+		jQuery(function ($) {
+			$(".tab").click(function () {
+				var id = $(this).index(".tab");
+
+				$(this).toggleClass("active");
+				$(".content").eq(id).slideToggle('slow');
+			});
+		});
+	</script>
+</body>
+
+</html>

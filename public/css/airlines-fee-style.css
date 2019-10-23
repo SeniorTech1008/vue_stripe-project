@@ -1,0 +1,214 @@
+html {
+	box-sizing: border-box;	
+}
+*, *::after, *::before {
+	box-sizing: inherit;
+}
+body {
+	font-family: 'Karla', sans-serif;
+	background: #f7f9fe;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	line-height: 1.5;
+	min-width: 320px;
+	outline: none;
+}
+#pageWrapper {
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+}
+/* Heder logo */
+#header {
+	padding-bottom: 30px;
+	overflow: hidden;
+	background-color: #141f3f;
+	color: #fff;
+}
+
+#nav {
+	float: right;
+}
+#nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+#nav li {
+	display: inline-block;
+	margin-left: 5px;
+	font-size: 15px;
+}
+#nav li a {
+	text-decoration: none;
+	color: #fff;
+	font-weight: bold;
+	padding: 15px 50px;
+}
+#nav li a:hover {
+	color: #fff;
+	background: #00b5ff;
+	border: 1px solid #00b5ff;
+	border-radius: 5px;
+}
+#nav li .active {
+	color: #fff;
+	background: #00b5ff;
+	padding: 15px 50px;
+	border: 1px solid #00b5ff;
+	border-radius: 5px;
+}
+.logoTitle {
+	font-size: 40px;
+	text-align: center;
+}
+
+.feeDetailBlock {
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+.detailBlockwarpper {
+	background: #fff;
+	text-align: center;
+	border: 1px solid #ddd;
+	border-radius: 5px; 
+	padding-bottom: 70px;
+	padding-top: 25px;
+	padding-left: 50px;
+	padding-right: 50px;
+}
+section{
+	padding:4em 0 !important
+}
+.headerRow {
+	border-bottom: 1px solid #ddd;
+}
+.headerRow h3 {
+	color: #141f3f;
+}
+.contentRow {
+	border-bottom: 1px solid #ddd;	
+	padding-bottom: 50px;
+}
+.contentRow ul {
+	list-style-type: none;
+	text-align: center;
+	padding-left: 0;
+	padding-top: 10px;
+}
+.contentRow li {
+	display: block;
+	font-size: 15px;
+	margin-bottom: 13px; 
+}
+.contentRow li a {
+	text-decoration: none;
+	color: #000;
+	font-weight: bold;
+}
+.contentRow li a:hover {
+	color: #141f3f;
+}
+
+/* Footer styling */
+.section-1 h2{
+    font-family:  karlaBold;
+    font-weight: bold;
+    color:#141F3F;
+}
+
+.footer-new {	
+    background: #141F3F;	
+    width: 100%;	
+}	
+
+ .footer-new .footer-top {	
+    padding-top: 20px;	
+    padding-bottom: 30px;	
+}	
+
+ .footer-new h4 {	
+    font-weight: bold;	
+    font-size: 22px;	
+    color: #222229;	
+}	
+
+ .footer-new .description p {	
+    font-weight: bold;	
+    font-size: 14px;	
+    line-height: 30px;	
+}	
+
+
+ .footer-new .phone-book .btn-deals {	
+    position: absolute;	
+    width: 70px;	
+    border-radius: 0px;	
+    margin-top: 0px;	
+    font-weight: normal;	
+    height: 40px;	
+}	
+
+
+ /* footer-fix */	
+.footer-top-row{	
+    display:flex;	
+    justify-content: center;	
+}	
+.footer-new .footer-menu {	
+    display: flex;	
+    flex-direction: column;	
+    align-items: center;	
+}	
+
+ .footer-new .footer-menu a {	
+    margin-top: 20px;	
+    color: #222229;	
+    font-size: 15px;	
+    text-decoration: none;	
+    font-weight: bold;	
+}	
+
+ .footer-bottom {	
+    padding-top: 50px;	
+    padding-bottom: 20px;	
+    color: #222229;	
+    font-weight: bold;	
+    font-size: 14px;	
+}	
+
+ .footer-bottom-titles {	
+    display: flex;	
+    justify-content: space-around;	
+    padding: 0 160px;	
+}	
+
+ .footer-bottom span {	
+    color: #222229;	
+    font-weight: bolder;	
+    font-size: 16px;	
+}	
+
+ .footer-bottom a {	
+    color: black;	
+    /* margin-right: 20px; */	
+    font-size: 18px;	
+}	
+
+ .footer-bottom-titles a:hover {	
+    text-decoration: none;	
+}	
+
+ .footer-bottom-description {	
+    text-align: center;	
+    margin-top: 30px;	
+    font-size: 16px;	
+}	
+
+ .footer-bottom-social-links {	
+    margin: 30px 0px 50px 0px;	
+    display: flex;	
+    justify-content: space-around;	
+    padding: 0 40%;	
+}

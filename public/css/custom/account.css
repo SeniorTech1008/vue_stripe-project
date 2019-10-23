@@ -1,0 +1,80 @@
+
+        nav a {
+            font-size: 18px !important;
+            color: #fff !important;
+            font-weight: bold;
+            padding: 10px 20px;
+            letter-spacing: 0 !important;
+            margin: 5px;
+        }
+        
+        a.btn-logout {
+            border-radius: 5px;
+            width: 140px;
+            text-align: center;
+            padding: 10px 20px !important;
+        }
+        
+        div#myNavbar ul.navbar-right li:last-child {
+            margin-top: 4px;
+        }
+        
+        .btn-referral {
+            background: #00B5FF;
+            color: #fff;
+        }
+        
+        .btn-referral:hover {
+            color: #fff;
+        }
+        
+        .btn-referral:focus {
+            color: #fff;
+        }
+        
+        .float-right {
+            float: right !important;
+        }
+        
+        .float-left {
+            float: left !important;
+        }
+        
+        .float-right,
+        .float-left::after {
+            clear: both;
+        }
+        
+        .border-0 {
+            border: none;
+        }
+        
+        .close.float-left {
+            opacity: 1;
+        }
+        
+        .close.float-left span {
+            font-size: .7em;
+        }
+        
+        @media (max-width:768px) {
+            .navbar-header .icon-bar {
+                background-color: #00b5ff !important;
+            }
+        }
+        
+        .welcome-wande {
+            background-image: url("../images/header.jpg");
+            background-repeat: no-repeat;
+            background-position: bottom;
+            background-size: 100%;
+            padding: 10px 15px 15px 15px;
+            border: 1px solid #e0e1e5;
+            border-radius: 3px;
+        }
+        @media (min-width:1200px){
+  
+  .home-nav: top:10px;
+  
+}
+    

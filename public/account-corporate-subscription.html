@@ -1,0 +1,1025 @@
+<!Doctype html>
+<html lang="en">
+
+<head>
+    <title>Wanderift | Account</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="description" content="">
+    <link rel="icon" href="images/favicon.png">
+    <link rel="stylesheet" href="css/bs4-utilities.min.css">
+    <!--remove "css/bs4-utilities.min.css" if using bootstrap4 in future-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/jBox.all.css">
+    <link rel="stylesheet" href="css/media.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <style>
+        nav a {
+            font-size: 18px !important;
+            color: #fff !important;
+            font-weight: bold;
+            padding: 10px 20px;
+            letter-spacing: 0 !important;
+            margin: 5px;
+        }
+        
+        a.btn-logout {
+            border-radius: 5px;
+            width: 140px;
+            text-align: center;
+            padding: 10px 20px !important;
+        }
+        
+        div#myNavbar ul.navbar-right li:last-child {
+            margin-top: 4px;
+        }
+        
+        .btn-referral {
+            background: #00B5FF;
+            color: #fff;
+        }
+        
+        .btn-referral:hover {
+            color: #fff;
+        }
+        
+        .btn-referral:focus {
+            color: #fff;
+        }
+        
+        .float-right {
+            float: right !important;
+        }
+        
+        .float-left {
+            float: left !important;
+        }
+        
+        .float-right,
+        .float-left::after {
+            clear: both;
+        }
+        
+        .border-0 {
+            border: none;
+        }
+        
+        .close.float-left {
+            opacity: 1;
+        }
+        
+        .close.float-left span {
+            font-size: .7em;
+        }
+        
+        @media (max-width:768px) {
+            .navbar-header .icon-bar {
+                background-color: #00b5ff !important;
+            }
+        }
+        
+         .purchase-container {
+            background-color: #fff;
+            border: 2px solid #d5d6da;
+            box-shadow: -1px 2px 5px #b6b7bb;
+        }
+        .slider-container {
+            background-color: #fff;
+            border: 2px solid #d5d6da;
+            box-shadow: -1px 2px 5px #b6b7bb;
+        }
+
+        .slider-div {
+            border-right: 2px solid #d5d6da;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .slider-wrap {
+            width: 80%;
+            margin-left: 20px;
+            overflow: hidden;
+        }
+
+        .slider {
+            -webkit-appearance: none;
+            width: 100%;
+            height: 35px;
+            background: #d3d3d3;
+            outline: none;
+            opacity: 0.7;
+            -webkit-transition: .2s;
+            transition: opacity .2s;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+         input[type="range"] {
+            margin: auto;
+            -webkit-appearance: none;
+            position: relative;
+            cursor: pointer;
+            outline: none;
+        }
+
+
+        ::-webkit-slider-runnable-track {
+            background: #ddd;
+        }
+
+        ::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 20px;
+            height: 40px;
+            background: #141f3f;
+            box-shadow: -100vw 0 0 100vw #00b7ff;
+        }
+
+        ::-moz-range-track {
+            height: 40px;
+            background: #ddd;
+        }
+
+        ::-moz-range-thumb {
+            background: #fff;
+            height: 40px;
+            width: 20px;
+            border: 3px solid #999;
+            border-radius: 0 !important;
+            box-shadow: -100vw 0 0 100vw #00b7ff;
+            box-sizing: border-box;
+        }
+
+        ::-ms-fill-lower {
+            background: #00b7ff;
+        }
+
+        ::-ms-thumb {
+            background: #fff;
+            border: 2px solid #999;
+            height: 40px;
+            width: 20px;
+            box-sizing: border-box;
+        }
+
+        ::-ms-ticks-after {
+            display: none;
+        }
+
+        ::-ms-ticks-before {
+            display: none;
+        }
+
+        ::-ms-track {
+            background: #ddd;
+            color: transparent;
+            height: 40px;
+            border: none;
+        }
+
+        ::-ms-tooltip {
+            display: none;
+        }
+
+        .slider-div h4 {
+            color: #001756;
+            font-weight: 700;
+            padding: 20px
+        }
+
+        .tockens-count-slider {
+            width: 70%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .total-tockens {
+            text-align: center;
+            justify-content: center;
+            padding: 15px;
+        }
+
+        .number {
+            font-size: 4.5em !important;
+            color: #001756;
+            font-weight: bold;
+        }
+
+        .payment-infos {
+            width: 100%;
+            margin: 2em auto;
+            display: flex;
+            flex-wrap: wrap;
+            background-color: #fff;
+            justify-content: space-between;
+            border: 2px solid #d5d6da;
+            box-shadow: -1px 2px 5px #b6b7bb;
+        }
+
+        .payment-inf {
+            display: flex;
+            flex: 1;
+            text-align: center;
+            align-items: center;
+            padding: 2em;
+            width: auto;
+            font-size: 1.2em;
+            justify-content: space-around;
+        }
+
+        .border-r {
+            border-right: 2px solid #d5d6da;
+        }
+
+        .payment-inf .number {
+            font-size: 2.5em !important;
+        }
+
+        .cta-box {
+            width: 55%;
+            margin: 0 auto;
+            padding: 2em;
+            background-color: #fff;
+            box-shadow: 0 1px 2px #b6b7bb;
+        }
+
+        .input-box,
+        .btn-submit {
+            margin: 40px auto;
+            max-width: 450px;
+            border: 1px solid #b6b7bb;
+            box-shadow: 0 1px 2px #b6b7bb;
+            display: flex;
+            align-items: center;
+            height: 70px;
+            position: relative;
+        }
+        .welcome-wande {
+            background-image: url("../images/header.jpg");
+            background-repeat: no-repeat;
+            background-position: bottom;
+            background-size: 100%;
+            padding: 10px 15px 15px 15px;
+            border: 1px solid #e0e1e5;
+            border-radius: 3px;
+        }
+        @media (min-width:1200px){
+  
+  .home-nav: top:10px;
+  
+}
+    </style>
+</head>
+
+<body>
+    <main id="app">
+        <nav class="navbar navbar-default sharp" style="background: rgb(20, 31, 63); padding-top: 14px; height: 90px;">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html"><img src="images/Wanderift_Logo_2.png" alt="" style="width: 180px;"></a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav">
+
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="home-nav"><a href="index.html" style="">Home</a></li>
+                        <li><a @click="logout" class="btn btn-1 btn-logout" style="">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+
+        <div class="container section-1">
+
+
+            <div class="row">
+
+                <div class="col-xs-12">
+
+
+                    <h2 style="font-size: 40px; padding-top: 20px; ">Account</h2>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="container">
+
+
+            <div class="row">
+
+                <div class="col-xs-12" style="margin-bottom: 100px;">
+
+
+                    <ul class="nav my-nav-tabs divider mt30" style="padding-bottom: 6px;">
+                        <li class="active"><a data-toggle="tab" href="#home" style="font-size: 18px; margin-right: 20px;">Overview</a></li>
+                       
+                        <li><a data-toggle="tab" href="#menu1" style="font-size: 18px; margin-right: 20px;">Billing</a>
+                        </li>
+                      
+                    </ul>
+
+                    <div class="tab-content mt30">
+                        <div id="home" class="tab-pane fade in active">
+
+
+                            <div class="col-xs-12 col-sm-5 ">
+
+                                <h3 class="bold" style="font-size: 28px; padding-bottom: 20px;">Traveler Information
+                                </h3>
+
+
+                                <div action="">
+
+                                    <div class="form-group">
+
+                                        <label for="" style="padding-bottom:10px;">First Name</label>
+                                        <input v-model="client.firstname" class="form-control sharp input-width" type="text" placeholder="First Name">
+                                    </div>
+
+                                    <div class="form-group">
+
+                                        <label for="" style="padding-bottom:10px;">Last Name</label>
+                                        <input v-model="client.lastname" class="form-control sharp input-width" type="text" placeholder="Last Name">
+
+                                    </div>
+                                    <div class="form-group">
+
+                                        <label for="" style="padding-bottom:10px;">Company</label>
+                                        <input v-model="client.company" class="form-control sharp input-width" type="text" placeholder="Your Company">
+
+                                    </div>
+
+                                    <div class="form-group">
+
+                                        <label for="" style="padding-bottom:10px;">Email</label>
+                                        <input v-model="client.email" class="form-control sharp input-width" type="email" placeholder="Email">
+
+                                    </div>
+
+                                    <div class="form-group">
+
+                                        <label for="" style="padding-bottom:10px;">Date Of Birth</label>
+                                        <input v-model="client.dob" class="form-control sharp input-width" type="date">
+
+                                    </div>
+
+                                    <div class="form-group">
+
+                                        <label for="" style="padding-bottom:10px;">Gender</label>
+                                        <input v-model="client.gender" class="form-control sharp input-width" type="text" placeholder="Gender">
+
+                                    </div>
+
+                                    <div class="form-group">
+
+                                        <label for="" style="padding-bottom:10px;">Market</label>
+                                        <input v-model="client.subscriber_market" class="form-control sharp input-width" type="text" placeholder="Market">
+
+                                    </div>
+
+                                    <div class="form-group" style="padding-top: 5px;">
+
+
+                                        <button @click="updateUserDetails" class="btn btn-1 bold btn-width" style="">Save</button>
+
+                                    </div>
+
+                                </div>
+
+
+
+
+                                    <div class="clearfix"></div>
+
+                                    <h3 class="bold" style="font-size: 28px; padding-bottom: 20px;">Add Employees</h3>
+
+                                    <div action="">
+
+                                        <div class="form-group">
+
+                                            <label for="" style="padding-bottom:10px;">Employee One</label>
+                                            <input class="form-control sharp input-width" type="text"  placeholder="johndoe@gmail.com">
+
+                                        </div>
+
+                                        <div class="form-group">
+
+                                            <label for="" style="padding-bottom:10px;">Employee Two</label>
+                                            <input class="form-control sharp input-width" type="text" placeholder="johndoe@gmail.com">
+
+                                        </div>
+
+                                         <div class="form-group">
+
+                                            <label for="" style="padding-bottom:10px;">Employee Three</label>
+                                            <input class="form-control sharp input-width" type="text" placeholder="johndoe@gmail.com">
+
+                                        </div>
+                                        <div align="middle" style="font-size: 12px;">
+
+                                            
+                                            <button style="background: #FFFFFF;border-width: 0;">
+                                                <img src="./images/adding-employees.png" alt class="check" style="width:12px;margin-right: 0px;">Add More Employees</button>
+
+                                        </div>
+
+
+
+                                        <div class="form-group" style="padding-top: 5px;">
+
+                                            <button @click="updatePassword" class="btn btn-1 bold " style="width:200px;">Add Employees to Account</button>
+
+                                        </div>
+                                    </div>
+
+                            </div>
+
+                        
+
+                            <div class="col-xs-12 col-sm-6 ">
+
+
+                                <div class="col-xs-12 ">
+
+
+                                    <h3 class="bold" style="font-size: 28px; padding-bottom: 10px; ">Select Tokens
+                                    </h3>
+
+                                    <div class="slider-container" style="height:150px;">
+                                        <div class="row">
+                                            <div class="col-md-8 col-sm-12 slider-div" style="height:150px;">
+                                                <h4 class="slider-title">How many tokens?</h4>
+                                                <div class="slider-wrap">
+                                                    <div class="range-slider">
+                                                        <input class="range-slider__range" type="range" value="60" min="10" max="100"
+                                                            step="1" id="tockenSlider">
+                                                    </div>
+                                                </div>
+                                                <div class="tockens-count-slider">
+                                                    <div align="left" style="margin-left:-20px;">
+                                                        
+                                                        <label >10 Tokens</label>
+                                                    </div>
+                                                    <div align="right" style="margin-right: -20px;">
+                                                        <label >100 Tokens</label>    
+                                                    </div>
+                                                    
+
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 col-sm-12 total-tockens">
+                                                <h5>Total Tokens</h5>
+                                                <p class="number" id="tockens">60</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="payment-infos">
+                                        <div class="payment-inf border-r" style="color: #001756; font-weight:bold;">
+                                            Total Cost: <div class="number" id="totalPrice">$2736</div>
+                                        </div>
+                                        <div class="payment-inf border-r" style="color: #001756; font-weight:bold;">
+                                            <div class="number" id="perTocken"></div> per token
+                                        </div>
+                                       
+                                    </div>
+                                </div>
+
+                                
+
+
+                                <div class="col-xs-12 ">
+                                     <h3 class="mt0 bold" style="font-size: 28px; padding-bottom: 10px; ">Purchase Your Tokens</h3>
+                                    <div class="col-sm-12 mt20 purchase-container" style="padding: 30px;">
+
+                                       
+                                        <div class="form-group">
+
+                                            <label for="" style="padding-bottom:10px;">Bank Account Number</label>
+                                            <input class="form-control sharp input-width purchase-container" type="text" style="width:100%">
+
+                                        </div>
+                                        <div class="form-group">
+
+                                            <label for="" style="padding-bottom:10px;">Routing Number</label>
+                                            <input class="form-control sharp input-width purchase-container" type="text" style="width:100%">
+
+                                        </div>
+                                        
+                                           <button class="btn btn-1 bold input-width" id="btn_purchase" style="width: 100%; margin-top: 30px; padding:10px; font-size: 18px;" >Purchase 60 Tokens For $6840</button>
+                                            <!-- <div class="payment-inf border-r" style="color: #001756; font-weight:bold;">
+                                                Total Cost: <div class="number" id="totalPrice">$2736</div>
+                                            </div>
+                                            <div class="payment-inf border-r" style="color: #001756; font-weight:bold;">
+                                                <div class="number" id="perTocken"></div> per token
+                                            </div> -->
+                                           
+                                        
+                                        
+                                    </div>
+
+                                </div>
+
+                              
+                            </div>
+                        </div>
+                        <div id="menu1" class="tab-pane fade">
+                            <div class="col-xs-12 col-sm-6 ">
+
+                                <h3 class="bold" style="font-size: 28px; padding-bottom: 20px;">Upgrade Subscription
+                                </h3>
+
+
+                                <div action="" class="mt20">
+
+                                    <div class="form-group">
+
+
+
+                                        <input v-model="tokens.subscription" value="Lite" name="plan" type="radio" id="lite">
+                                        <label for="lite" style="font-size: 16px;">Wanderift Lite $369/mo</label>
+
+
+                                    </div>
+
+                                    <div class="form-group">
+
+
+                                        <input v-model="tokens.subscription" value="Pro" name="plan" id="pro" type="radio">
+                                        <label for="pro" style="font-size: 16px;">Wanderift Pro $459/mo</label>
+
+
+                                    </div>
+
+                                    <div class="form-group">
+
+                                        <label for="" style="font-size: 16px; padding-top:10px; padding-bottom:10px;">
+
+                                            Selection | {{ tokens.subscription | plan }}
+
+                                        </label>
+
+
+                                    </div>
+
+                                    <div class="form-group">
+
+                                        <label for="" style="padding-bottom:10px;">Card Number</label>
+                                        <input class="form-control sharp input-width" type="text" v-model="card.number" placeholder="Card number">
+
+                                    </div>
+
+                                    <div class="form-group">
+
+                                        <label for="" style="padding-bottom:10px;">Card Holder</label>
+                                        <input class="form-control sharp input-width" type="text" v-model="card.nameOnCard" placeholder="Card holder">
+
+                                    </div>
+
+                                    <div class="row">
+
+                                        <div class="form-group  col-xs-4 pl2">
+
+                                            <label for="" style="padding-bottom:10px;">Exp Date</label>
+                                            <input class="form-control sharp " type="text" v-model="card.exp_date" placeholder="Exp date">
+                                        </div>
+
+                                        <div class="form-group  col-xs-4 pr0 pl2">
+
+                                            <label for="" style="padding-bottom:10px;">CVC</label>
+                                            <input class="form-control sharp " type="text" v-model="card.cvc" placeholder="CVC">
+
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group col-xs-4">
+
+                                        <button class="btn btn-1 bold btn-width" @click="updatePayment(tokens.subscription)" style="margin-top: 10px;">Pay</button>
+
+                                    </div>
+
+                                </div>
+
+
+
+                            </div>
+                            <div class="col-xs-12 col-sm-6 ">
+
+
+                                <div class="col-xs-12">
+
+
+                                    <h3 class="bold" style="font-size: 28px; padding-bottom: 20px;">Add New Payment</h3>
+
+
+                                    <div action="">
+
+                                        <div class="form-group">
+
+                                            <label for="" style="padding-bottom:10px;">Card Number</label>
+                                            <input class="form-control sharp input-width" type="text" placeholder="Card number">
+
+                                        </div>
+
+                                        <div class="form-group">
+
+                                            <label for="" style="padding-bottom:10px;">Card Holder</label>
+                                            <input class="form-control sharp input-width" type="text" placeholder="Card holder">
+
+                                        </div>
+
+                                        <div class="row">
+
+                                            <div class="form-group  col-xs-4 pl2">
+
+                                                <label for="" style="padding-bottom:10px;">Exp Date</label>
+                                                <input class="form-control sharp " type="text" v-model="card.exp_date" placeholder="Exp date">
+
+                                            </div>
+
+                                            <div class="form-group  col-xs-4 pr0 pl2">
+
+                                                <label for="" style="padding-bottom:10px;">CVC</label>
+                                                <input class="form-control sharp " type="text" v-model="card.cvc" placeholder="CVC">
+
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group col-xs-4 pr0">
+
+                                            <input class="btn btn-1 bold btn-width" type="submit" value="Save" style="margin-top: 10px;">
+
+                                        </div>
+
+                                    </div>
+
+
+                                </div>
+
+
+                            </div>
+
+                        </div>
+                        <div id="menu2" class="tab-pane fade">
+
+                            <div class="col-xs-12 col-sm-6 ">
+
+
+                                <div class="col-xs-12 divider">
+
+
+                                    <h3 class="bold" style="font-size: 28px; padding-bottom: 20px;">Add'Ons</h3>
+
+
+
+                                    <div class="col-sm-2 mt20">
+
+                                        <img class="img-responsive" src="./images/ticket.png" alt="">
+
+                                    </div>
+                                    <div class="col-sm-10 mt20">
+
+                                        <h3 class="mt0 bold" style="">1 Extra Tokens</h3>
+                                        <p class="bold" style="">$124</p>
+
+                                        <ul class="ul">
+
+                                            <li><img class="check" src="./images/green_check.png" alt="">Additional Token
+                                            </li>
+                                            <li><img class="check" src="./images/green_check.png" alt="" style="">Up to 60% off thousands of hotels</li>
+                                            <li><img class="check" src="./images/green_check.png" alt="" style="">Weekly updates from Weekly Wander</li>
+                                            <a href="" class="btn btn-2 bold mt10" style="width: 178px; margin-top:30px; margin-bottom:30px;">Add to
+                                                Current
+                                                Plan</a>
+                                        </ul>
+                                    </div>
+
+                                </div>
+
+
+                                <div class="col-xs-12 divider">
+
+
+                                    <h3 class="bold"></h3>
+
+                                    <h6 class="bold mt20 ml20"></h6>
+
+
+                                    <div class="col-sm-2 mt20">
+
+                                        <img class="img-responsive" src="./images/ticket.png" alt="">
+
+                                    </div>
+                                    <div class="col-sm-10 mt20">
+
+                                        <h3 class="mt0 bold" style="">2 Extra Tokens</h3>
+                                        <p class="bold" style="">$252 ($126 per token)</p>
+
+                                        <ul class="ul">
+
+                                            <li><img class="check" src="./images/green_check.png" alt="" style="">2 Extra Tokens
+                                            </li>
+                                            <li><img class="check" src="./images/green_check.png" alt="" style="">1 extra token rollover
+                                            </li>
+                                            <li><img class="check" src="./images/green_check.png" alt="" style="">Up to 60% off thousands of hotels</li>
+                                            <li><img class="check" src="./images/green_check.png" alt="" style="">No long term commitment
+                                            </li>
+                                            <a href="" class="btn btn-2 bold mt10" style="width: 178px; margin-top:30px; margin-bottom:30px;">Add to
+                                                Current
+                                                Plan</a>
+                                        </ul>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="col-xs-12 col-sm-6 ">
+
+
+                                <div class="col-xs-12 divider">
+
+
+                                    <h3 class="bold" style="font-size: 28px; padding-bottom: 20px;">Extras</h3>
+
+
+                                    <div class="col-sm-2 mt20">
+
+                                        <img class="img-responsive" src="./images/4.png" alt="">
+
+                                    </div>
+                                    <div class="col-sm-10 mt20">
+
+                                        <h3 class="mt0 bold" style="">Skyscroller</h3>
+                                        <p class="bold" style="">Free</p>
+
+
+                                        <ul class="ul">
+
+                                            <li><img class="check" src="./images/green_check.png" alt="" style="">Scroll through the hottest flights online</li>
+                                            <li><img class="check" src="./images/green_check.png" alt="" style="">Recieve email updates of deals</li>
+
+                                            <a href="https://skyscroller.com/" class="btn btn-2 bold mt40" style="margin-top:60px; margin-bottom:30px;">Scroll the Deals</a>
+                                        </ul>
+
+
+
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="col-xs-12 divider">
+
+
+                                    <h3 class="bold"></h3>
+
+                                    <h6 class="bold mt20 ml20"></h6>
+
+
+                                    <div class="col-sm-2 mt20">
+
+                                        <img class="img-responsive" src="./images/5.png" alt="">
+
+                                    </div>
+                                    <div class="col-sm-10 mt20">
+
+                                        <h3 class="mt0 bold" style="">Wanderift Hotels</h3>
+                                        <p class="bold" style="">Up to 60% thousands hotels</p>
+
+
+                                        <ul class="ul">
+
+                                            <li><img class="check" src="./images/green_check.png" alt="" style="">Amazing Hotel Deals
+                                            </li>
+                                            <li><img class="check" src="./images/green_check.png" alt="" style="">Hundreds of 5 star hotels
+                                            </li>
+                                            <li><img class="check" src="./images/green_check.png" alt="" style="">Vacation Destinations
+                                            </li>
+
+                                            <a href="" class="btn btn-2 bold mt40" style="margin-top:60px; margin-bottom:30px;">Search Hotels</a>
+                                        </ul>
+
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                       
+                    </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer here -->
+        <div class="footer-new ">
+            <div class="container ">
+                <div class="footer-top " style="margin-left: 160px;margin-right: 160px;padding-top: 50px; ">
+                    <div class="row footer-top-row ">
+                        <div class="col-md-3 ">
+                            <div class="footer-menu ">
+                                <h4 style="padding-bottom: 10px; color: #F7F9FF; ">Contact</h4>
+                                <a href="how-it-works.html" style="font-size: 14px; color: #F7F9FF; ">Help / FAQ</a>
+                                <a href="media.html " style="font-size: 14px; color: #F7F9FF; ">Press</a>
+                                <a href="# " style="font-size: 14px; color: #F7F9FF; ">Partners</a>
+                            </div>
+                        </div>
+                        <div class="col-md-3 ">
+                            <div class="footer-menu ">
+                                <h4 style="padding-bottom: 10px; color: #F7F9FF; ">Company</h4>
+                                <a href="about-us.html " style="font-size: 14px; color: #F7F9FF; ">About</a>
+                                <a href="mobile_app.html" style="font-size: 14px; color: #F7F9FF; ">Mobile</a>
+                                <a href="how-it-works.html" style="font-size: 14px; color: #F7F9FF; ">How it works</a>
+                            </div>
+                        </div>
+                        <div class="col-md-3 ">
+                            <div class="footer-menu ">
+                                <h4 style="padding-bottom: 10px; color: #F7F9FF; ">More</h4>
+                                <a href="https://skyscroller.com/" style="font-size: 14px; color: #F7F9FF; ">Skyscroller</a>
+                                <a href="ads.html" style="font-size: 14px; color: #F7F9FF; ">Advertising</a>
+                                <a href="airline_fees.html" style="font-size: 14px; color: #F7F9FF; ">Airline Fees</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom " style="height: 250px; ">
+                    <div class="footer-bottom-titles ">
+                        <a href="images/Wanderift_Privacy_Policy.pdf" class="title-link " style="font-size: 14px; color: #F7F9FF; ">Privacy Policy</a>
+                        <a href="images/Wanderift_terms_of_Use.pdf" class="title-link " style="font-size: 14px; color: #F7F9FF; ">Terms & Conditions </a>
+                        <a href="#" class="title-link " style="font-size: 14px; color: #F7F9FF; ">Wanderift LLC</a>
+                    </div>
+
+                    <div class="footer-bottom-description " style="font-size:14px; padding-top:10px; padding-bottom:5px; color: #F7F9FF; ">Save time and money when booking with Wanderift. Always pay the same price for your flight when booking with tokens.
+                    </div>
+
+                    <div class="footer-bottom-social-links ">
+                        <a href="https://www.instagram.com/wanderift/" class="ig-link "><img src="asset/instagram.png " alt=" " style="width:30px; height:30px; "></a>
+                        <a href="https://twitter.com/wanderift" class="twit-link "><img src="asset/twit.png " alt=" " style="width:30px; height:30px; "></a>
+                        <a href="https://www.facebook.com/Wanderift/" class="face-link "><img src="asset/face.png " alt=" " style="width:30px; height:30px; "></a>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <a href="# " class="ig-link "><img src="images/Wanderift_Logo_2.png " alt=" " style="width:140px; padding-bottom: 40px;"></a>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- MODALS -->
+        <!-- ========================Flight Search Dialog======================== -->
+        <!-- Modal -->
+        <div class="modal fade" id="paymentmodal" tabindex="-1" role="dialog" aria-labelledby="paymentmodal" aria-hidden="true" style="margin-top: 200px!important;">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content welcome-wande" style="text-align: center">
+
+                    <div class="modal-body">
+                        <h3 style="font-size: 20px;font-weight: bold; color: #141F3F; opacity: 50%; margin-top: 10px; line-height:1.5; margin-bottom:5px; margin-left:0px;">
+                            Processing Payment! Thank you for waiting</h3>
+                        <div class="progress">
+                            <div class="progress-bar" style="background-color: #00B5FF !important" role="progressbar" v-bind:style="{width: progress + '%'}" aria-valuenow="progress" aria-valuemin="0" aria-valuemax="100">{{progress}}%</div>
+                        </div>
+                        <h3 style="font-size: 12px;font-weight: bold; color: #141F3F; opacity: 50%; margin-top: 15px; line-height:1.5; margin-left:0px;" v-if="error.message">
+                            {{ error.message }}<a href="account.html" @click="closeModal"> Try again</a></h3>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- ========================Flight Search Dialog======================== -->
+
+        <!-- Payment Success Modal -->
+        <div class="modal fade" id="paymentSuccess" tabindex="-1" role="dialog" aria-labelledby="paymentSuccess" aria-hidden="true" style="margin-top: 200px!important;">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content welcome-wande" style="text-align: center; padding: 5vh 3vh 5vh 3vh;">
+
+                    <div class="modal-body" style="padding: 0 5vh 0 5vh">
+                        <h3 style="font-size: 20px;font-weight: bold; color: #141F3F; opacity: 50%; margin-top: 10px; line-height:1.5; margin-bottom:5px; margin-left:0px;">
+                            Congrats! You've subscribed to fly</h3>
+                        <h3 style="font-size: 14px;font-weight: bold; color: rgba(20, 31, 63, 1); margin-top: 15px; margin-bottom: 15px; line-height:1.5;letter-spacing: 1px;">
+                            You've just upgraded your subscription to Wanderift {{customerInfo.plan}}, You currently have {{ tokens.available }} tokens available
+                        </h3>
+                        <a href="index.html" class="btn btn-1 bold" style="width: 140px">Start Booking</a>
+                        <h3 style="font-size: 12px;font-weight: bold; color: #141F3F; opacity: 50%; margin-top: 15px; line-height:1.5; margin-left:0px;">
+                            Have some questions, Click<a href="how-it-works.html"> HERE</a></h3>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- ========================Flight Search Dialog======================== -->
+
+        <!-- ========================== Invite a Friend Backdrop starts here =====================  -->
+        <div class="modal fade" id="referFriend" tabindex="-1" role="dialog" aria-labelledby="referFriendLabel" aria-hidden="true" style="top:20%">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content" style="padding: 0 1rem">
+                    <div class="modal-header border-0">
+                        <button type="button" class="close float-left" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">close</span>
+                    </button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <h4 class="h4" style="font-weight: bold;">Know someone that likes to travel?</h4>
+                        <p style="line-height: 2;padding:0 5rem;">Add your friends email below and we will send them an invite to signup if they click the link and subscribe to either Wanderift Lite or Pro, you'll recieve a free token (free one-way flight).</p>
+                        <input id="reference" class="form-control text-center" style="width: 50%; margin: auto;" type="email" placeholder="john@wanderift.com">
+                    </div>
+                    <div class="modal-footer" style="text-align: center">
+                        <button type="button" class="btn btn-secondary btn-referral" style="width: 50%;" onclick="SendRef()">Send Invite</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ========================== Invite a Friend Backdrop Ends here =====================  -->
+
+    </main>
+</body>
+<script src="https://www.gstatic.com/firebasejs/5.7.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.7.2/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.7.2/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.7.2/firebase-firestore.js"></script>
+<script src="js/firebase-config.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue-filter/0.2.5/vue-filter.js"></script>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/plugin.js "></script>
+<script src="js/plugin-2.js "></script>
+<script src="js/jquery.nice-select.js "></script>
+<script src="js/jBox.all.js"></script>
+<script src="./js/main.js"></script>
+<script src="js/referral.js "></script>
+<script src="js/vuejs/account-corporate.js"></script>
+<script>
+    (function () {
+        let slider = document.getElementById("tockenSlider");
+        let tockens = document.getElementById("tockens");
+        let totalPrice = document.getElementById("totalPrice");
+        let costpertockenDOM = document.getElementById("perTocken");
+        let btnPurchase = document.getElementById("btn_purchase");
+        
+        let costPerTocken = 114;
+        const fixedPrice = 180;
+        const StartingTockens = slider.value;
+        
+
+        
+        costpertockenDOM.innerHTML = '$' + costPerTocken;
+        slider.oninput = function () {
+            if (this.value >= 50) {
+                costPerTocken = 114;
+                costpertockenDOM.innerHTML = '$' + costPerTocken;
+               
+            }
+            else if (this.value >= 25){
+                costPerTocken = 117;
+                costpertockenDOM.innerHTML = '$' + costPerTocken;
+                
+            }
+            else {
+                costPerTocken = 121;
+                costpertockenDOM.innerHTML = '$' + costPerTocken;
+               
+            }
+            tockens.innerHTML = this.value;
+            totalPrice.innerHTML = '$' + this.value * costPerTocken;
+
+            btnPurchase.innerHTML = "Purchase " + this.value + " Tokens For $" + this.value * costPerTocken;
+            
+        }
+        /*for (let i = 1; i <= 3; i++) {
+            document.getElementById("input" + i).addEventListener("focus", function() {
+                document.getElementById("icon" + i).style.display = "none";
+            });
+            document.getElementById("input" + i).addEventListener("focusout", function() {
+                if(document.getElementById("input" + i).value == "") {
+                    document.getElementById("icon" + i).style.display = "block";
+                }
+
+            })
+        }*/
+    })();
+</script>
+</html>

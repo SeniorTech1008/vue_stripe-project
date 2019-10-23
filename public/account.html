@@ -1,0 +1,863 @@
+<!Doctype html>
+<html lang="en">
+
+<head>
+    <title>Wanderift | Account</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="description" content="">
+    <link rel="icon" href="images/favicon.png">
+    <link rel="stylesheet" href="css/bs4-utilities.min.css">
+    <!--remove "css/bs4-utilities.min.css" if using bootstrap4 in future-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/jBox.all.css">
+    <link rel="stylesheet" href="css/media.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <style>
+        nav a {
+            font-size: 18px !important;
+            color: #fff !important;
+            font-weight: bold;
+            padding: 10px 20px;
+            letter-spacing: 0 !important;
+            margin: 5px;
+        }
+        
+        a.btn-logout {
+            border-radius: 5px;
+            width: 140px;
+            text-align: center;
+            padding: 10px 20px !important;
+        }
+        
+        div#myNavbar ul.navbar-right li:last-child {
+            margin-top: 4px;
+        }
+        
+        .btn-referral {
+            background: #00B5FF;
+            color: #fff;
+        }
+        
+        .btn-referral:hover {
+            color: #fff;
+        }
+        
+        .btn-referral:focus {
+            color: #fff;
+        }
+        
+        .float-right {
+            float: right !important;
+        }
+        
+        .float-left {
+            float: left !important;
+        }
+        
+        .float-right,
+        .float-left::after {
+            clear: both;
+        }
+        
+        .border-0 {
+            border: none;
+        }
+        
+        .close.float-left {
+            opacity: 1;
+        }
+        
+        .close.float-left span {
+            font-size: .7em;
+        }
+        
+        @media (max-width:768px) {
+            .navbar-header .icon-bar {
+                background-color: #00b5ff !important;
+            }
+        }
+        
+        .welcome-wande {
+            background-image: url("../images/header.jpg");
+            background-repeat: no-repeat;
+            background-position: bottom;
+            background-size: 100%;
+            padding: 10px 15px 15px 15px;
+            border: 1px solid #e0e1e5;
+            border-radius: 3px;
+        }
+        @media (min-width:1200px){
+  
+  .home-nav: top:10px;
+  
+}
+    </style>
+</head>
+
+<body>
+    <main id="app">
+        <nav class="navbar navbar-default sharp" style="background: rgb(20, 31, 63); padding-top: 14px; height: 90px;">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html"><img src="images/Wanderift_Logo_2.png" alt="" style="width: 180px;"></a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav">
+
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="home-nav"><a href="index.html" style="">Home</a></li>
+                        <li><a @click="logout" class="btn btn-1 btn-logout" style="">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+
+        <div class="container section-1">
+
+
+            <div class="row">
+
+                <div class="col-xs-12">
+
+
+                    <h2 style="font-size: 40px; padding-top: 20px; ">Account</h2>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="container">
+
+
+            <div class="row">
+
+                <div class="col-xs-12" style="margin-bottom: 100px;">
+
+
+                    <ul class="nav my-nav-tabs divider mt30" style="padding-bottom: 6px;">
+                        <li class="active"><a data-toggle="tab" href="#home" style="font-size: 18px; margin-right: 20px;">Overview</a></li>
+                        <li><a data-toggle="tab" href="#frequentFlyerNumbers" style="font-size: 18px; margin-right: 20px;">Frequent Flyer Numbers</a></li>
+                        <li><a data-toggle="tab" href="#menu1" style="font-size: 18px; margin-right: 20px;">Billing</a>
+                        </li>
+                        <li class="float-right">
+                            <!-- Button trigger invite modal -->
+                            <button class="btn w-btn-primary btn-referral" data-toggle="modal" data-target="#referFriend">Refer a Friend</button> </li>
+
+                    </ul>
+
+                    <div class="tab-content mt30">
+                        <div id="home" class="tab-pane fade in active">
+
+
+                            <div class="col-xs-12 col-sm-6 ">
+
+                                <h3 class="bold" style="font-size: 28px; padding-bottom: 20px;">Traveler Information
+                                </h3>
+
+
+                                <div action="">
+
+                                    <div class="form-group">
+
+                                        <label for="" style="padding-bottom:10px;">First Name</label>
+                                        <input v-model="client.firstname" class="form-control sharp input-width" type="text" placeholder="First Name">
+                                    </div>
+
+                                    <div class="form-group">
+
+                                        <label for="" style="padding-bottom:10px;">Last Name</label>
+                                        <input v-model="client.lastname" class="form-control sharp input-width" type="text" placeholder="Last Name">
+
+                                    </div>
+
+                                    <div class="form-group">
+
+                                        <label for="" style="padding-bottom:10px;">Email</label>
+                                        <input v-model="client.email" class="form-control sharp input-width" type="email" placeholder="Email">
+
+                                    </div>
+
+                                    <div class="form-group">
+
+                                        <label for="" style="padding-bottom:10px;">Date Of Birth</label>
+                                        <input v-model="client.dob" class="form-control sharp input-width" type="date">
+
+                                    </div>
+
+                                    <div class="form-group">
+
+                                        <label for="" style="padding-bottom:10px;">Gender</label>
+                                        <input v-model="client.gender" class="form-control sharp input-width" type="text" placeholder="Gender">
+
+                                    </div>
+
+                                    <div class="form-group">
+
+                                        <label for="" style="padding-bottom:10px;">Market</label>
+                                        <input v-model="client.subscriber_market" class="form-control sharp input-width" type="text" placeholder="Market">
+
+                                    </div>
+
+                                    <div class="form-group" style="padding-top: 5px;">
+
+
+                                        <button @click="updateUserDetails" class="btn btn-1 bold btn-width" style="">Save</button>
+
+                                    </div>
+
+                                    </form>
+
+
+
+
+                                    <div class="clearfix"></div>
+
+                                    <h3 class="bold" style="font-size: 28px; padding-bottom: 20px;">Change Password</h3>
+
+                                    <div action="">
+
+                                        <div class="form-group">
+
+                                            <label for="" style="padding-bottom:10px;">Current Password</label>
+                                            <input class="form-control sharp input-width" type="text" v-model="resetPass.password" placeholder="Current password">
+
+                                        </div>
+
+                                        <div class="form-group">
+
+                                            <label for="" style="padding-bottom:10px;">New Password</label>
+                                            <input class="form-control sharp input-width" type="text" v-model="resetPass.newPassword" placeholder="New Password">
+
+                                        </div>
+
+
+                                        <div class="form-group" style="padding-top: 5px;">
+
+                                            <button @click="updatePassword" class="btn btn-1 bold btn-width" style="">Update</button>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="col-xs-12 col-sm-6 ">
+
+
+                                <div class="col-xs-12 divider">
+
+
+                                    <h3 class="bold" style="font-size: 28px; padding-bottom: 10px; ">Subscription Plans
+                                    </h3>
+
+                                    <div class="col-sm-2 mt20">
+
+                                        <img class="img-responsive" src="./images/1.png" alt="">
+
+                                    </div>
+                                    <div class="col-sm-10 mt20">
+
+                                        <h3 class="mt0 bold" style="">Traveler Account</h3>
+                                        <p class="bold" style="">Free</p>
+
+
+                                        <ul class="ul">
+
+                                            <li style="padding-top:8px;"><img class="check" src="./images/green_check.png" style="padding-bottom:5px;" alt="">Access to deals on skyscroller</li>
+                                            <li style="padding-top:8px;"><img class="check" src="./images/green_check.png" style="padding-bottom:5px;" alt="">Up to 60% off thousands of hotels
+                                            </li>
+                                            <li style="padding-top:8px; padding-bottom:20px;"><img class="check" src="./images/green_check.png" style="padding-bottom:5px;" alt="">Weekly updates from Weekly Wander</li>
+                                            <a v-if="customerInfo.plan == null" style="margin-bottom:20px;" class="btn btn-2 bold mt10">Current Plan</a>
+                                            <a v-else style="margin-bottom:20px;" class="btn btn-2 bold mt10" @click="cancleSubscription">Subscribe</a>
+                                        </ul>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="col-xs-12 divider">
+
+
+                                    <h3 class="bold"></h3>
+
+                                    <h6 class="bold mt20 ml20"></h6>
+
+
+                                    <div class="col-sm-2 mt20">
+
+                                        <img class="img-responsive" src="./images/2.png" alt="">
+
+                                    </div>
+                                    <div class="col-sm-10 mt20">
+
+                                        <h3 class="mt0 bold" style="">Wanderift Lite</h3>
+                                        <p class="bold" style="">$369/mo</p>
+
+                                        <ul class="ul">
+
+                                            <li style="padding-top:8px;"><img class="check" src="./images/green_check.png" alt="" style="padding-bottom:5px;">3 tokens (3 one-way flights)</li>
+                                            <li style="padding-top:8px;"><img class="check" src="./images/green_check.png" alt="" style="padding-bottom:5px;">1 token rollover</li>
+                                            <li style="padding-top:8px;"><img class="check" src="./images/green_check.png" alt="" style="padding-bottom:5px;">Up to 60% off thousands of hotels</li>
+                                            <li style="padding-top:8px;"><img class="check" src="./images/green_check.png" alt="" style="padding-bottom:5px;">No long term commitment</li>
+                                            <a v-if="customerInfo.plan == 'Lite'" style="margin-bottom:20px;" class="btn btn-2 bold mt10">Current Plan</a>
+                                            <a v-else href="#menu1" data-toggle="tab" style="margin-bottom:20px;" class="btn btn-2 bold mt10">Subscribe</a>
+                                        </ul>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="col-xs-12 divider">
+
+
+                                    <h3 class="bold"></h3>
+
+                                    <h6 class="bold mt20 ml20"></h6>
+
+
+                                    <div class="col-sm-2 mt20">
+
+                                        <img class="img-responsive" src="./images/3.png" alt="">
+
+                                    </div>
+                                    <div class="col-sm-10 mt20">
+
+                                        <h3 class="mt0 bold" style="">Wanderift Pro</h3>
+                                        <p class="bold" style="">$459/mo</p>
+
+                                        <ul class="ul">
+                                            <li style="padding-top:8px;"><img class="check" src="./images/green_check.png" alt="" style="padding-bottom:5px;">4 tokens (4 one-way flights)</li>
+                                            <li style="padding-top:8px;"><img class="check" src="./images/green_check.png" alt="" style="padding-bottom:5px;">2 token rollover</li>
+                                            <li style="padding-top:8px;"><img class="check" src="./images/green_check.png" alt="" style="padding-bottom:5px;">Up to 60% off thousands of hotels
+                                            </li>
+                                            <li style="padding-top:8px;"><img class="check" src="./images/green_check.png" alt="" style="padding-bottom:5px;">No long term commitment</li>
+                                            <a v-if="customerInfo.plan == 'Pro'" style="margin-bottom:20px;" class="btn btn-2 bold mt10">Current Plan</a>
+                                            <a v-else href="#menu1" data-toggle="tab" style="margin-bottom:20px;" class="btn btn-2 bold mt10">Subscribe</a>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="menu1" class="tab-pane fade">
+                            <div class="col-xs-12 col-sm-6 ">
+
+                                <h3 class="bold" style="font-size: 28px; padding-bottom: 20px;">Upgrade Subscription
+                                </h3>
+
+
+                                <div action="" class="mt20">
+
+                                    <div class="form-group">
+
+
+
+                                        <input v-model="tokens.subscription" value="Lite" name="plan" type="radio" id="lite">
+                                        <label for="lite" style="font-size: 16px;">Wanderift Lite $369/mo</label>
+
+
+                                    </div>
+
+                                    <div class="form-group">
+
+
+                                        <input v-model="tokens.subscription" value="Pro" name="plan" id="pro" type="radio">
+                                        <label for="pro" style="font-size: 16px;">Wanderift Pro $459/mo</label>
+
+
+                                    </div>
+
+                                    <div class="form-group">
+
+                                        <label for="" style="font-size: 16px; padding-top:10px; padding-bottom:10px;">
+
+                                            Selection | {{ tokens.subscription | plan }}
+
+                                        </label>
+
+
+                                    </div>
+
+                                    <div class="form-group">
+
+                                        <label for="" style="padding-bottom:10px;">Card Number</label>
+                                        <input class="form-control sharp input-width" type="text" v-model="card.number" placeholder="Card number">
+
+                                    </div>
+
+                                    <div class="form-group">
+
+                                        <label for="" style="padding-bottom:10px;">Card Holder</label>
+                                        <input class="form-control sharp input-width" type="text" v-model="card.nameOnCard" placeholder="Card holder">
+
+                                    </div>
+
+                                    <div class="row">
+
+                                        <div class="form-group  col-xs-4 pl2">
+
+                                            <label for="" style="padding-bottom:10px;">Exp Date</label>
+                                            <input class="form-control sharp " type="text" v-model="card.exp_date" placeholder="Exp date">
+                                        </div>
+
+                                        <div class="form-group  col-xs-4 pr0 pl2">
+
+                                            <label for="" style="padding-bottom:10px;">CVC</label>
+                                            <input class="form-control sharp " type="text" v-model="card.cvc" placeholder="CVC">
+
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group col-xs-4">
+
+                                        <button class="btn btn-1 bold btn-width" @click="updatePayment(tokens.subscription)" style="margin-top: 10px;">Pay</button>
+
+                                    </div>
+
+                                </div>
+
+
+
+                            </div>
+                            <div class="col-xs-12 col-sm-6 ">
+
+
+                                <div class="col-xs-12">
+
+
+                                    <h3 class="bold" style="font-size: 28px; padding-bottom: 20px;">Add New Payment</h3>
+
+
+                                    <div action="">
+
+                                        <div class="form-group">
+
+                                            <label for="" style="padding-bottom:10px;">Card Number</label>
+                                            <input class="form-control sharp input-width" type="text" placeholder="Card number">
+
+                                        </div>
+
+                                        <div class="form-group">
+
+                                            <label for="" style="padding-bottom:10px;">Card Holder</label>
+                                            <input class="form-control sharp input-width" type="text" placeholder="Card holder">
+
+                                        </div>
+
+                                        <div class="row">
+
+                                            <div class="form-group  col-xs-4 pl2">
+
+                                                <label for="" style="padding-bottom:10px;">Exp Date</label>
+                                                <input class="form-control sharp " type="text" v-model="card.exp_date" placeholder="Exp date">
+
+                                            </div>
+
+                                            <div class="form-group  col-xs-4 pr0 pl2">
+
+                                                <label for="" style="padding-bottom:10px;">CVC</label>
+                                                <input class="form-control sharp " type="text" v-model="card.cvc" placeholder="CVC">
+
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group col-xs-4 pr0">
+
+                                            <input class="btn btn-1 bold btn-width" type="submit" value="Save" style="margin-top: 10px;">
+
+                                        </div>
+
+                                    </div>
+
+
+                                </div>
+
+
+                            </div>
+
+                        </div>
+                        <div id="menu2" class="tab-pane fade">
+
+                            <div class="col-xs-12 col-sm-6 ">
+
+
+                                <div class="col-xs-12 divider">
+
+
+                                    <h3 class="bold" style="font-size: 28px; padding-bottom: 20px;">Add'Ons</h3>
+
+
+
+                                    <div class="col-sm-2 mt20">
+
+                                        <img class="img-responsive" src="./images/ticket.png" alt="">
+
+                                    </div>
+                                    <div class="col-sm-10 mt20">
+
+                                        <h3 class="mt0 bold" style="">1 Extra Tokens</h3>
+                                        <p class="bold" style="">$124</p>
+
+                                        <ul class="ul">
+
+                                            <li><img class="check" src="./images/green_check.png" alt="">Additional Token
+                                            </li>
+                                            <li><img class="check" src="./images/green_check.png" alt="" style="">Up to 60% off thousands of hotels</li>
+                                            <li><img class="check" src="./images/green_check.png" alt="" style="">Weekly updates from Weekly Wander</li>
+                                            <a href="" class="btn btn-2 bold mt10" style="width: 178px; margin-top:30px; margin-bottom:30px;">Add to
+                                                Current
+                                                Plan</a>
+                                        </ul>
+                                    </div>
+
+                                </div>
+
+
+                                <div class="col-xs-12 divider">
+
+
+                                    <h3 class="bold"></h3>
+
+                                    <h6 class="bold mt20 ml20"></h6>
+
+
+                                    <div class="col-sm-2 mt20">
+
+                                        <img class="img-responsive" src="./images/ticket.png" alt="">
+
+                                    </div>
+                                    <div class="col-sm-10 mt20">
+
+                                        <h3 class="mt0 bold" style="">2 Extra Tokens</h3>
+                                        <p class="bold" style="">$252 ($126 per token)</p>
+
+                                        <ul class="ul">
+
+                                            <li><img class="check" src="./images/green_check.png" alt="" style="">2 Extra Tokens
+                                            </li>
+                                            <li><img class="check" src="./images/green_check.png" alt="" style="">1 extra token rollover
+                                            </li>
+                                            <li><img class="check" src="./images/green_check.png" alt="" style="">Up to 60% off thousands of hotels</li>
+                                            <li><img class="check" src="./images/green_check.png" alt="" style="">No long term commitment
+                                            </li>
+                                            <a href="" class="btn btn-2 bold mt10" style="width: 178px; margin-top:30px; margin-bottom:30px;">Add to
+                                                Current
+                                                Plan</a>
+                                        </ul>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="col-xs-12 col-sm-6 ">
+
+
+                                <div class="col-xs-12 divider">
+
+
+                                    <h3 class="bold" style="font-size: 28px; padding-bottom: 20px;">Extras</h3>
+
+
+                                    <div class="col-sm-2 mt20">
+
+                                        <img class="img-responsive" src="./images/4.png" alt="">
+
+                                    </div>
+                                    <div class="col-sm-10 mt20">
+
+                                        <h3 class="mt0 bold" style="">Skyscroller</h3>
+                                        <p class="bold" style="">Free</p>
+
+
+                                        <ul class="ul">
+
+                                            <li><img class="check" src="./images/green_check.png" alt="" style="">Scroll through the hottest flights online</li>
+                                            <li><img class="check" src="./images/green_check.png" alt="" style="">Recieve email updates of deals</li>
+
+                                            <a href="https://skyscroller.com/" class="btn btn-2 bold mt40" style="margin-top:60px; margin-bottom:30px;">Scroll the Deals</a>
+                                        </ul>
+
+
+
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="col-xs-12 divider">
+
+
+                                    <h3 class="bold"></h3>
+
+                                    <h6 class="bold mt20 ml20"></h6>
+
+
+                                    <div class="col-sm-2 mt20">
+
+                                        <img class="img-responsive" src="./images/5.png" alt="">
+
+                                    </div>
+                                    <div class="col-sm-10 mt20">
+
+                                        <h3 class="mt0 bold" style="">Wanderift Hotels</h3>
+                                        <p class="bold" style="">Up to 60% thousands hotels</p>
+
+
+                                        <ul class="ul">
+
+                                            <li><img class="check" src="./images/green_check.png" alt="" style="">Amazing Hotel Deals
+                                            </li>
+                                            <li><img class="check" src="./images/green_check.png" alt="" style="">Hundreds of 5 star hotels
+                                            </li>
+                                            <li><img class="check" src="./images/green_check.png" alt="" style="">Vacation Destinations
+                                            </li>
+
+                                            <a href="" class="btn btn-2 bold mt40" style="margin-top:60px; margin-bottom:30px;">Search Hotels</a>
+                                        </ul>
+
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div id="frequentFlyerNumbers" class="tab-pane fade">
+                            <div class="col-md-12 p-4 pt-0 mb-0">
+                                <div class="row">
+                                    <div class="col d-flex align-items-start">
+                                        <h3 class="bold d-inline-block mr-4" style="font-size: 28px; padding-bottom: 20px;">Frequent Flyer Numbers</h3>
+                                        <button class="btn w-btn-primary ml-4 mt-2" @click="saveFfn">Save</button>
+                                    </div>
+                                </div>
+
+                                <div action="">
+                                    <div class="form-group">
+
+                                        <div class="row justify-content-end" style="margin-bottom: 80px;">
+
+                                            <div class="col-xs-12 col-md-4 mt30">
+                                                <label class="pb-2" style="font-size: 18px;">Alaska Airlines</label>
+                                                <input v-model="flight.alaska" class="form-control sharp input-width" type="text" placeholder="Mileage Plan">
+                                            </div>
+
+                                            <div class="col-xs-12 col-md-4 mt30">
+                                                <label class="pb-2" style="font-size: 18px;">Delta Airlines</label>
+                                                <input v-model="flight.delta" class="form-control sharp input-width" type="text" placeholder="SkyMiles">
+                                            </div>
+
+                                            <div class="col-xs-12 col-md-4 mt30">
+                                                <label class="pb-2" style="font-size: 18px;">Southwest Airlines</label>
+                                                <input v-model="flight.southwest" class="form-control sharp input-width" type="text" placeholder="Rapid Rewards">
+                                            </div>
+
+                                            <div class="col-xs-12 col-md-4 mt30">
+                                                <label class="pb-2" style="font-size: 18px;">Allegiant Air</label>
+                                                <input v-model="flight.allegiant" class="form-control sharp input-width" type="text" placeholder="myAllegiant Rewards">
+                                            </div>
+
+                                            <div class="col-xs-12 col-md-4 mt30">
+                                                <label class="pb-2" style="font-size: 18px;">Frontier</label>
+                                                <input v-model="flight.frontier" class="form-control sharp input-width" type="text" placeholder="myFrontier">
+                                            </div>
+
+                                            <div class="col-xs-12 col-md-4 mt30">
+                                                <label class="pb-2" style="font-size: 18px;">Spirit Airlines</label>
+                                                <input v-model="flight.spirit" class="form-control sharp input-width" type="text" placeholder="Free Spirit">
+                                            </div>
+
+                                            <div class="col-xs-12 col-md-4 mt30">
+                                                <label class="pb-2" style="font-size: 18px;">American Airlines</label>
+                                                <input v-model="flight.american" class="form-control sharp input-width" type="text" placeholder="AA Advantage">
+                                            </div>
+
+                                            <div class="col-xs-12 col-md-4 mt30">
+                                                <label class="pb-2" style="font-size: 18px;">jetBlue</label>
+                                                <input v-model="flight.jetblue" class="form-control sharp input-width" type="text" placeholder="TrueBlue ">
+                                            </div>
+
+                                            <div class="col-xs-12 col-md-4 mt30">
+                                                <label class="pb-2" style="font-size: 18px;">Sun Country Air</label>
+                                                <input v-model="flight.sunCountry" class="form-control sharp input-width" type="text" placeholder="Sun Country Rewards">
+                                            </div>
+
+                                            <div class="col-xs-12 col-md-4 mt30">
+                                                <label class="pb-2" style="font-size: 18px;">United Airlines</label>
+                                                <input v-model="flight.united" class="form-control sharp input-width" type="text" placeholder="Mileage Plus Program">
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer here -->
+        <div class="footer-new ">
+            <div class="container ">
+                <div class="footer-top " style="margin-left: 160px;margin-right: 160px;padding-top: 50px; ">
+                    <div class="row footer-top-row ">
+                        <div class="col-md-3 ">
+                            <div class="footer-menu ">
+                                <h4 style="padding-bottom: 10px; color: #F7F9FF; ">Contact</h4>
+                                <a href="how-it-works.html" style="font-size: 14px; color: #F7F9FF; ">Help / FAQ</a>
+                                <a href="media.html " style="font-size: 14px; color: #F7F9FF; ">Press</a>
+                                <a href="# " style="font-size: 14px; color: #F7F9FF; ">Partners</a>
+                            </div>
+                        </div>
+                        <div class="col-md-3 ">
+                            <div class="footer-menu ">
+                                <h4 style="padding-bottom: 10px; color: #F7F9FF; ">Company</h4>
+                                <a href="about-us.html " style="font-size: 14px; color: #F7F9FF; ">About</a>
+                                <a href="mobile_app.html" style="font-size: 14px; color: #F7F9FF; ">Mobile</a>
+                                <a href="how-it-works.html" style="font-size: 14px; color: #F7F9FF; ">How it works</a>
+                            </div>
+                        </div>
+                        <div class="col-md-3 ">
+                            <div class="footer-menu ">
+                                <h4 style="padding-bottom: 10px; color: #F7F9FF; ">More</h4>
+                                <a href="https://skyscroller.com/" style="font-size: 14px; color: #F7F9FF; ">Skyscroller</a>
+                                <a href="ads.html" style="font-size: 14px; color: #F7F9FF; ">Advertising</a>
+                                <a href="airline_fees.html" style="font-size: 14px; color: #F7F9FF; ">Airline Fees</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom " style="height: 250px; ">
+                    <div class="footer-bottom-titles ">
+                        <a href="images/Wanderift_Privacy_Policy.pdf" class="title-link " style="font-size: 14px; color: #F7F9FF; ">Privacy Policy</a>
+                        <a href="images/Wanderift_terms_of_Use.pdf" class="title-link " style="font-size: 14px; color: #F7F9FF; ">Terms & Conditions </a>
+                        <a href="#" class="title-link " style="font-size: 14px; color: #F7F9FF; ">Wanderift LLC</a>
+                    </div>
+
+                    <div class="footer-bottom-description " style="font-size:14px; padding-top:10px; padding-bottom:5px; color: #F7F9FF; ">Save time and money when booking with Wanderift. Always pay the same price for your flight when booking with tokens.
+                    </div>
+
+                    <div class="footer-bottom-social-links ">
+                        <a href="https://www.instagram.com/wanderift/" class="ig-link "><img src="asset/instagram.png " alt=" " style="width:30px; height:30px; "></a>
+                        <a href="https://twitter.com/wanderift" class="twit-link "><img src="asset/twit.png " alt=" " style="width:30px; height:30px; "></a>
+                        <a href="https://www.facebook.com/Wanderift/" class="face-link "><img src="asset/face.png " alt=" " style="width:30px; height:30px; "></a>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <a href="# " class="ig-link "><img src="images/Wanderift_Logo_2.png " alt=" " style="width:140px; padding-bottom: 40px;"></a>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- MODALS -->
+        <!-- ========================Flight Search Dialog======================== -->
+        <!-- Modal -->
+        <div class="modal fade" id="paymentmodal" tabindex="-1" role="dialog" aria-labelledby="paymentmodal" aria-hidden="true" style="margin-top: 200px!important;">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content welcome-wande" style="text-align: center">
+
+                    <div class="modal-body">
+                        <h3 style="font-size: 20px;font-weight: bold; color: #141F3F; opacity: 50%; margin-top: 10px; line-height:1.5; margin-bottom:5px; margin-left:0px;">
+                            Processing Payment! Thank you for waiting</h3>
+                        <div class="progress">
+                            <div class="progress-bar" style="background-color: #00B5FF !important" role="progressbar" v-bind:style="{width: progress + '%'}" aria-valuenow="progress" aria-valuemin="0" aria-valuemax="100">{{progress}}%</div>
+                        </div>
+                        <h3 style="font-size: 12px;font-weight: bold; color: #141F3F; opacity: 50%; margin-top: 15px; line-height:1.5; margin-left:0px;" v-if="error.message">
+                            {{ error.message }}<a href="account.html" @click="closeModal"> Try again</a></h3>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- ========================Flight Search Dialog======================== -->
+
+        <!-- Payment Success Modal -->
+        <div class="modal fade" id="paymentSuccess" tabindex="-1" role="dialog" aria-labelledby="paymentSuccess" aria-hidden="true" style="margin-top: 200px!important;">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content welcome-wande" style="text-align: center; padding: 5vh 3vh 5vh 3vh;">
+
+                    <div class="modal-body" style="padding: 0 5vh 0 5vh">
+                        <h3 style="font-size: 20px;font-weight: bold; color: #141F3F; opacity: 50%; margin-top: 10px; line-height:1.5; margin-bottom:5px; margin-left:0px;">
+                            Congrats! You've subscribed to fly</h3>
+                        <h3 style="font-size: 14px;font-weight: bold; color: rgba(20, 31, 63, 1); margin-top: 15px; margin-bottom: 15px; line-height:1.5;letter-spacing: 1px;">
+                            You've just upgraded your subscription to Wanderift {{customerInfo.plan}}, You currently have {{ tokens.available }} tokens available
+                        </h3>
+                        <a href="index.html" class="btn btn-1 bold" style="width: 140px">Start Booking</a>
+                        <h3 style="font-size: 12px;font-weight: bold; color: #141F3F; opacity: 50%; margin-top: 15px; line-height:1.5; margin-left:0px;">
+                            Have some questions, Click<a href="how-it-works.html"> HERE</a></h3>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- ========================Flight Search Dialog======================== -->
+
+        <!-- ========================== Invite a Friend Backdrop starts here =====================  -->
+        <div class="modal fade" id="referFriend" tabindex="-1" role="dialog" aria-labelledby="referFriendLabel" aria-hidden="true" style="top:20%">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content" style="padding: 0 1rem">
+                    <div class="modal-header border-0">
+                        <button type="button" class="close float-left" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">close</span>
+                    </button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <h4 class="h4" style="font-weight: bold;">Know someone that likes to travel?</h4>
+                        <p style="line-height: 2;padding:0 5rem;">Add your friends email below and we will send them an invite to signup if they click the link and subscribe to either Wanderift Lite or Pro, you'll recieve a free token (free one-way flight).</p>
+                        <input id="reference" class="form-control text-center" style="width: 50%; margin: auto;" type="email" placeholder="john@wanderift.com">
+                    </div>
+                    <div class="modal-footer" style="text-align: center">
+                        <button type="button" class="btn btn-secondary btn-referral" style="width: 50%;" onclick="SendRef()">Send Invite</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ========================== Invite a Friend Backdrop Ends here =====================  -->
+
+    </main>
+</body>
+<script src="https://www.gstatic.com/firebasejs/5.7.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.7.2/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.7.2/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.7.2/firebase-firestore.js"></script>
+<script src="js/firebase-config.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue-filter/0.2.5/vue-filter.js"></script>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/plugin.js "></script>
+<script src="js/plugin-2.js "></script>
+<script src="js/jquery.nice-select.js "></script>
+<script src="js/jBox.all.js"></script>
+<script src="./js/main.js"></script>
+<script src="js/referral.js "></script>
+<script src="js/vuejs/account.js"></script>
+
+</html>

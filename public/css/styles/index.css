@@ -1,0 +1,37 @@
+.top-heading{font-size: 30px;}
+#popupshow {
+    position: fixed;
+    left: 40%;
+    top: 40%;
+    z-index: 999;
+    background: black;
+    border-radius: 25px;
+    width: 265px;
+    color: #fff;
+    padding: 20px 30px;
+    margin: 0 auto;
+    display: none;
+}
+.close-results {
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    font-size: 39px;
+    color: #FFF;
+}
+::-webkit-input-placeholder {
+    font-size: 12px;
+}
+
+#booking_flight_form {
+    margin-top:80px;
+}
+@media only screen and (max-width: 600px) {
+    #booking_flight_form {
+        margin-top:5px;
+    }
+}
+.twoway_trips {
+    max-width: 1051px;
+}

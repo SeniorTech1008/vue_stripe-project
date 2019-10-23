@@ -1,0 +1,252 @@
+.travler_information, .support_information {
+    padding: 30px 40px 20px 35px;
+}
+
+.travler_information label {
+    color: #000000;
+    font-weight: bold;
+}
+
+.support_information label {
+    color: #000000;
+    font-weight: bold;
+}
+
+label {
+    text-transform: none;
+}
+
+.firstline, .secondline {
+    display: flex;
+    justify-content: space-between;
+}
+
+.gender {
+    margin-right: 91px;
+}
+
+.dob {
+    display: inline-flex;
+}
+
+.logout-container {
+    display: inline-flex;
+    margin-right: 40px;
+    margin-top: 65px;
+    width: 180px;
+    height: 40px;
+    align-items: center;
+}
+
+.logout-button {
+    color: white;
+    display: block;
+    background: #1F222C;
+    border-radius: 2rem;
+    padding: 8px;
+    width: 180px;
+    height: 44px;
+    margin-left: 6px;
+    /* border: 1px solid white; */
+}
+
+.logout-button:hover {
+    background: grey;
+    color: black;
+}
+
+#subscribe {
+    text-align: center;
+}
+
+#subscribe label {
+    font-weight: 700;
+    color: #202D38;
+}
+
+#subscribe input {
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    height: 38px;
+    line-height: 54px;
+}
+
+.hero-welcome-message .form-group {
+    margin-bottom: 12px;
+}
+
+input {
+    background-color: white !important;
+}
+
+input:focus {
+    border: 2px solid #007bff !important;
+
+    -moz-box-shadow: 0 0 3px #FFF0AA;
+    -webkit-box-shadow: 0 0 3px #FFF0AA;
+    box-shadow: 0 0 3px #FFF0AA;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    height: calc(2.25rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.hero-welcome-message button {
+    border: 0px;
+}
+
+#non-subscribe {
+    display: none;
+}
+
+.hero-welcome-message * {
+    font-family: 'Karla', sans-serif;
+    font-weight: 400;
+}
+
+.hero-welcome-message .right {
+    height: 100vh;
+    padding-left: 70px;
+    padding-right: 70px;
+}
+
+.hero-welcome-message input {
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    height: 54px;
+    line-height: 54px;
+}
+
+.hero-welcome-message label {
+    font-weight: 700;
+    color: #202D38;
+}
+
+.hero-welcome-message .form-group {
+    margin-bottom: 28px;
+}
+
+@media screen and (max-width: 768px) {
+    .hero-welcome-message .form-group {
+        margin-bottom: 18px;
+    }
+}
+
+.hero-welcome-message button {
+    color: white;
+    display: block;
+    background: #1F222C;
+    border-radius: 2rem;
+    padding: 7px 14px;
+    width: 180px
+}
+
+.hero-welcome-message .heading {
+    font-weight: 700;
+    font-size: 24px;
+}
+
+#card-expiry-month::-webkit-inner-spin-button,
+#card-expiry-year::-webkit-inner-spin-button,
+#card-ccv::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0;
+}
+
+.hero-welcome-message .message {
+    display: none;
+}
+
+.price {
+    margin: 0;
+    font-weight: 700;
+}
+
+.payment-error {
+    width: 100%;
+    background-color: #b35057;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    display: none;
+}
+
+
+.modal-mask {
+    position: fixed;
+    z-index: 9998;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    display: table;
+    transition: opacity .3s ease;
+}
+
+.modal-wrapper {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.modal-container {
+    width: 300px;
+    margin: 0px auto;
+    padding: 20px 30px;
+    background-color: #fff;
+    border-radius: 2px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .33);
+    transition: all .3s ease;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.modal-header h3 {
+    margin-top: 0;
+    color: #42b983;
+}
+
+.modal-body {
+    margin: 20px 0;
+}
+
+.modal-default-button {
+    float: right;
+}
+
+/*
+ * The following styles are auto-applied to elements with
+ * transition="modal" when their visibility is toggled
+ * by Vue.js.
+ *
+ * You can easily play with the modal transition by editing
+ * these styles.
+ */
+
+.modal-enter {
+    opacity: 0;
+}
+
+.modal-leave-active {
+    opacity: 0;
+}
+
+.modal-enter .modal-container,
+.modal-leave-active .modal-container {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
